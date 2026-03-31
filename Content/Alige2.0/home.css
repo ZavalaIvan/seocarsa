@@ -1821,7 +1821,30 @@ svg.bar-linea {
     }
 
     .planes-seguros {
-        margin-bottom: 12rem;
+        margin-bottom: 16rem;
+    }
+
+    .aseguradoras {
+        padding-top: 2.25rem;
+    }
+
+    .aseguradoras .slick-list {
+        overflow: hidden;
+    }
+
+    .aseguradoras .slick-track {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .aseguradoras .slick-slide {
+        float: none;
+        height: auto;
+    }
+
+    .aseguradora-container {
+        width: 8.75rem !important;
     }
 
     .cliente-comentarios {
