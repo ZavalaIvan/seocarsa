@@ -1,13 +1,17 @@
 .planes-seguros {
-    height: 35.5rem;
+    min-height: 39rem;
+    height: auto;
     border-radius: 0rem 0rem 11.375rem 0rem;
     background: var(--a-color-tertiary);
     --bs-gutter-x: 0;
     padding-top: 5rem;
+    padding-bottom: 2.5rem;
 }
 
 .planes-seguros-texto {
     margin-top: 3rem;
+    padding-right: 1.5rem;
+    width: 58%;
 }
 
 .planes-seguros-h1 {
@@ -17,8 +21,8 @@
 
 .planes-seguros-p {
     color: #fff;
-    margin-bottom: 5.5rem
-    margin-top: 5.5rem;
+    margin-bottom: 3rem;
+    margin-top: 0;
 }
 
 
@@ -505,6 +509,13 @@
     height: 100%;
 }
 
+.productos .tab-pane > .col-6:not(.tab-pane-info) {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 0;
+}
+
 .producto-chat {
     display: flex;
     width: 11.875rem;
@@ -516,6 +527,7 @@
     border-radius: 12.5rem 12.5rem 12.5rem 0rem;
     background: #fff;
     position: absolute;
+    z-index: 1;
 }
 
     .producto-chat p {
@@ -526,7 +538,14 @@
 
 .producto-img {
     width: auto;
-    height: 100%;
+    height: auto;
+    max-height: calc(24rem + 20px);
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0;
+    align-self: flex-end;
+    transform: translateY(8px);
 }
 
 #producto-ahorro .producto-img {
@@ -800,10 +819,165 @@ svg.bar-linea {
     position: relative;
 }
 
-    .direccion .mapa iframe {
+.direccion .mapa iframe {
         width: 100%;
         height: 100%;
     }
+
+/* Ajustes de jerarquia tipografica para el copy SEO de la home */
+.planes-seguros-h1 {
+    font-size: 3.15rem;
+    line-height: 1.08;
+    max-width: 32ch;
+    letter-spacing: -0.02em;
+}
+
+.planes-seguros-img {
+    width: 42%;
+}
+
+.planes-seguros-p {
+    max-width: 34rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.empoderamos-h3 {
+    font-size: 2.35rem;
+    line-height: 1.15;
+    max-width: 28ch;
+}
+
+.empoderamos-puntos p {
+    font-size: 1rem;
+    line-height: 1.45;
+    font-weight: 500;
+}
+
+.avatar-msj {
+    width: 13.5rem;
+    padding: 0.625rem 0.95rem;
+}
+
+.avatar-msj-texto {
+    font-size: 0.875rem;
+    line-height: 1.35;
+    font-weight: 500;
+}
+
+.tu-buscas-h2 {
+    max-width: 48ch;
+    font-size: 2.3rem;
+    line-height: 1.15;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buscas-punto {
+    min-height: 14.5rem;
+    gap: 0.55rem;
+    padding: 0rem 2rem 1.35rem;
+}
+
+.buscas-punto h3,
+.buscas-punto .h6 {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    line-height: 1.25;
+    font-weight: 700;
+    text-align: center;
+    color: var(--a-color-tertiary);
+}
+
+.buscas-punto p {
+    font-size: 0.93rem;
+    line-height: 1.5;
+    margin: 0;
+    color: #4d6181;
+}
+
+.productos-h2 {
+    font-size: 2.45rem;
+    line-height: 1.12;
+}
+
+.productos-p {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #566987;
+}
+
+.productos .tab-pane {
+    min-height: 26.75rem;
+    height: auto;
+}
+
+.productos .tab-pane h4 {
+    font-size: 2rem;
+    line-height: 1.12;
+    font-weight: 700;
+    max-width: 26ch;
+}
+
+.productos .tab-pane p {
+    margin-bottom: 1.85rem;
+    padding-right: 1rem;
+    font-size: 0.98rem;
+    line-height: 1.62;
+    font-weight: 400;
+}
+
+.tab-pane-info {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.producto-chat {
+    width: 12.75rem;
+    min-height: 9.5rem;
+    height: auto;
+    padding: 0.9rem 1.15rem;
+}
+
+.producto-chat p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: 700;
+    text-align: center;
+}
+
+.proceso-paso h5 {
+    font-size: 1.08rem;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.proceso-paso p {
+    font-size: 0.94rem;
+    line-height: 1.55;
+    color: #4d6181;
+}
+
+.interesado-h3 {
+    font-size: 2.1rem;
+    line-height: 1.15;
+    text-align: center;
+    max-width: 38ch;
+}
+
+.interesado-p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 40rem;
+}
+
+.direccion-h3 {
+    font-size: 2.2rem;
+    line-height: 1.15;
+}
 
 .mapa-informacion {
     width: 26rem;
@@ -1315,7 +1489,8 @@ svg.bar-linea {
     .buscas-punto {
         width: 90%;
         min-width: 18.5rem;
-        height: 12.5rem;
+        min-height: 13.5rem;
+        height: auto;
         padding: 0rem 1rem;
         margin-bottom: 5.5rem;
     }
@@ -1335,6 +1510,8 @@ svg.bar-linea {
         width: 100%;
         padding-left: 0.75rem;
         padding-right: 0.75rem;
+        font-size: 2rem;
+        line-height: 1.15;
     }
 
     .productos-p {
@@ -1343,6 +1520,8 @@ svg.bar-linea {
         padding-left: 0.75rem;
         padding-right: 0.75rem;
         margin-bottom: 1rem;
+        font-size: 0.95rem;
+        line-height: 1.55;
     }
 
     .accordion-button::after {
