@@ -1,0 +1,1299 @@
+html, html body {
+    font-size: 16px;
+}
+
+.cotiza_ahora, .elige_aseguradoras , .como_contrato , .pasos_como_contrato , .pasos_puntos , .tu_seguro_gastos_medicos , .pasos_mejores_coberturas , .fold_ramos , .contactanos, nav .container-fluid {
+    max-width: 1750px;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.backColorTransparent {
+    padding: 26px 2% 16px;
+}
+
+.navbar .logo {
+    height: 54px;
+    width: 142px;
+}
+
+.cotiza_ahora {
+    background-color: #ffffff;
+    height: 950px;
+    padding: 12% 6% 0 6%;
+    background: url('../../images/gmm/img-background-SGMM-escritorio.png') no-repeat bottom left;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+    .cotiza_ahora .div-titulos {
+        padding-top: 24px;
+        padding-right: 24px;
+    }
+
+        .cotiza_ahora .div-titulos h1 {
+            color: #1E3575;
+            font-size: 2.750rem;
+            font-weight: 600;
+            letter-spacing: 0;
+            line-height: 3.750rem;
+            margin-bottom: 20px;
+        }
+
+            .cotiza_ahora .div-titulos h1 b {
+                color: #0A357C;
+            }
+
+        .cotiza_ahora .div-titulos h2 {
+            color: #1E3575;
+            font-size: 1.500rem;
+            letter-spacing: 0;
+            line-height: 2.500rem;
+        }
+
+    .cotiza_ahora .div-formulario {
+        display: flex;
+        justify-content: center;
+    }
+
+        .cotiza_ahora .div-formulario .divformulario {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cotiza_ahora .div-formulario .formulario {
+            height: 380px;
+            width: 100%;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            box-shadow: 0 2px 22px 0 #EBEBEB;
+            padding: 36px 50px 36px 36px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cotiza_ahora .div-formulario .div-genero {
+            width: 70%;
+        }
+
+        .cotiza_ahora .div-formulario .div-edad {
+            width: 25%;
+        }
+
+        .cotiza_ahora .div-formulario .btn-group {
+            height: 70px;
+            width: 100%;
+            border-top: 2px solid rgba(10, 53, 124, 0.1);
+            border-bottom: 2px solid rgba(10, 53, 124, 0.1);
+            border-radius: 35px;
+        }
+
+            .cotiza_ahora .div-formulario .btn-group .btn {
+                width: 50%;
+                height: 70px;
+                border: 2px solid transparent;
+                color: #0a357c99;
+                font-size: 1.25rem;
+                font-weight: bold;
+                letter-spacing: 0;
+                line-height: 1.25rem;
+                display: flex;
+                justify-content: space-evenly;
+                border-top-right-radius: 0 !important;
+                border-bottom-right-radius: 0 !important;
+                border-radius: 35px !important;
+                align-items: center;
+                background-color: transparent;
+            }
+
+
+            .cotiza_ahora .div-formulario .btn-group .btn-p1 {
+                border-left: 2px solid #0a357c1a;
+            }
+
+            .cotiza_ahora .div-formulario .btn-group .btn-p2 {
+                border-right: 2px solid rgba(10, 53, 124, 0.1);
+            }
+
+            .cotiza_ahora .div-formulario .btn-group .btn .icn-inactivo {
+                display: block;
+            }
+
+            .cotiza_ahora .div-formulario .btn-group .btn .icn-activo {
+                display: none;
+            }
+
+            .cotiza_ahora .div-formulario .btn-group .btn.activo {
+                color: #A9C23E;
+                border: 2px solid #A9C33E;
+            }
+
+                .cotiza_ahora .div-formulario .btn-group .btn.activo .icn-inactivo {
+                    display: none;
+                }
+
+                .cotiza_ahora .div-formulario .btn-group .btn.activo .icn-activo {
+                    display: block;
+                }
+
+
+            .cotiza_ahora .div-formulario .btn-group .btn:hover {
+                color: #A9C33E;
+                border: 2px solid #A9C33E;
+            }
+
+                .cotiza_ahora .div-formulario .btn-group .btn:hover .icn-inactivo {
+                    display: none;
+                }
+
+                .cotiza_ahora .div-formulario .btn-group .btn:hover .icn-activo {
+                    display: block;
+                }
+
+        .cotiza_ahora .div-formulario h3 {
+            color: #0A357C;
+            font-size: 1.5rem;
+            letter-spacing: 0;
+            line-height: 1.2916rem;
+            margin-bottom: 36px;
+            text-align: center;
+        }
+
+        .cotiza_ahora .div-formulario p.title {
+            color: #0A357C;
+            font-size: 1rem;
+            letter-spacing: 0;
+            line-height: 1.2916rem;
+            margin-bottom: 6px;
+            text-align: left;
+        }
+
+        .cotiza_ahora .div-formulario .form-control {
+            font-size: 1.25rem;
+            padding: 8px 28px;
+        }
+
+        .cotiza_ahora .div-formulario select {
+            background: url(../../img/icn-dropdown-select.svg) no-repeat right #fff;
+            -webkit-appearance: none;
+            background-position: right 10px center;
+        }
+
+        .cotiza_ahora .div-formulario .btnPrincipal,
+        .cotiza_ahora .div-formulario .btnPrincipal:focus,
+        .cotiza_ahora .div-formulario .btnPrincipal:hover {
+            height: 51px;
+            margin-top: 35px;
+        }
+
+            .cotiza_ahora .div-formulario .btnPrincipal img {
+                height: 20px;
+                width: 25px;
+                margin-left: 24px;
+            }
+
+.cotiza_ahora_gnp {
+    background: url('../../images/gmm/img-Background-gnp.png') no-repeat top left;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+    height: 100% !important;
+}
+
+    .cotiza_ahora_gnp .div-titulos {
+        padding-top: 0;
+        padding-right: 14%;
+        width: 55%;
+    }
+
+    .cotiza_ahora_gnp .div-formulario {
+        width: 45%;
+    }
+
+    .cotiza_ahora_gnp .div-titulos h1 {
+        font-size: 3.25rem;
+        line-height: 3.45rem;
+        margin-bottom: 34px !important;
+    }
+
+    .cotiza_ahora_gnp .div-titulos h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 2rem;
+        margin-bottom: 31px !important;
+    }
+
+    .cotiza_ahora_gnp .div-flex {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+        .cotiza_ahora_gnp .div-flex p {
+            color: #1E3575;
+            font-size: 1.5rem;
+            letter-spacing: 0;
+            line-height: 1.5rem;
+        }
+
+        .cotiza_ahora_gnp .div-flex img {
+            height: 60px;
+            margin-left: 20px;
+        }
+
+    .cotiza_ahora_gnp .div-formulario .formulario {
+        height: 100%;
+    }
+
+    .cotiza_ahora_gnp .div-formulario h3 {
+        color: #0A357C;
+        font-size: 1.75rem;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 1.28rem;
+        text-align: left;
+    }
+
+    .cotiza_ahora_gnp .div-formulario .divformulario {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+        .cotiza_ahora_gnp .div-formulario .divformulario > div {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+            .cotiza_ahora_gnp .div-formulario .divformulario > div .div-parentesco {
+                width: 70%;
+            }
+
+            .cotiza_ahora_gnp .div-formulario .divformulario > div .div-edad {
+                width: 25%;
+            }
+
+            .cotiza_ahora_gnp .div-formulario .divformulario > div .btn-quitar {
+                background-color: transparent;
+                color: #1E3575;
+                padding: 0;
+                border: 0px;
+                height: 22px;
+                width: 22px;
+                position: absolute;
+                right: -30px;
+                top: 24px;
+                z-index: 1;
+            }
+
+                .cotiza_ahora_gnp .div-formulario .divformulario > div .btn-quitar .material-icons {
+                    font-size: 1.375rem;
+                }
+
+    .cotiza_ahora_gnp .btnAgregar {
+        color: #B9B9B9;
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: 0;
+        line-height: 1.33rem;
+        background-color: transparent;
+        text-decoration: underline;
+        float: left;
+    }
+
+        .cotiza_ahora_gnp .btnAgregar.activo {
+            color: #447DF0;
+        }
+
+
+.div-isla-iconos img {
+    margin-top: -20px;
+    width: 100%;
+}
+
+.aseguradoras {
+    background-color: #FCFCFC;
+    text-align: center;
+    padding: 34px 80px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+    .aseguradoras .imgLogos {
+        height: 50px;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+
+        .aseguradoras .imgLogos.logo-largo {
+            height: 23px;
+        }
+
+        .aseguradoras .imgLogos img {
+            width: auto;
+            height: 100%;
+        }
+
+.como_contrato {
+    -moz-background-size: cover;
+    text-align: center;
+    padding-top: 0px;
+    background-color: #ffffff;
+}
+
+    .como_contrato h1 {
+        color: #1E3575;
+        font-size: 2.000rem;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 1.250rem;
+        margin-bottom: 0px;
+        margin-top: 80px;
+        margin-bottom: 70px;
+    }
+
+        .como_contrato h1 b {
+            color: #A9C23E;
+        }
+
+    .como_contrato img {
+        height: 100%;
+        width: 523px;
+        margin-bottom: -40px;
+    }
+
+.pasos_como_contrato {
+    background-color: #F0F7FC;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+    .pasos_como_contrato .pasos {
+        display: inline-block;
+        text-align: center;
+        width: 25%;
+    }
+
+        .pasos_como_contrato .pasos .punto {
+            height: 48px;
+            width: 48px;
+            background-color: rgba(114, 130, 172, 0.6);
+            border-radius: 50%;
+            display: table;
+            margin: auto;
+        }
+
+            .pasos_como_contrato .pasos .punto p {
+                color: #FFFFFF;
+                font-size: 1.750rem;
+                font-weight: bold;
+                letter-spacing: 0;
+                line-height: 1.429rem;
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+        .pasos_como_contrato .pasos h2 {
+            color: #1E3575;
+            font-size: 2.000rem;
+            font-weight: bold;
+            letter-spacing: 0;
+            line-height: 1.250rem;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .pasos_como_contrato .pasos p {
+            color: #1E3575;
+            font-size: 1.250rem;
+            letter-spacing: 0;
+            line-height: 1.200rem;
+            text-align: center;
+            font-weight: normal;
+        }
+
+            .pasos_como_contrato .pasos p b {
+                font-weight: 700;
+            }
+
+    .pasos_como_contrato .flecha {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 15px;
+    }
+
+        .pasos_como_contrato .flecha img {
+            height: 20px;
+            width: 20px;
+        }
+
+    .pasos_como_contrato .activo .punto {
+        background-color: #A9C23E;
+    }
+
+    .pasos_como_contrato .activo h2 {
+        color: #A9C23E;
+    }
+
+    .pasos_como_contrato .activo p {
+        color: #1E3575;
+    }
+
+
+.pasos_puntos {
+    background-color: #ffffff;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+    .pasos_puntos .div_puntos {
+        width: 20%;
+        display: inline-block;
+        margin: 0 1% 20px;
+        vertical-align: top;
+    }
+
+        .pasos_puntos .div_puntos .div_icon .material-icons {
+            color: #A9C23E;
+            font-size: 60px;
+        }
+
+        .pasos_puntos .div_puntos .div_p p {
+            color: #1E3575;
+            font-size: 1.25rem;
+            letter-spacing: 0;
+            line-height: 1.4rem;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+            .pasos_puntos .div_puntos .div_p p b {
+                color: #A9C23E;
+            }
+
+    .pasos_puntos .btn,
+    .pasos_puntos .btn:focus,
+    .pasos_puntos .btn:hover,
+    .pasos_puntos .btn:active {
+        height: 60px;
+        border-radius: 5px;
+        margin-top: 90px;
+        padding: 6px 45px;
+    }
+
+    .pasos_puntos h2 {
+        color: #1E3575;
+        font-size: 1.375rem;
+        letter-spacing: 0;
+        line-height: 1.45rem;
+        text-align: center;
+    }
+
+
+.tu_seguro_gastos_medicos {
+    background-color: #F0F7FC;
+    padding: 60px 20%;
+    text-align: center;
+}
+
+    .tu_seguro_gastos_medicos h2 {
+        color: #1E3575;
+        font-size: 1.375rem;
+        letter-spacing: 0;
+        line-height: 1.45rem;
+        text-align: center;
+    }
+
+.pasos_mejores_coberturas {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+    .pasos_mejores_coberturas h2 {
+        color: #1E3575;
+        font-size: 2.25rem;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 1.25rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .pasos_mejores_coberturas h3 {
+        color: #1E3575;
+        font-size: 1.375rem;
+        letter-spacing: 0;
+        line-height: 1.27rem;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    .pasos_mejores_coberturas .btn,
+    .pasos_mejores_coberturas .btn:focus,
+    .pasos_mejores_coberturas .btn:hover,
+    .pasos_mejores_coberturas .btn:active {
+        height: 60px;
+        border-radius: 5px;
+        margin-top: 100px;
+    }
+
+    .pasos_mejores_coberturas .div_puntos {
+        padding: 20px;
+        height: 350px;
+        width: 261px;
+        border: 1px solid #F9F9F9;
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        box-shadow: 6px 6px 11px 0 rgba(56, 56, 56, 0.1);
+        display: inline-block;
+        margin: 0 3% 20px;
+        vertical-align: top;
+    }
+
+        .pasos_mejores_coberturas .div_puntos .div_icon img {
+            margin-top: 10px;
+            height: 84px;
+            width: 87px;
+        }
+
+        .pasos_mejores_coberturas .div_puntos .div_icon h4 {
+            color: #1E3575;
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0;
+            line-height: 1.15rem;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pasos_mejores_coberturas .div_puntos .div_p p {
+            color: #5C5F60;
+            font-size: 1rem;
+            letter-spacing: 0;
+            line-height: 1.25rem;
+            text-align: center;
+            margin-top: 35px;
+        }
+
+
+.fold_ramos {
+    background: #F6F9FF;
+    padding: 60px 0 !important;
+    background-color: #F0F7FC;
+}
+
+    .fold_ramos h2 {
+        color: #445065;
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 1.292rem;
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 0 10%;
+    }
+
+    .fold_ramos .btn {
+        height: 54px;
+        width: 225px;
+        border-radius: 27px;
+        background-color: #E6EDFF;
+        color: #1E3575;
+        font-weight: bold;
+        font-size: 1.500rem;
+        letter-spacing: 0;
+        line-height: 1.292rem;
+        text-align: center;
+        margin: 10px;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+
+        .fold_ramos .btn:hover,
+        .fold_ramos .btn:focus {
+            background-color: #1E3575;
+            color: #FFFFFF;
+        }
+
+
+.contactanos {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+    .contactanos .divFrame {
+        padding-right: 25px;
+    }
+
+        .contactanos .divFrame .mapa {
+            height: 260px;
+            width: 438px;
+            float: right;
+        }
+
+            .contactanos .divFrame .mapa iframe {
+                height: 100%;
+                width: 100%;
+                border-radius: 0px;
+            }
+
+    .contactanos .divContacto {
+        padding-top: 15px;
+        padding-left: 25px;
+    }
+
+        .contactanos .divContacto h1 {
+            color: #0A357C;
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 0;
+            line-height: 1.29rem;
+            margin-top: 25px;
+            margin-bottom: 13px;
+        }
+
+        .contactanos .divContacto h2 {
+            color: #0A357C;
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0;
+            line-height: 1.25rem;
+        }
+
+        .contactanos .divContacto p {
+            color: #8A98A9;
+            font-size: 1.125rem;
+            letter-spacing: 0;
+            line-height: 1.27rem;
+        }
+
+        .contactanos .divContacto .p_whatsapp {
+            margin-top: 20px;
+        }
+
+            .contactanos .divContacto .p_whatsapp .icn_whatsapp {
+                height: 22px;
+                width: 22px;
+                margin-top: -2px;
+                margin-right: 10px;
+            }
+
+
+
+.div-isla {
+    width: 100%;
+    display: none;
+}
+
+/*Media query*/
+@media (min-width: 2500px) {
+    .aseguradoras .imgLogos {
+        height: 80px;
+    }
+
+        .aseguradoras .imgLogos.logo-largo {
+            height: 50px;
+        }
+
+    .como_contrato img {
+        height: 450px;
+        width: auto;
+    }
+
+    .contactanos .divFrame .mapa {
+        height: 360px;
+        width: 538px;
+        float: right;
+    }
+
+    .pasos_mejores_coberturas .div_puntos {
+        width: 450px;
+        margin: 0 2% 20px;
+    }
+
+    .cotiza_ahora {
+        height: 1320px;
+        padding: 7% 10% 0 10%;
+    }
+
+        .cotiza_ahora .div-formulario .btnPrincipal,
+        .cotiza_ahora .div-formulario .btnPrincipal:focus,
+        .cotiza_ahora .div-formulario .btnPrincipal:hover {
+            height: 70px;
+        }
+
+            .cotiza_ahora .div-formulario .btnPrincipal img {
+                height: 30px;
+                width: 35px;
+            }
+
+        .cotiza_ahora .div-formulario .btn-group .btn img {
+            width: 35px;
+        }
+}
+
+@media (min-width: 1800px) and (max-width: 2500px) {
+    .aseguradoras .imgLogos {
+        height: 55px;
+    }
+
+        .aseguradoras .imgLogos.logo-largo {
+            height: 30px;
+        }
+
+    .cotiza_ahora {
+        height: 1060px;
+        padding: 8% 8% 0 8%;
+    }
+
+        .cotiza_ahora .div-formulario .btnPrincipal,
+        .cotiza_ahora .div-formulario .btnPrincipal:focus,
+        .cotiza_ahora .div-formulario .btnPrincipal:hover {
+            height: 70px;
+        }
+
+            .cotiza_ahora .div-formulario .btnPrincipal img {
+                height: 30px;
+                width: 30px;
+            }
+
+        .cotiza_ahora .div-formulario .btn-group .btn img {
+            width: 35px;
+        }
+}
+
+@media (max-width: 1380px) {
+    .aseguradoras .imgLogos {
+        height: 44px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .pasos_como_contrato .pasos {
+        width: 30%;
+    }
+
+    .pasos_como_contrato .flecha {
+        margin-top: 30px;
+    }
+
+    .aseguradoras .imgLogos {
+        height: 49px;
+    }
+
+        .aseguradoras .imgLogos img {
+            width: 80%;
+            height: 100%;
+        }
+
+    .cotiza_ahora .div-titulos h1 {
+        margin-bottom: 30px;
+    }
+
+    .cotiza_ahora .div-titulos h2 {
+        margin-bottom: 30px;
+    }
+
+    .cotiza_ahora {
+        height: 813px;
+        padding: 9% 6% 0 6%;
+    }
+
+    .cotiza_ahora_gnp .div-titulos {
+        padding-right: 10%;
+        text-align: left;
+    }
+}
+
+@media (max-width: 1220px) {
+    .aseguradoras .imgLogos {
+        height: 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1024px) {
+    .cotiza_ahora {
+        text-align: center;
+    }
+
+    .aseguradoras {
+        padding: 42px 0;
+    }
+
+    .pasos_como_contrato .pasos {
+        width: 30%;
+    }
+
+    .pasos_como_contrato {
+        padding: 110px 0;
+    }
+
+    .cotiza_ahora .div-titulos h1 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+
+    .cotiza_ahora {
+        height: 813px;
+        padding: 14% 2% 0 3%;
+    }
+
+    .cotiza_ahora_gnp .div-titulos {
+        padding-right: 10%;
+        width: 50%;
+    }
+
+    .cotiza_ahora_gnp .div-formulario {
+        width: 50%;
+    }
+}
+
+@media (max-width: 991px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .pasos_como_contrato .pasos {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    .fold_ramos .btn {
+        margin: 10px;
+    }
+
+    .aseguradoras .imgLogos {
+        margin-bottom: 10px;
+    }
+
+    .contactanos .divFrame {
+        padding-right: 25px;
+        padding-left: 25px;
+        text-align: center;
+    }
+
+        .contactanos .divFrame .mapa {
+            height: 260px;
+            width: 438px;
+            float: none;
+            margin: auto;
+        }
+
+            .contactanos .divFrame .mapa iframe {
+                height: 100%;
+                width: 100%;
+                border-radius: 0px;
+            }
+
+    .contactanos .divContacto {
+        padding-top: 40px;
+        padding-left: 22%;
+        padding-right: 22%;
+    }
+
+    .cotiza_ahora {
+        padding: 113px 0 0 0;
+        background: url(../../images/gmm/img-backGround-SGMM-movil-nueves.png) no-repeat top left;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        background-size: contain;
+    }
+
+
+    .div-isla {
+        display: block;
+    }
+
+        .div-isla img {
+            width: 100%;
+        }
+
+    .cotiza_ahora .div-titulos {
+        padding-top: 24px;
+        padding-right: 0;
+    }
+
+    .cotiza_ahora .div-formulario .formulario {
+        width: 70%;
+    }
+
+    .cotiza_ahora_gnp {
+    padding: 130px 2% 0 2%;
+}
+    
+.cotiza_ahora_gnp .div-formulario .formulario {
+    width: 100%;
+padding: 25px;}
+    
+    .cotiza_ahora_gnp .div-titulos {
+        padding-right: 2%;
+        padding-top: 0;width: 50%;
+    }
+
+    .cotiza_ahora_gnp .div-formulario {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .encabezadoTransparente {
+        padding: 6px 0;
+    }
+
+
+    .btnPrincipal, .btnPrincipal:focus, .btnPrincipal:hover, .btnPrincipal:active {
+        font-size: 1.750rem;
+        float: left;
+        margin-left: 20px;
+    }
+
+
+    .encabezado {
+        padding: 6px 0;
+        height: 70px;
+    }
+
+        .encabezado .logo_contenedor .foto_perfil {
+            height: 50px;
+            width: 50px;
+        }
+
+        .encabezado .logo_contenedor p {
+            font-size: 1.5rem;
+            padding: 16px 0;
+        }
+
+    .cotiza_ahora {
+        padding-top: 113px;
+    }
+
+        .cotiza_ahora .div-titulos h2 {
+            font-size: 1.1rem;
+            text-align: left;
+            margin-left: 0;
+        }
+
+    .btnPrincipal .material-icons {
+        margin-top: 0;
+    }
+
+    .aseguradoras .imgLogos {
+        height: 50px;
+    }
+
+        .aseguradoras .imgLogos.logo-largo {
+            height: 26px;
+        }
+
+    .como_contrato {
+        padding-top: 0;
+    }
+
+        .como_contrato img {
+            height: 100%;
+            width: 80%;
+        }
+
+    .pasos_como_contrato {
+        padding: 90px 0 50px 0;
+    }
+
+        .pasos_como_contrato .pasos {
+            width: 80%;
+            display: none;
+        }
+
+        .pasos_como_contrato .activo {
+            display: inline-block;
+        }
+
+    .fold_ramos .btn {
+        margin: 10px;
+    }
+
+    .aseguradoras {
+        padding: 34px 14px !important;
+    }
+
+    .como_contrato h1 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        font-size: 1.7rem;
+        padding: 0 10%;
+    }
+
+    .pasos_puntos {
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+
+        .pasos_puntos .div_puntos {
+            width: 36%;
+            margin: 0 4% 20px;
+        }
+
+            .pasos_puntos .div_puntos .div_p p {
+                margin-top: 20px;
+                font-size: 1rem;
+            }
+
+        .pasos_puntos .btn {
+            margin-top: 30px;
+            float: none;
+        }
+
+    .tu_seguro_gastos_medicos {
+        padding: 30px 6%;
+    }
+
+        .tu_seguro_gastos_medicos h2 {
+            font-size: 1.2rem;
+        }
+
+    .pasos_mejores_coberturas {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+        .pasos_mejores_coberturas h2 {
+            font-size: 1.7rem;
+            padding: 0 10%;
+        }
+
+        .pasos_mejores_coberturas h3 {
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+            padding: 0 10%;
+        }
+
+        .pasos_mejores_coberturas .div_puntos {
+            margin: 0 3% 30px;
+            height: 300px;
+            width: 70%;
+        }
+
+        .pasos_mejores_coberturas .btn {
+            margin-top: 40px;
+            float: none;
+        }
+
+        .pasos_mejores_coberturas .div_puntos .div_icon h4 {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .pasos_mejores_coberturas .div_puntos .div_p p {
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+    .contactanos {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+        .contactanos .divContacto {
+            padding: 50px 32px;
+        }
+
+        .contactanos .divFrame {
+            padding: 0px;
+        }
+
+            .contactanos .divFrame .mapa {
+                height: 224px;
+                width: 100%;
+                float: none;
+            }
+
+    .div_containerBoton {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .cotiza_ahora .div-titulos {
+        padding: 0px 10%;
+    }
+
+        .cotiza_ahora .div-titulos h1 {
+            font-size: 1.8rem;
+        }
+
+    .cotiza_ahora .div-formulario {
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cotiza_ahora {
+        padding: 140px 0 0 0;
+        background: url(../../images/gmm/img-backGround-SGMM-movil-nueves.png) no-repeat top left;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        background-size: contain;
+    }
+
+        .cotiza_ahora .div-formulario .formulario {
+            height: 450px;
+            width: 90%;
+            padding: 0 20px;
+        }
+
+        .cotiza_ahora .div-formulario .divformulario {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+    .div-isla {
+        display: block;
+    }
+
+        .div-isla img {
+            width: 100%;
+        }
+
+    .cotiza_ahora .div-formulario .btnPrincipal, .cotiza_ahora .div-formulario .btnPrincipal:focus, .cotiza_ahora .div-formulario .btnPrincipal:hover {
+        height: 50px;
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .cotiza_ahora .div-formulario .div-genero {
+        width: 100%;
+    }
+
+    .cotiza_ahora .div-formulario .div-edad {
+        width: 100%;
+    }
+
+    .cotiza_ahora .div-formulario h3 {
+        font-size: 1.3rem;
+        margin-bottom: 26px;
+    }
+
+    .cotiza_ahora_gnp .div-titulos {
+        padding: 0px 0%;
+        width: 100%;
+    }
+
+    .cotiza_ahora_gnp .div-formulario {
+        width: 100%;
+    }
+
+    .cotiza_ahora_gnp .div-titulos h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .cotiza_ahora_gnp .div-titulos h2 {
+        font-size: 1.375rem;
+        text-align: center;
+    }
+
+    .cotiza_ahora_gnp .div-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+        .cotiza_ahora_gnp .div-flex p {
+            font-size: 1.25rem;
+        }
+
+    .cotiza_ahora_gnp .div-formulario .formulario {
+        height: 100%;
+        padding: 45px 15px 45px 15px;
+    }
+
+    .cotiza_ahora_gnp .div-formulario .form-control {
+        font-size: 1.125rem;
+        padding: 8px 14px;
+    }
+
+    .cotiza_ahora_gnp .div-formulario h3 {
+        font-size: 1.25rem;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .cotiza_ahora_gnp .div-formulario .btnPrincipal,
+    .cotiza_ahora_gnp .div-formulario .btnPrincipal:focus,
+    .cotiza_ahora_gnp .div-formulario .btnPrincipal:hover {
+        margin-top: 35px;
+        width: auto;
+        float: none;
+    }
+
+    .cotiza_ahora_gnp .btnAgregar {
+        font-size: 1.125rem;
+        margin-top: 10px;
+    }
+
+    .cotiza_ahora_gnp .input_visible {
+        visibility: visible;
+        display: none;
+    }
+
+    .cotiza_ahora_gnp .div-formulario .divformulario > div {
+        margin-bottom: 10px;
+    }
+
+    .cotiza_ahora_gnp .title_error {
+        margin-top: 6px !important;
+        margin-bottom: 0px !important;
+    }
+
+    .cotiza_ahora_gnp .div-formulario .divformulario > div .btn-quitar {
+        right: 2px;
+        top: 4px;
+    }
+    
+.cotiza_ahora_gnp .div-formulario select.form-control {
+    padding: 8px 38px 8px 14px;
+}
+    
+    .div-isla-iconos img {
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 416px) and (max-width: 767px) {
+}
+
+@media (max-width: 415px) {
+}
+
+@media (max-width: 320px) {
+    .cotiza_ahora {
+        padding-top: 80px;
+    }
+}
+
+.btnPrincipal,
+.btnPrincipal:focus,
+.btnPrincipal:hover,
+.btnPrincipal:active {
+    border-radius: 37px;
+    padding: 6px 32px;
+    font-size: 1.5rem;
+}

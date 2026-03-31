@@ -1,0 +1,72 @@
+#############################################
+# ACTIVAR REWRITE
+#############################################
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+#############################################
+# CANONICALIZAR URLs LEGACY A RUTAS SEO
+#############################################
+RewriteRule ^index\.html$ / [R=301,L,NC]
+RewriteRule ^contacto23c9\.html$ /contacto.html [R=301,L,NC]
+RewriteRule ^contactod3c0\.html$ /contacto.html [R=301,L,NC]
+RewriteRule ^contactoe2ac\.html$ /contacto.html [R=301,L,NC]
+RewriteRule ^b\.html$ / [R=301,L,NC]
+RewriteRule ^c\.html$ / [R=301,L,NC]
+RewriteRule ^c-2\.html$ / [R=301,L,NC]
+RewriteRule ^salud\.html$ /seguro-medico [R=301,L,NC]
+RewriteRule ^seguros-de-auto\.html$ /seguro-de-auto [R=301,L,NC]
+RewriteRule ^seguros-de-vida/allianz\.html$ /seguro-de-vida [R=301,L,NC]
+RewriteRule ^planes-de-ahorro/allianz\.html$ /seguro-de-ahorro [R=301,L,NC]
+RewriteRule ^planes-de-ahorro/empresarial\.html$ /seguro-empresarial [R=301,L,NC]
+RewriteRule ^Fianzas/cumplimiento\.html$ /fianza-de-cumplimiento [R=301,L,NC]
+RewriteRule ^Fianzas/anticipo\.html$ /fianza-de-anticipo [R=301,L,NC]
+RewriteRule ^Fianzas/vicios-ocultos\.html$ /fianza-de-vicios-ocultos [R=301,L,NC]
+RewriteRule ^Fianzas/credito\.html$ /fianza-de-credito [R=301,L,NC]
+RewriteRule ^Fianzas/fidelidad\.html$ /fianza-de-fidelidad [R=301,L,NC]
+
+#############################################
+# EVITAR CONFLICTOS CON ARCHIVOS / CARPETAS
+#############################################
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#############################################
+# ====== SEGUROS (URLs SEO) ======
+#############################################
+
+# Seguro de Ahorro
+RewriteRule ^seguro-de-ahorro/?$ /planes-de-ahorro/allianz.html [L]
+
+# Seguro de Vida
+RewriteRule ^seguro-de-vida/?$ /seguros-de-vida/allianz.html [L]
+
+# Seguro Médico
+RewriteRule ^seguro-medico/?$ /salud.html [L]
+
+# Seguro de Auto
+RewriteRule ^seguro-de-auto/?$ /seguros-de-auto.html [L]
+
+# Seguro Empresarial
+RewriteRule ^seguro-empresarial/?$ /planes-de-ahorro/empresarial.html [L]
+
+#############################################
+# ====== FIANZAS (URLs SEO) ======
+#############################################
+
+# Fianza de Cumplimiento
+RewriteRule ^fianza-de-cumplimiento/?$ /Fianzas/cumplimiento.html [L]
+
+# Fianza de Anticipo
+RewriteRule ^fianza-de-anticipo/?$ /Fianzas/anticipo.html [L]
+
+# Fianza de Vicios Ocultos
+RewriteRule ^fianza-de-vicios-ocultos/?$ /Fianzas/vicios-ocultos.html [L]
+
+# Fianza de Crédito
+RewriteRule ^fianza-de-credito/?$ /Fianzas/credito.html [L]
+
+# Fianza de Fidelidad
+RewriteRule ^fianza-de-fidelidad/?$ /Fianzas/fidelidad.html [L]
+
+</IfModule>

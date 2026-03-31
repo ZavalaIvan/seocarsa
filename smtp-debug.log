@@ -1,0 +1,534 @@
+Connection: opening to ssl://mail.carsaseguros.mx:465, timeout=300, options=array()
+Connection: opened
+SERVER -> CLIENT: 220-p3plzcpnl509075.prod.phx3.secureserver.net ESMTP Exim 4.98.2 #2 Mon, 15 Dec 2025 10:47:21 -0700 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+CLIENT -> SERVER: EHLO carsaseguros.mx
+
+SERVER -> CLIENT: 250-p3plzcpnl509075.prod.phx3.secureserver.net Hello carsaseguros.mx [208.109.77.171]
+250-SIZE 52428800
+250-LIMITS MAILMAX=10 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+CLIENT -> SERVER: AUTH LOGIN
+
+SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+CLIENT -> SERVER: [credentials hidden]
+SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+CLIENT -> SERVER: [credentials hidden]
+SERVER -> CLIENT: 235 Authentication succeeded
+
+CLIENT -> SERVER: MAIL FROM:<no-reply@carsaseguros.mx>
+
+SERVER -> CLIENT: 250 OK
+
+CLIENT -> SERVER: RCPT TO:<contacto@segurosfianzas.com>
+
+SERVER -> CLIENT: 250 Accepted
+
+CLIENT -> SERVER: RCPT TO:<ivan.soportetec@gmail.com>
+
+SERVER -> CLIENT: 250 Accepted
+
+CLIENT -> SERVER: DATA
+
+SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+CLIENT -> SERVER: Date: Mon, 15 Dec 2025 17:47:21 +0000
+
+CLIENT -> SERVER: To: contacto@segurosfianzas.com
+
+CLIENT -> SERVER: From: Formulario Web Carsa <no-reply@carsaseguros.mx>
+
+CLIENT -> SERVER: Cc: ivan.soportetec@gmail.com
+
+CLIENT -> SERVER: Subject: =?iso-8859-1?Q?Nueva_solicitud_de_cotizaci=C3=B3n_(Ahorro)_-_Carsa_Seguros?=
+
+CLIENT -> SERVER: Message-ID: <SuZUqcoWCE5l4pWmRbHesYXsIfFcbkZv6Lg62rJ9Elw@carsaseguros.mx>
+
+CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.1 (https://github.com/PHPMailer/PHPMailer)
+
+CLIENT -> SERVER: MIME-Version: 1.0
+
+CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+CLIENT -> SERVER: 
+
+CLIENT -> SERVER: <html><body>
+
+CLIENT -> SERVER:                 <h2>Solicitud de Plan de Ahorro</h2>
+
+CLIENT -> SERVER:                 <p><strong>Teléfono:</strong> 9991602984</p>
+
+CLIENT -> SERVER:                 <p><strong>Edad:</strong> 33</p>
+
+CLIENT -> SERVER:                 <p><strong>Monto:</strong> $2000</p>
+
+CLIENT -> SERVER:             </body></html>
+
+CLIENT -> SERVER: 
+
+CLIENT -> SERVER: .
+
+SERVER -> CLIENT: 250 OK id=1vVCfJ-00000008oHE-1ECZ
+
+CLIENT -> SERVER: QUIT
+
+SERVER -> CLIENT: 221 p3plzcpnl509075.prod.phx3.secureserver.net closing connection
+
+Connection: closed
+Connection: opening to ssl://mail.carsaseguros.mx:465, timeout=300, options=array()
+Connection: opened
+SERVER -> CLIENT: 220-p3plzcpnl509075.prod.phx3.secureserver.net ESMTP Exim 4.98.2 #2 Mon, 15 Dec 2025 11:04:20 -0700 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+CLIENT -> SERVER: EHLO carsaseguros.mx
+
+SERVER -> CLIENT: 250-p3plzcpnl509075.prod.phx3.secureserver.net Hello carsaseguros.mx [208.109.77.171]
+250-SIZE 52428800
+250-LIMITS MAILMAX=10 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+CLIENT -> SERVER: AUTH LOGIN
+
+SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+CLIENT -> SERVER: [credentials hidden]
+SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+CLIENT -> SERVER: [credentials hidden]
+SERVER -> CLIENT: 235 Authentication succeeded
+
+CLIENT -> SERVER: MAIL FROM:<no-reply@carsaseguros.mx>
+
+SERVER -> CLIENT: 250 OK
+
+CLIENT -> SERVER: RCPT TO:<contacto@segurosfianzas.com>
+
+SERVER -> CLIENT: 250 Accepted
+
+CLIENT -> SERVER: RCPT TO:<ivan.soportetec@gmail.com>
+
+SERVER -> CLIENT: 250 Accepted
+
+CLIENT -> SERVER: DATA
+
+SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+CLIENT -> SERVER: Date: Mon, 15 Dec 2025 18:04:20 +0000
+
+CLIENT -> SERVER: To: contacto@segurosfianzas.com
+
+CLIENT -> SERVER: From: Formulario Web Carsa <no-reply@carsaseguros.mx>
+
+CLIENT -> SERVER: Cc: ivan.soportetec@gmail.com
+
+CLIENT -> SERVER: Subject: =?iso-8859-1?Q?Nueva_solicitud_de_cotizaci=C3=B3n_(Ahorro)_-_Carsa_Seguros?=
+
+CLIENT -> SERVER: Message-ID: <sdjSOkTcvieALWaOo4dMYGs64TECJO0JcohfEldcQ@carsaseguros.mx>
+
+CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.1 (https://github.com/PHPMailer/PHPMailer)
+
+CLIENT -> SERVER: MIME-Version: 1.0
+
+CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+CLIENT -> SERVER: 
+
+CLIENT -> SERVER: <html><body>
+
+CLIENT -> SERVER:                 <h2>Solicitud de Plan de Ahorro</h2>
+
+CLIENT -> SERVER:                 <p><strong>Teléfono:</strong> 9993567229</p>
+
+CLIENT -> SERVER:                 <p><strong>Edad:</strong> 33</p>
+
+CLIENT -> SERVER:                 <p><strong>Monto:</strong> $500</p>
+
+CLIENT -> SERVER:             </body></html>
+
+CLIENT -> SERVER: 
+
+CLIENT -> SERVER: .
+
+SERVER -> CLIENT: 250 OK id=1vVCvk-00000008rZ6-10kN
+
+CLIENT -> SERVER: QUIT
+
+SERVER -> CLIENT: 221 p3plzcpnl509075.prod.phx3.secureserver.net closing connection
+
+Connection: closed
+Connection: opening to ssl://mail.carsaseguros.mx:465, timeout=300, options=array()
+Connection: opened
+SERVER -> CLIENT: 220-p3plzcpnl509075.prod.phx3.secureserver.net ESMTP Exim 4.98.2 #2 Mon, 15 Dec 2025 11:04:33 -0700 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+CLIENT -> SERVER: EHLO carsaseguros.mx
+
+SERVER -> CLIENT: 250-p3plzcpnl509075.prod.phx3.secureserver.net Hello carsaseguros.mx [208.109.77.171]
+250-SIZE 52428800
+250-LIMITS MAILMAX=10 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+CLIENT -> SERVER: AUTH LOGIN
+
+SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+CLIENT -> SERVER: [credentials hidden]
+SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+CLIENT -> SERVER: [credentials hidden]
+SERVER -> CLIENT: 235 Authentication succeeded
+
+CLIENT -> SERVER: MAIL FROM:<no-reply@carsaseguros.mx>
+
+SERVER -> CLIENT: 250 OK
+
+CLIENT -> SERVER: RCPT TO:<contacto@segurosfianzas.com>
+
+SERVER -> CLIENT: 250 Accepted
+
+CLIENT -> SERVER: RCPT TO:<ivan.soportetec@gmail.com>
+
+SERVER -> CLIENT: 250 Accepted
+
+CLIENT -> SERVER: DATA
+
+SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+CLIENT -> SERVER: Date: Mon, 15 Dec 2025 18:04:33 +0000
+
+CLIENT -> SERVER: To: contacto@segurosfianzas.com
+
+CLIENT -> SERVER: From: Formulario Web Carsa <no-reply@carsaseguros.mx>
+
+CLIENT -> SERVER: Cc: ivan.soportetec@gmail.com
+
+CLIENT -> SERVER: Subject: =?iso-8859-1?Q?Solicitud_Seguro_de_Protecci=C3=B3n_-_Carsa_Seguros?=
+
+CLIENT -> SERVER: Message-ID: <WXBbTG3cLfdsdMNhWR99MShDz1K9HEHvIsBlJNokSoQ@carsaseguros.mx>
+
+CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.1 (https://github.com/PHPMailer/PHPMailer)
+
+CLIENT -> SERVER: MIME-Version: 1.0
+
+CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+CLIENT -> SERVER: 
+
+CLIENT -> SERVER: <html><body>
+
+CLIENT -> SERVER:                 <h2>Seguro de Protección</h2>
+
+CLIENT -> SERVER:                 <p><strong>Whatsapp:</strong> 9993567229</p>
+
+CLIENT -> SERVER:                 <p><strong>Protección para:</strong> Mi</p>
+
+CLIENT -> SERVER:             </body></html>
+
+CLIENT -> SERVER: 
+
+CLIENT -> SERVER: .
+
+SERVER -> CLIENT: 250 OK id=1vVCvx-00000008rbL-1YbJ
+
+CLIENT -> SERVER: QUIT
+
+SERVER -> CLIENT: 221 p3plzcpnl509075.prod.phx3.secureserver.net closing connection
+
+Connection: closed
+Connection: opening to ssl://mail.carsaseguros.mx:465, timeout=300, options=array()
+Connection: opened
+SERVER -> CLIENT: 220-p3plzcpnl509075.prod.phx3.secureserver.net ESMTP Exim 4.98.2 #2 Mon, 15 Dec 2025 11:05:17 -0700 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+CLIENT -> SERVER: EHLO carsaseguros.mx
+
+SERVER -> CLIENT: 250-p3plzcpnl509075.prod.phx3.secureserver.net Hello carsaseguros.mx [208.109.77.171]
+250-SIZE 52428800
+250-LIMITS MAILMAX=10 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+CLIENT -> SERVER: AUTH LOGIN
+
+SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+CLIENT -> SERVER: [credentials hidden]
+SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+CLIENT -> SERVER: [credentials hidden]
+SERVER -> CLIENT: 235 Authentication succeeded
+
+CLIENT -> SERVER: MAIL FROM:<no-reply@carsaseguros.mx>
+
+SERVER -> CLIENT: 250 OK
+
+CLIENT -> SERVER: RCPT TO:<agentes@segurosfianzas.com>
+
+SERVER -> CLIENT: 250 Accepted
+
+CLIENT -> SERVER: RCPT TO:<bettyc@segurosfianzas.com>
+
+SERVER -> CLIENT: 250 Accepted
+
+CLIENT -> SERVER: RCPT TO:<ivan.soportetec@gmail.com>
+
+SERVER -> CLIENT: 250 Accepted
+
+CLIENT -> SERVER: DATA
+
+SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+CLIENT -> SERVER: Date: Mon, 15 Dec 2025 18:05:17 +0000
+
+CLIENT -> SERVER: To: agentes@segurosfianzas.com
+
+CLIENT -> SERVER: From: Formulario Web Carsa <no-reply@carsaseguros.mx>
+
+CLIENT -> SERVER: Cc: bettyc@segurosfianzas.com, ivan.soportetec@gmail.com
+
+CLIENT -> SERVER: Subject: =?iso-8859-1?Q?Nueva_cotizaci=C3=B3n_Seguro_de_Auto_-_Carsa_Seguros?=
+
+CLIENT -> SERVER: Message-ID: <ETJezdwLCCkfkzhSwFICvh0iNXLKZrKtPdIIZtnPI@carsaseguros.mx>
+
+CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.1 (https://github.com/PHPMailer/PHPMailer)
+
+CLIENT -> SERVER: MIME-Version: 1.0
+
+CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+CLIENT -> SERVER: 
+
+CLIENT -> SERVER: <html><body>
+
+CLIENT -> SERVER:                 <h2>Seguro de Auto</h2>
+
+CLIENT -> SERVER:                 <p><strong>WhatsApp:</strong> 9993567229</p>
+
+CLIENT -> SERVER:                 <p><strong>Marca:</strong> chevrolet</p>
+
+CLIENT -> SERVER:                 <p><strong>Modelo:</strong> sonic chevrolet</p>
+
+CLIENT -> SERVER:                 <p><strong>Año:</strong> 2015</p>
+
+CLIENT -> SERVER:                 <p><strong>Estado:</strong> Yucatán</p>
+
+CLIENT -> SERVER:             </body></html>
+
+CLIENT -> SERVER: 
+
+CLIENT -> SERVER: .
+
+SERVER -> CLIENT: 250 OK id=1vVCwg-00000008rm8-0idN
+
+CLIENT -> SERVER: QUIT
+
+SERVER -> CLIENT: 221 p3plzcpnl509075.prod.phx3.secureserver.net closing connection
+
+Connection: closed
+Connection: opening to ssl://mail.carsaseguros.mx:465, timeout=300, options=array()
+Connection: opened
+SERVER -> CLIENT: 220-p3plzcpnl509075.prod.phx3.secureserver.net ESMTP Exim 4.98.2 #2 Mon, 15 Dec 2025 11:05:51 -0700 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+CLIENT -> SERVER: EHLO carsaseguros.mx
+
+SERVER -> CLIENT: 250-p3plzcpnl509075.prod.phx3.secureserver.net Hello carsaseguros.mx [208.109.77.171]
+250-SIZE 52428800
+250-LIMITS MAILMAX=10 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+CLIENT -> SERVER: AUTH LOGIN
+
+SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+CLIENT -> SERVER: [credentials hidden]
+SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+CLIENT -> SERVER: [credentials hidden]
+SERVER -> CLIENT: 235 Authentication succeeded
+
+CLIENT -> SERVER: MAIL FROM:<no-reply@carsaseguros.mx>
+
+SERVER -> CLIENT: 250 OK
+
+CLIENT -> SERVER: RCPT TO:<contacto@segurosfianzas.com>
+
+SERVER -> CLIENT: 250 Accepted
+
+CLIENT -> SERVER: RCPT TO:<ivan.soportetec@gmail.com>
+
+SERVER -> CLIENT: 250 Accepted
+
+CLIENT -> SERVER: DATA
+
+SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+CLIENT -> SERVER: Date: Mon, 15 Dec 2025 18:05:50 +0000
+
+CLIENT -> SERVER: To: contacto@segurosfianzas.com
+
+CLIENT -> SERVER: From: Formulario Web Carsa <no-reply@carsaseguros.mx>
+
+CLIENT -> SERVER: Cc: ivan.soportetec@gmail.com
+
+CLIENT -> SERVER: Subject: Nueva solicitud de Fianza - Carsa Seguros
+
+CLIENT -> SERVER: Message-ID: <xTaLQ4pwiokIJr3qLNqcfTYvOAxMCNCxKf3Z7u2m8@carsaseguros.mx>
+
+CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.1 (https://github.com/PHPMailer/PHPMailer)
+
+CLIENT -> SERVER: MIME-Version: 1.0
+
+CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+CLIENT -> SERVER: 
+
+CLIENT -> SERVER: <html><body>
+
+CLIENT -> SERVER:                 <h2>Fianzas</h2>
+
+CLIENT -> SERVER:                 <p><strong>Whatsapp:</strong> 9993567229</p>
+
+CLIENT -> SERVER:                 <p><strong>Línea de afianzamiento:</strong> No</p>
+
+CLIENT -> SERVER:                 <p><strong>Tipo:</strong> Otro</p>
+
+CLIENT -> SERVER:             </body></html>
+
+CLIENT -> SERVER: 
+
+CLIENT -> SERVER: .
+
+SERVER -> CLIENT: 250 OK id=1vVCxD-00000008ru5-0aGP
+
+CLIENT -> SERVER: QUIT
+
+SERVER -> CLIENT: 221 p3plzcpnl509075.prod.phx3.secureserver.net closing connection
+
+Connection: closed
+Connection: opening to ssl://mail.carsaseguros.mx:465, timeout=300, options=array()
+Connection: opened
+SERVER -> CLIENT: 220-p3plzcpnl509075.prod.phx3.secureserver.net ESMTP Exim 4.98.2 #2 Mon, 15 Dec 2025 11:06:23 -0700 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+CLIENT -> SERVER: EHLO carsaseguros.mx
+
+SERVER -> CLIENT: 250-p3plzcpnl509075.prod.phx3.secureserver.net Hello carsaseguros.mx [208.109.77.171]
+250-SIZE 52428800
+250-LIMITS MAILMAX=10 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+CLIENT -> SERVER: AUTH LOGIN
+
+SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+CLIENT -> SERVER: [credentials hidden]
+SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+CLIENT -> SERVER: [credentials hidden]
+SERVER -> CLIENT: 235 Authentication succeeded
+
+CLIENT -> SERVER: MAIL FROM:<no-reply@carsaseguros.mx>
+
+SERVER -> CLIENT: 250 OK
+
+CLIENT -> SERVER: RCPT TO:<contacto@segurosfianzas.com>
+
+SERVER -> CLIENT: 250 Accepted
+
+CLIENT -> SERVER: RCPT TO:<ivan.soportetec@gmail.com>
+
+SERVER -> CLIENT: 250 Accepted
+
+CLIENT -> SERVER: DATA
+
+SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+CLIENT -> SERVER: Date: Mon, 15 Dec 2025 18:06:23 +0000
+
+CLIENT -> SERVER: To: contacto@segurosfianzas.com
+
+CLIENT -> SERVER: From: Formulario Web Carsa <no-reply@carsaseguros.mx>
+
+CLIENT -> SERVER: Cc: ivan.soportetec@gmail.com
+
+CLIENT -> SERVER: Subject: Nueva solicitud de Fianza - Carsa Seguros
+
+CLIENT -> SERVER: Message-ID: <EInU9jdaMqQmj7eDtg6Am38hu5R53UnXcHrODOAd7dw@carsaseguros.mx>
+
+CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.1 (https://github.com/PHPMailer/PHPMailer)
+
+CLIENT -> SERVER: MIME-Version: 1.0
+
+CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+CLIENT -> SERVER: 
+
+CLIENT -> SERVER: <html><body>
+
+CLIENT -> SERVER:                 <h2>Fianzas</h2>
+
+CLIENT -> SERVER:                 <p><strong>Whatsapp:</strong> 9999999999</p>
+
+CLIENT -> SERVER:                 <p><strong>Línea de afianzamiento:</strong> No</p>
+
+CLIENT -> SERVER:                 <p><strong>Tipo:</strong> Cumplimiento</p>
+
+CLIENT -> SERVER:             </body></html>
+
+CLIENT -> SERVER: 
+
+CLIENT -> SERVER: .
+
+SERVER -> CLIENT: 250 OK id=1vVCxj-00000008rym-0iTI
+
+CLIENT -> SERVER: QUIT
+
+SERVER -> CLIENT: 221 p3plzcpnl509075.prod.phx3.secureserver.net closing connection
+
+Connection: closed

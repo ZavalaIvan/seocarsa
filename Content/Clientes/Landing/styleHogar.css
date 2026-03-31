@@ -1,0 +1,887 @@
+/*Principal para poder modificar las medidas EM*/
+:root {
+    --fuente-principal: 'Source Sans Pro', sans-serif;
+    --color-primario: #0A357C;
+}
+
+html, body {
+    font-size: 16px;
+    background-color: #FFFFFF;
+    font-family: var(--fuente-principal);
+}
+
+
+#mainContainer {
+    padding-top: 120px;
+    background: url('../../images/Hogar/img-background-nubes-movil.png') no-repeat;
+}
+
+.containerHeroText, .containerForm {
+    padding-left: 3% !important;
+    padding-right: 3% !important;
+}
+
+.containerHeroText {
+    width: 100%;
+    margin-bottom: 96px;
+}
+
+    .containerHeroText p {
+        color: var(--color-primario);
+        font-weight: 600;
+        font-size: 2.7rem;
+        line-height: 2.7rem;
+        text-align: center;
+    }
+
+        .containerHeroText p b {
+            font-weight: 700;
+        }
+
+.containerForm {
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 22px 0 #EBEBEB;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 67px 15px !important;
+    margin-bottom: 40px;
+}
+
+    .containerForm .textoGrupo {
+        color: var(--color-primario);
+        font-size: 1.125rem;
+        letter-spacing: 0;
+        line-height: 0.625rem;
+        margin-bottom: 14px;
+    }
+
+.grupoUno .inputFormulario {
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 16px 0 #E5E8ED;
+    padding: 16px 12px;
+    color: #17345A;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    width: 100%;
+    line-height: 0;
+    border: 1px solid #E5E8ED;
+    border: 1px solid rgba(10, 53, 124, 0.2);
+}
+
+.grupoDos {
+    margin-bottom: 40px;
+}
+
+    .grupoDos textarea {
+        width: 100%;
+        color: #17345A;
+        font-size: 1rem;
+        padding: 6px 13px;
+        border: 1px solid #E5E8ED;
+        border-radius: 12px;
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 16px 0 #E5E8ED;
+        height: 92px;
+        border: 1px solid rgba(10, 53, 124, 0.2);
+    }
+
+        .grupoUno .inputFormulario:focus, .grupoDos textarea:focus {
+            border: 1px solid rgba(10, 53, 124, 0.2);
+        }
+
+.checkbox {
+    margin-bottom: 20px;
+}
+
+    .checkbox p {
+        color: #8A98A9;
+        font-size: 0.875rem;
+        padding-left: 5px;
+    }
+
+        .checkbox p a {
+            color: #0A357C;
+            text-decoration: underline;
+        }
+
+
+.container_check {
+    display: block;
+    position: relative;
+    padding-left: 0;
+    margin-bottom: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #445065;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.1875rem;
+    padding-top: 0;
+    width: auto;
+    margin-left: 2px;
+    margin-top: -9px !important;
+    z-index: 2;
+}
+
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: transparent;
+    border-radius: 2px;
+    border: 2px solid #A9C23E;
+}
+
+/* On mouse-over, add a grey background color */
+.container_check:hover input ~ .checkmark {
+    background-color: transparent;
+    /* border: 2px solid #2b85f5; */
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_check input:checked ~ .checkmark {
+    background-color: #A9C23E;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container_check input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container_check .checkmark:after {
+    left: 3px;
+    top: -1px;
+    width: 5px;
+    height: 11px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.pInputLeft {
+    padding-left: 6px !important;
+}
+
+.pIntputRight {
+    padding-right: 6px !important;
+}
+
+.container-boton {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+    .container-boton button,
+    .modal_body_confirmar button,
+    .modal_body_confirmar button:hover {
+        border-radius: 29.5px;
+        background-color: #FF8E3D;
+        text-align: center;
+        padding: 9px 32px;
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: white;
+        border: none;
+    }
+
+.contactanos {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 50px;
+}
+
+    .contactanos .divContacto {
+        padding: 50px 32px;
+    }
+
+    .contactanos .divFrame {
+        padding: 0px;
+    }
+
+        .contactanos .divFrame .mapa {
+            height: 224px;
+            width: 100%;
+            float: none;
+        }
+
+
+
+            .contactanos .divFrame .mapa iframe {
+                height: 100%;
+                width: 100%;
+                border-radius: 15px;
+            }
+
+    .contactanos .divContacto h1 {
+        color: #0A357C;
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 1.29rem;
+        margin-top: 25px;
+        margin-bottom: 13px;
+    }
+
+    .contactanos .divContacto h2 {
+        color: #0A357C;
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: 0;
+        line-height: 1.25rem;
+    }
+
+    .contactanos .divContacto p {
+        color: #8A98A9;
+        font-size: 1.125rem;
+        letter-spacing: 0;
+        line-height: 1.27rem;
+    }
+
+    .contactanos .divContacto .p_whatsapp {
+        margin-top: 20px;
+    }
+
+        .contactanos .divContacto .p_whatsapp .icn_whatsapp {
+            height: 22px;
+            width: 22px;
+            margin-top: -2px;
+            margin-right: 10px;
+        }
+
+.itemsContainer {
+    height: 230px;
+    background: url('../../images/Hogar/img-background-Hogar-movil.png') no-repeat;
+    background-size: cover;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.containerCasa, .containerLadron, .containerTormeta, .containerTromba {
+    position: absolute;
+}
+
+.containerCasa {
+    bottom: 70px;
+    left: 15px;
+}
+
+.containerLadron {
+    bottom: 5px;
+    left: 15px;
+}
+
+.containerTormeta {
+    bottom: 30px;
+    right: -30px;
+}
+
+.containerTromba {
+    bottom: 60px;
+    left: 230px;
+}
+
+.containerCasa img {
+    height: 275.45px;
+    width: 337.33px;
+}
+
+.containerLadron img {
+    height: 91.01px;
+    width: 72.69px;
+}
+
+.containerTormeta img {
+    height: 131.66px;
+    width: 180.17px;
+}
+
+.containerTromba img {
+    height: 296px;
+    width: 284px;
+}
+
+    .containerTromba img:first-child {
+        mix-blend-mode: multiply;
+    }
+
+@media only screen and (min-width: 430px) and (max-width: 768px) {
+    .containerTormeta {
+        left: 330px;
+    }
+
+    .containerTromba {
+        bottom: 70px;
+        left: 260px;
+    }
+
+    .itemsContainer {
+        height: 300px;
+        background: url('../../images/Hogar/img-background-Hogar.png') no-repeat;
+        background-position-y: 90px;
+        background-size: contain;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    #mainContainer {
+        padding-top: 180px;
+        background: url('../../images/Hogar/img-bacground-nubes-Hogar.png') no-repeat;
+        background-size: contain;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .itemsContainer {
+        height: 300px;
+        background-size: contain;
+    }
+
+    .containerTormeta {
+        left: 330px;
+    }
+
+    .fold-uno {
+        max-width: 800px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1110px) {
+
+    #mainContainer {
+        background: url('../../images/Hogar/img-bacground-nubes-Hogar.png') no-repeat;
+        background-size: contain;
+    }
+
+
+    .itemsContainer {
+        background: none;
+        height: 600px;
+    }
+
+    .fold-uno {
+        width: 100%;
+        height: 700px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        background: url('../../images/Hogar/img-background-Hogar.png') no-repeat;
+        background-size: contain;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        background-position-y: 475px;
+    }
+
+    .containerCasa {
+        bottom: 200px;
+        left: 0px;
+    }
+
+    .containerLadron {
+        bottom: 100px;
+        left: 15px;
+    }
+
+    .containerTormeta {
+        bottom: 140px;
+        right: -150px;
+        z-index: 2;
+    }
+
+    .containerTromba {
+        bottom: 240px;
+        left: 295px;
+    }
+
+    .containerCasa img {
+        height: 454px;
+        width: 555.99px;
+    }
+
+    .containerLadron img {
+        height: 150px;
+        width: 119.81px;
+    }
+
+    .containerTormeta img {
+        height: 217px;
+        width: 296.95px;
+    }
+
+    .containerTromba img {
+        height: 301px;
+        width: 339.18px;
+    }
+
+    .contactanos {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+        .contactanos .divFrame {
+            padding-right: 25px;
+        }
+
+            .contactanos .divFrame .mapa {
+                height: 260px;
+                width: 438px;
+                float: right;
+            }
+
+        .contactanos .divContacto {
+            padding-top: 15px;
+            padding-left: 25px;
+        }
+
+    .containerForm {
+        padding: 67px 55px !important;
+    }
+}
+
+@media only screen and (min-width: 1111px) and (max-width: 1440px) {
+
+    #mainContainer {
+        background: url('../../images/Hogar/img-bacground-nubes-Hogar.png') no-repeat;
+        background-size: contain;
+    }
+
+
+    .itemsContainer {
+        background: none;
+        height: 600px;
+    }
+
+    .fold-uno {
+        width: 100%;
+        height: 700px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        background: url('../../images/Hogar/img-background-Hogar.png') no-repeat;
+        background-size: contain;
+        padding-left: 88px;
+        padding-right: 40px;
+        justify-content: space-between;
+        background-position-y: 475px;
+    }
+
+    .containerHeroText {
+        max-width: 514px;
+    }
+
+
+    .containerCasa {
+        bottom: 150px;
+        left: 0px;
+    }
+
+    .containerLadron {
+        bottom: 100px;
+        left: 15px;
+    }
+
+    .containerTormeta {
+        bottom: 110px;
+        left: 430px;
+        z-index: 2;
+    }
+
+    .containerTromba {
+        bottom: 240px;
+        left: 295px;
+    }
+
+    .containerTromba {
+    }
+
+    .containerCasa img {
+        height: 454px;
+        width: 555.99px;
+    }
+
+    .containerLadron img {
+        height: 150px;
+        width: 119.81px;
+    }
+
+    .containerTormeta img {
+        height: 217px;
+        width: 296.95px;
+    }
+
+    .containerTromba img {
+        height: 301px;
+        width: 339.18px;
+    }
+
+    .contactanos {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        margin-top: 0;
+    }
+
+        .contactanos .divFrame {
+            padding-right: 25px;
+        }
+
+            .contactanos .divFrame .mapa {
+                height: 260px;
+                width: 438px;
+                float: right;
+            }
+
+        .contactanos .divContacto {
+            padding-top: 15px;
+            padding-left: 25px;
+        }
+
+    .containerForm {
+        max-width: 613px;
+        padding: 67px 55px !important;
+    }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1500px) {
+    #mainContainer {
+        background: url('../../images/Hogar/img-bacground-nubes-Hogar.png') no-repeat;
+        background-size: contain;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+
+    .itemsContainer {
+        background: none;
+        height: 600px;
+    }
+
+    .fold-uno {
+        max-width: 1440px;
+        height: 700px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        background: url('../../images/Hogar/img-background-Hogar.png') no-repeat;
+        background-size: contain;
+        padding-left: 88px;
+        padding-right: 40px;
+        justify-content: space-between;
+        background-position-y: 310px;
+    }
+
+    .containerHeroText {
+        max-width: 514px;
+    }
+
+
+    .containerCasa {
+        bottom: 245px;
+        left: -20px;
+    }
+
+    .containerLadron {
+        bottom: 200px;
+        left: -55px;
+    }
+
+    .containerTormeta {
+        bottom: 205px;
+        left: 480px;
+        z-index: 2;
+    }
+
+    .containerTromba {
+        bottom: 230px;
+        left: 420px;
+    }
+
+    .containerCasa img {
+        height: 454px;
+        width: 555.99px;
+    }
+
+    .containerLadron img {
+        height: 150px;
+        width: 119.81px;
+    }
+
+    .containerTormeta img {
+        height: 217px;
+        width: 296.95px;
+    }
+
+    .containerTromba img {
+        height: 410px;
+        width: 390px;
+    }
+
+    .contactanos {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        margin-top: 0;
+    }
+
+        .contactanos .divFrame {
+            padding-right: 25px;
+        }
+
+            .contactanos .divFrame .mapa {
+                height: 260px;
+                width: 438px;
+                float: right;
+            }
+
+        .contactanos .divContacto {
+            padding-top: 15px;
+            padding-left: 25px;
+        }
+
+    .containerForm {
+        max-width: 613px;
+        padding: 67px 55px !important;
+    }
+}
+
+
+@media (min-width: 1500px) and (max-width: 2000px) {
+    html body {
+        font-size: 18px;
+    }
+
+    #mainContainer {
+        background: url('../../images/Hogar/img-bacground-nubes-Hogar.png') no-repeat;
+        background-size: 100% 35%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+
+    .itemsContainer {
+        background: none;
+        height: 600px;
+    }
+
+    .fold-uno {
+        max-width: 1440px;
+        height: 700px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        background: url('../../images/Hogar/img-background-Hogar.png') no-repeat;
+        background-size: contain;
+        padding-left: 88px;
+        padding-right: 40px;
+        justify-content: space-between;
+        background-position-y: 310px;
+    }
+
+    .containerHeroText {
+        max-width: 514px;
+    }
+
+
+    .containerCasa {
+        bottom: 245px;
+        left: -20px;
+    }
+
+    .containerLadron {
+        bottom: 200px;
+        left: -55px;
+    }
+
+    .containerTormeta {
+        bottom: 205px;
+        left: 480px;
+        z-index: 2;
+    }
+
+    .containerTromba {
+        bottom: 280px;
+        left: 280px;
+    }
+
+    .containerCasa img {
+        height: 454px;
+        width: 555.99px;
+    }
+
+    .containerLadron img {
+        height: 150px;
+        width: 119.81px;
+    }
+
+    .containerTormeta img {
+        height: 217px;
+        width: 296.95px;
+    }
+
+    .containerTromba img {
+        height: 410px;
+        width: 390px;
+    }
+
+    .contactanos {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        margin-top: 0;
+    }
+
+        .contactanos .divFrame {
+            padding-right: 25px;
+        }
+
+            .contactanos .divFrame .mapa {
+                height: 260px;
+                width: 438px;
+                float: right;
+            }
+
+        .contactanos .divContacto {
+            padding-top: 15px;
+            padding-left: 25px;
+        }
+
+    .containerForm {
+        max-width: 613px;
+        padding: 67px 55px !important;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    html body {
+        font-size: 18px;
+    }
+
+    #mainContainer {
+        background: url('../../images/Hogar/img-bacground-nubes-Hogar.png') no-repeat;
+        background-size: 100% 35%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+
+    .itemsContainer {
+        background: none;
+        height: 600px;
+    }
+
+    .fold-uno {
+        max-width: 1440px;
+        height: 700px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        background: url('../../images/Hogar/img-background-Hogar.png') no-repeat;
+        background-size: contain;
+        padding-left: 88px;
+        padding-right: 40px;
+        justify-content: space-between;
+        background-position-y: 310px;
+    }
+
+    .containerHeroText {
+        max-width: 514px;
+    }
+
+
+    .containerCasa {
+        bottom: 245px;
+        left: -20px;
+    }
+
+    .containerLadron {
+        bottom: 200px;
+        left: -55px;
+    }
+
+    .containerTormeta {
+        bottom: 205px;
+        left: 480px;
+        z-index: 2;
+    }
+
+    .containerTromba {
+        bottom: 280px;
+        left: 280px;
+    }
+
+    .containerCasa img {
+        height: 454px;
+        width: 555.99px;
+    }
+
+    .containerLadron img {
+        height: 150px;
+        width: 119.81px;
+    }
+
+    .containerTormeta img {
+        height: 217px;
+        width: 296.95px;
+    }
+
+    .containerTromba img {
+        height: 410px;
+        width: 390px;
+    }
+
+    .contactanos {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        margin-top: 0;
+    }
+
+        .contactanos .divFrame {
+            padding-right: 25px;
+        }
+
+            .contactanos .divFrame .mapa {
+                height: 260px;
+                width: 438px;
+                float: right;
+            }
+
+        .contactanos .divContacto {
+            padding-top: 15px;
+            padding-left: 25px;
+        }
+
+    .containerForm {
+        max-width: 613px;
+        padding: 67px 55px !important;
+    }
+}

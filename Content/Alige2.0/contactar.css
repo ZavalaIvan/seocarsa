@@ -1,0 +1,194 @@
+﻿.producto {
+    padding-top: 8.5rem;
+    padding-bottom: 3rem;
+}
+
+.producto .col-12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto-h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    color: var(--a-color-dark);
+    margin-bottom: 2rem;
+}
+
+.producto-p {
+    text-align: center;
+    font-size: 1.60188rem;
+    font-weight: 700;
+    line-height: 2rem;
+    color: var(--a-color-dark);
+    margin-bottom: 2rem;
+}
+
+.producto-p span {
+    color: #274470;
+}
+
+.producto select {
+    display: flex;
+    width: 19.875rem;
+    padding: 1.25rem 1.5rem;
+    align-items: center;
+    gap: 7.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--a-color-primary-50);
+    background: #fff;
+    box-shadow: 0px 15px 15px 0px rgba(134, 101, 230, 0.1);
+    color: #274470;
+    text-align: left;
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1rem;
+}
+
+.producto select:focus {
+    box-shadow: none;
+}
+
+.asesoria {
+    --bs-gutter-x: 0;
+    background: var(--a-color-primary-30);
+    padding-top: 2.8rem;
+    padding-bottom: 9.44rem;
+}
+
+.asesoria.disabled {
+    opacity: 0.4;
+}
+
+.cards {
+    display: flex;
+    gap: 3.13rem;
+    justify-content: center;
+}
+
+.card {
+    width: 20rem;
+    height: 16.9375rem;
+    border-radius: 2.5rem;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2.5rem;
+}
+
+.card svg {
+    width: 3rem;
+    height: 3rem;
+}
+
+.card h6 {
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.card .btn {
+    width: 100%;
+    padding: 1.25rem 2rem;
+}
+
+.card button:disabled {
+    border: 2px solid var(--a-color-secondary);
+    background: var(--a-color-secondary);
+    color: var(--a-color-dark);
+    opacity: 1;
+}
+
+.asesoria-p {
+    text-align: center;
+    font-size: 1.60188rem;
+    font-weight: 700;
+    line-height: 2rem;
+    color: var(--a-color-dark);
+    margin-bottom: 2.3rem;
+}
+
+.asesoria-p span {
+    color: #274470;
+}
+
+@media only screen and (max-width: 991px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto {
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+    }
+
+    .producto-h1 {
+        font-size: 1.60188rem;
+        font-weight: 700;
+        line-height: 2rem;
+        margin-bottom: 5rem;
+    }
+
+    .producto-p,
+    .asesoria-p {
+        font-size: 1.26563rem;
+        line-height: 1.625rem;
+    }
+
+    .producto-p {
+        margin-bottom: 1.56rem;
+    }
+
+    .producto select {
+        width: 90%;
+    }
+
+    .card {
+        width: 100%;
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .producto-h1 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .producto select {
+        width: 50%;
+    }
+    .card {
+        width: 50%;
+    }
+}
+
+@media (min-width: 451px) and (max-width: 769px) {
+    .producto,
+    .asesoria .container {
+        --bs-gutter-x: 2rem;
+        --bs-gutter-y: 2rem;
+    }
+}
+
+@media (min-width: 359px) and (max-width: 450px) {
+    .producto,
+    .asesoria .container {
+        --bs-gutter-x: 1.6rem;
+        --bs-gutter-y: 1.6rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .asesoria .container {
+        --bs-gutter-x: 0.75rem;
+        --bs-gutter-y: 0.75rem;
+    }
+}

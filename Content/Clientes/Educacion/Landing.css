@@ -1,0 +1,647 @@
+html, html body {
+    font-size: 16px;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.backColorTransparent {
+    padding: 26px 2% 16px;
+}
+
+
+.btnPrincipal,
+.btnPrincipal:focus,
+.btnPrincipal:hover,
+.btnPrincipal:active {
+    padding: 8px 36px;
+    font-size: 1.5rem;
+    border-radius: 43.5px;
+    background: #FF8E3D;
+    height: auto;
+}
+
+.cotiza_ahora {
+    background-color: #ffffff;
+    height: 750px;
+    padding: 6% 6% 0 6%;
+    background: url('../../images/Educacion/img-background-allianz.png') no-repeat bottom left;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    text-align: center;
+}
+
+    .cotiza_ahora .div-titulos h1 {
+        color: #0A357C;
+        font-size: 2.875rem;
+        font-weight: normal;
+        letter-spacing: 0;
+        line-height: 2.875rem;
+        margin-bottom: 15px;
+    }
+
+    .cotiza_ahora .div-subtitulos h2 {
+        color: #0A357C;
+        font-size: 1.5625rem;
+        font-weight: 600;
+        letter-spacing: 0;
+        line-height: 1.5625rem;
+        margin-top: 15px;
+    }
+
+
+    .cotiza_ahora .div-titulos .div-aseguradora {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .cotiza_ahora .div-titulos .div-aseguradora img {
+            height: 100%;
+            width: 10.1875rem;
+            margin-right: 33px;
+        }
+
+        .cotiza_ahora .div-titulos .div-aseguradora p {
+            color: #044B93;
+            font-size: 1.5rem;
+            letter-spacing: 0;
+            line-height: 1.29rem;
+        }
+
+    .cotiza_ahora .div-formulario {
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+        .cotiza_ahora .div-formulario .formulario {
+            height: 100%;
+            width: 605px;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            box-shadow: 0 2px 22px 0 #EBEBEB;
+            padding: 34px;
+        }
+
+            .cotiza_ahora .div-formulario .formulario .div-campos {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+                .cotiza_ahora .div-formulario .formulario .div-campos > div {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin-bottom: 25px;
+                    flex-wrap: nowrap;
+                }
+
+                .cotiza_ahora .div-formulario .formulario .div-campos p {
+                    color: #5A6366;
+                    font-size: 1.75rem;
+                    letter-spacing: 0;
+                    line-height: 1.28rem;
+                }
+
+                    .cotiza_ahora .div-formulario .formulario .div-campos p.title_error {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        text-align: center !important;
+                        margin: 0 !important;
+                    }
+
+                .cotiza_ahora .div-formulario .formulario .div-campos .form-control {
+                    height: 45px;
+                    border-radius: 10px;
+                    background-color: #F9F9F9;
+                    padding: 9px 13px;
+                    font-size: 1.25rem;
+                }
+
+                .cotiza_ahora .div-formulario .formulario .div-campos .div-edad,
+                .cotiza_ahora .div-formulario .formulario .div-campos .div-edad-hijo {
+                    position: relative;
+                    margin-left: 15px;
+                    margin-right: 20px;
+                    width: 100px;
+                }
+
+                .cotiza_ahora .div-formulario .formulario .div-campos .div-edad-hijo {
+                    margin-right: 0px;
+                }
+
+                .cotiza_ahora .div-formulario .formulario .div-campos .div-genero {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .cotiza_ahora .div-formulario .formulario .div-campos .div-genero-hijo {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .cotiza_ahora .div-formulario .formulario .div-campos .div-monto {
+                    position: relative;
+                    margin-left: 15px;
+                    width: 263px;
+                    text-align: center;
+                }
+
+                    .cotiza_ahora .div-formulario .formulario .div-campos .div-monto .form-control {
+                        font-size: 0.8125rem;
+                    }
+
+                .cotiza_ahora .div-formulario .formulario .div-campos .div-periodo {
+                    position: relative;
+                    margin-left: 15px;
+                    width: 90px;
+                }
+
+                    .cotiza_ahora .div-formulario .formulario .div-campos .div-periodo .form-control {
+                        font-size: 0.8125rem;
+                        background: url(../../img/icn-dropdown-select.svg) no-repeat right #FFFFFF;
+                        background-color: #ffffff;
+                        -webkit-appearance: none;
+                        background-position: right 0px center;
+                    }
+
+                .cotiza_ahora .div-formulario .formulario .div-campos .div-edad .title_error,
+                .cotiza_ahora .div-formulario .formulario .div-campos .div-edad-hijo .title_error {
+                    left: -52px;
+                    bottom: -20px;
+                    width: 200px;
+                }
+
+                .cotiza_ahora .div-formulario .formulario .div-campos .div-genero .title_error {
+                    left: -44px;
+                    bottom: -20px;
+                    width: 200px;
+                }
+
+                .cotiza_ahora .div-formulario .formulario .div-campos .div-genero-hijo .title_error {
+                    left: 0;
+                    bottom: -20px;
+                    width: 200px;
+                }
+
+                .cotiza_ahora .div-formulario .formulario .div-campos .div-monto .title_error {
+                    left: 0;
+                    bottom: -20px;
+                    width: 100%;
+                }
+
+                .cotiza_ahora .div-formulario .formulario .div-campos .div-periodo .title_error {
+                    left: 0;
+                    bottom: -20px;
+                    width: 90px;
+                }
+
+            .cotiza_ahora .div-formulario .formulario .btnPrincipal {
+                margin-top: 15px;
+            }
+
+.div-genero .btn {
+    height: 40px;
+    width: 28px;
+    background: transparent;
+}
+
+    .div-genero .btn#btn_genero_h {
+        margin-left: 15px;
+        margin-right: 10px;
+    }
+
+    .div-genero .btn#btn_genero_m {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+
+    .div-genero .btn img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .div-genero .btn .icn-inactivo {
+        display: block;
+    }
+
+    .div-genero .btn .icn-activo {
+        display: none;
+    }
+
+    .div-genero .btn.activo .icn-inactivo {
+        display: none;
+    }
+
+    .div-genero .btn.activo .icn-activo {
+        display: block;
+    }
+
+.div-genero-hijo .btn {
+    height: 40px;
+    width: 83px;
+    border-radius: 4px;
+    background-color: #D8D8D8;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 27px;
+}
+
+    .div-genero-hijo .btn#btn_genero_hijo_h {
+        margin-left: 15px;
+        margin-right: 5px;
+    }
+
+    .div-genero-hijo .btn#btn_genero_hijo_m {
+        margin-right: 15px;
+        margin-left: 5px;
+    }
+
+    .div-genero-hijo .btn img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .div-genero-hijo .btn.activo {
+        background-color: #A9C23E;
+    }
+
+
+.aseguradora {
+    height: 100%;
+    background-color: #F9F9F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.2% 0;
+}
+
+    .aseguradora .p0 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aseguradora img {
+        height: 100%;
+        width: 186px;
+        margin: 0 25px;
+    }
+
+    .aseguradora p {
+        color: #044B93;
+        font-size: 1.5rem;
+        letter-spacing: 0;
+        line-height: 1.29rem;
+    }
+
+.contactanos {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+    .contactanos .divFrame {
+        padding-right: 25px;
+    }
+
+        .contactanos .divFrame .mapa {
+            height: 260px;
+            width: 438px;
+            float: right;
+        }
+
+            .contactanos .divFrame .mapa iframe {
+                height: 100%;
+                width: 100%;
+                border-radius: 0px;
+            }
+
+    .contactanos .divContacto {
+        padding-top: 15px;
+        padding-left: 25px;
+    }
+
+        .contactanos .divContacto h1 {
+            color: #0A357C;
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 0;
+            line-height: 1.29rem;
+            margin-top: 25px;
+            margin-bottom: 13px;
+        }
+
+        .contactanos .divContacto h2 {
+            color: #0A357C;
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0;
+            line-height: 1.25rem;
+        }
+
+        .contactanos .divContacto p {
+            color: #8A98A9;
+            font-size: 1.125rem;
+            letter-spacing: 0;
+            line-height: 1.27rem;
+        }
+
+        .contactanos .divContacto .p_whatsapp {
+            margin-top: 20px;
+        }
+
+            .contactanos .divContacto .p_whatsapp .icn_whatsapp {
+                height: 22px;
+                width: 22px;
+                margin-top: -2px;
+                margin-right: 10px;
+            }
+
+
+/*Media query*/
+@media (min-width: 2500px) {
+    .cotiza_ahora {
+        height: 1200px;
+        padding: 6% 6% 0 6%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+
+        .cotiza_ahora .div-formulario .formulario {
+            width: 920px;
+            padding: 40px 34px;
+        }
+
+            .cotiza_ahora .div-formulario .formulario .div-campos .div-edad,
+            .cotiza_ahora .div-formulario .formulario .div-campos .div-edad-hijo {
+                width: 150px;
+            }
+
+            .cotiza_ahora .div-formulario .formulario .div-campos .div-monto {
+                width: 400px;
+            }
+
+            .cotiza_ahora .div-formulario .formulario .div-campos .div-periodo {
+                width: 130px;
+            }
+
+            .cotiza_ahora .div-formulario .formulario .div-campos .form-control {
+                height: 70px;
+            }
+
+    .contactanos .divFrame .mapa {
+        height: 360px;
+        width: 538px;
+        float: right;
+    }
+}
+
+@media (min-width: 1800px) and (max-width: 2500px) {
+    .cotiza_ahora {
+        height: 900px;
+        padding: 6% 6% 0 6%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+
+        .cotiza_ahora .div-formulario .formulario {
+            width: 670px;
+        }
+
+            .cotiza_ahora .div-formulario .formulario .div-campos .div-edad,
+            .cotiza_ahora .div-formulario .formulario .div-campos .div-edad-hijo {
+                width: 118px;
+            }
+
+            .cotiza_ahora .div-formulario .formulario .div-campos .div-monto {
+                width: 285px;
+            }
+
+            .cotiza_ahora .div-formulario .formulario .div-campos .div-periodo {
+                width: 100px;
+            }
+
+            .cotiza_ahora .div-formulario .formulario .div-campos .form-control {
+                height: 60px;
+            }
+}
+
+@media (max-width: 1380px) {
+    .cotiza_ahora {
+        height: 780px;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        background-size: contain;
+    }
+}
+
+@media (max-width: 1300px) {
+    .cotiza_ahora {
+        height: 775px;
+    }
+}
+
+@media (max-width: 1220px) {
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 991px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .cotiza_ahora {
+        height: 790px;
+        padding: 14% 6% 0 6%;
+    }
+
+    .contactanos .divFrame {
+        padding-right: 25px;
+        padding-left: 25px;
+        text-align: center;
+    }
+
+        .contactanos .divFrame .mapa {
+            height: 260px;
+            width: 438px;
+            float: none;
+            margin: auto;
+        }
+
+            .contactanos .divFrame .mapa iframe {
+                height: 100%;
+                width: 100%;
+                border-radius: 0px;
+            }
+
+    .contactanos .divContacto {
+        padding-top: 40px;
+        padding-left: 22%;
+        padding-right: 22%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .cotiza_ahora {
+        padding: 28% 15px 0 15px;
+        background: url(../../images/Vida/img-background-nubes-movil.png) no-repeat top left;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        background-size: contain;
+        height: 100%;
+    }
+
+        .cotiza_ahora .div-titulos h1 {
+            font-size: 1.6rem;
+            padding: 0;
+        }
+
+    .cotiza_ahora .div-subtitulos h2 {
+    font-size: 1rem;
+}
+
+        .cotiza_ahora .div-titulos .div-aseguradora p {
+            font-size: 0.875rem;
+        }
+
+        .cotiza_ahora .div-titulos .div-aseguradora img {
+            width: 7rem;
+            margin-right: 18px;
+        }
+
+        .cotiza_ahora .div-formulario .formulario .div-campos .div-edad,
+        .cotiza_ahora .div-formulario .formulario .div-campos .div-edad-hijo {
+            margin: 0 10px;
+            width: 92px;
+        }
+    
+.cotiza_ahora .div-formulario .formulario .div-campos .div-edad-hijo {
+    margin-right: 0px;
+}
+        .cotiza_ahora .div-formulario .formulario {
+            width: 100%;
+            padding: 35px 10px;
+        }
+
+            .cotiza_ahora .div-formulario .formulario .div-campos p {
+                font-size: 1.125rem;
+            }
+
+            .cotiza_ahora .div-formulario .formulario .div-campos .div-monto {
+                margin-left: 10px;
+                width: 50%;
+            }
+
+            .cotiza_ahora .div-formulario .formulario .div-campos .div-periodo {
+                margin-left: 9px;
+                width: 55px;
+            }
+
+            .cotiza_ahora .div-formulario .formulario .div-campos > div {
+                justify-content: center;
+                width: 100%;
+            }
+.cotiza_ahora .div-formulario .formulario .div-campos .form-control {
+    font-size: 1.125rem;
+}
+            .cotiza_ahora .div-formulario .formulario .div-campos .div-monto .form-control {
+                font-size: 0.625rem;
+                padding: 9px 8px;
+            }
+
+    .cotiza_ahora .div-formulario .formulario .div-campos .div-periodo .form-control{
+                font-size: 0.75rem;
+                padding: 0px 14px 0px 0px;
+                height: 28px;
+                background: url(../../img/icn-dropdown-select.svg) no-repeat right transparent;
+                -webkit-appearance: none;
+                background-color: transparent;
+                border: 0px solid #E5E8ED;
+                -webkit-box-shadow: 0 0 0 0 #e5e8ed;
+                -moz-box-shadow: 0 0 0 0 #e5e8ed;
+    }
+    
+.div-genero-hijo .btn {
+    height: 40px;
+    width: 60px;
+}
+
+    .div-genero-hijo .btn#btn_genero_hijo_h {
+        margin-left: 10px;
+        margin-right: 2px;
+    }
+
+    .div-genero-hijo .btn#btn_genero_hijo_m {
+        margin-right: 10px;
+        margin-left: 2px;
+    }
+
+    .aseguradora {
+    padding: 18px 20px;
+}
+
+    .aseguradora .p0 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+    .aseguradora img {
+        width: 127px;
+        margin: 0 12px;
+    }
+
+    .aseguradora p {
+        color: #044B93;
+        font-size: 1rem;
+        letter-spacing: 0;
+        line-height: 1.9rem;
+        text-align: center;
+    }
+    
+    .contactanos {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+        .contactanos .divContacto {
+            padding: 50px 32px;
+        }
+
+        .contactanos .divFrame {
+            padding: 0px;
+        }
+
+            .contactanos .divFrame .mapa {
+                height: 224px;
+                width: 100%;
+                float: none;
+            }
+}
+
+@media (max-width: 320px) {
+    .cotiza_ahora .div-formulario .formulario .div-campos > div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

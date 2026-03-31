@@ -1,0 +1,4 @@
+*.zip
+*.log
+smtp-debug.log
+error_log

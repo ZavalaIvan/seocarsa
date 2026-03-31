@@ -1,0 +1,359 @@
+.footer {
+    padding-top: 24px;
+    padding-bottom: 0;
+    background-color: #FAFAFA;
+}
+
+.footer .borde {
+    border-left: 2px solid;
+}
+
+.footer h2 {
+    color: #424749;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.25em;
+    margin-bottom: 24px;
+    margin-top: 46px;
+}
+
+.footer p {
+    color: #424749;
+    font-size: 0.875em;
+    letter-spacing: 0;
+    line-height: 1.285em;
+    margin-bottom: 6px;
+}
+
+.footer h2 a,
+.footer p a {
+    color: #424749;
+}
+
+.footer .divContenedorSeguros {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.footer .divContenedorSeguros .divBorde {
+    background-color: #EBEAEC;
+    width: 1px;
+    height: auto;
+    margin-top: 45px;
+    margin-bottom: 10px;
+}
+
+.footer .divContenedorMarcas {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.footer .divContenedorMarcasGNP {
+    justify-content: center;
+    padding-left: 0%;
+    padding-right: 0%;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.footer .icn_cnsf {
+    display: block;
+    height: 51px;
+    width: auto;
+}
+
+.footer .icn_amazon {
+    display: block;
+    margin-top: 37px;
+    height: 54px;
+    width: auto;
+}
+
+.divContenedorMarcasGNP .marcasFlex .icn_amazon {
+    margin: 0px;
+}
+
+.footer .divTerminos {
+    margin-top: 23px;
+    text-align: center;
+    padding-top: 19px;
+    padding-bottom: 23px;
+}
+
+.footer .divTerminos h3 {
+    color: #424749;
+    font-size: 1em;
+    letter-spacing: 0;
+    line-height: 1.25em;
+}
+
+.footer .divTerminos h3 a {
+    color: #424749;
+    text-decoration: underline;
+}
+
+.vtnEmergente {
+    width: 384px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.12);
+    position: fixed;
+    right: 50px;
+    top: auto;
+    bottom: 0;
+    padding: 20px 35px;
+    z-index: 1000;
+}
+
+.vtnEmergente .cerrar,
+.vtnEmergente .divContenido {
+    display: block;
+}
+
+.vtnEmergente .abrir {
+    display: none;
+}
+
+.vtnEmergente.cerrado .cerrar,
+.vtnEmergente.cerrado .divContenido {
+    display: none;
+}
+
+.vtnEmergente.cerrado .abrir {
+    display: block;
+}
+
+.vtnEmergente .btnCerrar {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    background-color: transparent;
+}
+
+.vtnEmergente .btnCerrar .material-icons {
+    font-size: 3em;
+    color: #003460;
+}
+
+.vtnEmergente h1 {
+    color: #003460;
+    font-size: 1.375em;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 30px;
+    text-align: center;
+}
+
+.vtnEmergente p {
+    color: #17345A;
+    font-size: 1em;
+    letter-spacing: 0;
+    line-height: 1.125em;
+    text-align: center;
+    margin-top: 13px;
+}
+
+.vtnEmergente .btnTelefono {
+    width: 100%;
+    height: 60px;
+    border: 2px solid #1B3572;
+    background-color: transparent;
+    border-radius: 12px;
+    color: #1B3572;
+    font-size: 1.25em;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 27px;
+    margin-top: 26px;
+}
+
+.vtnEmergente .btnTelefono .material-icons {
+    position: absolute;
+    left: 84px;
+    font-size: 1em;
+}
+
+.vtnEmergente .btnWhatsapp {
+    width: 100%;
+    height: 60px;
+    border-radius: 12px;
+    background-color: #25D366;
+    color: #FFFFFF;
+    font-size: 1.25em;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 27px;
+    margin-top: 11px;
+}
+
+.vtnEmergente .btnWhatsapp .icn_whatsapp {
+    position: absolute;
+    left: 84px;
+}
+
+.vtnEmergente .divTitulo {
+    cursor: pointer;
+}
+
+.marcasFlex{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.divContenedorMarcasGNP .marcasFlex {
+    flex-direction: row;
+    gap: 40px;
+}
+
+.contenedorMarcas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 40px;
+}
+
+/*Media query*/
+@media (min-width: 2500px) {
+    .footer .icn_cnsf {
+        height: 70px;
+    }
+
+    .footer .icn_amazon {
+        height: 70px;
+    }
+
+    .vtnEmergente {
+        width: 484px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .vtnEmergente {
+        width: 340px;
+        right: 10px;
+    }
+
+    .vtnEmergente .btnTelefono .material-icons {
+        left: 74px;
+    }
+
+
+    .vtnEmergente .btnWhatsapp .icn_whatsapp {
+        left: 74px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer .divContenedorSeguros {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .footer .divContenedorMarcas {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .footer {
+        margin-bottom: 70px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .footer .divContenedorSeguros .divBorde {
+        display: none;
+    }
+
+    .footer .divContenedorSeguros .divSeguros {
+        width: 50%;
+        float: left;
+    }
+
+    .footer .divContenedorSeguros .divSeguros-lg {
+        width: 50%;
+        float: left;
+    }
+
+    .footer {
+        margin-bottom: 70px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .footer .divTerminos {
+        margin-top: 10px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .footer p {
+        margin-bottom: 10px;
+    }
+
+    .vtnEmergente {
+        width: 90%;
+        right: 5%;
+    }
+
+    .accordion {
+        background-color: #FAFAFA;
+        color: #424749;
+        cursor: pointer;
+        padding: 10px 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+    }
+
+    .accordion.active, .accordion:hover {
+        background-color: #FAFAFA;
+        color: #424749 !important;
+    }
+
+    .accordion .material-icons {
+        float: right;
+        font-size: 20px;
+        color: #424749;
+    }
+
+    .accordion .cerrar {
+        display: block;
+    }
+
+    .accordion .abrir {
+        display: none;
+    }
+
+    .accordion.active .cerrar {
+        display: none;
+    }
+
+    .accordion.active .abrir {
+        display: block;
+    }
+
+    .panelAccordion {
+        padding: 0 32px !important;
+        display: none;
+        background-color: #FAFAFA;
+        overflow: hidden;
+    }
+
+    .panelAccordion .divMarca {
+        width: 50%;
+        float: left;
+    }
+}

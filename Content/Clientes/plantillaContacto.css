@@ -1,0 +1,391 @@
+﻿.main-container {
+  padding: 4% 5%;
+}
+
+.navbar-nav > li > a {
+  padding: 10px 0;
+}
+
+.title-container {
+  text-align: center;
+  color: #1E3575;
+  margin-bottom: 24px;
+}
+
+  .title-container h1 {
+      font-size: 2em;
+      letter-spacing: 0;
+      line-height: 1.3em;
+      margin-bottom: 24px;
+  }
+
+  .title-container h2 {
+      font-size: 1.25em;
+      letter-spacing: 0;
+      line-height: 1.5em;
+      margin-bottom: 24px;
+      font-weight: bold;
+  }
+
+  .title-container p {
+      font-size: 0.85em;
+      letter-spacing: 0;
+      line-height: 1.3em;
+      padding: 0 3%;
+  }
+
+.form-container {
+  padding: 0 7%;
+  margin-bottom: 48px;
+  width: 100%;
+}
+
+  .form-container .field-container {
+      margin-bottom: 0px;
+  }
+
+
+      .form-container .field-container .titleLabel {
+          color: #525668;
+          font-size: 0.85em;
+          letter-spacing: 0;
+          line-height: 0.5625em;
+          margin-left: 16px;
+          font-weight: normal;
+      }
+
+      .form-container .field-container input, .form-container .field-container select, .form-container .field-container textarea {
+          width: 100%;
+          border: 1px solid #C1C7DF;
+          border-radius: 8px;
+          padding: 8px 0 8px 16px;
+          font-size: 0.85em;
+          letter-spacing: 0;
+          line-height: 0.5625em;
+      }
+
+
+.field-container textarea {
+  height: 80px !important;
+  padding-top: 13px !important;
+}
+
+.form-container .field-container input:hover, .form-container .field-container select:hover, .form-container .field-container textarea:hover {
+  color: #989CB2;
+}
+
+.form-container .field-container input:active, .form-container .field-container select:active, .form-container .field-container textarea:active, .form-container .field-container input:focus, .form-container .field-container select:focus, .form-container .field-container textarea:focus {
+  border: 1px solid #1E4BD2;
+  color: #1E4BD2;
+}
+
+.field-container label.wpforms-error {
+  width: 100%;
+  color: #FD2D57;
+  font-size: 0.9em;
+  line-height: 1em;
+  font-weight: normal;
+  text-align: right;
+}
+
+.btnSend-Container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+  .btnSend-Container button {
+      padding: 8px 24px;
+      background-color: #1E4BD2;
+      color: #fff;
+      border-radius: 60px;
+      border: none;
+      box-shadow: none;
+      height: 48px;
+      width: 200px;
+      font-weight: 700;
+      font-family: var(--fuente-principal);
+      font-size: 1.125em;
+      transition: all 0.2s ease;
+  }
+
+      .btnSend-Container button:hover {
+          box-shadow: 0 5px #1E4BD2;
+          transform: translateY(-5px);
+          background: #1E3575 !important;
+      }
+
+      .btnSend-Container button:focus, .btnSend-Container button:active, .btnSend-Container button:focus-visible {
+          transform: translateY(4px);
+          background: #1E4BD2;
+          outline: 0 !important
+      }
+
+.img-container {
+  position: relative;
+  text-align: center;
+}
+
+  .img-container img {
+      height: 262px;
+      width: 366px;
+  }
+
+
+.blurAmarillo {
+  position: absolute;
+  height: 173.94px;
+  width: 173.94px;
+  border-radius: 9999px;
+  background-color: rgba(255, 179, 0, 0.67);
+  top: 3%;
+  left: 23%;
+  filter: blur(95px);
+  z-index: -2;
+}
+
+.blurAzulMarino {
+  position: absolute;
+  height: 225.42px;
+  width: 225.42px;
+  border-radius: 9999px;
+  background-color: rgba(28, 96, 255, 0.43);
+  filter: blur(110px);
+  z-index: -1;
+  bottom: 0%;
+  right: 20%;
+}
+
+#modalContratacion .blurAmarillo {
+  position: absolute;
+  height: 110px;
+  width: 110px;
+  border-radius: 9999px;
+  background-color: rgba(255, 179, 0, 0.67);
+  top: 45%;
+  left: 10%;
+  filter: blur(95px);
+  z-index: -2;
+}
+
+#modalContratacion .blurAzulMarino {
+  position: absolute;
+  height: 170px;
+  width: 170px;
+  top: 40%;
+  left: 41%;
+  filter: blur(50px);
+  border-radius: 9999px;
+  background-color: rgba(28, 96, 255, 0.43);
+  z-index: -1;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .title-container p {
+      font-size: 1em;
+  }
+
+  .field-container-desktop {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 24px;
+  }
+
+      .field-container-desktop .field-container {
+          width: 100%;
+      }
+
+  .field-container textarea {
+      height: 112px !important;
+  }
+
+  #modalContratacion .blurAmarillo {
+      height: 160px;
+      width: 160px;
+      top: 47%;
+      left: 20%;
+      filter: blur(80px);
+  }
+
+  #modalContratacion .blurAzulMarino {
+      height: 215.41px;
+      width: 215.41px;
+      bottom: 17%;
+      right: 25%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title-container h1 {
+      font-size: 3em;
+      letter-spacing: 0;
+      line-height: 1.25em;
+  }
+
+  .title-container h2 {
+      font-size: 2em;
+      letter-spacing: 0;
+      line-height: 2.1875em;
+  }
+
+  .title-container p {
+      font-size: 1em;
+      letter-spacing: 0;
+      line-height: 1.4em;
+      padding: 0 17%;
+  }
+
+  .imgForm-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 64px;
+      align-items: center;
+  }
+
+  .field-container-desktop {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 24px;
+  }
+
+      .field-container-desktop .field-container {
+          width: 100%;
+      }
+
+  .btnSend-Container {
+      justify-content: start;
+  }
+
+  .imgForm-container {
+      justify-content: center;
+      width: 95%;
+  }
+
+      .imgForm-container .form-container {
+          width: 85%;
+      }
+
+      .imgForm-container .img-container {
+          width: 60%;
+      }
+
+  .blurAmarillo {
+      top: -2%;
+      left: 5%;
+  }
+
+  .blurAzulMarino {
+      bottom: 30%;
+      right: 0%;
+  }
+
+  .form-container .field-container textarea {
+      height: 112px;
+  }
+
+  #modalContratacion .blurAmarillo {
+      height: 160px;
+      width: 160px;
+      top: 47%;
+      left: 20%;
+      filter: blur(80px);
+  }
+
+  #modalContratacion .blurAzulMarino {
+      height: 215.41px;
+      width: 215.41px;
+      bottom: 17%;
+      right: 25%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .img-container img {
+      Width: 512px;
+      Height: 366px;
+  }
+
+  #modalContratacion .blurAmarillo {
+      height: 160px;
+      width: 160px;
+      top: 47%;
+      left: 20%;
+      filter: blur(80px);
+  }
+
+  #modalContratacion .blurAzulMarino {
+      height: 215.41px;
+      width: 215.41px;
+      bottom: 17%;
+      right: 25%;
+  }
+}
+
+@media (min-width: 1800px) and (max-width: 2500px) {
+  html body {
+      font-size: 18px;
+  }
+
+  .main-container {
+      padding: 4% 13%;
+  }
+
+  .divWordpress {
+      margin-top: 116px;
+  }
+
+  .title-container p {
+      padding: 0 24%;
+  }
+
+  #modalContratacion .blurAmarillo {
+      height: 160px;
+      width: 160px;
+      top: 47%;
+      left: 20%;
+      filter: blur(80px);
+  }
+
+  #modalContratacion .blurAzulMarino {
+      height: 215.41px;
+      width: 215.41px;
+      bottom: 17%;
+      right: 25%;
+  }
+}
+
+@media (min-width: 2500px) {
+  html body {
+      font-size: 26px;
+  }
+
+  .main-container {
+      padding: 4% 15%;
+  }
+
+  .divWordpress {
+      margin-top: 168px;
+  }
+
+  #modalContratacion .blurAmarillo {
+      height: 160px;
+      width: 160px;
+      top: 47%;
+      left: 20%;
+      filter: blur(80px);
+  }
+
+  #modalContratacion .blurAzulMarino {
+      height: 215.41px;
+      width: 215.41px;
+      bottom: 17%;
+      right: 25%;
+  }
+}

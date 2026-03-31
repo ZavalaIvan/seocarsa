@@ -1,0 +1,163 @@
+html body {
+    font-size: 16px;
+}
+
+body {
+    color: #0A0A0A;
+}
+
+
+.main-container {
+    padding: 100px 0 3.37rem;
+}
+
+.container, .col-xs-12.calendar-container {
+    padding: 0px
+}
+
+h1 {
+    font-size: 2.44125rem;
+    line-height: 2.9375rem;
+    margin-bottom: 0.94rem;
+}
+
+p {
+    font-size: 1.47656rem;
+    line-height: 1.96875rem;
+    margin-bottom: 1rem;
+}
+
+    p.highlight {
+        font-size: 1.47656rem;
+        margin-bottom: 50px;
+        line-height: 1.96875rem;
+    }
+
+.text-container {
+    width: 100%;
+}
+
+.calendar-frame {
+    min-width: 320px;
+    height: 1145px;
+}
+
+._cUP1np9gMvFQrcPftuf.xahN8AEzyAvQtVj17TPv {
+    margin-top: 3.75rem;
+}
+
+footer {
+    background:  #F5F5F5;
+    box-shadow: 0px -10px 15px 0px rgba(0, 0, 0, 0.10);
+}
+
+@media(min-width:375px) {
+    .container, .col-xs-12.calendar-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .calendar-frame {
+        height: 1150px;
+    }
+}
+
+@media(min-width:425px) {
+    .calendar-frame {
+        height: 1100px;
+    }
+}
+
+@media (min-width:576px) {
+    .calendar-frame {
+        height: 1040px;
+    }
+}
+
+@media (min-width:710px) {
+   /*  .main-container {
+        padding: 120px 0;
+    } */
+
+    .calendar-frame {
+        height: 1110px;
+    }
+
+    p.highlight {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width:768px) {
+    .pull-right .navbar-nav > li:last-child {
+        padding-top: 1px;
+    }
+
+    body.agendar .navBarAhorro .a_blog {
+        margin-right: 5px !important;
+    }
+
+    body.agendar .navBarAhorro .a_contactanos {
+        width: 150px;
+    }
+
+}
+
+@media (min-width:992px) {
+    body.agendar .navBarAhorro .a_contactanos {
+        width: 200px;
+    }
+}
+
+@media (min-width:1200px) {
+    /* .main-container {
+        padding: 140px 0;
+    } */
+
+    body.agendar .navBarAhorro .a_blog {
+        margin-right: 20px !important;
+    }
+
+    .calendar-frame {
+        height: 710px;
+    }
+}
+
+@media(min-width:1400px) {
+    .container {
+        width: 1320px;
+    }
+
+    body.agendar .navBarAhorro .a_blog {
+        margin-right: 40px !important;
+    }
+}
+
+@media(min-width:1800px) {
+
+    .container {
+        width: 1720px;
+    }
+}
+
+@media(min-width:2500px) {
+
+    .container {
+        width: 2420px;
+    }
+
+    body.agendar .navBarAhorro .a_contactanos {
+        width: 300px;
+        height: 60px;
+        border-radius: 100px;
+        padding: 19px 30px !important;
+    }
+
+    .pull-right .navbar-nav > li:last-child {
+        padding-top: 17px;
+    }
+
+    body.agendar .navBarAhorro .a_blog {
+        margin-right: 80px !important;
+    }
+}

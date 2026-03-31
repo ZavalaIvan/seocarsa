@@ -1,0 +1,118 @@
+[24-Oct-2025 17:38:20 UTC] PHP Warning:  require(PHPMailer/src/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/enviar.php on line 6
+[24-Oct-2025 17:38:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/enviar.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/enviar.php on line 6
+[24-Oct-2025 17:44:05 UTC] PHP Warning:  require(PHPMailer/src/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/enviar.php on line 6
+[24-Oct-2025 17:44:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/enviar.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/enviar.php on line 6
+[24-Oct-2025 18:20:20 UTC] PHP Warning:  require(PHPMailer/src/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[24-Oct-2025 18:20:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/enviar.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[27-Oct-2025 22:06:27 UTC] PHP Parse error:  syntax error, unexpected token "elseif" in /home/z02o89xenyx2/public_html/enviar.php on line 17
+[29-Oct-2025 18:44:02 UTC] PHP Parse error:  Unmatched '}' in /home/z02o89xenyx2/public_html/enviar.php on line 156
+[29-Oct-2025 18:44:28 UTC] PHP Parse error:  Unmatched '}' in /home/z02o89xenyx2/public_html/enviar.php on line 156
+[13-Dec-2025 15:23:48 UTC] PHP Warning:  require(phpmailer/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 15:23:48 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'phpmailer/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/enviar.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 15:24:09 UTC] PHP Warning:  require(phpmailer/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 15:24:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'phpmailer/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/enviar.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 15:24:26 UTC] PHP Warning:  require(phpmailer/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 15:24:26 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'phpmailer/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/enviar.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 15:25:10 UTC] PHP Warning:  require(phpmailer/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 15:25:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'phpmailer/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/enviar.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 15:39:45 UTC] PHP Warning:  require(phpmailer/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 15:39:45 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'phpmailer/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/enviar.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 15:43:12 UTC] PHP Warning:  require(phpmailer/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 15:43:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'phpmailer/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/enviar.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 15:56:24 UTC] PHP Warning:  require(phpmailer/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 15:56:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'phpmailer/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/enviar.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 16:15:57 UTC] PHP Warning:  require(phpmailer/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 16:15:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'phpmailer/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/enviar.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 16:32:16 UTC] PHP Warning:  require(phpmailer/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 16:32:16 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'phpmailer/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/enviar.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 16:32:27 UTC] PHP Warning:  require(phpmailer/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 16:32:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'phpmailer/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/enviar.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 17:01:07 UTC] PHP Warning:  require(/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[13-Dec-2025 17:01:07 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/enviar.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[14-Dec-2025 15:51:34 UTC] PHP Warning:  require(/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[14-Dec-2025 15:51:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/enviar.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[14-Dec-2025 16:31:05 UTC] PHP Warning:  require(/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/test-phpmailer.php on line 2
+[14-Dec-2025 16:31:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/test-phpmailer.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/test-phpmailer.php on line 2
+[14-Dec-2025 16:32:35 UTC] PHP Warning:  require(/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/test-phpmailer.php on line 2
+[14-Dec-2025 16:32:35 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/test-phpmailer.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/test-phpmailer.php on line 2
+[14-Dec-2025 16:32:38 UTC] PHP Warning:  require(/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/test-phpmailer.php on line 2
+[14-Dec-2025 16:32:38 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/test-phpmailer.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/test-phpmailer.php on line 2
+[15-Dec-2025 17:08:11 UTC] PHP Warning:  require(/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[15-Dec-2025 17:08:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/enviar.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/enviar.php on line 9
+[15-Dec-2025 17:20:21 UTC] PHP Warning:  require(/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/test-phpmailer.php on line 2
+[15-Dec-2025 17:20:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/test-phpmailer.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/test-phpmailer.php on line 2
+[15-Dec-2025 17:20:58 UTC] PHP Warning:  require(/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/test-phpmailer.php on line 2
+[15-Dec-2025 17:20:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/test-phpmailer.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/test-phpmailer.php on line 2
+[15-Dec-2025 17:25:39 UTC] PHP Warning:  require(/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/test-phpmailer.php on line 2
+[15-Dec-2025 17:25:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/test-phpmailer.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/test-phpmailer.php on line 2
+[15-Dec-2025 17:28:00 UTC] PHP Warning:  require(/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php): Failed to open stream: No such file or directory in /home/z02o89xenyx2/public_html/test-phpmailer.php on line 7
+[15-Dec-2025 17:28:00 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/z02o89xenyx2/public_html/phpmailer/src/Exception.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/z02o89xenyx2/public_html/test-phpmailer.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/z02o89xenyx2/public_html/test-phpmailer.php on line 7

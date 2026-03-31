@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="9px" height="13px" viewBox="0 0 9 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>icn-next</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Diseño-Cot-(R)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cotizador-(resizing)" transform="translate(-1121.000000, -295.000000)" fill="#00529C">
+            <path d="M1129.64845,301.851556 C1129.84376,301.656244 1129.84376,301.343743 1129.64845,301.148431 L1123.85157,295.351549 C1123.65625,295.156236 1123.34375,295.156236 1123.14844,295.351549 L1121.85156,296.648425 C1121.65625,296.843738 1121.65625,297.156238 1121.85156,297.351551 L1126.00001,301.499993 L1121.85156,305.648436 C1121.65625,305.843749 1121.65625,306.156249 1121.85156,306.351562 L1123.14844,307.648438 C1123.34375,307.843751 1123.65625,307.843751 1123.85157,307.648438 L1129.64845,301.851556 Z" id="icn-next"></path>
+        </g>
+    </g>
+</svg>

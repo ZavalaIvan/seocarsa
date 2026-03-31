@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icn-check-enabled</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="v14---GMM" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="C-nT-PF---Antiguedad-Si" transform="translate(-494.000000, -390.000000)">
+            <g id="icn-check-enabled" transform="translate(494.000000, 390.000000)">
+                <rect id="Rectangle-Copy-3" fill="#2792FF" x="0" y="0" width="16" height="16" rx="5"></rect>
+                <path d="M14,5.75757576 C14,5.9469697 13.9225806,6.13636364 13.7832258,6.27272727 L7.12516129,12.7878788 C6.98580645,12.9242424 6.79225806,13 6.59870968,13 C6.40516129,13 6.2116129,12.9242424 6.07225806,12.7878788 L2.21677419,9.01515152 C2.07741935,8.87878788 2,8.68939394 2,8.5 C2,8.31060606 2.07741935,8.12121212 2.21677419,7.98484848 L3.26967742,6.95454545 C3.40903226,6.81818182 3.60258065,6.74242424 3.79612903,6.74242424 C3.98967742,6.74242424 4.18322581,6.81818182 4.32258065,6.95454545 L6.59870968,9.18939394 L11.6774194,4.21212121 C11.8167742,4.07575758 12.0103226,4 12.203871,4 C12.3974194,4 12.5909677,4.07575758 12.7303226,4.21212121 L13.7832258,5.24242424 C13.9225806,5.37878788 14,5.56818182 14,5.75757576 Z" id="Check---FontAwesome-Copy-47" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

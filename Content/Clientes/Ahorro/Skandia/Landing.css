@@ -1,0 +1,2200 @@
+picture source,
+picture img {
+    height: auto;
+}
+
+body {
+    background-color: #FFF;
+    color: var(--a-color-dark) !important;
+}
+
+.input_visible {
+    visibility: hidden;
+}
+
+.hero {
+    padding-top: 5.87rem;
+    color: var(--a-color-light);
+    background-image: url('../../../img/Ahorro/Skandia/webp/mobil/img-hero-mobile.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0px 0px 8.5rem 0px;
+}
+
+
+.hero h1 {
+    margin-bottom: 1.25rem;
+}
+
+.hero .hero-icon-container {
+    padding: .4rem;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .hero-icon-container svg {
+    width: .875rem;
+    height: .875rem;
+}
+
+.hero .p-xlg-bold {
+    font-weight: 700;
+    line-height: 1.625rem;
+}
+
+
+.hero .formulario label {
+    padding-left: 0.31rem;
+    padding-bottom: 0.31rem;
+    font-weight: 500;
+}
+
+.hero .formulario input {
+    width: 100%;
+    padding: 1rem 1.5625rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--a-color-primary-70);
+    box-shadow: 0px 15px 15px 0px rgba(134, 101, 230, 0.10);
+}
+
+.hero .formulario input::placeholder {
+    color: rgba(101, 110, 230, 0.50);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.hero input[type=number]::-webkit-inner-spin-button,
+.hero input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.hero input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.hero .formulario input:focus,
+.hero .formulario input:active {
+    outline: none;
+}
+
+form .title_error {
+    color: var(--a-color-secondary);
+    padding-left: 1rem;
+}
+
+.btn-container {
+    padding-bottom: 4.38rem;
+}
+
+.btn-container button,
+a.btn-b-light {
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 1.25rem 1.31rem;
+    max-width: 12.5rem;
+    width: 100%;
+}
+
+.btn-shadow {
+    box-shadow: 0px 5px 24px 0px rgba(196, 230, 101, 0.40);
+}
+
+.btn-agendar {
+    display: inline-flex;
+    padding: 1.25rem 1.625rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 1.5rem;
+    border: 2px solid #274470;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #274470;
+}
+
+.botones-container {
+    padding-top: 1.88rem;
+    padding-bottom: 4.37rem;
+    gap: 1.25rem;
+}
+
+.botones-container button {
+    width: 13rem;
+}
+
+.bg-morado {
+    background-color: #274470;
+    color: var(--a-color-light);
+    padding-top: 2.13rem;
+    padding-bottom: 2.5rem;
+    margin-top: 4.38rem;
+}
+
+.bg-morado .botones-container {
+    padding-bottom: 0rem;
+}
+
+.bg-morado .btn-primary {
+    box-shadow: 0px 5px 24px 0px rgba(196, 230, 101, 0.40);
+}
+
+.bg-morado .btn-agendar {
+    border: 2px solid var(--a-color-light);
+    color: var(--a-color-light);
+}
+
+.sobre-tu-retiro {
+    margin-top: 4.7rem;
+    margin-bottom: 4.16rem;
+}
+
+.retiro-img-container {
+    height: 19.6875rem;
+    max-width: 19.25rem;
+}
+
+.retiro-img-container .retiro-badged-container {
+    position: absolute;
+    bottom: 0;
+}
+
+.sobre-tu-retiro .retiro-img-container picture {
+    left: -1.5rem;
+}
+
+.retiro-img-container .retiro-badged {
+    display: flex;
+    padding: 0.5rem 0.875rem;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.9375rem;
+    background: var(--a-color-light);
+    box-shadow: 0px 15px 15px 0px rgba(134, 101, 230, 0.10);
+    max-width: 11.87rem;
+}
+
+.retiro-img-container .retiro-badged__verde {
+    background: var(--a-color-secondary-50);
+}
+
+.retiro-badged__right {
+    position: relative;
+    left: -5rem;
+}
+
+.retiro-badged__left {
+    position: relative;
+    right: -4rem;
+}
+
+.sobre-tu-retiro .retiro-img-container picture {
+    text-align: center;
+}
+
+.sobre-tu-retiro .retiro-img-container picture img {
+    width: 13rem;
+    height: 20rem;
+}
+
+.sobre-tu-retiro .circulo-verde {
+    width: 148px;
+    height: 296px;
+    transform: rotate(-90deg);
+    border-radius: 0px 300px 300px 0px;
+    background: var(--a-color-secondary);
+    z-index: -1;
+    position: absolute;
+    top: 5.8rem;
+}
+
+.card-container {
+    margin-top: 0.63rem;
+    background-color: var(--a-color-light);
+    border-radius: 0.9375rem;
+    box-shadow: 0px 15px 15px 0px rgba(134, 101, 230, 0.10);
+    padding: 1.0625rem 0.875rem;
+    text-align: center;
+}
+
+
+.ppr {
+    background-color: #F1EDFC;
+    padding-top: 1.68rem;
+    padding-bottom: 1.44rem;
+}
+
+.ppr .cards-container {
+    gap: 2.56rem;
+    margin-top: 3.6rem;
+    margin-bottom: 4.25rem;
+}
+
+.ppr .card-item {
+    background-color: var(--a-color-light);
+    border-radius: 1rem;
+    box-shadow: 6px 6px 15px 0px rgba(134, 101, 230, 0.15);
+    padding: 1.25rem 1.25rem 1.12rem 1.25rem;
+    position: relative;
+}
+
+.ppr .card-item span {
+    font-size: 1.60188rem;
+    font-style: normal;
+    font-weight: 700;
+    padding: 0.10rem 0.88rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--a-color-dark);
+    color: #FFF;
+    top: -25%;
+}
+
+.ppr .figura-container {
+    max-width: 20rem;
+}
+
+.ppr .img-titulo-1 {
+    left: 0;
+    top: 1rem;
+}
+
+.ppr .img-titulo-2 {
+    right: 1.3rem;
+    bottom: 6rem;
+}
+
+.barras-estado__container {
+    margin-top: 1.19rem;
+}
+
+.barra-estado__item {
+    gap: 0.62rem;
+}
+
+.barra-estado__item p {
+    margin-bottom: 0rem;
+}
+
+.barra-estado__item p span {
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.125rem;
+}
+
+.barra-estado__item-morado {
+    color: #00C83C;
+}
+
+.barra-estado__bg {
+    width: 100%;
+    height: 3rem;
+    border-radius: 1rem;
+    background-color: #F1EDFC;
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.barra-estado__bg-shadow {
+    box-shadow: 2px 4px 15px -7px #B0B5CB;
+}
+
+.barra-estado__bg-morado {
+    height: 3rem;
+    border-radius: 1rem;
+    background: #57b1e3;
+}
+
+.barra-estado__bg-morado-md {
+    width: 6.625rem;
+}
+
+.barra-estado__bg-morado-sm {
+    width: 2.875rem;
+}
+
+.barras-estado__container picture {
+    position: absolute;
+    bottom: 0;
+}
+
+.barras-estado__container .moneda-full {
+    right: 6.5rem;
+}
+
+.barras-estado__container .moneda-md {
+    left: 5.56rem;
+}
+
+.barras-estado__container .moneda-sm {
+    left: 1.75rem;
+}
+
+.plan-allianz {
+    margin-bottom: 3.56rem;
+}
+
+.deducible-impuestos {
+    margin-bottom: 4.37rem;
+}
+
+.deducible-impuestos .sub-titulo {
+    margin-bottom: 4.37rem;
+}
+
+.deducible-impuestos .cards-deducible-container {
+    gap: 3rem;
+}
+
+.deducible-impuestos .cards-deducible-container .bloque-uno {
+    gap: 3rem;
+}
+
+.deducible-impuestos .cards-deducible-container .card-deducible {
+    border-radius: 1rem;
+    background: #FFF;
+    box-shadow: 6px 6px 15px 0px rgba(134, 101, 230, 0.15);
+    height: auto;
+    padding: 1.62rem 1rem 1.25rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.cards-deducible-container .card-deducible .card-img {
+    width: 60%;
+}
+
+.cards-deducible-container .card-deducible .card-img picture .img-pig {
+    width: 5.20438rem;
+    position: relative;
+    bottom: 1rem;
+}
+
+.cards-deducible-container .card-deducible .card-img picture .img-woman {
+    position: relative;
+    bottom: -21px;
+    width: 8.1875rem;
+}
+
+.card-icon {
+    position: absolute;
+    top: -1.88rem;
+    left: 1.25rem;
+    background-color: #00C83C;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon .material-symbols-outlined {
+    font-size: 1.875rem;
+}
+
+.plan-ahorro h2 {
+    margin-bottom: 1.13rem;
+}
+
+.benefits-graph {
+    max-width: 1082px;
+    position: relative;
+    margin-top: 32px;
+}
+
+.benefits-points {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 18px;
+    padding: 3.6875rem 1.125rem 1.25rem 1.125rem;
+    border-radius: 1rem;
+    box-shadow: 6px 6px 15px 0px rgba(134, 101, 230, 0.15);
+    margin-bottom: 2.5rem;
+}
+
+.benefits-point {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 1.44rem;
+}
+
+.benefits-point .img {
+    width: 1.5625rem;
+    height: 2rem;
+}
+
+.graph-img {
+    width: 100%;
+    height: 289px;
+}
+
+.graph-bubbles {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    bottom: 63px;
+    width: 100%;
+    margin-left: 0;
+}
+
+.graph-bubble {
+    height: 38px;
+    width: 102px;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0 3px 10px 2px rgba(0, 0, 0, .1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.graph-bubble p {
+    font-weight: 700;
+}
+
+.graph-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: calc(50% - 4px);
+    display: inline-block;
+    color: #fff;
+    border: 6px solid transparent;
+    border-bottom: 8px solid #fff;
+    transform: rotate(180deg);
+}
+
+.bubble1 {
+    bottom: 2.35rem;
+}
+
+.bubble3 {
+    bottom: 5.72rem;
+}
+
+.bubble5 {
+    bottom: 12.85rem;
+}
+
+.graph-ejex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    width: 100%;
+    margin-left: 0;
+}
+
+.graph-eje {
+    width: 176px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.graph-eje p {
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 1rem;
+    color: #666;
+}
+
+.benefits-disclaimer {
+    max-width: 976px;
+    color: #666;
+    font-weight: 300;
+    letter-spacing: 0;
+    text-align: center;
+    font-size: .75rem;
+    line-height: 1.125rem;
+    margin-top: 1.13rem;
+}
+
+.tarjetas-container {
+    margin-top: 1.88rem;
+    gap: 1.25rem;
+}
+
+.tarjeta-container-item {
+    color: var(--a-color-light);
+    width: 18.5rem;
+    padding: 1.5625rem 0.9375rem 0rem 0.9375rem;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 1.25rem;
+    background: #274470;
+}
+
+.tarjetas-container-img {
+    text-align: center;
+}
+
+/*.proceso-puntos {
+    display: none;
+}*/
+
+.proceso-pasos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
+
+/*.div-proceso-punto {
+    width: 100%;
+    position: relative;
+    justify-content: center;
+}*/
+
+.proceso-punto {
+    display: flex;
+    padding: 0.4375rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 6.25rem;
+    margin-top: 0rem;
+    border: 2px solid #274470;
+    background: #274470;
+    z-index: 1;
+}
+
+
+
+.proceso-punto p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.125rem;
+    text-align: center;
+    font-family: var(--fuente-principal);
+    margin: 0;
+}
+
+.div-proceso-punto svg {
+    position: absolute;
+    height: 340px;
+}
+
+/*.proceso-paso {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    padding: 1.25rem 1rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    border: 2px solid #274470;
+    background: var(--a-color-tertiary-20);
+   
+    box-shadow: 2px 2px 15px 0 rgba(134, 101, 230, .5);
+    align-items: flex-end;
+    z-index: 1;
+}*/
+
+/*.proceso-paso .paso-icon,
+.proceso-paso.active .paso-icon {
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 12.5rem;
+    background: #00C83C;
+    box-shadow: 2px 2px 20px 0 rgba(134, 101, 230, .2);
+    padding: .8rem;
+    margin-top: -3.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+
+/*.paso-icon img {
+    width: 100%;
+    height: 100%;
+}*/
+
+.clientes-a {
+    width: 7.5rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    color: #292929;
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: none;
+    gap: 0.6rem;
+}
+
+.clientes-a .material-symbols-outlined {
+    font-size: 1.125rem;
+}
+
+.clientes-a {
+    text-decoration: underline;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.25rem;
+}
+
+.enlace-container {
+    margin-top: 3.90rem;
+}
+
+.enlace-container-mas {
+    margin-top: 0.9rem;
+    margin-bottom: 1.24rem;
+    margin: 0px;
+}
+
+.sobre-alige {
+    gap: 1.25rem;
+    color: var(--a-color-light);
+    background-color: #274470;
+    padding-top: 2.06rem;
+    margin-bottom: 4.37rem;
+    margin-top: 4.38rem;
+    padding-bottom: 1.94rem;
+}
+
+.sobre-alige .sobre-alige-textos {
+    margin-bottom: 1.20rem;
+}
+
+.sobre-alige .sobre-alige-textos p {
+    font-size: 1.21875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.65625rem;
+    margin-bottom: 0.5rem;
+}
+
+.sobre-alige .sobre-alige-textos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.sobre-alige-img-container .img-laptop,
+.sobre-alige-img-globo {
+    display: none;
+}
+
+.sobre-alige .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cards-container {
+    margin-top: 2rem;
+}
+
+.cards-container .card-item {
+    max-width: 16.3125rem;
+    width: 100%;
+    background-color: var(--a-color-light);
+    border-radius: 0.9375rem;
+    box-shadow: 0px 15px 15px 0px rgba(134, 101, 230, 0.10);
+    padding: 1.25rem;
+    position: relative;
+    color: #3F3F3F;
+    position: relative;
+}
+
+.cards-container .item-right {
+    margin-left: auto;
+}
+
+.cards-container .card-item .icon-container {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #00C83C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 1.88rem;
+    top: -1rem;
+}
+
+.faq h2 {
+    padding-left: 1.06rem;
+    padding-right: 1.06rem;
+}
+
+.div-faq-container {
+    max-width: 33rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.faqs {
+    background-color: #F5F5F5;
+    margin-top: 1.56rem;
+    margin-bottom: 1.88rem;
+}
+
+.faqs .container {
+    background-color: white;
+}
+
+.faqs details {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    border-bottom: 1px solid #CACDF7;
+}
+
+.faqs details summary::-webkit-details-marker {
+    display: none;
+}
+
+.faqs details summary {
+    color: #274470;
+    font-weight: 700;
+    padding: 1.25rem;
+}
+
+.faqs details p {
+    padding: 1.56rem;
+    background-color: #FFF;
+    border-left: 1px solid #CACDF7;
+    border-right: 1px solid #CACDF7;
+    border-top: 1px solid #CACDF7;
+    margin-bottom: 0px;
+}
+
+
+details>summary>p {
+    transition: all 1s ease;
+}
+
+details > summary > i {
+    transition: 0.25s;
+}
+
+.loader2 {
+    color: #FFFFFF;
+    font-size: 50px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin: 72px auto;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+    animation: load6 1.5s infinite ease, round 1.5s infinite ease;
+}
+
+.loader {
+    color: #000000;
+    font-size: 50px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin: 72px auto;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+    animation: load6 1.5s infinite ease, round 1.5s infinite ease;
+}
+
+#myModalActualizando {
+    height: 100vh;
+}
+
+#myModalActualizando.modal {
+    text-align: center;
+    padding: 0 !important;
+}
+
+#myModalActualizando .modal:before {
+    content: '';
+    display: inline-block;
+    height: 0%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
+#myModalActualizando .modal-dialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#myModalActualizando .modal-loader {
+    background-color: transparent !important;
+    border: none;
+}
+
+@-webkit-keyframes load6 {
+    0% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+
+    5%,
+    95% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+
+    10%,
+    59% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+
+    20% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+    }
+
+    38% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+    }
+
+    100% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+}
+
+@keyframes load6 {
+    0% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+
+    5%,
+    95% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+
+    10%,
+    59% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+
+    20% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+    }
+
+    38% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+    }
+
+    100% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+}
+
+@-webkit-keyframes round {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes round {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hero {
+        background-position: 0 0px;
+        border-radius: 0px;
+    }
+
+    .hero .img-hero-lg {
+        display: none;
+    }
+
+    .hero .container-items-md {
+        display: flex !important;
+        gap: 1.25rem !important;
+    }
+
+    .hero .col-md-6 {
+        width: 50% !important;
+    }
+
+    .hero h1 {
+        font-size: 2.44125rem;
+        line-height: 2.9375rem;
+    }
+
+    .hero-titulos-container p {
+        font-size: 1.375rem;
+        line-height: 1.375rem;
+    }
+
+    .hero-titulos-container .p-xlg-bold {
+        font-size: 1.4225rem;
+        line-height: 1.75rem;
+        font-style: normal;
+        /*font-weight: 700 !important;*/
+        font-weight: 400 !important;
+        margin-bottom: 1.25rem;
+    }
+
+    .hero-titulos-container .p-xlg {
+        /*font-size: 1.26563rem;*/
+        font-size: 20px;
+        /*line-height: 1.625rem;*/
+        line-height: normal;
+    }
+
+    .hero .genero-container {
+        gap: 5.25rem;
+    }
+
+    .btn-container button,
+    a.btn-b-light {
+        max-width: 100%;
+    }
+
+    .d-lg-block.burbuja-alige-container .burbuja-alige-izquierda {
+        display: none;
+    }
+
+    .sobre-alige-textos-container .d-md-block,
+    .d-lg-block.burbuja-alige-container {
+        display: block !important;
+    }
+
+    .retiro-textos-container h2,
+    .ppr-container h2,
+    .plan-retiro h2,
+    .deducible-impuestos h2,
+    .plan-ahorro h2,
+    .nuestros-proceso h2,
+    .testimoniales h2,
+    .faq h2,
+    .bg-morado h2,
+    .direccion-h3 {
+        font-size: 1.80188rem;
+        line-height: 2.125rem;
+        margin-bottom: 0.63rem;
+        text-align: center;
+    }
+
+    .ppr-container .sub-titulo, .impacto-edad .sub-titulo, .plan-allianz .sub-titulo,  .deducible-impuestos .sub-titulo, .plan-ahorro .sub-titulo {
+        font-size: 1.21875rem;
+        line-height: 1.96875rem;
+        text-align: center;
+    }
+
+    .sobre-tu-retiro {
+        margin-bottom: 3.01rem;
+    }
+
+    .retiro-img-container {
+        height: 26.875rem;
+    }
+
+    .sobre-tu-retiro .retiro-img-container picture img {
+        width: 17.4375rem;
+        height: 26.875rem;
+    }
+
+    .sobre-tu-retiro .flex-lg-row-reverse {
+        flex-direction: row-reverse;
+    }
+
+    .sobre-tu-retiro h2 {
+        text-align: left;
+        margin-bottom: 1.69rem;
+    }
+
+    .sobre-tu-retiro .sub-titulo {
+        font-size: 1.21875rem;
+        line-height: 1.96875rem;
+        margin-bottom: 3rem;
+    }
+
+    .sobre-tu-retiro .circulo-verde {
+        top: auto;
+        bottom: -4.6rem;
+    }
+
+    .sobre-tu-retiro .retiro-textos-container .card-container {
+        font-size: 1.21875rem;
+        text-align: start;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .ppr {
+        padding-bottom: 3.75rem;
+        background-color: transparent;
+    }
+
+    .ppr .container {
+        background-color: #F1EDFC;
+        border-radius: 2rem;
+        padding: 1.88rem 0.69rem 1.88rem 0.69rem;
+    }
+
+    .ppr .cards-container {
+        gap: 2.5rem;
+    }
+
+    .ppr .card-item {
+        padding: 0.9375rem 0.625rem 0.625rem 0.625rem;
+    }
+
+    .ppr .card-item h5{
+        font-size: 1.125rem;
+        line-height: 1.625rem;
+        margin-bottom: 0.09rem;
+    } 
+
+    .ppr .card-item p {
+        font-size: 0.875rem;
+        margin-bottom: 0rem;
+    }
+
+    .ppr .card-item p br.d-lg-none {
+        display: none;
+    }
+
+    .ppr .img-titulo-1, .ppr .img-titulo-2 {
+        font-size: 1.4225rem;
+        line-height: 1.75rem;
+    }
+
+    .ppr .cards-container .card-item {
+        max-width: 100%;
+    }
+
+    .ppr .card-item-1 {
+        width: 100%;
+    }
+
+    .ppr .card-item-2 {
+        width: 97%;
+    }
+
+    .ppr .card-item-3 {
+        width: 83%;
+    }
+
+    .ppr .card-item span {
+        top: -35%;	
+    }
+
+    .ppr .ppr-imgContainer {
+        height: 100%;
+        align-items: end;
+    }
+
+    .ppr .cards-container {
+        margin-bottom: 0px;
+    }
+
+    .botones-container {
+        flex-direction: row !important;
+    }
+
+    .bg-morado {
+        border-radius: 3rem;
+        padding: 2.5rem;
+    }
+
+    .impacto-edad .barras-estado__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 2.64rem;
+        margin-bottom: 1.88rem;
+    }
+
+    .impacto-edad .barra-estado__item {
+        gap: 1.25rem;
+    }
+
+    .impacto-edad .barra-estado__item .inicia__titulo span {
+        font-size: 1.9375rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 2.5rem;
+    }
+
+    .impacto-edad .barra-estado__item .podrias-tener__titulo {
+        display: none;
+    }
+
+    .impacto-edad .barra-estado__bg {
+        width: 6.25rem;
+        height: 20rem;
+        border-radius: 1rem;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .impacto-edad .barra-estado__bg .barra-estado__bg-morado {
+        width: 6.25rem;
+        bottom: 0;
+    }
+
+    .moneda-25 .barra-estado__bg-morado {
+        height: 20rem;
+    }
+
+    .moneda-30 .barra-estado__bg-morado {
+        height: 13.5rem;
+    }
+
+    .moneda-35 .barra-estado__bg-morado {
+        height: 7.5rem;
+    }
+
+    .moneda-40 .barra-estado__bg-morado {
+        height: 4.4375rem;
+    }
+
+    .moneda-45 .barra-estado__bg-morado {
+        height: 2.5625rem;
+    }
+
+    .impacto-edad .barra-estado__bg .burbuja {
+        position: relative;
+        display: flex;
+        padding: 0.875rem 0.625rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.625rem;
+        border-radius: 1rem;
+        box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+        background-color: var(--a-color-light);
+        padding: 0.88rem 0.62rem;
+        left: -0.5rem;
+    }
+
+    .impacto-edad .barra-estado__bg .burbuja::after {
+        content: '';
+        position: absolute;
+        bottom: -0.9rem;
+        left: calc(50% - 4px);
+        display: inline-block;
+        color: #fff;
+        border: 6px solid transparent;
+        border-bottom: 8px solid #ffffff;
+        transform: rotate(180deg);
+    }
+
+    .impacto-edad .moneda-25 .burbuja {
+        top: 2.6rem;
+    }
+
+    .impacto-edad .moneda-30 .burbuja {
+        top: 0.5rem;
+    }
+
+    .impacto-edad .moneda-35 .burbuja {
+        bottom: 3rem;
+    }
+
+    .impacto-edad .moneda-40 .burbuja {
+        bottom: 4.7rem;
+    }
+
+    .impacto-edad .moneda-45 .burbuja {
+        bottom: 5.4rem;
+    }
+
+    .impacto-edad .burbuja-tendras {
+        padding: 0.5rem 2.25rem;
+        text-align: center;
+        border-radius: 1rem;
+        box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+        background-color: var(--a-color-light);
+        position: absolute;
+        top: 1.25rem;
+        left: -2rem;
+    }
+
+    .impacto-edad .burbuja-tendras p {
+        font-size: 1.47656rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.96875rem;
+    }
+
+    .impacto-edad .barra-estado__bg .burbuja p {
+        color: #00C83C;
+        font-size: 2.4375rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 2.5625rem;
+    }
+
+    .impacto-edad .barra-estado__bg picture {
+        left: 0.4rem;
+    }
+
+    .impacto-edad .p-xsm {
+        color: #292929;
+        font-size: 0.875rem;
+        line-height: 1rem;
+    }
+
+    .deducible-impuestos .cards-deducible-container .bloque-uno {
+        gap: 0rem;
+        width: 100%;
+    }
+
+    .deducible-impuestos .cards-deducible-container .card-deducible {
+        width: 18.75rem;
+        height: 24.4375rem;
+    }
+
+    .deducible-impuestos .cards-deducible-container .card-deducible {
+        flex-direction: column;
+        padding: 1.87rem 0rem 0rem 2.19rem;
+
+    }
+
+    .deducible-impuestos .cards-deducible-container .bloque-uno .card-deducible {
+        width: 18.75rem;
+        height: 24.4375rem;
+        justify-content: space-between;
+    }
+
+    .deducible-impuestos .cards-deducible-container .card-deducible-md {
+        width: 41.25rem;
+        height: 10.4375rem;
+    }
+
+    .deducible-impuestos .cards-deducible-container .bloque-uno {
+        gap: 0rem;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .card-icon {
+        width: 3.75rem;
+        height: 3.75rem;
+        top: 2.6rem;
+        left: -2rem;
+    }
+
+    .deducible-impuestos .cards-deducible-container .card-deducible-md .card-icon {
+        top: 0rem;
+    }
+
+    .benefits-points {
+        flex-direction: row;
+        padding: 1.875rem;
+    }
+
+    .benefits-points .img {
+        width: 2.5rem;
+        height: 3.125rem;
+    }
+
+    .benefits-points p{
+        font-size: 1.21875rem;
+        line-height: 1.96875rem;
+        font-weight: 400;
+    }
+
+    .graph-eje p {
+        font-size: 1.21875rem;
+        line-height: 1.96875rem;
+        font-weight: 400;
+    }
+
+    .benefits-disclaimer {
+        font-size: 1rem;
+        line-height: 1.375rem; 
+        font-weight: 400;
+    }
+
+    .benefits-graph picture .graph-img {
+        border-radius: 1rem;
+        box-shadow: 0px 0px 15px 0px rgba(134, 101, 230, 0.15);
+    }
+
+    .graph-info {
+        width: 22.25rem;
+        position: absolute;
+        top: 2.13rem;
+        left: 1.20rem;
+    }
+
+    .bubble2 {
+        bottom: 3.50rem;
+    }
+
+    .bubble4 {
+        bottom: 9.41rem;
+    }
+
+    .card-icon .material-symbols-outlined {
+        font-size: 2.5rem;
+    }
+
+    .card-deducible .card-texto h3 {
+        font-size: 1.80188rem;
+        line-height: 2.125rem;
+        margin-bottom: 0.62rem;
+    }
+
+    .card-deducible .card-texto p {
+        font-size: 1.21875rem;
+        line-height: 1.96875rem;
+    }
+
+    .cards-deducible-container .card-deducible .card-img {
+        width: 100%;
+    }
+
+    .cards-deducible-container .card-deducible .card-img picture .img-pig {
+        width: 12.39294rem;
+        bottom: 0rem;
+    }
+
+    .cards-deducible-container .card-deducible .card-img picture .img-woman {
+        width: 16.02738rem;
+        bottom: 0rem;
+    }
+
+    .deducible-impuestos .cards-deducible-container {
+        gap: 4.94rem;
+    }
+
+    .tarjeta-container-item {
+        width: 19.8rem;
+        height: 29rem;
+        padding: 1.5625rem 0.9375rem 0rem 0.9375rem;
+    }
+
+    .tarjeta-container-item picture img {
+        width: 17rem;
+        height: 12.5rem;
+    } 
+
+/*    .nuestros-proceso {
+        max-width: 100%;
+    }*/
+
+    .nuestros-proceso h2 {
+        font-size: 1.80188rem;
+        line-height: 2.125rem;
+        margin-bottom: 1.25rem;
+    }
+
+ /*   .proceso-puntos {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-bottom: 1.8rem;
+        height: 4.6875rem;
+        gap: 1.5rem;
+        position: relative;
+    }*/
+
+   /* .div-proceso-punto {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+    }*/
+
+    .proceso-punto {
+        width: 2rem;
+        height: 2rem;
+        align-items: center;
+        border-radius: 6.25rem;
+        background: #E0E0E0;
+        margin-top: 3rem;
+        border: none;
+    }
+        .proceso-punto.active {
+            border: 2px solid #00C83C;
+        }
+        .proceso-paso .paso-icon {
+            display: flex;
+            padding: 10px;
+            align-items: flex-start;
+            gap: 10px;
+            border-radius: 200px;
+            background: var(--Colors-Solid-Light, #FFF);
+        }
+    .proceso-paso:hover .paso-icon, .proceso-paso.active .paso-icon {
+      
+        background: var(--Colors-Solid-Skandia-Green, #00C83C);
+        /* Shadow/Icon Process */
+        box-shadow: 2px 2px 20px 0px rgba(134, 101, 230, 0.20);
+    }
+        /*  .proceso-paso .paso-icon,
+    .proceso-paso.active .paso-icon {
+        margin-top: 0px;
+        width: 3.125rem;
+        height: 3.125rem;
+        background-color: #fff;
+    }*/
+        /*.proceso-paso:hover,
+    .proceso-paso.active {*/
+        /*background: var(--a-color-tertiary-20);*/
+        /*background: var(--a-color-light);
+        border: 2px solid #0A0A0A;
+    }*/
+        /*.proceso-paso:hover .paso-icon,
+    .proceso-paso.active .paso-icon {*/
+        /* background-color: #00C83C;*/
+        /*display: flex;
+        padding: 10px;
+        align-items: flex-start;
+        gap: 10px;*/
+        /* position: absolute;
+        left: 25px;
+        top: -12px;*/
+        /*border-radius: 200px;
+        background: var(--Colors-Solid-Skandia-Green, #00C83C);*/
+        /* Shadow/Icon Process */
+        /*box-shadow: 2px 2px 20px 0px rgba(134, 101, 230, 0.20);
+    }*/
+
+        .proceso-punto p {
+        color: var(--a-color-dark);
+        text-align: center;
+        font-size: 1.125rem;
+        line-height: 1.125rem;
+    }
+
+    .proceso-pasos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+ /*   .proceso-paso {
+        height: 26.75rem;
+        width: 25%;
+        padding: 1.25rem 1rem;
+        align-items: flex-start;
+        box-shadow: none;
+        border: 2px solid rgba(10, 10, 10, 0.50);
+    }*/
+
+    .proceso-paso h5 {
+        font-size: 1.3125rem;
+    }
+
+    .proceso-paso p {
+        font-size: 0.9375rem;
+    }
+    
+    .sobre-alige {
+        background-color: transparent;
+    }
+
+    .sobre-alige .sobre-alige-container {
+        border-radius: 2rem;
+        background: #274470;
+        padding: 1.88rem 1.25rem 1.12rem;
+    }
+
+    .sobre-alige-container .md-titulo h2 {
+        font-size: 2.44125rem;
+        line-height: 2.9375rem;
+    }
+
+    .sobre-alige-container .md-subtitulo-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.37rem;
+        font-size: 1.47656rem;
+        line-height: 1.96875rem;
+    }
+
+    .sobre-alige-container .md-subtitulo-container img {
+        width: 8.40938rem;
+    }
+
+    .sobre-alige .cards-container {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .sobre-alige .sobre-alige-textos-container {
+        margin-bottom: 0px;
+        width: 50%;
+    }
+
+    .sobre-alige-img-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    .sobre-alige .sobre-alige-container .principal-card-container {
+        width: 51%;
+    }
+
+    .sobre-alige .sobre-alige-container .card-item {
+        max-width: 100%;
+    }
+
+    .sobre-alige-textos-container .sobre-alige-subTitulo {
+        gap: 0.3rem;
+    }
+
+    .sobre-alige-textos-container .sobre-alige-subTitulo h4 {
+        font-size: 1.47656rem;
+        line-height: 1.96875rem;
+    }
+
+    .sobre-alige-textos-container .sobre-alige-subTitulo p {
+        font-size: 1.47656rem;
+        line-height: 1.96875rem;
+    }
+
+    .sobre-alige-textos-container .md-subtitulo-container img{
+        display: none;
+    }
+
+    .sobre-alige-img-container .sobre-alige-img-globo {
+        width: 13.125rem;
+        height: 13.125rem;
+        border-radius: 12.5rem 12.5rem 0rem 12.5rem;
+        background: #FFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        padding: 3.69rem 2.25rem;
+        position: absolute;
+        z-index: 1;
+        top: -0.8rem;
+        left: -1.2rem;
+    }
+
+    .sobre-alige-img-container .sobre-alige-img-globo img {
+        width: 6.3125rem;
+        height: 1.07906rem;
+    }
+
+    .sobre-alige-img-container .sobre-alige-img-globo p {
+        color: #474747;
+        margin-top: 0.55rem;
+    }
+
+    .sobre-alige-img-container img {
+        width: 15.63413rem;
+        height: 20rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    .sobre-alige-img-container .img-laptop {
+        display: flex;
+        margin-bottom: -1rem;
+    }
+
+    .div-faq-container {
+        max-width: 720px;
+        --bs-gutter-x: 2rem;
+        --bs-gutter-y: 2rem;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .proceso-paso:hover .paso-icon, .proceso-paso.active .paso-icon {
+        background: var(--Colors-Solid-Skandia-Green, #00C83C);
+        box-shadow: 2px 2px 20px 0px rgba(134, 101, 230, 0.20);
+    }
+
+    .proceso-punto {
+        margin-top: 0rem;
+        border: 2px solid #274470;
+        /* background: #274470; */
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+}
+
+@media only screen and (min-width: 1280px) {
+   
+}
+
+@media (min-width: 1280px) and (max-width: 1399px) {
+    .sobre-alige .cards-container {
+        width: 70%;
+        margin-left: 100px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .proceso-pasos {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+        @media only screen and (min-width: 960px) {
+            .retiro-img-container {
+                height: 28.875rem;
+                max-width: 100%;
+                margin-left: 0rem;
+                margin-right: 0rem;
+            }
+
+            .ppr .container {
+                padding: 1.5rem 0.69rem 3.94rem 0.69rem;
+            }
+
+            .ppr .cards-container {
+                padding-left: 2.81rem;
+                gap: 1.25rem;
+            }
+
+            .ppr .figura-container {
+                max-width: 24.25rem;
+            }
+
+            .ppr .card-item {
+                padding: 1.25rem 1.25rem 1.25rem 1.5625rem;
+            }
+
+            .ppr .card-item-1 {
+                width: 25.18rem;
+            }
+
+            .ppr .card-item-2 {
+                width: 24.75rem;
+            }
+
+            .ppr .card-item-3 {
+                width: 20.875rem;
+            }
+
+            .ppr .card-item span {
+                top: 1.5rem;
+                left: -1.4rem;
+            }
+
+            .impacto-edad .barras-estado__container {
+                gap: 5.62rem;
+            }
+
+            .bg-morado-lg {
+                margin-left: 0rem;
+                margin-right: 0rem;
+                border-radius: 0rem;
+                max-width: 100%;
+            }
+
+            .sobre-alige .align-items-center {
+                gap: 0.75rem !important;
+                justify-content: flex-start !important;
+                flex-direction: row !important;
+            }
+
+            .gap-lg-5 {
+                gap: 0rem !important;
+            }
+
+            .faqs {
+                max-width: 45.875rem;
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            .home .d-lg-none {
+                display: none !important;
+            }
+
+            .home .d-lg-flex {
+                display: flex !important;
+            }
+
+            .hero {
+                padding-top: 7.87rem;
+            }
+
+                .hero .col-md-6 {
+                    width: 49% !important;
+                }
+
+            .sobre-tu-retiro .circulo-verde {
+                width: 14.0625rem;
+                height: 28.1875rem;
+                bottom: -7rem;
+            }
+
+            .retiro-badged__right {
+                left: -2rem;
+            }
+
+            .retiro-img-container .retiro-badged__verde {
+                position: relative;
+                left: 5rem;
+            }
+
+            .retiro-img-container .retiro-badged {
+                position: relative;
+                right: 4.5rem;
+            }
+
+            .retiro-img-container .retiro-badged__left {
+                left: 0rem;
+            }
+
+            .deducible-impuestos .cards-deducible-container .bloque-uno .card-deducible {
+                width: 85%;
+                align-items: center;
+                padding-left: 0rem;
+            }
+
+            .cards-deducible-container .card-deducible .card-img picture {
+                display: flex;
+                justify-content: center;
+            }
+
+            .deducible-impuestos .cards-deducible-container .card-deducible-md {
+                width: 92%;
+            }
+
+            .d-lg-block.burbuja-alige-container .burbuja-alige-izquierda {
+                display: flex;
+            }
+
+            .sobre-alige .sobre-alige-container {
+                padding-top: 1.12rem;
+                padding-right: 7.25rem;
+                padding-left: 1.88rem;
+            }
+
+            .sobre-alige-textos-container {
+                justify-content: center;
+            }
+
+            .sobre-alige .burbuja-alige {
+                width: 10.625rem;
+                height: 10.625rem;
+            }
+
+            .sobre-alige .burbuja-alige-derecha {
+                left: -7.7rem;
+            }
+
+            .burbuja-alige-derecha p,
+            .burbuja-alige-izquierda p {
+                margin-bottom: 0rem;
+                font-size: 1rem;
+                line-height: 1.375rem;
+            }
+
+            .sobre-alige .burbuja-alige-derecha img {
+                width: 8.4375rem;
+            }
+        }
+
+        @media only screen and (min-width: 1280px) {
+            .hero .col-lg-5 {
+                width: 41.66666667% !important;
+            }
+
+            .hero .col-lg-4 {
+                width: 33.33333333% !important;
+            }
+
+            .hero {
+                background: linear-gradient(156deg, #274470 1.03%, #274470 97.9%);
+            }
+
+                .hero h1 {
+                    font-size: 3.1875rem;
+                    line-height: normal;
+                }
+
+                .hero .img-hero-lg {
+                    display: block;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                }
+
+                .hero .img-hero-container {
+                    width: 19.9375rem;
+                    height: 29.0625rem;
+                }
+
+                .hero .picture-container {
+                    left: -5rem;
+                    top: 0rem;
+                }
+
+                    .hero .picture-container picture {
+                        position: relative;
+                        z-index: 2;
+                    }
+
+                .hero .p-xlg-bold {
+                    font-size: 2rem;
+                    margin-bottom: 3.37rem;
+                }
+
+                .hero .circulo-luz {
+                    width: 30rem;
+                    height: 30rem;
+                    border-radius: 39.25rem;
+                    background: radial-gradient(50.09% 50.09% at 46.96% 50%, rgba(118, 126, 241, 0.00) 0%, #BFC3FF 46.35%, rgba(118, 126, 241, 0.00) 100%);
+                    mix-blend-mode: lighten;
+                    position: absolute;
+                    left: -3.5rem;
+                    top: 3rem;
+                    z-index: 0;
+                    filter: blur(10px);
+                }
+
+            .p-xlg-bold {
+                font-size: 2rem;
+                font-weight: 400 !important;
+                line-height: normal !important;
+            }
+
+            .retiro-textos-container h2,
+            .ppr-container h2,
+            .plan-retiro h2,
+            .deducible-impuestos h2,
+            .plan-ahorro h2,
+            .nuestros-proceso h2,
+            .testimoniales h2,
+            .faq h2,
+            .bg-morado h2,
+            .direccion-h3 {
+                font-size: 3.05188rem;
+                line-height: 3.5rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .ppr-container .sub-titulo, .impacto-edad .sub-titulo, .plan-allianz .sub-titulo, .deducible-impuestos .sub-titulo, .plan-ahorro .sub-titulo, .subtitulo-links {
+                font-size: 1.47656rem;
+                line-height: 1.96875rem;
+            }
+
+
+            .sobre-tu-retiro .retiro-img-container picture {
+                left: -8.62rem;
+            }
+
+                .sobre-tu-retiro .retiro-img-container picture img {
+                    width: 19.1875rem;
+                    height: 29.625rem;
+                }
+
+            .sobre-tu-retiro .circulo-verde {
+                left: 6.5rem;
+            }
+
+            .retiro-img-container {
+                text-align: left;
+            }
+
+                .retiro-img-container .retiro-badged-container {
+                    bottom: 1.56rem;
+                }
+
+            .retiro-badged__right {
+                left: -3.19rem;
+            }
+
+            .retiro-img-container .retiro-badged {
+                right: 11rem;
+            }
+
+            .retiro-img-container .retiro-badged__verde {
+                left: 4rem;
+            }
+
+            .retiro-img-container .retiro-badged__left {
+                left: -7rem;
+            }
+
+            .ppr .cards-container {
+                padding-left: 5.81rem;
+            }
+
+            .ppr .card-item span {
+                display: flex;
+                width: 4.1875rem;
+                padding: 0.625rem;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 0.625rem;
+                font-size: 2.44125rem;
+                line-height: 2.9375rem;
+                left: -3.25rem;
+                top: 1.13rem;
+            }
+
+            .ppr .card-item h5 {
+                font-size: 1.5625rem;
+                line-height: normal;
+            }
+
+            .ppr .card-item p {
+                font-size: 1.125rem;
+                line-height: normal;
+            }
+
+            .ppr .card-item-1 {
+                width: 25.4rem;
+            }
+
+            .ppr .figura-container picture img {
+                width: 27.25rem;
+            }
+
+            .ppr .img-titulo-1, .ppr .img-titulo-2 {
+                font-size: 1.95313rem;
+                line-height: normal;
+            }
+
+            .ppr .img-titulo-1 {
+                left: -1rem;
+            }
+
+            .ppr .img-titulo-2 {
+                bottom: 7rem;
+            }
+
+            .barras-estado__main-container h6 {
+                font-size: 1.47656rem;
+                line-height: 1.96875rem;
+            }
+
+            .card-deducible .card-texto h3 {
+                font-size: 3.05188rem;
+                line-height: 3.5rem;
+            }
+
+            .card-deducible .card-texto p {
+                font-size: 1.47656rem;
+                line-height: 1.96875rem;
+            }
+
+            .deducible-impuestos .cards-deducible-container .card-deducible-md .card-icon {
+                top: 2rem;
+                left: -1.87rem;
+            }
+
+            .benefits-points {
+                padding: 1.88rem 3.44rem;
+            }
+
+            .benefits-point .img {
+                width: 3.5rem;
+                height: 4.375rem;
+            }
+
+            .benefits-point p {
+                font-size: 1.47656rem;
+                line-height: 1.96875rem;
+            }
+
+            .benefits-graph {
+                width: 57.875rem;
+            }
+
+            .graph-img {
+                height: 30.4375rem;
+            }
+
+            .graph-bubble {
+                width: 10.375rem;
+                height: 3.5rem;
+            }
+
+                .graph-bubble p {
+                    font-size: 1.47656rem;
+                    line-height: 1.96875rem;
+                }
+
+            .bubble1 {
+                bottom: 2.63rem;
+            }
+
+            .bubble2 {
+                bottom: 3.53rem;
+            }
+
+            .bubble3 {
+                bottom: 7.44rem;
+            }
+
+            .bubble4 {
+                bottom: 12.75rem;
+            }
+
+            .bubble5 {
+                bottom: 21.06rem;
+            }
+
+            .tarjeta-container-item {
+                width: 16.3125rem;
+                height: 31rem;
+            }
+
+            /*  .proceso-paso {
+        height: 22.75rem;
+    }*/
+
+            .sobre-alige .sobre-alige-container {
+                padding: 3.12rem 1.88rem 1.88rem 3.12rem;
+            }
+
+            .sobre-alige-textos-container {
+                position: relative;
+            }
+
+            .sobre-ali .salto-xmd {
+                display: none !important;
+            }
+
+            .sobre-alige .sobre-alige-textos-container {
+                width: 50%;
+            }
+
+            .sobre-alige .sobre-alige-container .principal-card-container {
+                width: 50%;
+                margin-left: 200px;
+            }
+
+            .sobre-alige-img-container {
+                position: absolute;
+                left: 21rem;
+                bottom: -0.9rem;
+            }
+
+                .sobre-alige-img-container .sobre-alige-img-globo {
+                    top: 15rem;
+                    left: -10rem;
+                }
+
+            .sobre-alige .cards-container {
+                align-items: flex-end;
+            }
+
+            .img-titulo-container {
+                margin-top: 15rem;
+                padding: 1.25rem;
+            }
+
+            .cards-container .item-right {
+                margin-left: 0px;
+            }
+
+            .sobre-alige-img-container .img-laptop {
+                width: 23.5rem;
+                height: 30.0625rem;
+            }
+
+            .d-xlg-none {
+                display: none !important;
+            }
+
+            .d-lg-flex {
+                display: flex !important;
+            }
+        }
+
+        @media only screen and (min-width: 1440px) {
+
+            .deducible-impuestos .cards-deducible-container .card-deducible-md {
+                width: 100%;
+            }
+
+            .tarjeta-container-item {
+                width: 23.84%;
+                height: 30rem;
+            }
+
+                .tarjeta-container-item picture img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .tarjeta-container-item.col-xl-4 {
+                    width: 31.9% !important;
+                }
+
+            .tarjetas-container-img img {
+                width: 100%;
+            }
+
+            .benefits-graph {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            /* .nuestros-proceso {
+        max-width: 67%;
+    }*/
+
+            .ppr .container {
+                padding-right: 6rem;
+                padding-left: 6rem;
+            }
+        }

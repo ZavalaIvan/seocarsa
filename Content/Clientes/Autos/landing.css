@@ -1,0 +1,454 @@
+html, html body {
+    font-size: 16px;
+}
+
+.cotiza_ahora, .divLogos, .contactanos, nav .container-fluid {
+    max-width: 1440px;
+}
+
+.cotiza_ahora {
+    padding: 180px 2% 30px;
+    background: url(../../images/Autos/img-background-completo-Autos.png) bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.cotiza_ahora h1 {
+    color: #0A357C;
+    font-family: var(--fuente-secundaria);
+    font-size: 3.75rem;
+    font-weight: normal;
+    letter-spacing: 0;
+    line-height: 3.75rem;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.cotiza_ahora h1 b {
+    color: #0A357C;
+}
+
+.cotiza_ahora p {
+    color: #1B3572;
+    font-size: 2.375rem;
+    letter-spacing: 0;
+    line-height: 2.375rem;
+    margin-top: 67px;
+    margin-bottom: 200px;
+    text-align: center;
+}
+
+.cotiza_ahora .title_error {
+    text-align: center !important;
+    margin-top: 10px !important;
+    margin-bottom: 0px !important;
+}
+
+
+.cotiza_ahora .divFormulario {
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.cotiza_ahora .divFormulario .btn {
+    display: inline-block;
+    margin-left: .5%;
+    margin-right: .5%;
+    padding: 10px 30px;
+    width: 17%;
+    vertical-align: top;
+}
+
+.cotiza_ahora .divFormulario .inputAuto {
+    width: 64%;
+    display: inline-block;
+    margin-left: .5%;
+    margin-right: .5%;
+    vertical-align: top;
+}
+
+.cotiza_ahora .divFormulario .inputAuto input::placeholder {
+    color: #17345A;
+    opacity: 0.6;
+}
+
+.cotiza_ahora .divFormulario .inputAnio {
+    width: 15%;
+    display: inline-block;
+    margin-left: .5%;
+    margin-right: .5%;
+    text-align: right;
+    vertical-align: top;
+}
+
+    .cotiza_ahora .divFormulario .inputAnio .btn {
+        width: 100%;
+        box-shadow: 0 2px 16px 0 #e5e8ed;
+        position: relative;
+        box-shadow: 0 2px 16px 0 #E5E8ED;
+        -webkit-box-shadow: 0 2px 16px 0 #e5e8ed;
+        -moz-box-shadow: 0 2px 16px 0 #e5e8ed;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 10px 10px 30px;
+    }
+
+
+.divLogos .aseguradoras {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/*.divLogos .aseguradoras .imgLogos {
+    height: 46px;
+    display: inline-block;
+    margin: 0;
+}
+
+.divLogos .aseguradoras .imgLogos img {
+    width: auto;
+    height: 90%;
+}*/
+
+.divLogos {
+    margin-top: 63px;
+}
+
+.divLogos .aseguradoras .imgLogos {
+    height: 40px;
+    display: inline-block;
+    margin: 0px;
+}
+
+.divLogos .aseguradoras .imgLogos img {
+    width: auto;
+    height: 100%;
+    max-width: 120px;
+}
+
+.contactanos {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.contactanos .divFrame {
+    padding-right: 25px;
+}
+
+.contactanos .divFrame .mapa {
+    height: 260px;
+    width: 438px;
+    float: right;
+}
+
+.contactanos .divFrame .mapa iframe {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+}
+
+.contactanos .divContacto {
+    padding-top: 15px;
+    padding-left: 25px;
+}
+
+.contactanos .divContacto h1 {
+    color: #0A357C;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 1.29rem;
+    margin-top: 25px;
+    margin-bottom: 13px;
+}
+
+.contactanos .divContacto h2 {
+    color: #0A357C;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.25rem;
+}
+
+.contactanos .divContacto p {
+    color: #8A98A9;
+    font-size: 1.125rem;
+    letter-spacing: 0;
+    line-height: 1.27rem;
+}
+
+.contactanos .divContacto .p_whatsapp {
+    margin-top: 20px;
+}
+
+.contactanos .divContacto .p_whatsapp .icn_whatsapp {
+    height: 22px;
+    width: 22px;
+    margin-top: -2px;
+    margin-right: 10px;
+}
+
+.containerMenuKebab .menuKebab {
+    left: 0;
+    top: 0;
+    width: 290px;
+}
+
+.containerMenuKebab .menuKebab .opcionKebab {
+    height: 40px;
+    width: 20%;
+}
+
+
+.ui-widget-content li {
+    border: 0 solid #dddddd;
+    background-color: #F5F4F5;
+    color: #333333;
+}
+
+.ui-widget li {
+    padding: 0px;
+    color: #1B3572;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.250rem;
+}
+
+.ui-widget li div {
+    position: relative;
+    padding: 10px 23px 10px 23px !important;
+}
+
+.ui-widget li div:hover, .ui-widget li div:active, .ui-widget li div:focus {
+    background-color: #A9C23E;
+    border: 0 solid #A9C23E;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+    background-color: #A9C23E !important;
+    border: 0 solid #A9C23E !important;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/*End AutoAcompletar jquery UI*/
+
+#txt_anioAuto .material-icons {
+    font-size: 1.8rem;
+    color: #C3C3C3;
+}
+
+/*Media query*/
+@media (min-width: 2500px) {
+    html body {
+        font-size: 26px;
+    }
+
+    .cotiza_ahora {
+        padding: 200px 2% 30px;
+    }
+
+    .cotiza_ahora p {
+        margin-top: 67px;
+        margin-bottom: 850px;
+    }
+
+    .cotiza_ahora .divFormulario {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+
+    .divLogos .aseguradoras .imgLogos {
+        height: 60px;
+    }
+
+    .contactanos .divFrame .mapa {
+        height: 360px;
+        width: 538px;
+        float: right;
+    }
+
+    #txt_anioAuto .material-icons {
+        top: 17%;
+    }
+}
+
+@media (min-width: 1800px) and (max-width: 2500px) {
+    html body {
+        font-size: 18px;
+    }
+
+    .cotiza_ahora p {
+        margin-top: 67px;
+        margin-bottom: 500px;
+    }
+}
+
+@media (max-width: 1380px) {}
+
+@media (max-width: 1300px) {}
+
+@media (max-width: 1220px) {}
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 1024px) {
+    .cotiza_ahora .divFormulario {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .divLogos .aseguradoras .imgLogos {
+        height: 30px;
+    }
+
+    .cotiza_ahora {
+        margin-top: 75px;
+        padding: 80px 0 30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .cotiza_ahora .divFormulario {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .cotiza_ahora .divFormulario .inputAuto {
+        width: 60%;
+    }
+
+    .cotiza_ahora .divFormulario .inputAnio {
+        width: 18%;
+    }
+
+    .contactanos .divFrame {
+        padding-right: 25px;
+        padding-left: 25px;
+        text-align: center;
+    }
+
+    .contactanos .divFrame .mapa {
+        height: 260px;
+        width: 438px;
+        float: none;
+        margin: auto;
+    }
+
+    .contactanos .divFrame .mapa iframe {
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .contactanos .divContacto {
+        padding-top: 40px;
+        padding-left: 22%;
+        padding-right: 22%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    html body {
+        font-size: 16px;
+        overflow-x: hidden;
+    }
+
+    .cotiza_ahora {
+        background: url(../../images/Autos/img-background-completo.png) bottom;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+
+    .cotiza_ahora h1 {
+        font-size: 2.3125rem;
+        margin-bottom: 50px;
+    }
+
+    .cotiza_ahora .divFormulario {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .cotiza_ahora .divFormulario .inputAuto {
+        width: 98%;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-bottom: 16px;
+    }
+
+    .cotiza_ahora .divFormulario .inputAnio {
+        width: 47%;
+        margin-left: 1%;
+        margin-right: 1%;
+        text-align: right;
+    }
+
+    .cotiza_ahora .divFormulario .btn {
+        margin-left: 1%;
+        margin-right: 1%;
+        width: 47%;
+        border: 1px solid #E5E8ED;
+    }
+
+
+    .cotiza_ahora p {
+        font-size: 1.5rem;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-top: 46px;
+        margin-bottom: 230px;
+    }
+
+    .divLogos .aseguradoras .imgLogos, .divLogos .aseguradoras .imgLogos {
+        height: 30px;
+        margin: 10px 22px;
+    }
+
+    .divLogos .aseguradoras, .divLogos .aseguradoras {
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+
+    .contactanos {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .contactanos .divContacto {
+        padding: 50px 32px;
+    }
+
+    .contactanos .divFrame {
+        padding: 0px;
+    }
+
+    .contactanos .divFrame .mapa {
+        height: 224px;
+        width: 100%;
+        float: none;
+    }
+}
+
+@media (min-width: 416px) and (max-width: 767px) {}
+
+@media (max-width: 415px) {}
+
+@media (max-width: 320px) {
+    html body {
+        font-size: 14px;
+    }
+}
