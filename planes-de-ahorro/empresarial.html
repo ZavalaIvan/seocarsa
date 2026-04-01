@@ -197,6 +197,41 @@
     #sobre-alige-burbuja2 {
       color: #001f3f;
     }
+
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translate3d(0, 28px, 0);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+      will-change: opacity, transform;
+    }
+
+    .reveal-on-scroll.reveal-left {
+      transform: translate3d(-32px, 0, 0);
+    }
+
+    .reveal-on-scroll.reveal-right {
+      transform: translate3d(32px, 0, 0);
+    }
+
+    .reveal-on-scroll.reveal-soft {
+      transform: translate3d(0, 18px, 0);
+    }
+
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-on-scroll,
+      .reveal-on-scroll.reveal-left,
+      .reveal-on-scroll.reveal-right,
+      .reveal-on-scroll.reveal-soft {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1051,6 +1086,83 @@ document.getElementById("form-empresarial").addEventListener("submit", function(
     <input id="TxbF" type="hidden" value="e1000a819a274d5f874c4f6fa83d757a">
     <input id="TxbG" type="hidden" value="5883c81733654f299ac495864af3245c">
   </div>
+
+  <script>
+    (function () {
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var animationTargets = [
+        ['#hero .hero-titulos-container', 'reveal-soft'],
+        ['#hero .picture-container', 'reveal-right'],
+        ['#hero .formulario-seccion', 'reveal-left'],
+        ['#sobre-tu-retiro .container', 'reveal-soft'],
+        ['#sobre-tu-retiro .botones-container', 'reveal-soft'],
+        ['#plan-retiro .tarjeta-container-item', 'reveal-soft'],
+        ['#plan-retiro .botones-container', 'reveal-soft'],
+        ['.procesoShowXs #plan-skandia', 'reveal-soft'],
+        ['#sobre-alige .sobre-alige-textos-container', 'reveal-left'],
+        ['#sobre-alige .img-container', 'reveal-right'],
+        ['#faq .faqs details', 'reveal-soft'],
+        ['#contratar-seguro h2, #contratar-seguro .subtitulo-links', 'reveal-soft'],
+        ['#contratar-seguro .botones-container', 'reveal-soft'],
+        ['.direccion .direccion-h3', 'reveal-soft'],
+        ['.direccion .mapa', 'reveal-soft']
+      ];
+
+      function markTargets() {
+        animationTargets.forEach(function (config, groupIndex) {
+          var selector = config[0];
+          var variant = config[1];
+          var elements = document.querySelectorAll(selector);
+
+          elements.forEach(function (element, index) {
+            element.classList.add('reveal-on-scroll', variant);
+            element.style.transitionDelay = reduceMotion ? '0ms' : Math.min(index * 80, 240) + 'ms';
+
+            if (groupIndex < 3) {
+              element.classList.add('is-visible');
+            }
+          });
+        });
+      }
+
+      function initRevealObserver() {
+        if (reduceMotion || !('IntersectionObserver' in window)) {
+          document.querySelectorAll('.reveal-on-scroll').forEach(function (element) {
+            element.classList.add('is-visible');
+          });
+          return;
+        }
+
+        var observer = new IntersectionObserver(function (entries, currentObserver) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+            entry.target.classList.add('is-visible');
+            currentObserver.unobserve(entry.target);
+          });
+        }, {
+          threshold: 0.18,
+          rootMargin: '0px 0px -10% 0px'
+        });
+
+        document.querySelectorAll('.reveal-on-scroll:not(.is-visible)').forEach(function (element) {
+          observer.observe(element);
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function () {
+          markTargets();
+          initRevealObserver();
+        });
+      } else {
+        markTargets();
+        initRevealObserver();
+      }
+    })();
+  </script>
 
 </body>
 <!-- Mirrored from carsa.com.mx/planes-de-ahorro/allianz by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 May 2025 15:56:54 GMT -->

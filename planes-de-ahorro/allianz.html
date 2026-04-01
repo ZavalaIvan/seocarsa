@@ -202,17 +202,57 @@
 }
 
 #plan-retiro .tarjeta-container-texto h5 {
-  color: #274470;
+  color: #ffffff;
 }
 
 #plan-retiro .tarjeta-container-texto p {
-  color: #334155;
+  color: #ffffff;
 }
 
 #nuestros-proceso .p-sm,
 #faq .p-sm,
 #faq p {
   color: #334155;
+}
+
+#tarjeta3-img {
+  position: relative;
+  top: -14px;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.reveal-left {
+  transform: translate3d(-32px, 0, 0);
+}
+
+.reveal-on-scroll.reveal-right {
+  transform: translate3d(32px, 0, 0);
+}
+
+.reveal-on-scroll.reveal-soft {
+  transform: translate3d(0, 18px, 0);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll,
+  .reveal-on-scroll.reveal-left,
+  .reveal-on-scroll.reveal-right,
+  .reveal-on-scroll.reveal-soft {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
   </style>
   
@@ -1975,6 +2015,88 @@ montoInput.addEventListener("input", () => {
     montoInput.value = "";
   }
 });
+</script>
+
+<script>
+  (function () {
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var animationTargets = [
+      ['#hero .hero-titulos-container', 'reveal-soft'],
+      ['#hero .picture-container', 'reveal-right'],
+      ['#hero .formulario-seccion', 'reveal-left'],
+      ['#sobre-tu-retiro .container', 'reveal-soft'],
+      ['#ppr .cards-container .card-item', 'reveal-soft'],
+      ['#ppr .botones-container', 'reveal-soft'],
+      ['#impacto-edad .container', 'reveal-soft'],
+      ['#impacto-edad .botones-container', 'reveal-soft'],
+      ['#plan-allianz .container', 'reveal-soft'],
+      ['#plan-allianz .botones-container', 'reveal-soft'],
+      ['#plan-retiro .tarjeta-container-item', 'reveal-soft'],
+      ['#plan-retiro .botones-container', 'reveal-soft'],
+      ['#nuestros-proceso #nuestros-proceso-titulo', 'reveal-soft'],
+      ['#nuestros-proceso .proceso-paso', 'reveal-soft'],
+      ['#sobre-alige .sobre-alige-textos-container', 'reveal-left'],
+      ['#sobre-alige .img-container', 'reveal-right'],
+      ['#faq .faqs details', 'reveal-soft'],
+      ['#faq .botones-container', 'reveal-soft'],
+      ['.direccion .direccion-h3', 'reveal-soft'],
+      ['.direccion .mapa', 'reveal-soft']
+    ];
+
+    function markTargets() {
+      animationTargets.forEach(function (config, groupIndex) {
+        var selector = config[0];
+        var variant = config[1];
+        var elements = document.querySelectorAll(selector);
+
+        elements.forEach(function (element, index) {
+          element.classList.add('reveal-on-scroll', variant);
+          element.style.transitionDelay = reduceMotion ? '0ms' : Math.min(index * 80, 240) + 'ms';
+
+          if (groupIndex < 3) {
+            element.classList.add('is-visible');
+          }
+        });
+      });
+    }
+
+    function initRevealObserver() {
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        document.querySelectorAll('.reveal-on-scroll').forEach(function (element) {
+          element.classList.add('is-visible');
+        });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries, currentObserver) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          entry.target.classList.add('is-visible');
+          currentObserver.unobserve(entry.target);
+        });
+      }, {
+        threshold: 0.18,
+        rootMargin: '0px 0px -10% 0px'
+      });
+
+      document.querySelectorAll('.reveal-on-scroll:not(.is-visible)').forEach(function (element) {
+        observer.observe(element);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function () {
+        markTargets();
+        initRevealObserver();
+      });
+    } else {
+      markTargets();
+      initRevealObserver();
+    }
+  })();
 </script>
 
 
