@@ -26,8 +26,24 @@
     margin-bottom: 2rem;
 }
 
+.producto-lead {
+    max-width: 42rem;
+    margin: 0 auto 1.25rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(39, 68, 112, 0.8);
+}
+
 .producto-p span {
     color: #274470;
+}
+
+.producto-ayuda {
+    margin-top: 0.85rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: rgba(39, 68, 112, 0.8);
 }
 
 .producto select {
@@ -64,6 +80,14 @@
     opacity: 0.4;
 }
 
+.asesoria-resumen {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(39, 68, 112, 0.9);
+}
+
 .cards {
     display: flex;
     gap: 3.13rem;
@@ -79,6 +103,7 @@
     justify-content: center;
     align-items: center;
     padding: 2rem 2.5rem;
+    box-shadow: 0 20px 50px rgba(39, 68, 112, 0.08);
 }
 
 .card svg {
@@ -88,13 +113,29 @@
 
 .card h6 {
     margin-top: 1.25rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
     text-align: center;
+}
+
+.card-copy {
+    margin-bottom: 1.25rem;
+    text-align: center;
+    color: rgba(39, 68, 112, 0.8);
+    line-height: 1.5;
 }
 
 .card .btn {
     width: 100%;
     padding: 1.25rem 2rem;
+}
+
+.card .btn.is-disabled,
+.card .btn[aria-disabled="true"] {
+    pointer-events: none;
+    border-color: var(--a-color-secondary);
+    background: var(--a-color-secondary);
+    color: var(--a-color-dark);
+    opacity: 1;
 }
 
 .card button:disabled {
@@ -140,6 +181,13 @@
     .asesoria-p {
         font-size: 1.26563rem;
         line-height: 1.625rem;
+    }
+
+    .producto-lead,
+    .producto-ayuda,
+    .asesoria-resumen,
+    .card-copy {
+        font-size: 0.95rem;
     }
 
     .producto-p {

@@ -48,6 +48,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <script>
         var _Root = 'Prod/index.html';
@@ -173,11 +174,15 @@
         Te ofrecemos orientación sobre nuestros productos de seguros
       </h1>
 
+      <p class="producto-lead cms-editable">
+        Selecciona la categoria que te interesa y te llevamos directo con el canal correcto por telefono o WhatsApp.
+      </p>
+
       <p id="producto-p" class="producto-p cms-editable">
         <span>Paso 1:</span> Elige un producto
       </p>
 
-      <select id="select-producto" class="form-control">
+      <select id="select-producto" class="form-control" aria-describedby="producto-ayuda">
         <option value="null">Elige producto...</option>
         <option value="Ahorro">Ahorro</option>
         <option value="Vida">Vida</option>
@@ -188,6 +193,9 @@
         <option value="Fianzas">Fianzas</option>
         <option value="Otro">Otro</option>
       </select>
+      <p id="producto-ayuda" class="producto-ayuda">
+        Si aun no sabes que opcion te conviene, elige <strong>Otro</strong> y te orientamos.
+      </p>
     </div>
   </div>
 </section>
@@ -198,22 +206,21 @@
       <div class="col-12">
         <p class="asesoria-p"><span>Paso 2:</span> Solicita asesoría</p>
       </div>
+      <p id="contacto-resumen" class="asesoria-resumen" aria-live="polite">
+        Elige un producto para habilitar tu llamada y tu WhatsApp.
+      </p>
       <div class="col-12 cards">
 
         <div class="card card-calendly">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-            <path d="M43.875 15H4.125C3.50625 15 3 14.4937 3 13.875V10.5C3 8.01562 5.01562 6 7.5 6H12V1.125C12 0.50625 12.5063 0 13.125 0H16.875C17.4937 0 18 0.50625 18 1.125V6H30V1.125C30 0.50625 30.5063 0 31.125 0H34.875C35.4938 0 36 0.50625 36 1.125V6H40.5C42.9844 6 45 8.01562 45 10.5V13.875C45 14.4937 44.4938 15 43.875 15ZM4.125 18H43.875C44.4938 18 45 18.5063 45 19.125V43.5C45 45.9844 42.9844 48 40.5 48H7.5C5.01562 48 3 45.9844 3 43.5V19.125C3 18.5063 3.50625 18 4.125 18ZM33.75 31.125C33.75 30.5063 33.2437 30 32.625 30H27V24.375C27 23.7563 26.4937 23.25 25.875 23.25H22.125C21.5063 23.25 21 23.7563 21 24.375V30H15.375C14.7563 30 14.25 30.5063 14.25 31.125V34.875C14.25 35.4938 14.7563 36 15.375 36H21V41.625C21 42.2438 21.5063 42.75 22.125 42.75H25.875C26.4937 42.75 27 42.2438 27 41.625V36H32.625C33.2437 36 33.75 35.4938 33.75 34.875V31.125Z" fill="#274470"/>
-          </svg>
-          <h6>Agenda una Cita con un Asesor</h6>
-          <a id="btn-calendly" href="#" class="btn btn-primary btn-large" disabled>Llamada</a>
+          <h6>Llamanos directo</h6>
+          <p class="card-copy">Habla con un asesor de CARSA y recibe atencion inmediata.</p>
+          <a id="btn-calendly" href="#" class="btn btn-primary btn-large is-disabled" aria-disabled="true" tabindex="-1">Llamar ahora</a>
         </div>
 
         <div class="card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-            <path d="M38.7094 9.10312C34.7812 5.16562 29.55 3 23.9906 3C12.5156 3 3.17812 12.3375 3.17812 23.8125C3.17812 27.4781 4.13438 31.0594 5.95312 34.2188L3 45L14.0344 42.1031C17.0719 43.7625 20.4937 44.6344 23.9813 44.6344H23.9906C35.4562 44.6344 45 35.2969 45 23.8219C45 18.2625 42.6375 13.0406 38.7094 9.10312Z" fill="#274470"/>
-          </svg>
           <h6>Envíanos un mensaje WhatsApp</h6>
-          <a id="btn-whatsapp" href="#" class="btn btn-primary btn-large" disabled>Abrir WhatsApp</a>
+          <p class="card-copy">Te abrimos el chat con un mensaje inicial segun el producto elegido.</p>
+          <a id="btn-whatsapp" href="#" class="btn btn-primary btn-large is-disabled" aria-disabled="true" tabindex="-1">Abrir WhatsApp</a>
         </div>
 
       </div>
@@ -256,8 +263,244 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<script>
+window.addEventListener("load", () => {
+  const originalSelect = document.getElementById("select-producto");
+  const originalCall = document.getElementById("btn-calendly");
+  const originalWhats = document.getElementById("btn-whatsapp");
+  const asesoria = document.querySelector(".asesoria");
+  const resumen = document.getElementById("contacto-resumen");
+
+  if (!originalSelect || !originalCall || !originalWhats || !asesoria || !resumen) {
+    return;
+  }
+
+  const select = originalSelect.cloneNode(true);
+  const btnCall = originalCall.cloneNode(true);
+  const btnWhats = originalWhats.cloneNode(true);
+
+  originalSelect.replaceWith(select);
+  originalCall.replaceWith(btnCall);
+  originalWhats.replaceWith(btnWhats);
+
+  const contactos = {
+    Ahorro: { phone: "9992653187", label: "Ahorro", message: "Hola, quisiera informes sobre planes de ahorro." },
+    Vida: { phone: "9992653187", label: "Vida", message: "Hola, quisiera informes sobre seguros de vida." },
+    Salud: { phone: "9999476517", label: "Salud", message: "Hola, quisiera informes sobre seguros de salud." },
+    Automovil: { phone: "9991163971", label: "Automovil", message: "Hola, quisiera informes sobre seguros de auto." },
+    Hogar: { phone: "9992653187", label: "Hogar", message: "Hola, quisiera informes sobre seguros de hogar." },
+    Empresarial: { phone: "9992653187", label: "Empresarial", message: "Hola, quisiera informes sobre seguros empresariales." },
+    Fianzas: { phone: "9992653187", label: "Fianzas", message: "Hola, quisiera informes sobre fianzas." },
+    Otro: { phone: "9992653187", label: "Otro", message: "Hola, quisiera orientacion para elegir el servicio adecuado." }
+  };
+
+  function formatPhone(phone) {
+    return `(${phone.slice(0, 3)}) ${phone.slice(3, 6)} ${phone.slice(6)}`;
+  }
+
+  function setDisabledState(isDisabled) {
+    [btnCall, btnWhats].forEach((button) => {
+      button.classList.toggle("is-disabled", isDisabled);
+      button.setAttribute("aria-disabled", String(isDisabled));
+      button.tabIndex = isDisabled ? -1 : 0;
+      if (isDisabled) {
+        button.href = "#";
+      }
+    });
+  }
+
+  function updateContactFlow(value) {
+    const contacto = contactos[value];
+
+    if (!contacto) {
+      asesoria.classList.add("disabled");
+      resumen.textContent = "Elige un producto para habilitar tu llamada y tu WhatsApp.";
+      setDisabledState(true);
+      return;
+    }
+
+    asesoria.classList.remove("disabled");
+    setDisabledState(false);
+
+    const formattedPhone = formatPhone(contacto.phone);
+    btnCall.href = `tel:+52${contacto.phone}`;
+    btnWhats.href = `https://wa.me/52${contacto.phone}?text=${encodeURIComponent(contacto.message)}`;
+    btnCall.setAttribute("aria-label", `Llamar a ${contacto.label} al ${formattedPhone}`);
+    btnWhats.setAttribute("aria-label", `Abrir WhatsApp para ${contacto.label} al ${formattedPhone}`);
+    resumen.textContent = `Canales habilitados para ${contacto.label}: llamada y WhatsApp al ${formattedPhone}.`;
+  }
+
+  select.addEventListener("change", () => {
+    updateContactFlow(select.value);
+  });
+
+  [btnCall, btnWhats].forEach((button) => {
+    button.addEventListener("click", (event) => {
+      if (button.getAttribute("aria-disabled") === "true") {
+        event.preventDefault();
+      }
+    });
+  });
+
+  updateContactFlow(select.value);
+});
+</script>
+
 
     
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector("nav.navbar");
+  const footer = document.querySelector("footer");
+
+  if (nav) {
+    nav.outerHTML = `
+   <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand ms-auto" href="index.html">
+            <img class="navbar-logo" src="Content/img/home/Logo.png" alt="CARSA Seguros y Fianzas" width="216" height="92" loading="lazy" data-jo="true">
+        </a>
+
+       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon material-symbols-outlined">
+        <span></span>
+    </span>
+</button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="menu1" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-jo="true">Seguros</a>
+                    <ul class="dropdown-menu" aria-labelledby="menu1">
+                        <li><a class="dropdown-item" href="/seguro-de-ahorro" data-jo="true">Ahorro</a></li>
+                        <li><a class="dropdown-item" href="/seguro-de-vida" data-jo="true">Vida</a></li>
+                        <li><a class="dropdown-item" href="/seguro-medico" data-jo="true">Salud</a></li>
+                        <li><a class="dropdown-item" href="planes-de-ahorro/hogar.html" data-jo="true">Hogar</a></li>
+                        <li><a class="dropdown-item" href="/seguro-de-auto" data-jo="true">Automovil</a></li>
+                        <li><a class="dropdown-item" href="/seguro-empresarial" data-jo="true">Empresarial</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="menu2" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-jo="true">Fianzas</a>
+                    <ul class="dropdown-menu" aria-labelledby="menu2">
+                        <li><a class="dropdown-item" href="/fianza-de-cumplimiento" data-jo="true">Cumplimiento</a></li>
+                        <li><a class="dropdown-item" href="/fianza-de-anticipo" data-jo="true">Anticipo</a></li>
+                        <li><a class="dropdown-item" href="/fianza-de-vicios-ocultos" data-jo="true">Vicios Ocultos</a></li>
+                        <li><a class="dropdown-item" href="/fianza-de-credito" data-jo="true">Credito</a></li>
+                        <li><a class="dropdown-item" href="/fianza-de-fidelidad" data-jo="true">Fidelidad</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.teamcarsa.com/" target="_blank" rel="noopener" data-jo="true">Unete a Carsa</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="contacto.html" class="btn btn-element-contact" data-jo="true">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>`;
+  }
+
+  if (footer) {
+    footer.outerHTML = `
+<footer>
+  <div class="container">
+    <div class="row">
+     <div class="col-12 footer-logo">
+
+  <div class="footer-logo-img-wrapper" data-jo="true"><p><img id="footer-logo" class="footer-logo-img" src="/Content/img/carsaLogo-B.png" alt="carsa" width="53" height="53"></p></div>
+
+  <p id="footer-logo-texto" class="footer-logo-tranquilo" data-jo="true">Tu tranquilidad, nuestro compromiso</p>
+
+</div>
+
+      <div class="col-12 footer-informacion">
+        <div class="col-4">
+          <div class="col-12 p-0">
+            <h5 id="footer-contacto-titulo" data-jo="true">Contactanos</h5>
+          </div>
+          <div class="col-12">
+  <p id="footer-correo" class="p-md" data-jo="true">
+    <span class="bold">Correo:</span>
+    <a href="mailto:contacto@segurosfianzas.com">contacto@segurosfianzas.com</a>
+  </p>
+
+  <p id="footer-telefono" class="p-md" data-jo="true">
+    <span class="bold">Telefono:</span> <a href="tel:+529999444999">(999) 944 4999</a>
+  </p>
+
+  <p id="footer-whatsapp" class="p-md" data-jo="true">
+    <span class="bold">WhatsApp:</span> <a href="https://wa.me/529992653187" target="_blank" rel="noopener">(999) 265 3187</a>
+  </p>
+  <div class="col-12 redes-sociales mt-3">
+  <span class="bold">Siguenos:</span>
+
+  <a href="https://www.facebook.com/share/1KgjejV4SG/" target="_blank" class="social-icon">
+    <i class="fab fa-facebook"></i>
+  </a>
+
+  <a href="https://www.instagram.com/grupocarsa?igsh=MTcwOHV1cnN2ZXd5bA==" target="_blank" class="social-icon">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+</div>
+</div>
+
+        </div>
+
+        <div class="col-8">
+          <div class="col-12 p-0">
+            <a href="mapa-del-sitio.html" target="_blank">
+              <h5 data-jo="true">Servicios</h5>
+            </a>
+          </div>
+          <div class="col-12 p-0">
+            <div class="col-3">
+              <h6 data-jo="true">Indice</h6>
+              <a href="#" class="p-md" data-jo="true">Seguros</a>
+              <a href="/seguro-de-ahorro" class="p-md" data-jo="true">Ahorro</a>
+              <a href="/seguro-de-vida" class="p-md" data-jo="true">Vida</a>
+              <a href="/seguro-de-auto" class="p-md" data-jo="true">Auto</a>
+              <a href="planes-de-ahorro/hogar.html" class="p-md" data-jo="true">Hogar</a>
+              <a href="/seguro-empresarial" class="p-md" data-jo="true">Empresarial</a>
+            </div>
+
+            <div class="col-3">
+              <h6 data-jo="true">Fianzas</h6>
+              <a href="#" class="p-md" data-jo="true">Fianzas</a>
+              <a href="/fianza-de-cumplimiento" class="p-md" data-jo="true">Cumplimiento</a>
+              <a href="/fianza-de-anticipo" class="p-md" data-jo="true">Anticipo</a>
+              <a href="/fianza-de-vicios-ocultos" class="p-md" data-jo="true">Vicios Ocultos</a>
+              <a href="/fianza-de-credito" class="p-md" data-jo="true">Credito</a>
+            </div>
+
+            <div class="col-3">
+              <h6 data-jo="true">Mas Informacion</h6>
+              <a href="https://www.teamcarsa.com/" target="_blank" rel="noopener" class="p-md" data-jo="true">Unete a CARSA</a>
+              <a href="/mapa-del-sitio.html" class="p-md" data-jo="true">Mapa de sitio</a>
+              <a href="#carsa-aviso-privacidad" class="p-md" data-jo="true">Aviso de privacidad</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 footer-redes">
+        <div class="redes"></div>
+      </div>
+    </div>
+  </div>
+</footer>`;
+  }
+});
+</script>
 
 <style>
     .lblFooter {
@@ -1321,9 +1564,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
     <script src='Scripts/general.js' async></script>
 <script src='Scripts/bootstrap5/bootstrap.min.js' async></script>
-<script src='Scripts/Alige2.0/contactar.js' async></script>
-
-
     <script src="../code.tidio.co_443/w0bu7xxlrw3g0vdy2ezqzbolq2gacoih.js" defer></script>
 
     <div id="frame-eKeys">
