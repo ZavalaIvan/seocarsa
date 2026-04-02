@@ -1,41 +1,79 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
-# Redirecciones desde archivos fisicos hacia URLs publicas
-RewriteRule ^index\.html$ / [R=301,L,NC]
-RewriteRule ^contacto\.html$ /contacto [R=301,L,NC]
-RewriteRule ^mapa-del-sitio\.html$ /mapa-del-sitio [R=301,L,NC]
-RewriteRule ^planes-de-ahorro/allianz\.html$ /seguro-de-ahorro [R=301,L,NC]
-RewriteRule ^seguros-de-vida/allianz\.html$ /seguro-de-vida [R=301,L,NC]
-RewriteRule ^salud\.html$ /seguro-medico [R=301,L,NC]
-RewriteRule ^planes-de-ahorro/hogar\.html$ /seguro-de-hogar [R=301,L,NC]
-RewriteRule ^seguros-de-auto\.html$ /seguro-de-auto [R=301,L,NC]
-RewriteRule ^planes-de-ahorro/empresarial\.html$ /seguro-empresarial [R=301,L,NC]
-RewriteRule ^Fianzas/cumplimiento\.html$ /fianza-de-cumplimiento [R=301,L,NC]
-RewriteRule ^Fianzas/anticipo\.html$ /fianza-de-anticipo [R=301,L,NC]
-RewriteRule ^Fianzas/vicios-ocultos\.html$ /fianza-de-vicios-ocultos [R=301,L,NC]
-RewriteRule ^Fianzas/credito\.html$ /fianza-de-credito [R=301,L,NC]
-RewriteRule ^Fianzas/fidelidad\.html$ /fianza-de-fidelidad [R=301,L,NC]
+# =========================
+# Redirecciones 301 solo si el usuario pidió la URL vieja
+# =========================
 
-# Canonicalizar versiones con slash final
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+contacto\.html[\s?] [NC]
+RewriteRule ^contacto\.html$ /contacto [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+mapa-del-sitio\.html[\s?] [NC]
+RewriteRule ^mapa-del-sitio\.html$ /mapa-del-sitio [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+planes-de-ahorro/allianz\.html[\s?] [NC]
+RewriteRule ^planes-de-ahorro/allianz\.html$ /seguro-de-ahorro [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+seguros-de-vida/allianz\.html[\s?] [NC]
+RewriteRule ^seguros-de-vida/allianz\.html$ /seguro-de-vida [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+salud\.html[\s?] [NC]
+RewriteRule ^salud\.html$ /seguro-medico [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+planes-de-ahorro/hogar\.html[\s?] [NC]
+RewriteRule ^planes-de-ahorro/hogar\.html$ /seguro-de-hogar [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+seguros-de-auto\.html[\s?] [NC]
+RewriteRule ^seguros-de-auto\.html$ /seguro-de-auto [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+planes-de-ahorro/empresarial\.html[\s?] [NC]
+RewriteRule ^planes-de-ahorro/empresarial\.html$ /seguro-empresarial [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+Fianzas/cumplimiento\.html[\s?] [NC]
+RewriteRule ^Fianzas/cumplimiento\.html$ /fianza-de-cumplimiento [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+Fianzas/anticipo\.html[\s?] [NC]
+RewriteRule ^Fianzas/anticipo\.html$ /fianza-de-anticipo [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+Fianzas/vicios-ocultos\.html[\s?] [NC]
+RewriteRule ^Fianzas/vicios-ocultos\.html$ /fianza-de-vicios-ocultos [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+Fianzas/credito\.html[\s?] [NC]
+RewriteRule ^Fianzas/credito\.html$ /fianza-de-credito [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+Fianzas/fidelidad\.html[\s?] [NC]
+RewriteRule ^Fianzas/fidelidad\.html$ /fianza-de-fidelidad [R=301,L]
+
+# =========================
+# Quitar slash final de URLs públicas
+# =========================
 RewriteRule ^(contacto|mapa-del-sitio|seguro-de-ahorro|seguro-de-vida|seguro-medico|seguro-de-hogar|seguro-de-auto|seguro-empresarial|fianza-de-cumplimiento|fianza-de-anticipo|fianza-de-vicios-ocultos|fianza-de-credito|fianza-de-fidelidad)/$ /$1 [R=301,L,NC]
 
-# Evitar conflictos con archivos y directorios reales
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+# =========================
+# No tocar archivos o carpetas reales
+# =========================
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
 
-# URLs publicas del sitio actual
-RewriteRule ^contacto$ /contacto.html [L,NC]
-RewriteRule ^mapa-del-sitio$ /mapa-del-sitio.html [L,NC]
-RewriteRule ^seguro-de-ahorro$ /planes-de-ahorro/allianz.html [L,NC]
-RewriteRule ^seguro-de-vida$ /seguros-de-vida/allianz.html [L,NC]
-RewriteRule ^seguro-medico$ /salud.html [L,NC]
-RewriteRule ^seguro-de-hogar$ /planes-de-ahorro/hogar.html [L,NC]
-RewriteRule ^seguro-de-auto$ /seguros-de-auto.html [L,NC]
-RewriteRule ^seguro-empresarial$ /planes-de-ahorro/empresarial.html [L,NC]
-RewriteRule ^fianza-de-cumplimiento$ /Fianzas/cumplimiento.html [L,NC]
-RewriteRule ^fianza-de-anticipo$ /Fianzas/anticipo.html [L,NC]
-RewriteRule ^fianza-de-vicios-ocultos$ /Fianzas/vicios-ocultos.html [L,NC]
-RewriteRule ^fianza-de-credito$ /Fianzas/credito.html [L,NC]
-RewriteRule ^fianza-de-fidelidad$ /Fianzas/fidelidad.html [L,NC]
+# =========================
+# Rewrites internos a archivos físicos
+# =========================
+RewriteRule ^$ index.html [L]
+RewriteRule ^contacto$ contacto.html [L,NC]
+RewriteRule ^mapa-del-sitio$ mapa-del-sitio.html [L,NC]
+RewriteRule ^seguro-de-ahorro$ planes-de-ahorro/allianz.html [L,NC]
+RewriteRule ^seguro-de-vida$ seguros-de-vida/allianz.html [L,NC]
+RewriteRule ^seguro-medico$ salud.html [L,NC]
+RewriteRule ^seguro-de-hogar$ planes-de-ahorro/hogar.html [L,NC]
+RewriteRule ^seguro-de-auto$ seguros-de-auto.html [L,NC]
+RewriteRule ^seguro-empresarial$ planes-de-ahorro/empresarial.html [L,NC]
+RewriteRule ^fianza-de-cumplimiento$ Fianzas/cumplimiento.html [L,NC]
+RewriteRule ^fianza-de-anticipo$ Fianzas/anticipo.html [L,NC]
+RewriteRule ^fianza-de-vicios-ocultos$ Fianzas/vicios-ocultos.html [L,NC]
+RewriteRule ^fianza-de-credito$ Fianzas/credito.html [L,NC]
+RewriteRule ^fianza-de-fidelidad$ Fianzas/fidelidad.html [L,NC]
 </IfModule>

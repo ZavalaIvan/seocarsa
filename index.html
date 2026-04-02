@@ -39,81 +39,106 @@
     <meta property="og:image" content="https://carsaseguros.mx/Content/img/home/OG_Meta.jpg">
     <meta name="twitter:image" content="https://carsaseguros.mx/Content/img/home/OG_Meta.jpg">
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "InsuranceAgency",
-            "@id": "https://carsaseguros.mx/#insuranceagency",
-            "name": "CARSA Seguros y Fianzas",
-            "alternateName": "CARSA Seguros",
-            "url": "https://carsaseguros.mx/",
-            "logo": "https://carsaseguros.mx/Content/img/home/Logo.png",
-            "image": "https://carsaseguros.mx/Content/img/home/OG_Meta.jpg",
-            "description": "Agencia de seguros en Mérida, Yucatán, especializada en seguro de auto, seguro de vida, seguro de hogar, gastos médicos mayores, fianzas y planes personales de retiro para personas y empresas.",
-            "telephone": "+52-999-944-4999",
-            "email": "contacto@segurosfianzas.com",
-            "priceRange": "$$",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "C. 60 326, Gonzalo Guerrero",
-              "addressLocality": "Mérida",
-              "addressRegion": "Yucatán",
-              "postalCode": "97118",
-              "addressCountry": "MX"
-            },
-            "areaServed": [
-              { "@type": "City", "name": "Mérida" },
-              { "@type": "State", "name": "Yucatán" }
-            ],
-            "contactPoint": [
-              {
-                "@type": "ContactPoint",
-                "contactType": "customer service",
-                "telephone": "+52-999-944-4999",
-                "areaServed": "MX",
-                "availableLanguage": ["es"]
-              },
-              {
-                "@type": "ContactPoint",
-                "contactType": "WhatsApp",
-                "telephone": "+52-999-265-3187",
-                "areaServed": "MX",
-                "availableLanguage": ["es"]
-              }
-            ],
-            "sameAs": [
-              "https://www.facebook.com/share/1KgjejV4SG/",
-              "https://www.instagram.com/grupocarsa?igsh=MTcwOHV1cnN2ZXd5bA==",
-              "https://www.teamcarsa.com/"
-            ],
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Servicios de CARSA Seguros",
-              "itemListElement": [
-                { "@type": "OfferCatalog", "name": "Seguro de ahorro" },
-                { "@type": "OfferCatalog", "name": "Seguro de vida" },
-                { "@type": "OfferCatalog", "name": "Seguro de gastos médicos mayores" },
-                { "@type": "OfferCatalog", "name": "Seguro de hogar" },
-                { "@type": "OfferCatalog", "name": "Seguro de auto" },
-                { "@type": "OfferCatalog", "name": "Seguro empresarial" },
-                { "@type": "OfferCatalog", "name": "Fianzas" },
-                { "@type": "OfferCatalog", "name": "Planes personales de retiro" }
-              ]
-            }
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "InsuranceAgency",
+          "@id": "https://carsaseguros.mx/#insuranceagency",
+          "name": "CARSA Seguros y Fianzas",
+          "alternateName": "CARSA Seguros",
+          "url": "https://carsaseguros.mx/",
+          "mainEntityOfPage": "https://carsaseguros.mx/",
+          "logo": "https://carsaseguros.mx/Content/img/home/Logo.png",
+          "image": "https://carsaseguros.mx/Content/img/home/OG_Meta.jpg",
+          "description": "Agencia de seguros en Mérida, Yucatán, especializada en seguro de auto, seguro de vida, seguro de hogar, gastos médicos mayores, fianzas y planes personales de retiro para personas y empresas.",
+          "telephone": "+52-999-944-4999",
+          "email": "contacto@segurosfianzas.com",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Calle 60 #326, Col. Gonzalo Guerrero",
+            "addressLocality": "Mérida",
+            "addressRegion": "Yucatán",
+            "postalCode": "97118",
+            "addressCountry": "MX"
           },
-          {
-            "@type": "WebSite",
-            "@id": "https://carsaseguros.mx/#website",
-            "url": "https://carsaseguros.mx/",
-            "name": "CARSA Seguros",
-            "inLanguage": "es-MX",
-            "publisher": {
-              "@id": "https://carsaseguros.mx/#insuranceagency"
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 20.967370,
+            "longitude": -89.623690
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Mérida"
+            },
+            {
+              "@type": "State",
+              "name": "Yucatán"
+            },
+            {
+              "@type": "Country",
+              "name": "México"
             }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "contactType": "customer service",
+              "telephone": "+52-999-944-4999",
+              "email": "contacto@segurosfianzas.com",
+              "areaServed": "MX",
+              "availableLanguage": ["es"]
+            },
+            {
+              "@type": "ContactPoint",
+              "contactType": "WhatsApp",
+              "telephone": "+52-999-265-3187",
+              "areaServed": "MX",
+              "availableLanguage": ["es"]
+            }
+          ],
+          "sameAs": [
+            "https://www.facebook.com/CarsaSegurosyFianzas",
+            "https://www.instagram.com/grupocarsa/",
+            "https://www.teamcarsa.com/"
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+              "opens": "08:00",
+              "closes": "17:00"
+            }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios de CARSA Seguros",
+            "itemListElement": [
+              { "@type": "OfferCatalog", "name": "Seguro de auto" },
+              { "@type": "OfferCatalog", "name": "Seguro de vida" },
+              { "@type": "OfferCatalog", "name": "Seguro de gastos médicos mayores" },
+              { "@type": "OfferCatalog", "name": "Seguro de hogar" },
+              { "@type": "OfferCatalog", "name": "Seguro empresarial" },
+              { "@type": "OfferCatalog", "name": "Seguro de ahorro" },
+              { "@type": "OfferCatalog", "name": "Fianzas" },
+              { "@type": "OfferCatalog", "name": "Planes personales de retiro" }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://carsaseguros.mx/#website",
+          "url": "https://carsaseguros.mx/",
+          "name": "CARSA Seguros y Fianzas",
+          "inLanguage": "es-MX",
+          "publisher": {
+            "@id": "https://carsaseguros.mx/#insuranceagency"
+          }
+        }
+      ]
+    }
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -284,6 +309,15 @@
    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
    
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHXRQNH3ZK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WHXRQNH3ZK');
+    </script>
 </head>
 <body>
     <!-- MenÃº de navegaciÃ³n principal -->
