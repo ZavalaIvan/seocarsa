@@ -4,9 +4,11 @@ var Genero = '',
     cpCorrecto = false,
     Privacidad = false;
 
-var CRM_BASE_URL = ['https://crm.', 'ali', 'ge', '.com.mx'].join(''),
-    LigaContacto = CRM_BASE_URL + '/nuevo_contacto/',
-    LigaHome = CRM_BASE_URL + '/Usuario/Home/';
+var SITE_BASE_URL = (window.location && window.location.origin && /^https?:/i.test(window.location.origin))
+        ? window.location.origin.replace(/\/$/, '')
+        : 'https://carsaseguros.mx',
+    LigaContacto = SITE_BASE_URL + '/contacto',
+    LigaHome = SITE_BASE_URL + '/';
 
 $(function () {
 
@@ -48,9 +50,6 @@ $(function () {
         if (valForm_Formulario(true)) {
             $('#myModalActualizando').modal('show');
             switch (landing) {
-                case 'Mutuus':
-                    CAPTCHA.VALIDATION("mutuus_lead_form");
-                    break;
                 case 'Hogar':
                     CAPTCHA.VALIDATION("hogar_lead_form");
                     break;
@@ -119,7 +118,7 @@ function valForm_Formulario(InputObligatorio = false) {
 
 function Registrar_Contacto() {
     /*
-     * PRODUCTO: 1 Auto, 2 GMM, 3 Hogar, 4 Vida, 5 Ahorro, 6 Educacional, 7 Mutuus, 8 PensionateYa
+     * PRODUCTO: 1 Auto, 2 GMM, 3 Hogar, 4 Vida, 5 Ahorro, 6 Educacional, 8 PensionateYa
      * 
      * CREADO_MEDIANTE: 
      * GOAGENTE AUTO
@@ -127,7 +126,6 @@ function Registrar_Contacto() {
      * FORMULARIO HOGAR
      * FORMULARIO VIDA
      * FORMULARIO AHORRO
-     * FORMULARIO MUTUUS
      * FORMULARIO OTROS
      * FORMULARIO CONTACTO
      * 
@@ -137,7 +135,6 @@ function Registrar_Contacto() {
      * HOGAR
      * VIDA
      * AHORRO
-     * MUTTUS
      * OTROS
      * CONTACTO
      * */
@@ -149,11 +146,6 @@ function Registrar_Contacto() {
         Embudo = 0,
         CreadoMediante = '';
     switch (landing) {
-        case 'Mutuus':
-            Producto = 7;
-            Embudo = 4,
-            CreadoMediante = 'FORMULARIO MUTUUS';
-            break;
         case 'Vida':
             Producto = 4;
             Embudo = 2,
@@ -290,10 +282,6 @@ function SendRegistroHubspot() {
     let Fuente = '';
     let pagina = '';
     switch (landing) {
-        case 'Mutuus':
-            Fuente = 'Saltodigital Mutuus';
-            pagina = 'Landing Mutuus';
-            break;
         case 'Vida':
             Fuente = 'Saltodigital Vida';
             pagina = 'Landing Vida';
@@ -344,10 +332,6 @@ function SendRegistroHubspot() {
 function captchaValid() {
     let googleUrl = '';
     switch (landing) {
-        case 'Mutuus':
-            googleUrl = urlCanonica.charAt(urlCanonica.length - 1) === '/' ? urlCanonica : `${urlCanonica}/`;
-            SetGoogleAnalytics(`${googleUrl}cta-solicitar`);
-            break;
         case 'Vida':
         case 'Hogar':
         case 'Ahorro':

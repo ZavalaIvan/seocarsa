@@ -93,7 +93,7 @@ footer {
         padding-top: 1px;
     }
 
-    body.agendar .navBarAhorro .a_blog {
+    body.agendar .navBarAhorro .a_recursos {
         margin-right: 5px !important;
     }
 
@@ -114,7 +114,7 @@ footer {
         padding: 140px 0;
     } */
 
-    body.agendar .navBarAhorro .a_blog {
+    body.agendar .navBarAhorro .a_recursos {
         margin-right: 20px !important;
     }
 
@@ -128,7 +128,7 @@ footer {
         width: 1320px;
     }
 
-    body.agendar .navBarAhorro .a_blog {
+    body.agendar .navBarAhorro .a_recursos {
         margin-right: 40px !important;
     }
 }
@@ -157,7 +157,7 @@ footer {
         padding-top: 17px;
     }
 
-    body.agendar .navBarAhorro .a_blog {
+    body.agendar .navBarAhorro .a_recursos {
         margin-right: 80px !important;
     }
 }

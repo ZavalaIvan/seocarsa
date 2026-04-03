@@ -308,7 +308,7 @@ button:focus {
     right: 25%;
 }
 
-.divWordpress {
+.divRecursos {
     margin-top: 116px;
 }
 
@@ -581,13 +581,13 @@ button[data-title]:hover::before {
 }
 
 @media (min-width: 2500px) {
-    .divWordpress {
+    .divRecursos {
         margin-top: 168px;
     }
 }
 
 @media (min-width: 1800px) and (max-width: 2500px) {
-    .divWordpress {
+    .divRecursos {
         margin-top: 116px;
     }
 }
@@ -619,7 +619,7 @@ button[data-title]:hover::before {
         overflow-x: hidden;
     }
 
-    .divWordpress {
+    .divRecursos {
         margin-top: 95px;
     }
 

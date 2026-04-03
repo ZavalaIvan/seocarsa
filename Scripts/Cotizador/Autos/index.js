@@ -11,9 +11,11 @@ var PerfilCotizacion = {
 
 var tagVehiculos = [];
 
-var CRM_BASE_URL = ['https://crm.', 'ali', 'ge', '.com.mx'].join(''),
-    LigaContacto = CRM_BASE_URL + '/nuevo_contacto/',
-    LigaHome = CRM_BASE_URL + '/Usuario/Home/';
+var SITE_BASE_URL = (window.location && window.location.origin && /^https?:/i.test(window.location.origin))
+        ? window.location.origin.replace(/\/$/, '')
+        : 'https://carsaseguros.mx',
+    LigaContacto = SITE_BASE_URL + '/contacto',
+    LigaHome = SITE_BASE_URL + '/';
 
 $(function () {
     iniciarQueryString();

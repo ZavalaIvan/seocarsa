@@ -199,7 +199,7 @@ function GeneraJsonContacto() {
         EDAD: Cotizacion.Contacto.Edad,
         GENERO: Cotizacion.Contacto.Genero,
         CREADO_MEDIANTE: 'REGISTRO CONTACTOS MulticotizadorSaas',
-        PRODUCTO: '5', //PRODUCTO: 1 Auto, 2 GMM, 3 Hogar, 4 Vida, 5 Ahorro, 6 Educacional, 7 Mutuus, 8 PensionateYa
+        PRODUCTO: '5', //PRODUCTO: 1 Auto, 2 GMM, 3 Hogar, 4 Vida, 5 Ahorro, 6 Educacional, 8 PensionateYa
         EMBUDO: 15, //Embudo Ahorro Skandia
     };
 }

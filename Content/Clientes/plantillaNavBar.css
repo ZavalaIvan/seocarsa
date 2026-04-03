@@ -110,7 +110,7 @@
     background-color: transparent !important;
 }
 
-.navBarAhorro .a_ofrecemos , .navBarAhorro .a_sobreNosotros, .navBarAhorro .a_blog {
+.navBarAhorro .a_ofrecemos , .navBarAhorro .a_sobreNosotros, .navBarAhorro .a_recursos {
     margin-right: 63px;
     font-weight: bold;
 }
@@ -137,7 +137,7 @@
     padding: 15px 32px !important;
 }
 
-.navBarAhorro a.a_blog{
+.navBarAhorro a.a_recursos{
     line-height: 1.7em !important;
 }
 
@@ -159,7 +159,7 @@
     background-color: #1E3575 !important;
 }
 
-.linkCalendly .a_blog {
+.linkCalendly .a_recursos {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
