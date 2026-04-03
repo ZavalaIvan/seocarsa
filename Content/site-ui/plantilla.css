@@ -359,6 +359,15 @@ h6 {
     box-shadow: none;
 }
 
+/* Navbar fallback for pages with mixed Bootstrap assets */
+.collapse.show {
+    display: block;
+}
+
+.navbar .dropdown-menu.show {
+    display: block;
+}
+
 
 footer .row {
     width: 100%;

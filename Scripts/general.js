@@ -134,3 +134,206 @@ function iniciarQueryString() {
   // Algunos módulos de JoCMS la llaman al iniciar la página.
   console.log("iniciarQueryString() llamada ignorada (dummy).");
 }
+function Carsa_InitNavbarFallback() {
+  if (typeof document === "undefined" || window.__carsaNavbarFallbackBound) {
+    return;
+  }
+
+  window.__carsaNavbarFallbackBound = true;
+
+  function isDesktopNavbar() {
+    return typeof window.matchMedia === "function" &&
+      window.matchMedia("(min-width: 992px)").matches;
+  }
+
+  function getCollapseTarget(toggle) {
+    var selector = toggle.getAttribute("data-bs-target") || toggle.getAttribute("href");
+    if (!selector || selector === "#") {
+      return null;
+    }
+
+    var navbar = toggle.closest(".navbar");
+    if (navbar && selector.charAt(0) === "#") {
+      var localTarget = navbar.querySelector(selector);
+      if (localTarget) {
+        return localTarget;
+      }
+    }
+
+    try {
+      return document.querySelector(selector);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function closeNavbarDropdowns(navbar, exceptToggle) {
+    if (!navbar) {
+      return;
+    }
+
+    navbar.querySelectorAll(".nav-item.dropdown > .dropdown-toggle.show").forEach(function (toggle) {
+      if (toggle === exceptToggle) {
+        return;
+      }
+
+      toggle.classList.remove("show");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+
+    navbar.querySelectorAll(".dropdown-menu.show").forEach(function (menu) {
+      if (exceptToggle && exceptToggle.nextElementSibling === menu) {
+        return;
+      }
+
+      menu.classList.remove("show");
+    });
+  }
+
+  function syncCollapseToggle(toggle, panel) {
+    var expanded = panel.classList.contains("show");
+    toggle.setAttribute("aria-expanded", String(expanded));
+    toggle.classList.toggle("collapsed", !expanded);
+  }
+
+  function setCollapseState(toggle, panel, expanded) {
+    panel.classList.toggle("show", expanded);
+    panel.classList.remove("collapsing");
+    syncCollapseToggle(toggle, panel);
+
+    if (!expanded) {
+      closeNavbarDropdowns(toggle.closest(".navbar"));
+    }
+  }
+
+  function setDropdownState(toggle, menu, expanded) {
+    closeNavbarDropdowns(toggle.closest(".navbar"), expanded ? toggle : null);
+    toggle.classList.toggle("show", expanded);
+    toggle.setAttribute("aria-expanded", String(expanded));
+    menu.classList.toggle("show", expanded);
+  }
+
+  document.addEventListener("click", function (event) {
+    var toggler = event.target.closest('.navbar .navbar-toggler[data-bs-toggle="collapse"]');
+
+    if (toggler) {
+      var panel = getCollapseTarget(toggler);
+      if (!panel) {
+        return;
+      }
+
+      var wantsOpen = !panel.classList.contains("show");
+      var hasBootstrapCollapse = !!(window.bootstrap && window.bootstrap.Collapse);
+
+      if (!hasBootstrapCollapse) {
+        event.preventDefault();
+        setCollapseState(toggler, panel, wantsOpen);
+        return;
+      }
+
+      window.setTimeout(function () {
+        if (panel.classList.contains("show") !== wantsOpen) {
+          setCollapseState(toggler, panel, wantsOpen);
+          return;
+        }
+
+        syncCollapseToggle(toggler, panel);
+      }, 180);
+
+      return;
+    }
+
+    var dropdownToggle = event.target.closest(".navbar .nav-item.dropdown > .dropdown-toggle");
+    if (!dropdownToggle || isDesktopNavbar()) {
+      return;
+    }
+
+    var dropdownMenu = dropdownToggle.nextElementSibling;
+    if (!dropdownMenu || !dropdownMenu.classList.contains("dropdown-menu")) {
+      return;
+    }
+
+    var wantsDropdownOpen = !dropdownMenu.classList.contains("show");
+    var hasBootstrapDropdown = !!(window.bootstrap && window.bootstrap.Dropdown);
+
+    event.preventDefault();
+
+    if (!hasBootstrapDropdown) {
+      setDropdownState(dropdownToggle, dropdownMenu, wantsDropdownOpen);
+      return;
+    }
+
+    window.setTimeout(function () {
+      if (dropdownMenu.classList.contains("show") !== wantsDropdownOpen) {
+        setDropdownState(dropdownToggle, dropdownMenu, wantsDropdownOpen);
+        return;
+      }
+
+      dropdownToggle.setAttribute("aria-expanded", String(dropdownMenu.classList.contains("show")));
+    }, 180);
+  });
+
+  document.addEventListener("click", function (event) {
+    if (isDesktopNavbar()) {
+      return;
+    }
+
+    var link = event.target.closest(".navbar .dropdown-item, .navbar .nav-link:not(.dropdown-toggle), .navbar .btn-element-contact");
+    if (!link) {
+      return;
+    }
+
+    var navbar = link.closest(".navbar");
+    var panel = navbar ? navbar.querySelector(".navbar-collapse.show") : null;
+    var toggler = navbar ? navbar.querySelector(".navbar-toggler") : null;
+
+    if (!panel || !toggler) {
+      return;
+    }
+
+    window.setTimeout(function () {
+      setCollapseState(toggler, panel, false);
+    }, 0);
+  });
+
+  document.addEventListener("shown.bs.collapse", function (event) {
+    if (!event.target.classList.contains("navbar-collapse")) {
+      return;
+    }
+
+    var navbar = event.target.closest(".navbar");
+    var toggler = navbar ? navbar.querySelector('.navbar-toggler[data-bs-target], .navbar-toggler[href]') : null;
+    if (toggler) {
+      syncCollapseToggle(toggler, event.target);
+    }
+  });
+
+  document.addEventListener("hidden.bs.collapse", function (event) {
+    if (!event.target.classList.contains("navbar-collapse")) {
+      return;
+    }
+
+    var navbar = event.target.closest(".navbar");
+    var toggler = navbar ? navbar.querySelector('.navbar-toggler[data-bs-target], .navbar-toggler[href]') : null;
+    if (toggler) {
+      syncCollapseToggle(toggler, event.target);
+    }
+
+    closeNavbarDropdowns(navbar);
+  });
+
+  document.querySelectorAll(".navbar .navbar-toggler").forEach(function (toggle) {
+    var panel = getCollapseTarget(toggle);
+    if (panel) {
+      syncCollapseToggle(toggle, panel);
+    }
+  });
+}
+
+if (typeof document !== "undefined") {
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", Carsa_InitNavbarFallback);
+  } else {
+    Carsa_InitNavbarFallback();
+  }
+}
