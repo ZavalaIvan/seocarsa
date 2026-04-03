@@ -31,9 +31,9 @@ $(function () {
     isGNP = $('#postCanonical').val().includes('gnp') ? true : false;
 
     if (isGNP)
-        urlCanonica = 'seguros-de-gastos-medicos-mayores/gnp/';
+        urlCanonica = 'gastos-medicos-mayores/gnp/';
     else
-        urlCanonica = 'seguros-de-gastos-medicos-mayores/';
+        urlCanonica = 'gastos-medicos-mayores/';
 
     //Datos del Usuario en Sesion
     Sesion.UsuarioId = ($('#postUsuarioId').val() != '') ? parseInt($('#postUsuarioId').val()) : 0;
@@ -74,7 +74,7 @@ $(function () {
         }, 'ObtenerAseguradorasGMM', '');
 
         $('#btn_ir_home, #btn_atras').click(() => {
-            windowLocationHref(`https://${window.location.host}/seguros-de-gastos-medicos-mayores`);
+            windowLocationHref(`https://${window.location.host}/gastos-medicos-mayores`);
         });
 
         $('#btnCotizarGMM').click(() => {

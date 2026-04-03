@@ -19,7 +19,7 @@ var ConsultarMontoMinimo = true;
 $(function () {
     iniciarQueryString();
 
-    urlCanonica = 'seguros-de-vida/allianz/';
+    urlCanonica = 'seguro-de-vida/';
 
     //Datos del Usuario en Sesion
     Sesion.UsuarioId = ($('#postUsuarioId').val() != '') ? parseInt($('#postUsuarioId').val()) : 0;

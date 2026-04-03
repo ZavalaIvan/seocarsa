@@ -2,6 +2,18 @@
 RewriteEngine On
 
 # =========================
+# Host canónico y HTTPS
+# =========================
+
+RewriteCond %{HTTP_HOST} ^(?:www\.)?carsa\.com\.mx$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www\.carsaseguros\.mx$ [NC]
+RewriteRule ^ https://carsaseguros.mx%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} ^carsaseguros\.mx$ [NC]
+RewriteRule ^ https://carsaseguros.mx%{REQUEST_URI} [R=301,L]
+
+# =========================
 # Redirecciones 301 solo si el usuario pidió la URL vieja
 # =========================
 
@@ -15,13 +27,13 @@ RewriteCond %{THE_REQUEST} \s/+mapa-del-sitio\.html[\s?] [NC]
 RewriteRule ^mapa-del-sitio\.html$ /mapa-del-sitio [R=301,L]
 
 RewriteCond %{THE_REQUEST} \s/+planes-de-ahorro/allianz\.html[\s?] [NC]
-RewriteRule ^planes-de-ahorro/allianz\.html$ /seguro-de-ahorro [R=301,L]
+RewriteRule ^planes-de-ahorro/allianz\.html$ /plan-personal-de-retiro [R=301,L]
 
 RewriteCond %{THE_REQUEST} \s/+seguros-de-vida/allianz\.html[\s?] [NC]
 RewriteRule ^seguros-de-vida/allianz\.html$ /seguro-de-vida [R=301,L]
 
 RewriteCond %{THE_REQUEST} \s/+salud\.html[\s?] [NC]
-RewriteRule ^salud\.html$ /seguro-medico [R=301,L]
+RewriteRule ^salud\.html$ /gastos-medicos-mayores [R=301,L]
 
 RewriteCond %{THE_REQUEST} \s/+planes-de-ahorro/hogar\.html[\s?] [NC]
 RewriteRule ^planes-de-ahorro/hogar\.html$ /seguro-de-hogar [R=301,L]
@@ -47,10 +59,28 @@ RewriteRule ^Fianzas/credito\.html$ /fianza-de-credito [R=301,L]
 RewriteCond %{THE_REQUEST} \s/+Fianzas/fidelidad\.html[\s?] [NC]
 RewriteRule ^Fianzas/fidelidad\.html$ /fianza-de-fidelidad [R=301,L]
 
+RewriteCond %{THE_REQUEST} \s/+fianzas\.html[\s?] [NC]
+RewriteRule ^fianzas\.html$ /fianzas [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+recursos\.html[\s?] [NC]
+RewriteRule ^recursos\.html$ /recursos [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+seguro-de-ahorro[\s?] [NC]
+RewriteRule ^seguro-de-ahorro$ /plan-personal-de-retiro [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+seguro-medico[\s?] [NC]
+RewriteRule ^seguro-medico$ /gastos-medicos-mayores [R=301,L]
+
 # =========================
 # Quitar slash final de URLs públicas
 # =========================
-RewriteRule ^(contacto|mapa-del-sitio|seguro-de-ahorro|seguro-de-vida|seguro-medico|seguro-de-hogar|seguro-de-auto|seguro-empresarial|fianza-de-cumplimiento|fianza-de-anticipo|fianza-de-vicios-ocultos|fianza-de-credito|fianza-de-fidelidad)/$ /$1 [R=301,L,NC]
+RewriteRule ^(contacto|mapa-del-sitio|plan-personal-de-retiro|seguro-de-ahorro|seguro-de-vida|gastos-medicos-mayores|seguro-medico|seguro-de-hogar|seguro-de-auto|seguro-empresarial|fianzas|recursos|fianza-de-cumplimiento|fianza-de-anticipo|fianza-de-vicios-ocultos|fianza-de-credito|fianza-de-fidelidad)/$ /$1 [R=301,L,NC]
+
+# =========================
+# Hub pages con prioridad
+# =========================
+RewriteRule ^fianzas$ fianzas.html [L,NC]
+RewriteRule ^recursos$ recursos.html [L,NC]
 
 # =========================
 # No tocar archivos o carpetas reales
@@ -65,8 +95,10 @@ RewriteRule ^ - [L]
 RewriteRule ^$ index.html [L]
 RewriteRule ^contacto$ contacto.html [L,NC]
 RewriteRule ^mapa-del-sitio$ mapa-del-sitio.html [L,NC]
+RewriteRule ^plan-personal-de-retiro$ planes-de-ahorro/allianz.html [L,NC]
 RewriteRule ^seguro-de-ahorro$ planes-de-ahorro/allianz.html [L,NC]
 RewriteRule ^seguro-de-vida$ seguros-de-vida/allianz.html [L,NC]
+RewriteRule ^gastos-medicos-mayores$ salud.html [L,NC]
 RewriteRule ^seguro-medico$ salud.html [L,NC]
 RewriteRule ^seguro-de-hogar$ planes-de-ahorro/hogar.html [L,NC]
 RewriteRule ^seguro-de-auto$ seguros-de-auto.html [L,NC]

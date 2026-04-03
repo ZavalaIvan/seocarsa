@@ -17,7 +17,7 @@ var LigaContacto = 'https://crm.alige.com.mx/nuevo_contacto/',
 $(function () {
     iniciarQueryString();
 
-    urlCanonica = 'seguros-de-auto/';
+    urlCanonica = 'seguro-de-auto/';
 
     //Datos del Usuario en Sesion
     Sesion.UsuarioId = ($('#postUsuarioId').val() != '') ? parseInt($('#postUsuarioId').val()) : 0;

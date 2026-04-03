@@ -17,39 +17,39 @@ $(document).ready(function () {
     switch (_Vista) {
         case 'IndexContacto':
             producto = '1'
-            agradecimiento = 'agradecimiento'
+            agradecimiento = 'agradecimiento.html?producto=general'
             break;
         case 'VidaContacto':
             producto = '4'
-            agradecimiento = 'seguros-de-vida/allianz/agradecimiento'
+            agradecimiento = 'agradecimiento.html?producto=vida'
             productoTxt = 'VIDA'
             embudo = '2'
             creadoMediante = 'FORMULARIO VIDA'
             break;
         case 'GMMContacto':
             producto = '2'
-            agradecimiento = 'seguros-de-gastos-medicos-mayores/agradecimiento'
+            agradecimiento = 'agradecimiento.html?producto=gmm'
             productoTxt = 'GMM'
             embudo = '4'
             creadoMediante = 'FORMULARIO GMM'
             break;
         case 'AutoContacto':
             producto = '1'
-            agradecimiento = 'seguros-de-auto/agradecimiento'
+            agradecimiento = 'agradecimiento.html?producto=auto'
             productoTxt = 'AUTO'
             embudo = '1'
             creadoMediante = 'FORMULARIO AUTO'
             break;
         case 'EducacionContacto':
             producto = '6'
-            agradecimiento = 'seguro-educacional/allianz/agradecimiento'
+            agradecimiento = 'agradecimiento.html?producto=educacion'
             productoTxt = 'EDUCACIONAL'
             embudo = '7'
             creadoMediante = 'FORMULARIO EDUCACIONAL'
             break;
         case 'GMMGNPContacto':
             producto = '5'
-            agradecimiento = 'seguros-de-gastos-medicos-mayores/gnp/agradecimiento'
+            agradecimiento = 'agradecimiento.html?producto=gmm-gnp'
             productoTxt = 'GMM GNP'
             embudo = '3'
             creadoMediante = 'FORMULARIO GMM GNP'
