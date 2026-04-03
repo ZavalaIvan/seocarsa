@@ -4,6 +4,19 @@ let urlCalendly = '',
     urlWhatsapp = '';
 
 $(document).ready(function () {
+    function abrirChatTidio(mensaje) {
+        if (!window.tidioChatApi || typeof window.tidioChatApi.show !== 'function' || typeof window.tidioChatApi.open !== 'function') {
+            return;
+        }
+
+        window.tidioChatApi.show();
+        window.tidioChatApi.open();
+
+        if (mensaje && typeof window.tidioChatApi.messageFromVisitor === 'function') {
+            window.tidioChatApi.messageFromVisitor(mensaje);
+        }
+    }
+
     $('#select-producto').change(function () {
         producto = $(this).val();
 
@@ -43,8 +56,7 @@ $(document).ready(function () {
 
             $('#btn-whatsapp').attr('href', '#');
             $('#btn-calendly').attr('href', '#');
-        }
-        else {
+        } else {
             urlWhatsapp = waLink;
             $('.asesoria').removeClass('disabled');
             $('.card button').removeAttr('disabled', 'disabled');
@@ -55,10 +67,8 @@ $(document).ready(function () {
     });
 
     $('#btn-chat').click(function () {
-        window.tidioChatApi.show();
-        window.tidioChatApi.open();
-
         let waLink = '';
+
         switch (producto) {
             case 'Ahorro':
                 waLink += "Hola, solicito informacion sobre los planes de ahorro.";
@@ -80,6 +90,6 @@ $(document).ready(function () {
                 break;
         }
 
-        tidioChatApi.messageFromVisitor(waLink);
+        abrirChatTidio(waLink);
     });
 });
