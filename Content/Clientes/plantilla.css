@@ -1,14 +1,30 @@
 /*Variables que se pueden modificar segun la palenta de colores seleccionada por el agente*/
 :root {
     --primer-color: #1A60EF;
-    --fuente-principal: 'Space Grotesk', sans-serif;
-    --fuente-secundaria: 'Rubik', sans-serif;
-    --fuente-tercero: Helvetica, sans-serif;
+    --fuente-principal: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --fuente-secundaria: "Arial Narrow", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --fuente-tercero: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --fuente-titulos: "DIN Schriftt", "DIN Alternate", "Bahnschrift", "Franklin Gothic Medium", Arial, sans-serif;
 }
 
 body {
     font-family: var(--fuente-principal);
     background-color: #ffffff;
+}
+
+body,
+p,
+a,
+li,
+label,
+input,
+textarea,
+select,
+button,
+.btn,
+.nav-link,
+.form-control {
+    font-family: var(--fuente-principal) !important;
 }
 
 .container-fluid {
@@ -18,7 +34,11 @@ body {
     margin-left: auto;
 }
 
-h1, h2, h3, h4, h5, h6, p, input, button {
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fuente-titulos) !important;
+}
+
+p, input, button {
     font-family: var(--fuente-principal), sans-serif;
 }
 

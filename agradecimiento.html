@@ -16,6 +16,8 @@
       --carsa-ink: #1f2937;
       --carsa-muted: #66768a;
       --carsa-white: #ffffff;
+      --carsa-font-body: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      --carsa-font-heading: "DIN Schriftt", "DIN Alternate", "Bahnschrift", "Franklin Gothic Medium", Arial, sans-serif;
     }
 
     * {
@@ -29,7 +31,7 @@
       align-items: center;
       justify-content: center;
       padding: 24px;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: var(--carsa-font-body);
       color: var(--carsa-ink);
       background:
         radial-gradient(circle at top left, rgba(39, 68, 112, 0.10), transparent 28%),
@@ -65,6 +67,7 @@
 
     h1 {
       margin: 0;
+      font-family: var(--carsa-font-heading);
       color: var(--carsa-blue-dark);
       font-size: clamp(32px, 4vw, 46px);
       line-height: 1.1;

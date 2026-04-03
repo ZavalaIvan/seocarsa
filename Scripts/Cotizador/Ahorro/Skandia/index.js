@@ -140,10 +140,6 @@ $(document).ready(function () {
         }
     });
 
-    /* setTimeout(function () {
-        document.getElementById('video-youtube').innerHTML = '<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/HXI82N7qlhM?rel=0" title="Skandia cuenta con múltiples fondos para invertir tus ahorros y maximizar tu rendimiento a largo plazo." frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-    }, 5000); */
-
     AOS.init({ once: true });
 
     $('.btn_modalDatos').click(() => {

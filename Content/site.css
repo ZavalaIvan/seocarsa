@@ -1,9 +1,48 @@
 /*Variables que se pueden modificar segun la palenta de colores seleccionada por el agente*/
 :root {
     --primer-color: #1A60EF;
-    --fuente-principal: 'Source Sans Pro', sans-serif;
-    --fuente-secundaria: 'Rubik', sans-serif;
-    --fuente-tercero: Helvetica, sans-serif;
+    --fuente-principal: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --fuente-secundaria: "Arial Narrow", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --fuente-tercero: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --fuente-titulos: "DIN Schriftt", "DIN Alternate", "Bahnschrift", "Franklin Gothic Medium", Arial, sans-serif;
+}
+
+body,
+p,
+a,
+li,
+label,
+input,
+textarea,
+select,
+button,
+.btn,
+.nav-link,
+.form-control,
+.p-sm,
+.p-md,
+.p-lg,
+.p-xl,
+.p-xxl {
+    font-family: var(--fuente-principal) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.titlePrincipal,
+.titleGlober,
+.titleGloberTerminos {
+    font-family: var(--fuente-titulos) !important;
 }
 
 .carsa-whatsapp-float {

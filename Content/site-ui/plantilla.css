@@ -42,7 +42,10 @@
     --a-color-quaternary-70: #a7dbf1ff;
     --a-color-quaternary-80: #96d3eeff;
     --a-color-quaternary-90: #84ccebff;
-    --fuente-principal: "Space Grotesk", sans-serif;
+    --fuente-principal: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --fuente-secundaria: "Arial Narrow", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --fuente-tercero: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --fuente-titulos: "DIN Schriftt", "DIN Alternate", "Bahnschrift", "Franklin Gothic Medium", Arial, sans-serif;
 }
 
 picture {
@@ -63,6 +66,26 @@ body {
     background-color: var(--a-color-light);
 }
 
+body,
+p,
+a,
+li,
+label,
+input,
+textarea,
+select,
+button,
+.btn,
+.nav-link,
+.form-control,
+.p-sm,
+.p-md,
+.p-lg,
+.p-xl,
+.p-xxl {
+    font-family: var(--fuente-principal) !important;
+}
+
 .row {
     --bs-gutter-x: 0;
     --bs-gutter-y: 0;
@@ -73,7 +96,7 @@ body {
 }
 
 h1 {
-    font-family: var(--fuente-principal);
+    font-family: var(--fuente-titulos) !important;
     font-size: 3.815rem;
     font-style: normal;
     font-weight: 700;
@@ -81,7 +104,7 @@ h1 {
 }
 
 h2 {
-    font-family: var(--fuente-principal);
+    font-family: var(--fuente-titulos) !important;
     font-size: 3.05188rem;
     font-style: normal;
     font-weight: 700;
@@ -89,7 +112,7 @@ h2 {
 }
 
 h3 {
-    font-family: var(--fuente-principal);
+    font-family: var(--fuente-titulos) !important;
     font-size: 2.44125rem;
     font-style: normal;
     font-weight: 700;
@@ -97,7 +120,7 @@ h3 {
 }
 
 h4 {
-    font-family: var(--fuente-principal);
+    font-family: var(--fuente-titulos) !important;
     font-size: 1.95313rem;
     font-style: normal;
     font-weight: 700;
@@ -105,7 +128,7 @@ h4 {
 }
 
 h5 {
-    font-family: var(--fuente-principal);
+    font-family: var(--fuente-titulos) !important;
     font-size: 1.5625rem;
     font-style: normal;
     font-weight: 700;
@@ -113,11 +136,23 @@ h5 {
 }
 
 h6 {
-    font-family: var(--fuente-principal);
+    font-family: var(--fuente-titulos) !important;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.titlePrincipal,
+.titleGlober,
+.titleGloberTerminos {
+    font-family: var(--fuente-titulos) !important;
 }
 
 .p-xs {

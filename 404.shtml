@@ -5,12 +5,17 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" >
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style type="text/css">
+:root {
+  --carsa-font-body: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --carsa-font-heading: "DIN Schriftt", "DIN Alternate", "Bahnschrift", "Franklin Gothic Medium", Arial, sans-serif;
+}
+
 body {
   background-color: #eee;
 }
 
 body, h1, p {
-  font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: var(--carsa-font-body);
   font-weight: normal;
   margin: 0;
   padding: 0;
@@ -40,6 +45,7 @@ body, h1, p {
 }
 
 h1 {
+  font-family: var(--carsa-font-heading);
   font-size: 48px;
   font-weight: 300;
   margin: 0 0 20px 0;
