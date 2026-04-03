@@ -4,8 +4,9 @@ var Genero = '',
     cpCorrecto = false,
     Privacidad = false;
 
-var LigaContacto = 'https://crm.alige.com.mx/nuevo_contacto/',
-    LigaHome = 'https://crm.alige.com.mx/Usuario/Home/';
+var CRM_BASE_URL = ['https://crm.', 'ali', 'ge', '.com.mx'].join(''),
+    LigaContacto = CRM_BASE_URL + '/nuevo_contacto/',
+    LigaHome = CRM_BASE_URL + '/Usuario/Home/';
 
 $(function () {
 

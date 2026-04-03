@@ -3,11 +3,6 @@ body {
   color: var(--a-color-dark);
 }
 
-.navbar,
-footer .container-fluid {
-    background: #4EA7CE;
-}
-
 .ppr-faq-container,
 .allianz-faq-container,
 .faq-bloque-container,
@@ -19,7 +14,7 @@ footer .container-fluid {
 .hero {
   padding-top: 5.87rem;
   color: var(--a-color-light);
-  background: linear-gradient(180deg, #4EA7CE 0%, #65BFE6 100%);
+  background: linear-gradient(156deg, #274470 1.03%, #57b1e3 97.9%);
   border-radius: 0px 0px 8.5rem 0px;
   margin-bottom: 2.75rem;
 }
@@ -67,7 +62,7 @@ a.btn-b-light {
 }
 
 .bg-morado {
-  background-color: #4EA7CE;
+  background-color: #274470;
   color: var(--a-color-light);
   padding-top: 2.13rem;
   padding-bottom: 2.5rem;
@@ -124,13 +119,13 @@ a.btn-b-light {
   padding: 1.25rem;
 }
 
-.faqs details div {
+.faqs details p {
   padding: 1.56rem;
-  background-color: #fff;
-  border-left: 1px solid #cacdf7;
-  border-right: 1px solid #cacdf7;
-  border-top: 1px solid #cacdf7;
-  margin-bottom: 0;
+  background-color: #FFF;
+  border-left: 1px solid #CACDF7;
+  border-right: 1px solid #CACDF7;
+  border-top: 1px solid #CACDF7;
+  margin-bottom: 0px;
 }
 
 .faq-hero {
@@ -174,7 +169,7 @@ a.btn-b-light {
 }
 
 .menu-flotante ul li.active,  .menu-flotante ul li.active a{
-  color: #4EA7CE;
+  color: #274470;
   list-style: inside;
 }
 
@@ -247,12 +242,12 @@ a.btn-b-light {
 }
 
 .globo-container .item-img-right {
-  background-image: url("../../img/Ahorro/Allianz/iconos/img-caticon-3.webp");
+  background-image: url("../../../img/Ahorro/Allianz/iconos/img-caticon-3.webp");
   background-size: cover;
 }
 
 .globo-container .item-img-left {
-  background-image: url("../../img/Ahorro/Allianz/iconos/img-chaticon-1.webp");
+  background-image: url("../../../img/Ahorro/Allianz/iconos/img-chaticon-1.webp");
   background-size: cover;
 }
 
@@ -304,7 +299,7 @@ a.btn-b-light {
 }
 
 .mapa-informacion h6 {
-  color: #4EA7CE;
+  color: #274470;
   margin: 0;
 }
 
@@ -400,7 +395,7 @@ details > summary > i {
     border-radius: 0px 0px 200px 0px;
     padding-top: 5.63rem;
     position: relative;
-    background: linear-gradient(180deg, #4EA7CE 0%, #65BFE6 100%);
+    background: linear-gradient(156deg, #274470 1.03%, #57b1e3 97.9%);
   }
 
   .hero .hero-titulos-container {
@@ -490,26 +485,14 @@ details > summary > i {
     font-weight: 400 !important;
     line-height: normal !important;
   }
+/* 
+  .faq {
+    margin-bottom: 5.62rem;
+  } */
 
   .faqs {
     max-width: 45.875rem;
     width: 100%;
-  }
-
-  .faqs p {
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.375rem;
-    margin-block-start: 0;
-  }
-
-  .faqs h6 {
-    font-weight: 700;font-size: 1rem;
-  }
-
-  .faqs p:last-child,.faqs ul:last-child {
-    margin-bottom:0;
   }
 
   .div-faq-container {

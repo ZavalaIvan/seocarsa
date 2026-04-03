@@ -2,6 +2,12 @@
 RewriteEngine On
 
 # =========================
+# Rutas heredadas retiradas
+# =========================
+RewriteRule ^Content/Mutuus(?:/.*)?$ - [G,L,NC]
+RewriteRule ^Content/images/Mutuus(?:/.*)?$ - [G,L,NC]
+
+# =========================
 # Host canónico y HTTPS
 # =========================
 

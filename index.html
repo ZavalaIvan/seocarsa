@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" xml:lang="es">
 <head>
     <!-- Favicon -->
@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta name="author" content="CARSA Seguros y Fianzas" />
     <!-- DescripciÃ³n editable -->
-    <meta name="description" data-jo="true" content="Cotiza seguros y fianzas en México con asesoría en línea. Compara seguro de auto, vida, gastos médicos mayores, hogar, plan personal de retiro y soluciones empresariales con CARSA.">
+    <meta name="description" data-jo="true" content="Cotiza seguros y fianzas en México con asesoría en línea. Compara auto, vida, gastos médicos, hogar, retiro y soluciones empresariales con CARSA.">
     <meta name="copyright" content="&copy; 2026 Copyright CARSA Seguros y Fianzas" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" property="og:title" content="Seguros y Fianzas en México | Cotiza en Línea | CARSA" />
@@ -212,8 +212,8 @@
     <link rel='preload' href='Content/bootstrap5/bootstrap.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
     <link rel='preload' href='Scripts/slick/slick.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
     <link rel='preload' href='Scripts/slick/slick-theme.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
-    <link rel='preload' href='Content/Alige2.0/plantilla.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
-    <link rel='preload' href='Content/Alige2.0/home.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
+    <link rel='preload' href='Content/site-ui/plantilla.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
+    <link rel='preload' href='Content/site-ui/home.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
 
     <script src="Scripts/jquery.min.js"></script>
 
@@ -368,6 +368,15 @@
 
    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
    
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHXRQNH3ZK"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'G-WHXRQNH3ZK');
+   </script>
 
 </head>
 <body>
@@ -520,7 +529,7 @@
   <div class="circle-50"></div>
 
   <!-- Imagen principal editable -->
-  <div class="empoderamos-sobrealige-wrapper" data-jo="true"><p><picture> <img id="img-sobrealige" class="empoderamos-sobrealige" src="/Content/img/home/png/img-sobrealige.png" alt="Asesora de CARSA Seguros atendiendo a clientes" width="267" height="436"> </picture></p></div>
+  <div class="hero-asesoria-wrapper" data-jo="true"><p><picture> <img id="img-hero-asesoria" class="hero-asesoria" src="/Content/img/home/png/img-hero-asesoria.png" alt="Asesora de CARSA Seguros atendiendo a clientes" width="267" height="436"> </picture></p></div>
 
   <!-- Chat 1 -->
   <div class="avatar-chat1">
@@ -1727,7 +1736,7 @@
     <script src="Scripts/general.js" async></script>
     <script src="Scripts/bootstrap5/bootstrap.min.js" async></script>
     <script src="Scripts/slick/slick.min.js" ></script>
-    <script src="Scripts/Alige2.0/home.js" ></script>
+    <script src="Scripts/site-ui/home.js" ></script>
     <script>
         (function () {
             var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1807,7 +1816,7 @@
     
     <!-- JoCMS: editor -->
     <script src="jocms/core/js/ui.js"></script>
-    <script src="Content/bootstrap5/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

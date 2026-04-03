@@ -672,7 +672,7 @@ a.btn-b-light {
     margin: 0px;
 }
 
-.sobre-alige {
+.bloque-respaldo {
     gap: 1.25rem;
     color: var(--a-color-light);
     background-color: #274470;
@@ -682,11 +682,11 @@ a.btn-b-light {
     padding-bottom: 1.94rem;
 }
 
-.sobre-alige .sobre-alige-textos {
+.bloque-respaldo .bloque-respaldo-textos {
     margin-bottom: 1.20rem;
 }
 
-.sobre-alige .sobre-alige-textos p {
+.bloque-respaldo .bloque-respaldo-textos p {
     font-size: 1.21875rem;
     font-style: normal;
     font-weight: 700;
@@ -694,19 +694,19 @@ a.btn-b-light {
     margin-bottom: 0.5rem;
 }
 
-.sobre-alige .sobre-alige-textos-container {
+.bloque-respaldo .bloque-respaldo-textos-container {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
     margin-bottom: 2.5rem;
 }
 
-.sobre-alige-img-container .img-laptop,
-.sobre-alige-img-globo {
+.bloque-respaldo-img-container .img-laptop,
+.bloque-respaldo-img-globo {
     display: none;
 }
 
-.sobre-alige .cards-container {
+.bloque-respaldo .cards-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -999,12 +999,12 @@ details > summary > i {
         max-width: 100%;
     }
 
-    .d-lg-block.burbuja-alige-container .burbuja-alige-izquierda {
+    .d-lg-block.globo-respaldo-container .globo-respaldo-izquierda {
         display: none;
     }
 
-    .sobre-alige-textos-container .d-md-block,
-    .d-lg-block.burbuja-alige-container {
+    .bloque-respaldo-textos-container .d-md-block,
+    .d-lg-block.globo-respaldo-container {
         display: block !important;
     }
 
@@ -1536,22 +1536,22 @@ details > summary > i {
         font-size: 0.9375rem;
     }
     
-    .sobre-alige {
+    .bloque-respaldo {
         background-color: transparent;
     }
 
-    .sobre-alige .sobre-alige-container {
+    .bloque-respaldo .bloque-respaldo-container {
         border-radius: 2rem;
         background: #274470;
         padding: 1.88rem 1.25rem 1.12rem;
     }
 
-    .sobre-alige-container .md-titulo h2 {
+    .bloque-respaldo-container .md-titulo h2 {
         font-size: 2.44125rem;
         line-height: 2.9375rem;
     }
 
-    .sobre-alige-container .md-subtitulo-container {
+    .bloque-respaldo-container .md-subtitulo-container {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -1560,21 +1560,21 @@ details > summary > i {
         line-height: 1.96875rem;
     }
 
-    .sobre-alige-container .md-subtitulo-container img {
+    .bloque-respaldo-container .md-subtitulo-container img {
         width: 8.40938rem;
     }
 
-    .sobre-alige .cards-container {
+    .bloque-respaldo .cards-container {
         width: 100%;
         margin-top: 0px;
     }
 
-    .sobre-alige .sobre-alige-textos-container {
+    .bloque-respaldo .bloque-respaldo-textos-container {
         margin-bottom: 0px;
         width: 50%;
     }
 
-    .sobre-alige-img-container {
+    .bloque-respaldo-img-container {
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -1583,33 +1583,33 @@ details > summary > i {
         position: relative;
     }
 
-    .sobre-alige .sobre-alige-container .principal-card-container {
+    .bloque-respaldo .bloque-respaldo-container .principal-card-container {
         width: 51%;
     }
 
-    .sobre-alige .sobre-alige-container .card-item {
+    .bloque-respaldo .bloque-respaldo-container .card-item {
         max-width: 100%;
     }
 
-    .sobre-alige-textos-container .sobre-alige-subTitulo {
+    .bloque-respaldo-textos-container .bloque-respaldo-subTitulo {
         gap: 0.3rem;
     }
 
-    .sobre-alige-textos-container .sobre-alige-subTitulo h4 {
+    .bloque-respaldo-textos-container .bloque-respaldo-subTitulo h4 {
         font-size: 1.47656rem;
         line-height: 1.96875rem;
     }
 
-    .sobre-alige-textos-container .sobre-alige-subTitulo p {
+    .bloque-respaldo-textos-container .bloque-respaldo-subTitulo p {
         font-size: 1.47656rem;
         line-height: 1.96875rem;
     }
 
-    .sobre-alige-textos-container .md-subtitulo-container img{
+    .bloque-respaldo-textos-container .md-subtitulo-container img{
         display: none;
     }
 
-    .sobre-alige-img-container .sobre-alige-img-globo {
+    .bloque-respaldo-img-container .bloque-respaldo-img-globo {
         width: 13.125rem;
         height: 13.125rem;
         border-radius: 12.5rem 12.5rem 0rem 12.5rem;
@@ -1625,24 +1625,24 @@ details > summary > i {
         left: -1.2rem;
     }
 
-    .sobre-alige-img-container .sobre-alige-img-globo img {
+    .bloque-respaldo-img-container .bloque-respaldo-img-globo img {
         width: 6.3125rem;
         height: 1.07906rem;
     }
 
-    .sobre-alige-img-container .sobre-alige-img-globo p {
+    .bloque-respaldo-img-container .bloque-respaldo-img-globo p {
         color: #474747;
         margin-top: 0.55rem;
     }
 
-    .sobre-alige-img-container img {
+    .bloque-respaldo-img-container img {
         width: 15.63413rem;
         height: 20rem;
         position: relative;
         z-index: 2;
     }
 
-    .sobre-alige-img-container .img-laptop {
+    .bloque-respaldo-img-container .img-laptop {
         display: flex;
         margin-bottom: -1rem;
     }
@@ -1675,7 +1675,7 @@ details > summary > i {
 }
 
 @media (min-width: 1280px) and (max-width: 1399px) {
-    .sobre-alige .cards-container {
+    .bloque-respaldo .cards-container {
         width: 70%;
         margin-left: 100px;
     }
@@ -1741,7 +1741,7 @@ details > summary > i {
                 max-width: 100%;
             }
 
-            .sobre-alige .align-items-center {
+            .bloque-respaldo .align-items-center {
                 gap: 0.75rem !important;
                 justify-content: flex-start !important;
                 flex-direction: row !important;
@@ -1813,37 +1813,37 @@ details > summary > i {
                 width: 92%;
             }
 
-            .d-lg-block.burbuja-alige-container .burbuja-alige-izquierda {
+            .d-lg-block.globo-respaldo-container .globo-respaldo-izquierda {
                 display: flex;
             }
 
-            .sobre-alige .sobre-alige-container {
+            .bloque-respaldo .bloque-respaldo-container {
                 padding-top: 1.12rem;
                 padding-right: 7.25rem;
                 padding-left: 1.88rem;
             }
 
-            .sobre-alige-textos-container {
+            .bloque-respaldo-textos-container {
                 justify-content: center;
             }
 
-            .sobre-alige .burbuja-alige {
+            .bloque-respaldo .globo-respaldo {
                 width: 10.625rem;
                 height: 10.625rem;
             }
 
-            .sobre-alige .burbuja-alige-derecha {
+            .bloque-respaldo .globo-respaldo-derecha {
                 left: -7.7rem;
             }
 
-            .burbuja-alige-derecha p,
-            .burbuja-alige-izquierda p {
+            .globo-respaldo-derecha p,
+            .globo-respaldo-izquierda p {
                 margin-bottom: 0rem;
                 font-size: 1rem;
                 line-height: 1.375rem;
             }
 
-            .sobre-alige .burbuja-alige-derecha img {
+            .bloque-respaldo .globo-respaldo-derecha img {
                 width: 8.4375rem;
             }
         }
@@ -2101,11 +2101,11 @@ details > summary > i {
         height: 22.75rem;
     }*/
 
-            .sobre-alige .sobre-alige-container {
+            .bloque-respaldo .bloque-respaldo-container {
                 padding: 3.12rem 1.88rem 1.88rem 3.12rem;
             }
 
-            .sobre-alige-textos-container {
+            .bloque-respaldo-textos-container {
                 position: relative;
             }
 
@@ -2113,27 +2113,27 @@ details > summary > i {
                 display: none !important;
             }
 
-            .sobre-alige .sobre-alige-textos-container {
+            .bloque-respaldo .bloque-respaldo-textos-container {
                 width: 50%;
             }
 
-            .sobre-alige .sobre-alige-container .principal-card-container {
+            .bloque-respaldo .bloque-respaldo-container .principal-card-container {
                 width: 50%;
                 margin-left: 200px;
             }
 
-            .sobre-alige-img-container {
+            .bloque-respaldo-img-container {
                 position: absolute;
                 left: 21rem;
                 bottom: -0.9rem;
             }
 
-                .sobre-alige-img-container .sobre-alige-img-globo {
+                .bloque-respaldo-img-container .bloque-respaldo-img-globo {
                     top: 15rem;
                     left: -10rem;
                 }
 
-            .sobre-alige .cards-container {
+            .bloque-respaldo .cards-container {
                 align-items: flex-end;
             }
 
@@ -2146,7 +2146,7 @@ details > summary > i {
                 margin-left: 0px;
             }
 
-            .sobre-alige-img-container .img-laptop {
+            .bloque-respaldo-img-container .img-laptop {
                 width: 23.5rem;
                 height: 30.0625rem;
             }

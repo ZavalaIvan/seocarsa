@@ -387,7 +387,7 @@ input[type=number] {
 }
 
 .Modal_backHeader {
-    background: url(img/popup-background.html) center;
+    background: linear-gradient(135deg, #0f4c81, #118ab2) center / cover no-repeat;
     height: 250px
 }
 

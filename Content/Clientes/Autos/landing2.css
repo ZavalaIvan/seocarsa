@@ -1,4 +1,4 @@
-﻿.navbar,
+.navbar,
 footer .container-fluid {
     /*background: #57b1e3;*/
     background: linear-gradient(156deg, #57b1e3 1.03%, #6FC3B3 97.9%);
@@ -538,7 +538,7 @@ form .title_error {
     height: 30rem;
 }*/
 
-.sobre-alige {
+.bloque-respaldo {
     gap: 1.25rem;
     color: var(--a-color-light);
     background-color: #57b1e3;
@@ -547,21 +547,21 @@ form .title_error {
     margin-top: 4.38rem;
 }
 
-    .sobre-alige .sobre-alige-textos-container {
+    .bloque-respaldo .bloque-respaldo-textos-container {
         display: flex;
         flex-direction: column;
         gap: 1.25rem;
         margin-bottom: 2.5rem;
     }
 
-    .sobre-alige .badges-container {
+    .bloque-respaldo .badges-container {
         bottom: 1rem;
         max-width: 17.5rem;
         left: 0;
         right: 0;
     }
 
-    .sobre-alige .badged-full {
+    .bloque-respaldo .badged-full {
         display: flex;
         width: 14.5625rem;
         padding: 0.5rem 0.875rem;
@@ -592,7 +592,7 @@ form .title_error {
     margin: 0px;
 }
 
-.sobre-alige .badged-full p span {
+.bloque-respaldo .badged-full p span {
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
@@ -876,22 +876,22 @@ details > summary > i {
             .sobre-tu-retiro .sub-titulo.d-md-none,
             .tranquilidad .sub-titulo.d-md-none,
             .plan-allianz h2.d-md-none,
-            .sobre-alige-textos-container .d-lg-none,
-            .sobre-alige-textos-container .d-md-none,
-            .sobre-alige-textos-container .d-md-none img,
-            .d-lg-block.burbuja-alige-container .burbuja-alige-izquierda {
+            .bloque-respaldo-textos-container .d-lg-none,
+            .bloque-respaldo-textos-container .d-md-none,
+            .bloque-respaldo-textos-container .d-md-none img,
+            .d-lg-block.globo-respaldo-container .globo-respaldo-izquierda {
                 display: none;
             }
 
             .sobre-tu-retiro .sub-titulo.d-md-block,
             .tranquilidad .sub-titulo.d-md-block,
             .plan-allianz h2.d-md-block,
-            .sobre-alige-textos-container .d-md-block,
-            .d-lg-block.burbuja-alige-container {
+            .bloque-respaldo-textos-container .d-md-block,
+            .d-lg-block.globo-respaldo-container {
                 display: block !important;
             }
 
-    .sobre-alige-textos-container .d-lg-flex {
+    .bloque-respaldo-textos-container .d-lg-flex {
         display: flex !important;
     }
 
@@ -1022,46 +1022,46 @@ details > summary > i {
         height: 12.5rem;
     }
 
-    .sobre-alige {
+    .bloque-respaldo {
         background-color: transparent;
     }
 
-        .sobre-alige .sobre-alige-container {
+        .bloque-respaldo .bloque-respaldo-container {
             border-radius: 2rem;
             background-color: #57b1e3;
             padding-top: 1.88rem;
             padding-left: 30px;
         }
 
-        .sobre-alige .sobre-alige-textos-container {
+        .bloque-respaldo .bloque-respaldo-textos-container {
             gap: 0.62rem;
         }
 
-    .sobre-alige-textos {
+    .bloque-respaldo-textos {
         margin-top: 0.63rem;
     }
 
-        .sobre-alige-textos p span {
+        .bloque-respaldo-textos p span {
             font-weight: 700;
         }
 
-    .sobre-alige-titulo {
+    .bloque-respaldo-titulo {
         font-size: 1.5625rem;
         margin-bottom: 0rem;
         line-height: normal;
     }
 
-    .sobre-alige-textos-container h4 {
+    .bloque-respaldo-textos-container h4 {
         font-size: 1.3125rem;
         margin-bottom: 0rem;
     }
 
-    .sobre-alige .sobre-alige-container .d-lg-flex {
+    .bloque-respaldo .bloque-respaldo-container .d-lg-flex {
         display: flex;
         justify-content: space-between;
     }
 
-    .sobre-alige .burbuja-alige {
+    .bloque-respaldo .globo-respaldo {
         width: 7.5rem;
         height: 7.5rem;
         background: #FFF;
@@ -1076,18 +1076,18 @@ details > summary > i {
         position: absolute;
     }
 
-    .sobre-alige .burbuja-alige-derecha {
+    .bloque-respaldo .globo-respaldo-derecha {
         border-radius: 12.5rem 12.5rem 0rem 12.5rem;
         left: -3.125rem;
         top: 2rem;
     }
 
-        .sobre-alige .burbuja-alige-derecha img {
+        .bloque-respaldo .globo-respaldo-derecha img {
             color: #4EA7CE;
             width: 5.3125rem;
         }
 
-    .sobre-alige .burbuja-alige-izquierda {
+    .bloque-respaldo .globo-respaldo-izquierda {
         border-radius: 12.5rem 12.5rem 12.5rem 0rem;
         bottom: 13.5rem;
         right: -6.5rem;
@@ -1206,41 +1206,41 @@ details > summary > i {
 
    
 
-    .sobre-alige .sobre-alige-container {
+    .bloque-respaldo .bloque-respaldo-container {
         padding-left: 5.12rem;
         padding-right: 7.25rem;
     }
 
-    .sobre-alige-textos-container {
+    .bloque-respaldo-textos-container {
         justify-content: center;
     }
 
-    .sobre-alige .sobre-alige-container .sobre-alige-textos p.d-lg-flex {
+    .bloque-respaldo .bloque-respaldo-container .bloque-respaldo-textos p.d-lg-flex {
         justify-content: start;
         gap: 0.5rem;
     }
 
-    .d-lg-block.burbuja-alige-container .burbuja-alige-izquierda {
+    .d-lg-block.globo-respaldo-container .globo-respaldo-izquierda {
         display: flex;
     }
 
-    .sobre-alige .burbuja-alige {
+    .bloque-respaldo .globo-respaldo {
         width: 10.625rem;
         height: 10.625rem;
     }
 
-    .sobre-alige .burbuja-alige-derecha {
+    .bloque-respaldo .globo-respaldo-derecha {
         left: -7.7rem;
     }
 
-    .burbuja-alige-derecha p,
-    .burbuja-alige-izquierda p {
+    .globo-respaldo-derecha p,
+    .globo-respaldo-izquierda p {
         margin-bottom: 0rem;
         font-size: 1rem;
         line-height: 1.375rem;
     }
 
-    .sobre-alige .burbuja-alige-derecha img {
+    .bloque-respaldo .globo-respaldo-derecha img {
         width: 8.4375rem;
     }
 
@@ -1421,12 +1421,12 @@ details > summary > i {
         height: 14.1875rem;
     } */
 
-    .sobre-alige-titulo {
+    .bloque-respaldo-titulo {
         font-size: 2.44125rem;
         line-height: 2.9375rem;
     }
 
-    .sobre-alige-textos p {
+    .bloque-respaldo-textos p {
         font-size: 1.47656rem;
         line-height: 1.96875rem;
     }
@@ -1474,7 +1474,7 @@ details > summary > i {
      /*   width: 100%;*/
     }
 
-    .sobre-alige .sobre-alige-container {
+    .bloque-respaldo .bloque-respaldo-container {
         padding-right: 11rem;
         padding-left: 11rem;
     }

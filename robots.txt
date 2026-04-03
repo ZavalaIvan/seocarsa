@@ -2,7 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /jocms/
 Disallow: /phpmailer/
-Disallow: /Scripts/
 Disallow: /smtp-debug.log
 Disallow: /error_log
 Disallow: /test-mail.php
