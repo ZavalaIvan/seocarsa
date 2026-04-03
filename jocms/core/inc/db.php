@@ -216,7 +216,7 @@ function jocms_history($path,$code){
     $handle = jocms_db_link();
     $return = $handle->exec("INSERT INTO history(task,user_id,time,code) VALUES ('".$handle->escapeString($path)."','".$handle->escapeString($_SESSION['jocms_id'])."',datetime('now'),'".$handle->escapeString($code)."')");
     $result = $handle->exec("DELETE FROM history WHERE time<datetime('now', '-". $handle->escapeString($GLOBALS['JO_S']['history'])." day')");
-    return $return;                                                                                                                                    //sql ausf�hrung pr�fen
+    return $return;                                                                                                                                    //sql ausfuehrung pruefen
 }
 
 //gets history entries for recovery list

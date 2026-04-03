@@ -256,7 +256,7 @@ a.btn-b-light {
   z-index: 1;
 }
 
-.proceso-paso h5 {
+.proceso-paso :is(h3, h5) {
   margin-bottom: 0.62rem;
 }
 

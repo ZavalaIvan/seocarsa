@@ -112,7 +112,7 @@ try{
     $filecode = substr_replace($filecode,$replacement, 0,0);
 
     //write temporary file
-    $myfile = fopen(JO_ROOT.$url."_cms_temp.php", "w+");       //taskid einf�gen
+    $myfile = fopen(JO_ROOT.$url."_cms_temp.php", "w+");       //taskid einfuegen
     if(!$myfile){
         throw new Exception($JO_LANG['ERR_404_DIR']);
     }

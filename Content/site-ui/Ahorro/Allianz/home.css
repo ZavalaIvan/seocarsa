@@ -795,7 +795,7 @@ details>summary>i {
         padding: 0.9375rem 0.625rem 0.625rem 0.625rem;
     }
 
-    .ppr .card-item h5{
+    .ppr .card-item :is(h3, h5){
         font-size: 1.125rem;
         line-height: 1.625rem;
         margin-bottom: 0.09rem;
@@ -1364,7 +1364,7 @@ details>summary>i {
         top: 1.13rem;
     }
 
-    .ppr .card-item h5 {
+    .ppr .card-item :is(h3, h5) {
         font-size: 1.5625rem;
         line-height: normal;
     }

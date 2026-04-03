@@ -143,6 +143,104 @@ h6 {
     line-height: normal;
 }
 
+.seo-crosslinks {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.seo-crosslinks-inner {
+    padding: 2rem;
+    border-radius: 1.75rem;
+    border: 1px solid var(--a-color-tertiary-30);
+    background: linear-gradient(180deg, #f8fbff 0%, #eef5fb 100%);
+    box-shadow: 0 18px 42px rgba(39, 68, 112, 0.08);
+}
+
+.seo-crosslinks-copy {
+    max-width: 46rem;
+}
+
+.seo-crosslinks-eyebrow {
+    margin: 0 0 0.75rem;
+    color: var(--a-color-tertiary);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.seo-crosslinks-title {
+    margin-bottom: 0.75rem;
+}
+
+.seo-crosslinks-text {
+    margin-bottom: 0;
+    color: var(--a-color-dark-80);
+}
+
+.seo-crosslinks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.seo-crosslink-card {
+    display: block;
+    height: 100%;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--a-color-tertiary-30);
+    background-color: var(--a-color-light);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.seo-crosslink-card:hover,
+.seo-crosslink-card:focus {
+    transform: translateY(-3px);
+    border-color: var(--a-color-quaternary);
+    box-shadow: 0 16px 36px rgba(39, 68, 112, 0.12);
+}
+
+.seo-crosslink-card h3 {
+    margin-bottom: 0.625rem;
+    color: var(--a-color-tertiary);
+    font-size: 1.45rem;
+    line-height: 1.3;
+}
+
+.seo-crosslink-card p {
+    margin-bottom: 0;
+    color: var(--a-color-dark-80);
+}
+
+.seo-crosslink-kicker {
+    display: inline-flex;
+    margin-bottom: 0.875rem;
+    color: var(--a-color-tertiary);
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+@media (max-width: 991.98px) {
+    .seo-crosslinks-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .seo-crosslinks {
+        margin-top: 3rem;
+    }
+
+    .seo-crosslinks-inner {
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+    }
+}
+
 .h1,
 .h2,
 .h3,
