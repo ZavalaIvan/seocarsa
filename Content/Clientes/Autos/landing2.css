@@ -1019,7 +1019,7 @@ details > summary > i {
 
     .tarjeta-container-item picture img {
         width: 17rem;
-        height: 12.5rem;
+        height: auto;
     }
 
     .bloque-respaldo {

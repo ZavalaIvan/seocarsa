@@ -413,6 +413,21 @@ a.btn-b-light {
     background: #274470;
 }
 
+@media only screen and (max-width: 991px) {
+    #navbar .container {
+        row-gap: 0.75rem;
+    }
+
+    #navbar .navbar-toggler {
+        position: relative;
+        z-index: 1001;
+    }
+
+    #navbar .navbar-collapse {
+        flex-basis: 100%;
+    }
+}
+
 .tarjetas-container-img {
     text-align: center;
 }
@@ -420,7 +435,7 @@ a.btn-b-light {
 #tarjeta3-img {
     display: block;
     position: relative;
-    top: 3.75rem;
+    top: 0;
 }
 
 .bloque-respaldo {
@@ -1477,7 +1492,7 @@ details>summary>i {
     }
 
     #tarjeta3-img {
-        top: 5.75rem;
+        top: 2rem;
     }
 
     .bloque-respaldo .bloque-respaldo-container{
