@@ -550,6 +550,8 @@
 
 #producto-ahorro .producto-img {
     margin-left: -0.5rem;
+    width: min(100%, 443px);
+    transform: translateY(18px);
 }
 
 #producto-ahorro .producto-chat {
