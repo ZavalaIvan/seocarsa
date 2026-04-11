@@ -13,7 +13,7 @@ html, body {
 
 #mainContainer {
     padding-top: 120px;
-    background: url('../../images/Hogar/img-background-nubes-movil.png') no-repeat;
+    background: url('../../images/Hogar/img-background-nubes-movil.webp') no-repeat;
 }
 
 .containerHeroText, .containerForm {
@@ -273,7 +273,7 @@ html, body {
 
 .itemsContainer {
     height: 230px;
-    background: url('../../images/Hogar/img-background-Hogar-movil.png') no-repeat;
+    background: url('../../images/Hogar/img-background-Hogar-movil.webp') no-repeat;
     background-size: cover;
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -339,7 +339,7 @@ html, body {
 
     .itemsContainer {
         height: 300px;
-        background: url('../../images/Hogar/img-background-Hogar.png') no-repeat;
+        background: url('../../images/Hogar/img-background-Hogar.webp') no-repeat;
         background-position-y: 90px;
         background-size: contain;
     }
@@ -349,7 +349,7 @@ html, body {
 
     #mainContainer {
         padding-top: 180px;
-        background: url('../../images/Hogar/img-bacground-nubes-Hogar.png') no-repeat;
+        background: url('../../images/Hogar/img-bacground-nubes-Hogar.webp') no-repeat;
         background-size: contain;
         display: flex;
         flex-direction: column;
@@ -374,7 +374,7 @@ html, body {
 @media only screen and (min-width: 1024px) and (max-width: 1110px) {
 
     #mainContainer {
-        background: url('../../images/Hogar/img-bacground-nubes-Hogar.png') no-repeat;
+        background: url('../../images/Hogar/img-bacground-nubes-Hogar.webp') no-repeat;
         background-size: contain;
     }
 
@@ -390,7 +390,7 @@ html, body {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        background: url('../../images/Hogar/img-background-Hogar.png') no-repeat;
+        background: url('../../images/Hogar/img-background-Hogar.webp') no-repeat;
         background-size: contain;
         padding-left: 0 !important;
         padding-right: 0 !important;
@@ -466,7 +466,7 @@ html, body {
 @media only screen and (min-width: 1111px) and (max-width: 1440px) {
 
     #mainContainer {
-        background: url('../../images/Hogar/img-bacground-nubes-Hogar.png') no-repeat;
+        background: url('../../images/Hogar/img-bacground-nubes-Hogar.webp') no-repeat;
         background-size: contain;
     }
 
@@ -482,7 +482,7 @@ html, body {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        background: url('../../images/Hogar/img-background-Hogar.png') no-repeat;
+        background: url('../../images/Hogar/img-background-Hogar.webp') no-repeat;
         background-size: contain;
         padding-left: 88px;
         padding-right: 40px;
@@ -568,7 +568,7 @@ html, body {
 
 @media only screen and (min-width: 1440px) and (max-width: 1500px) {
     #mainContainer {
-        background: url('../../images/Hogar/img-bacground-nubes-Hogar.png') no-repeat;
+        background: url('../../images/Hogar/img-bacground-nubes-Hogar.webp') no-repeat;
         background-size: contain;
         width: 100%;
         flex-direction: column;
@@ -588,7 +588,7 @@ html, body {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        background: url('../../images/Hogar/img-background-Hogar.png') no-repeat;
+        background: url('../../images/Hogar/img-background-Hogar.webp') no-repeat;
         background-size: contain;
         padding-left: 88px;
         padding-right: 40px;
@@ -676,7 +676,7 @@ html, body {
     }
 
     #mainContainer {
-        background: url('../../images/Hogar/img-bacground-nubes-Hogar.png') no-repeat;
+        background: url('../../images/Hogar/img-bacground-nubes-Hogar.webp') no-repeat;
         background-size: 100% 35%;
         width: 100%;
         display: flex;
@@ -697,7 +697,7 @@ html, body {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        background: url('../../images/Hogar/img-background-Hogar.png') no-repeat;
+        background: url('../../images/Hogar/img-background-Hogar.webp') no-repeat;
         background-size: contain;
         padding-left: 88px;
         padding-right: 40px;
@@ -784,7 +784,7 @@ html, body {
     }
 
     #mainContainer {
-        background: url('../../images/Hogar/img-bacground-nubes-Hogar.png') no-repeat;
+        background: url('../../images/Hogar/img-bacground-nubes-Hogar.webp') no-repeat;
         background-size: 100% 35%;
         width: 100%;
         display: flex;
@@ -805,7 +805,7 @@ html, body {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        background: url('../../images/Hogar/img-background-Hogar.png') no-repeat;
+        background: url('../../images/Hogar/img-background-Hogar.webp') no-repeat;
         background-size: contain;
         padding-left: 88px;
         padding-right: 40px;

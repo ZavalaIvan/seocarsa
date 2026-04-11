@@ -2,101 +2,6 @@ html, html body {
     font-size: 16px;
 }
 
-.cotiza_ahora, .divLogos, .contactanos, nav .container-fluid {
-    max-width: 1440px;
-}
-
-.cotiza_ahora {
-    padding: 180px 2% 30px;
-    background: url(../../images/Autos/img-background-completo-Autos.png) bottom;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-}
-
-.cotiza_ahora h1 {
-    color: #0A357C;
-    font-family: var(--fuente-secundaria);
-    font-size: 3.75rem;
-    font-weight: normal;
-    letter-spacing: 0;
-    line-height: 3.75rem;
-    text-align: center;
-    margin-bottom: 70px;
-}
-
-.cotiza_ahora h1 b {
-    color: #0A357C;
-}
-
-.cotiza_ahora p {
-    color: #1B3572;
-    font-size: 2.375rem;
-    letter-spacing: 0;
-    line-height: 2.375rem;
-    margin-top: 67px;
-    margin-bottom: 200px;
-    text-align: center;
-}
-
-.cotiza_ahora .title_error {
-    text-align: center !important;
-    margin-top: 10px !important;
-    margin-bottom: 0px !important;
-}
-
-
-.cotiza_ahora .divFormulario {
-    padding-left: 12%;
-    padding-right: 12%;
-}
-
-.cotiza_ahora .divFormulario .btn {
-    display: inline-block;
-    margin-left: .5%;
-    margin-right: .5%;
-    padding: 10px 30px;
-    width: 17%;
-    vertical-align: top;
-}
-
-.cotiza_ahora .divFormulario .inputAuto {
-    width: 64%;
-    display: inline-block;
-    margin-left: .5%;
-    margin-right: .5%;
-    vertical-align: top;
-}
-
-.cotiza_ahora .divFormulario .inputAuto input::placeholder {
-    color: #17345A;
-    opacity: 0.6;
-}
-
-.cotiza_ahora .divFormulario .inputAnio {
-    width: 15%;
-    display: inline-block;
-    margin-left: .5%;
-    margin-right: .5%;
-    text-align: right;
-    vertical-align: top;
-}
-
-    .cotiza_ahora .divFormulario .inputAnio .btn {
-        width: 100%;
-        box-shadow: 0 2px 16px 0 #e5e8ed;
-        position: relative;
-        box-shadow: 0 2px 16px 0 #E5E8ED;
-        -webkit-box-shadow: 0 2px 16px 0 #e5e8ed;
-        -moz-box-shadow: 0 2px 16px 0 #e5e8ed;
-        opacity: 1;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 10px 10px 30px;
-    }
-
-
 .divLogos .aseguradoras {
     display: flex;
     justify-content: space-between;
@@ -204,7 +109,6 @@ html, html body {
     width: 20%;
 }
 
-
 .ui-widget-content li {
     border: 0 solid #dddddd;
     background-color: #F5F4F5;
@@ -256,20 +160,6 @@ a.ui-button:active,
         font-size: 26px;
     }
 
-    .cotiza_ahora {
-        padding: 200px 2% 30px;
-    }
-
-    .cotiza_ahora p {
-        margin-top: 67px;
-        margin-bottom: 850px;
-    }
-
-    .cotiza_ahora .divFormulario {
-        padding-left: 25%;
-        padding-right: 25%;
-    }
-
     .divLogos .aseguradoras .imgLogos {
         height: 60px;
     }
@@ -289,11 +179,6 @@ a.ui-button:active,
     html body {
         font-size: 18px;
     }
-
-    .cotiza_ahora p {
-        margin-top: 67px;
-        margin-bottom: 500px;
-    }
 }
 
 @media (max-width: 1380px) {}
@@ -305,34 +190,13 @@ a.ui-button:active,
 @media (max-width: 1200px) {}
 
 @media (max-width: 1024px) {
-    .cotiza_ahora .divFormulario {
-        padding-left: 6%;
-        padding-right: 6%;
-    }
 
     .divLogos .aseguradoras .imgLogos {
         height: 30px;
     }
-
-    .cotiza_ahora {
-        margin-top: 75px;
-        padding: 80px 0 30px;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .cotiza_ahora .divFormulario {
-        padding-left: 2%;
-        padding-right: 2%;
-    }
-
-    .cotiza_ahora .divFormulario .inputAuto {
-        width: 60%;
-    }
-
-    .cotiza_ahora .divFormulario .inputAnio {
-        width: 18%;
-    }
 
     .contactanos .divFrame {
         padding-right: 25px;
@@ -364,53 +228,6 @@ a.ui-button:active,
     html body {
         font-size: 16px;
         overflow-x: hidden;
-    }
-
-    .cotiza_ahora {
-        background: url(../../images/Autos/img-background-completo.png) bottom;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-    }
-
-    .cotiza_ahora h1 {
-        font-size: 2.3125rem;
-        margin-bottom: 50px;
-    }
-
-    .cotiza_ahora .divFormulario {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .cotiza_ahora .divFormulario .inputAuto {
-        width: 98%;
-        margin-left: 1%;
-        margin-right: 1%;
-        margin-bottom: 16px;
-    }
-
-    .cotiza_ahora .divFormulario .inputAnio {
-        width: 47%;
-        margin-left: 1%;
-        margin-right: 1%;
-        text-align: right;
-    }
-
-    .cotiza_ahora .divFormulario .btn {
-        margin-left: 1%;
-        margin-right: 1%;
-        width: 47%;
-        border: 1px solid #E5E8ED;
-    }
-
-
-    .cotiza_ahora p {
-        font-size: 1.5rem;
-        padding-left: 10%;
-        padding-right: 10%;
-        margin-top: 46px;
-        margin-bottom: 230px;
     }
 
     .divLogos .aseguradoras .imgLogos, .divLogos .aseguradoras .imgLogos {

@@ -1502,7 +1502,7 @@ svg.bar-linea {
     }
 
     .productos {
-        margin-top: -5rem;
+        margin-top: 0;
     }
 
     .productos-h2 {
@@ -1580,7 +1580,9 @@ svg.bar-linea {
 
             .accordion-body p .bold {
                 font-weight: 400;
+            
             }
+
 
     .tab-pane-btn {
         width: 100%;
@@ -1825,7 +1827,7 @@ svg.bar-linea {
     }
 
     .aseguradoras {
-        padding-top: 2.25rem;
+        padding-top: 0.75rem;
     }
 
     .aseguradoras .slick-list {

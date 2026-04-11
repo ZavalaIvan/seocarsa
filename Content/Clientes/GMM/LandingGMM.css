@@ -23,7 +23,7 @@ html, html body {
     background-color: #ffffff;
     height: 950px;
     padding: 12% 6% 0 6%;
-    background: url('../../images/gmm/img-background-SGMM-escritorio.png') no-repeat bottom left;
+    background: url('../../images/gmm/img-background-SGMM-escritorio.webp') no-repeat bottom left;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -198,7 +198,7 @@ html, html body {
             }
 
 .cotiza_ahora_gnp {
-    background: url('../../images/gmm/img-Background-gnp.png') no-repeat top left;
+    background: url('../../images/gmm/img-Background-gnp.webp') no-repeat top left;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     background-size: contain;
@@ -907,7 +907,7 @@ html, html body {
 
     .cotiza_ahora {
         padding: 113px 0 0 0;
-        background: url(../../images/gmm/img-backGround-SGMM-movil-nueves.png) no-repeat top left;
+        background: url(../../images/gmm/img-backGround-SGMM-movil-nueves.webp) no-repeat top left;
         -webkit-background-size: contain;
         -moz-background-size: contain;
         background-size: contain;
@@ -1144,7 +1144,7 @@ padding: 25px;}
 
     .cotiza_ahora {
         padding: 140px 0 0 0;
-        background: url(../../images/gmm/img-backGround-SGMM-movil-nueves.png) no-repeat top left;
+        background: url(../../images/gmm/img-backGround-SGMM-movil-nueves.webp) no-repeat top left;
         -webkit-background-size: contain;
         -moz-background-size: contain;
         background-size: contain;

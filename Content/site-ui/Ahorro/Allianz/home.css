@@ -417,6 +417,12 @@ a.btn-b-light {
     text-align: center;
 }
 
+#tarjeta3-img {
+    display: block;
+    position: relative;
+    top: 3.75rem;
+}
+
 .bloque-respaldo {
     gap: 1.25rem;
     color: var(--a-color-light);
@@ -1468,6 +1474,10 @@ details>summary>i {
 
     .tarjetas-container-img img {
         width: 100%;
+    }
+
+    #tarjeta3-img {
+        top: 5.75rem;
     }
 
     .bloque-respaldo .bloque-respaldo-container{
