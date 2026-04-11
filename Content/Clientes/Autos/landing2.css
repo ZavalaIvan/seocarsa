@@ -184,15 +184,15 @@ form .title_error {
 
 .btn-shadow {
     box-shadow: 0px 5px 24px 0px #274470;
-    /*rgba(196, 230, 101, 0.40);*/
-    /* background-color: rgba(196, 230, 101, 0.40);*/
+    /*rgba(255, 255, 255, 0.45);*/
+    /* background-color: rgba(255, 255, 255, 0.45);*/
     
     color: white
 }
 
 .btn-shadow:hover, .btn-shadow:focus {
     box-shadow: 0px 5px 24px 0px #b200ff;
-   background-color: rgba(196, 230, 101, 0.40);
+   background-color: rgba(255, 255, 255, 0.45);
     color: white
 }
 
@@ -234,7 +234,7 @@ form .title_error {
     }
 
     .bg-morado .btn-primary {
-        box-shadow: 0px 5px 24px 0px rgba(196, 230, 101, 0.40);
+        box-shadow: 0px 5px 24px 0px rgba(255, 255, 255, 0.45);
     }
 
     .bg-morado .btn-agendar {
