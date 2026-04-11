@@ -115,3 +115,51 @@ RewriteRule ^fianza-de-vicios-ocultos$ Fianzas/vicios-ocultos.html [L,NC]
 RewriteRule ^fianza-de-credito$ Fianzas/credito.html [L,NC]
 RewriteRule ^fianza-de-fidelidad$ Fianzas/fidelidad.html [L,NC]
 </IfModule>
+
+# =========================
+# Cache de estaticos
+# =========================
+<IfModule mod_expires.c>
+ExpiresActive On
+
+# HTML y XML: siempre validar de nuevo
+ExpiresByType text/html "access plus 0 seconds"
+ExpiresByType application/xhtml+xml "access plus 0 seconds"
+ExpiresByType application/xml "access plus 0 seconds"
+ExpiresByType text/xml "access plus 0 seconds"
+
+# CSS y JS: cache larga; cambiar nombre del archivo al actualizarlo
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType text/javascript "access plus 1 year"
+ExpiresByType application/javascript "access plus 1 year"
+ExpiresByType application/x-javascript "access plus 1 year"
+
+# Imagenes y fuentes: cache larga
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/avif "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+ExpiresByType font/woff2 "access plus 1 year"
+ExpiresByType font/woff "access plus 1 year"
+ExpiresByType application/font-woff2 "access plus 1 year"
+ExpiresByType application/font-woff "access plus 1 year"
+ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+ExpiresByType font/ttf "access plus 1 year"
+ExpiresByType font/otf "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+# HTML: no cachear sin revalidar
+<FilesMatch "\.(html?|xhtml|xml)$">
+Header always set Cache-Control "no-cache, must-revalidate"
+</FilesMatch>
+
+# Activos estaticos: cache larga e immutable
+<FilesMatch "\.(css|js|mjs|png|jpe?g|gif|svg|webp|avif|ico|woff2?|ttf|otf|eot)$">
+Header always set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+</IfModule>
