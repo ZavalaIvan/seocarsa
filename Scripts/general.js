@@ -146,6 +146,23 @@ function Carsa_InitNavbarFallback() {
       window.matchMedia("(min-width: 992px)").matches;
   }
 
+  function syncMobileDropdownMode() {
+    document.querySelectorAll(".navbar .nav-item.dropdown > .dropdown-toggle").forEach(function (toggle) {
+      if (isDesktopNavbar()) {
+        if (toggle.dataset.carsaOriginalBsToggle) {
+          toggle.setAttribute("data-bs-toggle", toggle.dataset.carsaOriginalBsToggle);
+        }
+        return;
+      }
+
+      if (!toggle.dataset.carsaOriginalBsToggle) {
+        toggle.dataset.carsaOriginalBsToggle = toggle.getAttribute("data-bs-toggle") || "dropdown";
+      }
+
+      toggle.removeAttribute("data-bs-toggle");
+    });
+  }
+
   function getCollapseTarget(toggle) {
     var selector = toggle.getAttribute("data-bs-target") || toggle.getAttribute("href");
     if (!selector || selector === "#") {
@@ -194,6 +211,11 @@ function Carsa_InitNavbarFallback() {
     var expanded = panel.classList.contains("show");
     toggle.setAttribute("aria-expanded", String(expanded));
     toggle.classList.toggle("collapsed", !expanded);
+
+    var icon = toggle.querySelector(".navbar-toggler-icon.material-symbols-outlined");
+    if (icon) {
+      icon.textContent = expanded ? "close" : "menu";
+    }
   }
 
   function setCollapseState(toggle, panel, expanded) {
@@ -254,6 +276,14 @@ function Carsa_InitNavbarFallback() {
       return;
     }
 
+    var outsideOpenMenu = document.querySelector(".navbar .dropdown-menu.show");
+    if (outsideOpenMenu && !event.target.closest(".navbar .nav-item.dropdown")) {
+      var outsideToggle = outsideOpenMenu.previousElementSibling;
+      if (outsideToggle && outsideToggle.classList.contains("dropdown-toggle")) {
+        setDropdownState(outsideToggle, outsideOpenMenu, false);
+      }
+    }
+
     var link = event.target.closest(".navbar .dropdown-item, .navbar .nav-link:not(.dropdown-toggle), .navbar .btn-element-contact");
     if (!link) {
       return;
@@ -304,6 +334,12 @@ function Carsa_InitNavbarFallback() {
       syncCollapseToggle(toggle, panel);
     }
   });
+
+  syncMobileDropdownMode();
+
+  if (typeof window !== "undefined") {
+    window.addEventListener("resize", syncMobileDropdownMode);
+  }
 }
 
 if (typeof document !== "undefined") {
