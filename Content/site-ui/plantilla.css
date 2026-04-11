@@ -628,6 +628,12 @@ footer .container-fluid {
         color: var(--a-color-light);
         font-size: 2rem;
         height: 1.75rem;
+        width: 1.75rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        background-image: none;
     }
 
     .navbar-brand {
@@ -637,6 +643,11 @@ footer .container-fluid {
 
     .navbar-toggler {
         padding: 0;
+        width: 2rem;
+        height: 2rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .dropdown-menu {
