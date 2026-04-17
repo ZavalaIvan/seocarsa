@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //packages
 if (!defined('JO_ROOT')) define("JO_ROOT", realpath(__DIR__."/../../"));
 require_once(JO_ROOT.'/jocms/core/inc/settings.php');
@@ -24,7 +24,7 @@ function jocms_login_check($name,$password){
           $result = $handle->query("SELECT COUNT(*) AS count FROM login_attempts WHERE user_id = ".$output['id']." AND time > '".$handle->escapeString($valid_attempts)."'");
           $brute_output = $result->fetchArray();
           if($brute_output['count']>5){
-              echo "Das Passwort wurde zu oft falsch eingegeben. Zur Sicherheit vor einer Brute-Force-Attacke wurde dein Konto für max. 2h gesperrt.";
+              echo "Das Passwort wurde zu oft falsch eingegeben. Zur Sicherheit vor einer Brute-Force-Attacke wurde dein Konto fÃ¼r max. 2h gesperrt.";
               exit;
           }
 

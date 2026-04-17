@@ -24,10 +24,16 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' || empty($_POST)) {
     exit('Solicitud inválida');
 }
 
+$email = isset($_POST['email']) ? trim((string) $_POST['email']) : '';
+if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    http_response_code(400);
+    exit('Correo electrónico inválido');
+}
+
 /*********************************************************
  * DETECTAR TIPO DE FORMULARIO
  *********************************************************/
-if (isset($_POST['marca'], $_POST['modelo'])) {
+if (isset($_POST['modelo'], $_POST['anio'], $_POST['estado'])) {
     $tipo_form = 'auto';
 
 } elseif (isset($_POST['sexo'], $_POST['fumador'])) {
@@ -73,8 +79,8 @@ switch ($tipo_form) {
         $subject = 'Nueva cotización Seguro de Auto - Carsa Seguros';
         $message = "
             <h2>Seguro de Auto</h2>
+            <p><strong>Correo:</strong> ".htmlspecialchars($email)."</p>
             <p><strong>WhatsApp:</strong> ".htmlspecialchars($_POST['whatsapp'])."</p>
-            <p><strong>Marca:</strong> ".htmlspecialchars($_POST['marca'])."</p>
             <p><strong>Modelo:</strong> ".htmlspecialchars($_POST['modelo'])."</p>
             <p><strong>Año:</strong> ".htmlspecialchars($_POST['anio'])."</p>
             <p><strong>Estado:</strong> ".htmlspecialchars($_POST['estado'])."</p>
@@ -85,6 +91,7 @@ switch ($tipo_form) {
         $subject = 'Nueva solicitud de cotización (Ahorro) - Carsa Seguros';
         $message = "
             <h2>Plan de Ahorro</h2>
+            <p><strong>Correo:</strong> ".htmlspecialchars($email)."</p>
             <p><strong>Teléfono:</strong> ".htmlspecialchars($_POST['telefono'])."</p>
             <p><strong>Edad:</strong> ".htmlspecialchars($_POST['edad'])."</p>
             <p><strong>Monto:</strong> $".htmlspecialchars($_POST['monto'])."</p>
@@ -95,6 +102,7 @@ switch ($tipo_form) {
         $subject = 'Nueva solicitud de Seguro de Vida - Carsa Seguros';
         $message = "
             <h2>Seguro de Vida</h2>
+            <p><strong>Correo:</strong> ".htmlspecialchars($email)."</p>
             <p><strong>Teléfono:</strong> ".htmlspecialchars($_POST['telefono'])."</p>
             <p><strong>Edad:</strong> ".htmlspecialchars($_POST['edad'])."</p>
             <p><strong>Sexo:</strong> ".htmlspecialchars($_POST['sexo'])."</p>
@@ -107,6 +115,7 @@ switch ($tipo_form) {
         $subject = 'Nueva solicitud Empresarial - Carsa Seguros';
         $message = "
             <h2>Seguro Empresarial</h2>
+            <p><strong>Correo:</strong> ".htmlspecialchars($email)."</p>
             <p><strong>Teléfono:</strong> ".htmlspecialchars($_POST['telefono'])."</p>
             <p><strong>Código Postal:</strong> ".htmlspecialchars($_POST['codigo_postal'])."</p>
             <p><strong>Tipo de cliente:</strong> ".htmlspecialchars($_POST['tipo_cliente'])."</p>
@@ -117,6 +126,7 @@ switch ($tipo_form) {
         $subject = 'Nueva solicitud de Fianza - Carsa Seguros';
         $message = "
             <h2>Fianzas</h2>
+            <p><strong>Correo:</strong> ".htmlspecialchars($email)."</p>
             <p><strong>Whatsapp:</strong> ".htmlspecialchars($_POST['celular'])."</p>
             <p><strong>Línea de afianzamiento:</strong> ".htmlspecialchars($_POST['linea_afianzamiento'])."</p>
             <p><strong>Tipo de fianza:</strong> ".htmlspecialchars($_POST['tipo_fianza'])."</p>
@@ -127,6 +137,7 @@ switch ($tipo_form) {
         $subject = 'Solicitud Seguro de Salud - Carsa Seguros';
         $message = "
             <h2>Seguro Médico</h2>
+            <p><strong>Correo:</strong> ".htmlspecialchars($email)."</p>
             <p><strong>Whatsapp:</strong> ".htmlspecialchars($_POST['whatsapp'])."</p>
             <p><strong>Protección para:</strong> ".htmlspecialchars($_POST['proteccion_para'])."</p>
         ";
@@ -157,11 +168,11 @@ try {
     $mail->CharSet = 'UTF-8';
 
     $mail->setFrom('no-reply@carsaseguros.mx', 'Formulario Web Carsa');
-    $mail->addReplyTo('no-reply@carsaseguros.mx', 'Carsa Seguros');
+    $mail->addReplyTo($email, 'Contacto del formulario');
 
     $mail->addAddress($to);
-    foreach ($cc as $email) {
-        $mail->addCC($email);
+    foreach ($cc as $ccEmail) {
+        $mail->addCC($ccEmail);
     }
 
     $mail->isHTML(true);

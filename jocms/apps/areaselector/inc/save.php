@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //include packages
 if (!defined('JO_ROOT')) define("JO_ROOT", realpath(__DIR__."/../../../../"));
 require_once(JO_ROOT.'/jocms/core/inc/db.php');

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if (!defined('JO_ROOT')) define("JO_ROOT", realpath(__DIR__."/../../../"));
 //include database manager and dom parser
 require_once(JO_ROOT.'/jocms/core/inc/db.php');

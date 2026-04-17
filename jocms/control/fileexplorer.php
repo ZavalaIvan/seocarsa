@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 function jo_read_dir($url){
 	$folders = [];
 	$files = [];

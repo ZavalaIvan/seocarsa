@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if (!defined('JO_ROOT')) define("JO_ROOT", realpath(__DIR__."/.."));
 $message = "";
 $mail = "";

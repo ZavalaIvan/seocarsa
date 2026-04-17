@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if (!defined('JO_ROOT')) define("JO_ROOT", realpath(__DIR__."/../../../"));
 //packages
 require_once(JO_ROOT."/jocms/core/inc/settings.php");
