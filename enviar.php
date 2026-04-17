@@ -70,6 +70,9 @@ if ($tipo_form === 'auto') {
     $cc = ['ivan.soportetec@gmail.com'];
 }
 
+$autoReplySubject = '';
+$autoReplyMessage = '';
+
 /*********************************************************
  * CONSTRUIR MENSAJE
  *********************************************************/
@@ -84,6 +87,18 @@ switch ($tipo_form) {
             <p><strong>Modelo:</strong> ".htmlspecialchars($_POST['modelo'])."</p>
             <p><strong>Año:</strong> ".htmlspecialchars($_POST['anio'])."</p>
             <p><strong>Estado:</strong> ".htmlspecialchars($_POST['estado'])."</p>
+        ";
+        $autoReplySubject = 'Recibimos tu solicitud de seguro de auto - CARSA Seguros';
+        $autoReplyMessage = "
+            <p>Hola,</p>
+            <p>¡Gracias por contactarnos a través de nuestro sitio web!</p>
+            <p>Recibimos tu solicitud y será un gusto ayudarte a encontrar la mejor opción de seguro para tu auto. Para poder enviarte una cotización precisa y adaptada a lo que necesitas, te pedimos completar un breve formulario con algunos datos básicos.</p>
+            <p><strong>Completa tu información aquí:</strong><br><a href=\"https://forms.gle/tBqziEFDvLJwoZNM6\">https://forms.gle/tBqziEFDvLJwoZNM6</a></p>
+            <p>Este proceso te tomará menos de 2 minutos y nos permitirá ofrecerte opciones claras, comparativas y con las mejores coberturas disponibles.</p>
+            <p>En cuanto recibamos tu información, uno de nuestros asesores revisará tu caso y se pondrá en contacto contigo a la brevedad posible.</p>
+            <p>Si tienes alguna duda adicional, puedes responder a este correo y con gusto te apoyaremos.</p>
+            <p>Quedamos atentos para ayudarte a proteger lo que más importa.</p>
+            <p>Saludos,<br>Equipo CARSA Seguros<br><a href=\"https://www.carsaseguros.mx\">www.carsaseguros.mx</a></p>
         ";
     break;
 
@@ -180,6 +195,33 @@ try {
     $mail->Body    = "<html><body>{$message}</body></html>";
 
     $mail->send();
+
+    if ($tipo_form === 'auto' && $autoReplySubject !== '' && $autoReplyMessage !== '') {
+        try {
+            $autoReplyMail = new PHPMailer(true);
+            $autoReplyMail->isSMTP();
+            $autoReplyMail->Host       = $config['smtp_host'];
+            $autoReplyMail->SMTPAuth   = true;
+            $autoReplyMail->Username   = $config['smtp_user'];
+            $autoReplyMail->Password   = $config['smtp_pass'];
+            $autoReplyMail->Port       = $config['smtp_port'];
+            $autoReplyMail->SMTPSecure = ($config['smtp_secure'] === 'ssl')
+                ? PHPMailer::ENCRYPTION_SMTPS
+                : PHPMailer::ENCRYPTION_STARTTLS;
+            $autoReplyMail->CharSet = 'UTF-8';
+            $autoReplyMail->setFrom('no-reply@carsaseguros.mx', 'CARSA Seguros');
+            $autoReplyMail->addReplyTo('contacto@segurosfianzas.com', 'CARSA Seguros');
+            $autoReplyMail->addAddress($email);
+            $autoReplyMail->isHTML(true);
+            $autoReplyMail->Subject = $autoReplySubject;
+            $autoReplyMail->Body    = "<html><body>{$autoReplyMessage}</body></html>";
+            $autoReplyMail->AltBody = "Hola,\n\n¡Gracias por contactarnos a través de nuestro sitio web!\n\nRecibimos tu solicitud y será un gusto ayudarte a encontrar la mejor opción de seguro para tu auto. Para poder enviarte una cotización precisa y adaptada a lo que necesitas, te pedimos completar un breve formulario con algunos datos básicos.\n\nCompleta tu información aquí:\nhttps://forms.gle/tBqziEFDvLJwoZNM6\n\nEste proceso te tomará menos de 2 minutos y nos permitirá ofrecerte opciones claras, comparativas y con las mejores coberturas disponibles.\n\nEn cuanto recibamos tu información, uno de nuestros asesores revisará tu caso y se pondrá en contacto contigo a la brevedad posible.\n\nSi tienes alguna duda adicional, puedes responder a este correo y con gusto te apoyaremos.\n\nQuedamos atentos para ayudarte a proteger lo que más importa.\n\nSaludos,\nEquipo CARSA Seguros\nwww.carsaseguros.mx";
+            $autoReplyMail->send();
+        } catch (Exception $autoReplyException) {
+            // No interrumpimos el envío principal si la autorrespuesta falla.
+        }
+    }
+
     echo 'OK';
 
 } catch (Exception $e) {
