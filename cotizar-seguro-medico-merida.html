@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cotizar Seguro M&eacute;dico en M&eacute;rida | Seguro de Gastos M&eacute;dicos | CARSA</title>
+  <meta
+    name="description"
+    content="Cotiza tu seguro m&eacute;dico en M&eacute;rida con asesor&iacute;a personalizada. Compara opciones de seguro de gastos m&eacute;dicos mayores y recibe atenci&oacute;n r&aacute;pida en Yucat&aacute;n."
+  />
+  <meta
+    name="keywords"
+    content="cotizar seguro m&eacute;dico M&eacute;rida, cotizar seguro gastos m&eacute;dicos M&eacute;rida, seguro m&eacute;dico M&eacute;rida, seguro de gastos m&eacute;dicos mayores Yucat&aacute;n, asesor seguro m&eacute;dico M&eacute;rida"
+  />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Cotizar Seguro M&eacute;dico en M&eacute;rida | CARSA" />
+  <meta
+    property="og:description"
+    content="Recibe una cotizaci&oacute;n personalizada de seguro m&eacute;dico en M&eacute;rida y encuentra el plan ideal para ti, tu familia o tu empresa."
+  />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="Content/img/carsaLogo-B.webp" sizes="48x48" />
+  <link id="favicon" rel="shortcut icon" type="image/png" href="Content/img/carsaLogo-B.webp" />
+  <link rel="stylesheet" href="Content/bootstrap5/bootstrap-index.min.css" />
+  <link rel="stylesheet" href="Content/site-ui/plantilla.css" />
+  <link rel="stylesheet" href="Content/site-ui/home.css" />
+  <style>
+    :root {
+      --primary: #49a8df;
+      --primary-dark: #1f6fa7;
+      --secondary: #65d0c3;
+      --text: #213547;
+      --text-soft: #5d7185;
+      --bg: #f5f7fa;
+      --white: #ffffff;
+      --border: #dbe5ee;
+      --shadow: 0 16px 40px rgba(22, 46, 77, 0.08);
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --container: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(100% - 32px, var(--container)); margin: 0 auto; }
+    .section { padding: 72px 0; }
+    .section-sm { padding: 56px 0; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(46, 125, 192, 0.24);
+      background: rgba(255, 255, 255, 0.62);
+      color: #2e7dc0;
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      margin: 0 0 16px;
+      font-size: clamp(2.3rem, 4vw, 4.6rem);
+      line-height: 1.03;
+      letter-spacing: -0.05em;
+      color: #0b2d59;
+      font-weight: 900;
+    }
+
+    .section-subtitle,
+    p {
+      color: var(--text-soft);
+      line-height: 1.7;
+      font-size: 1.02rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1.5px solid transparent;
+      font-weight: 800;
+      font-size: 0.96rem;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2e7dc0, #337fbe);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(73, 168, 223, 0.28);
+    }
+
+    .btn-outline {
+      border-color: var(--primary-dark);
+      color: var(--primary-dark);
+      background: transparent;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--primary-dark);
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -48px;
+      z-index: 2000;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: #274470;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .skip-link:focus { top: 16px; }
+    .site-header { position: relative; z-index: 1200; }
+    .navbar-toggler .material-symbols-outlined { font-size: 0; }
+    .navbar-toggler {
+      position: relative;
+      width: 32px;
+      height: 26px;
+      border: none;
+      padding: 0;
+      outline: none;
+      box-shadow: none;
+    }
+
+    .navbar-toggler .material-symbols-outlined::before,
+    .navbar-toggler .material-symbols-outlined::after,
+    .navbar-toggler .material-symbols-outlined span {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 32px;
+      height: 3px;
+      background-color: #ffffff;
+      transition: 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .navbar-toggler .material-symbols-outlined::before { top: 3px; }
+    .navbar-toggler .material-symbols-outlined span { top: 11px; }
+    .navbar-toggler .material-symbols-outlined::after { top: 19px; }
+    .navbar-toggler:not(.collapsed) .material-symbols-outlined::before { transform: translateY(8px) rotate(45deg); }
+    .navbar-toggler:not(.collapsed) .material-symbols-outlined::after { transform: translateY(-8px) rotate(-45deg); }
+    .navbar-toggler:not(.collapsed) .material-symbols-outlined span { opacity: 0; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 0 0 84px;
+      background:
+        linear-gradient(90deg, rgba(211, 231, 248, 0.94) 0%, rgba(211, 231, 248, 0.84) 34%, rgba(255, 255, 255, 0.14) 62%, rgba(255, 255, 255, 0.08) 100%),
+        url("/Content/img/cotiza-tu-seguro-medico.webp") center center / cover no-repeat;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      left: -14%;
+      bottom: -24%;
+      width: 62%;
+      height: 92%;
+      background: linear-gradient(180deg, rgba(164, 206, 240, 0.82), rgba(154, 197, 233, 0.7));
+      clip-path: ellipse(62% 54% at 42% 46%);
+    }
+
+    .hero-grid,
+    .split,
+    .highlight-grid,
+    .search-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .hero-grid {
+      grid-template-columns: minmax(0, 1.08fr) minmax(420px, 470px);
+      min-height: 760px;
+      padding: 54px 0 44px;
+    }
+
+    .split,
+    .search-grid { grid-template-columns: minmax(0, 1fr) minmax(320px, 520px); }
+    .highlight-grid { grid-template-columns: minmax(0, 1fr) minmax(260px, 320px); }
+
+    .hero-copy { max-width: 590px; }
+    .hero-copy p { max-width: 560px; font-size: 1.14rem; }
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      margin-bottom: 24px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(46, 125, 192, 0.64);
+      background: rgba(255, 255, 255, 0.42);
+      color: #2e7dc0;
+      font-size: 0.95rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .hero-benefits,
+    .check-list,
+    .highlight-points {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .hero-benefits { margin-bottom: 30px; }
+
+    .hero-benefits li,
+    .check-list li,
+    .highlight-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: #123662;
+    }
+
+    .hero-benefits li span,
+    .check-list li span,
+    .highlight-points li strong {
+      flex: 0 0 auto;
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: #2f7fc1;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.96rem;
+      font-weight: 800;
+    }
+
+    .hero-actions,
+    .final-cta-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-form,
+    .trust-card,
+    .card,
+    .highlight-band,
+    .media-frame,
+    .faq-item,
+    .cluster-link,
+    .final-cta {
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(219, 229, 238, 0.8);
+      border-radius: 24px;
+      box-shadow: 0 24px 48px rgba(22, 46, 77, 0.12);
+    }
+
+    .hero-form { padding: 30px 26px 22px; }
+    .form-title { margin: 0 0 8px; font-size: 1.36rem; font-weight: 900; color: #112c4b; }
+    .form-subtitle { margin: 0 0 18px; }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .field { min-width: 0; }
+    .field.field-full { grid-column: 1 / -1; }
+    .field label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      min-height: 56px;
+      padding: 0 15px;
+      border: 1px solid #d5dde7;
+      border-radius: 12px;
+      font: inherit;
+      color: #17324d;
+      background: #fff;
+      outline: none;
+      appearance: none;
+    }
+
+    .field textarea {
+      min-height: 90px;
+      padding: 14px 15px;
+      resize: vertical;
+    }
+
+    .field-error { margin-top: 7px; font-size: 0.84rem; color: #b42318; display: none; }
+    .field.has-error .field-error { display: block; }
+    .field.has-error input,
+    .field.has-error select,
+    .field.has-error textarea {
+      border-color: #d92d20;
+      box-shadow: 0 0 0 4px rgba(217, 45, 32, 0.08);
+    }
+
+    .form-success,
+    .form-general-error {
+      display: none;
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-size: 0.92rem;
+    }
+
+    .form-success { background: #ecfdf3; color: #027a48; border: 1px solid #abefc6; }
+    .form-general-error { background: #fef3f2; color: #b42318; border: 1px solid #fecdca; }
+    .form-note { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 14px 0 0; font-size: 0.93rem; text-align: center; }
+
+    .trust-strip { margin-top: -98px; position: relative; z-index: 3; }
+    .trust-card {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 38px 22px;
+    }
+
+    .trust-item {
+      padding: 0 24px;
+      border-right: 1px solid rgba(219, 229, 238, 0.85);
+    }
+
+    .trust-item:last-child { border-right: 0; }
+    .trust-item strong { display: block; margin-bottom: 8px; font-size: 1rem; color: #102c4f; }
+    .trust-item span { display: block; color: #5b6c7c; }
+
+    .content-block p { margin: 0 0 16px; }
+
+    .media-frame { padding: 24px; }
+    .media-box {
+      min-height: 360px;
+      padding: 24px;
+      border-radius: 22px;
+      border: 1.5px dashed rgba(46, 125, 192, 0.34);
+      background: linear-gradient(180deg, rgba(239, 247, 255, 0.96), rgba(247, 251, 255, 0.96));
+      color: #5c7087;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      line-height: 1.8;
+      white-space: pre-line;
+    }
+
+    .media-video {
+      position: relative;
+      min-height: 360px;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #0f172a;
+      box-shadow: 0 22px 40px rgba(31, 111, 167, 0.14);
+    }
+
+    .media-video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .media-tags,
+    .highlight-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .media-tag,
+    .bubble {
+      display: inline-flex;
+      min-height: 38px;
+      padding: 0 16px;
+      align-items: center;
+      border-radius: 999px;
+      background: rgba(46, 125, 192, 0.08);
+      color: #2e7dc0;
+      font-weight: 700;
+    }
+
+    .cards-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 28px;
+    }
+
+    .card { padding: 28px 24px; }
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(73, 168, 223, 0.12), rgba(101, 208, 195, 0.16));
+      color: var(--primary-dark);
+      margin-bottom: 14px;
+      font-size: 1.2rem;
+    }
+
+    .card h3 { margin: 0 0 10px; font-size: 1.15rem; color: #102c4f; }
+
+    .highlight-band {
+      padding: 34px;
+      background: linear-gradient(180deg, #edf6ff 0%, #f4f9ff 100%);
+    }
+
+    .faq-list { display: grid; gap: 14px; margin-top: 28px; }
+    .faq-item { overflow: hidden; }
+    .faq-question {
+      width: 100%;
+      padding: 22px 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      border: 0;
+      background: transparent;
+      color: #102c4f;
+      font: inherit;
+      font-weight: 800;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .faq-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: rgba(46, 125, 192, 0.1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #2e7dc0;
+      font-size: 1.2rem;
+      flex: 0 0 auto;
+    }
+
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.28s ease; }
+    .faq-answer-inner { padding: 0 24px 24px; color: var(--text-soft); line-height: 1.7; }
+
+    .cluster-links { display: grid; gap: 18px; }
+    .cluster-link {
+      padding: 24px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .cluster-link strong { display: block; margin-bottom: 8px; color: #102c4f; }
+    .cluster-link-arrow { color: #2e7dc0; font-size: 1.5rem; font-weight: 900; }
+
+    .final-cta {
+      padding: 34px;
+      background: linear-gradient(135deg, #2e7dc0 0%, #56addf 100%);
+      color: #fff;
+    }
+
+    .final-cta p { color: rgba(255, 255, 255, 0.9); max-width: 760px; }
+    .final-cta .section-title { color: #fff; }
+
+    .redes-sociales {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .social-icon { font-size: 22px; color: #ffffff; transition: 0.3s; }
+    .social-icon:hover { color: #00bcd4; transform: scale(1.1); }
+    .social-icon svg { width: 1em; height: 1em; display: block; fill: currentColor; }
+
+    .carsa-legal-bar {
+      background: #274470;
+      color: #ffffff;
+      width: 100%;
+      padding: 16px 24px;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .carsa-legal-bar__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .carsa-legal-link {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .carsa-privacy-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 9999;
+    }
+
+    .carsa-privacy-modal:target { display: flex; }
+    .carsa-privacy-modal__box {
+      background: #ffffff;
+      width: 100%;
+      max-width: 950px;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 14px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+      position: relative;
+      padding: 32px;
+      color: #1f2937;
+    }
+
+    .carsa-privacy-modal__close {
+      position: sticky;
+      top: 0;
+      float: right;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      color: #274470;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: bold;
+      border: 1px solid #dbe3ec;
+    }
+
+    .carsa-privacy-title { margin: 10px 0; color: #274470; font-size: 30px; line-height: 1.2; font-weight: 800; }
+    .carsa-privacy-subtitle { margin: 0 0 24px; font-size: 18px; font-weight: 700; color: #334155; }
+    .carsa-privacy-section { margin-bottom: 26px; padding-bottom: 20px; border-bottom: 1px solid #e5e7eb; }
+    .carsa-privacy-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .carsa-privacy-section h3 { margin: 0 0 12px; color: #274470; font-size: 20px; }
+    .carsa-privacy-section p, .carsa-privacy-section li { font-size: 15px; line-height: 1.7; color: #374151; }
+    .carsa-privacy-highlight, .carsa-privacy-mail { color: #274470; font-weight: 700; }
+    .carsa-privacy-mail { text-decoration: none; }
+
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .split,
+      .highlight-grid,
+      .search-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-card,
+      .cards-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar-logo { width: 120px; height: auto; }
+      .section { padding: 58px 0; }
+      .hero-grid { min-height: auto; padding: 34px 0 110px; gap: 28px; }
+      .hero-actions,
+      .final-cta-actions { flex-direction: column; }
+      .btn { width: 100%; }
+      .form-grid,
+      .trust-card,
+      .cards-3 { grid-template-columns: 1fr; }
+      .field.field-full { grid-column: auto; }
+      .trust-strip { margin-top: -82px; }
+      .trust-item {
+        border-right: 0;
+        border-bottom: 1px solid rgba(219, 229, 238, 0.85);
+        padding: 0 0 18px;
+        margin: 0 0 18px;
+      }
+      .trust-item:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+      .carsa-legal-bar__inner { flex-direction: column; align-items: flex-start; }
+      .carsa-privacy-modal { padding: 12px; }
+      .carsa-privacy-modal__box { padding: 22px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+  <header class="site-header" role="banner">
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Navegacion principal">
+      <div class="container">
+        <a class="navbar-brand ms-auto" href="/">
+          <img class="navbar-logo" src="Content/img/home/Logo-216.webp" alt="CARSA Seguros y Fianzas" width="216" height="91" loading="eager" decoding="async" fetchpriority="high" />
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir o cerrar menu principal">
+          <span class="navbar-toggler-icon material-symbols-outlined"><span></span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="menu1" role="button" data-bs-toggle="dropdown" aria-expanded="false">Seguros</a>
+              <ul class="dropdown-menu" aria-labelledby="menu1">
+                <li><a class="dropdown-item" href="/plan-personal-de-retiro">Retiro</a></li>
+                <li><a class="dropdown-item" href="/seguro-de-vida">Vida</a></li>
+                <li><a class="dropdown-item" href="/gastos-medicos-mayores">Gastos m&eacute;dicos mayores</a></li>
+                <li><a class="dropdown-item" href="/seguro-de-hogar">Hogar</a></li>
+                <li><a class="dropdown-item" href="/seguro-de-auto">Autom&oacute;vil</a></li>
+                <li><a class="dropdown-item" href="/seguro-empresarial">Empresarial</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="menu2" role="button" data-bs-toggle="dropdown" aria-expanded="false">Fianzas</a>
+              <ul class="dropdown-menu" aria-labelledby="menu2">
+                <li><a class="dropdown-item" href="/fianzas">Panorama de fianzas</a></li>
+                <li><a class="dropdown-item" href="/fianza-de-cumplimiento">Cumplimiento</a></li>
+                <li><a class="dropdown-item" href="/fianza-de-anticipo">Anticipo</a></li>
+                <li><a class="dropdown-item" href="/fianza-de-vicios-ocultos">Vicios Ocultos</a></li>
+                <li><a class="dropdown-item" href="/fianza-de-credito">Cr&eacute;dito</a></li>
+                <li><a class="dropdown-item" href="/fianza-de-fidelidad">Fidelidad</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/recursos">Recursos</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.teamcarsa.com/" target="_blank" rel="noopener">&Uacute;nete a Carsa</a></li>
+            <li class="nav-item"><a href="/contacto" class="btn btn-element-contact">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-kicker">Atenci&oacute;n r&aacute;pida en M&eacute;rida y todo Yucat&aacute;n</div>
+          <h1 class="section-title">Cotizar seguro m&eacute;dico en M&eacute;rida con asesor&iacute;a clara y personalizada</h1>
+          <p>
+            Si est&aacute;s buscando <strong>cotizar un seguro m&eacute;dico en M&eacute;rida</strong>, aqu&iacute; puedes comenzar
+            de forma r&aacute;pida. Te ayudamos a comparar coberturas, deducibles, costos y aseguradoras
+            para encontrar el plan ideal para ti, tu familia o tu empresa.
+          </p>
+          <ul class="hero-benefits">
+            <li><span>&#10003;</span> Cotizaci&oacute;n personalizada seg&uacute;n tu perfil</li>
+            <li><span>&#10003;</span> Opciones de seguro de gastos m&eacute;dicos mayores</li>
+            <li><span>&#10003;</span> Atenci&oacute;n local en M&eacute;rida, Yucat&aacute;n</li>
+            <li><span>&#10003;</span> Comparaci&oacute;n entre distintas alternativas</li>
+          </ul>
+          <div class="hero-actions">
+            <a href="#formulario" class="btn btn-white">Cotizar ahora</a>
+            <a href="https://wa.me/529992563187" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Hablar por WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="hero-form" id="formulario">
+          <h2 class="form-title">Recibe tu cotizaci&oacute;n en minutos</h2>
+          <p class="form-subtitle">
+            Completa tus datos y te ayudamos a cotizar un seguro m&eacute;dico en M&eacute;rida seg&uacute;n tu edad,
+            presupuesto y tipo de cobertura.
+          </p>
+          <form id="leadForm" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Nombre completo</label>
+                <input id="name" name="name" type="text" placeholder="Ej. Mar&iacute;a Gonz&aacute;lez" />
+                <div class="field-error">Escribe tu nombre completo.</div>
+              </div>
+              <div class="field">
+                <label for="email">Correo electr&oacute;nico</label>
+                <input id="email" name="email" type="email" placeholder="Ej. nombre@correo.com" />
+                <div class="field-error">Ingresa un correo v&aacute;lido.</div>
+              </div>
+              <div class="field">
+                <label for="phone">Celular con WhatsApp</label>
+                <input id="phone" name="phone" type="tel" placeholder="Ej. 9991234567" />
+                <div class="field-error">Ingresa un n&uacute;mero v&aacute;lido de 10 d&iacute;gitos.</div>
+              </div>
+              <div class="field">
+                <label for="age">Edad</label>
+                <input id="age" name="age" type="number" min="0" max="120" placeholder="Ej. 37" />
+                <div class="field-error">Ingresa una edad v&aacute;lida.</div>
+              </div>
+              <div class="field field-full">
+                <label for="insuranceFor">&iquest;Para qui&eacute;n es el seguro?</label>
+                <select id="insuranceFor" name="insuranceFor">
+                  <option value="">Selecciona una opci&oacute;n</option>
+                  <option value="individual">Para m&iacute;</option>
+                  <option value="familiar">Para mi familia</option>
+                  <option value="empresarial">Para mi empresa</option>
+                </select>
+                <div class="field-error">Selecciona una opci&oacute;n.</div>
+              </div>
+              <div class="field field-full">
+                <label for="coverage">Tipo de cobertura que te interesa</label>
+                <select id="coverage" name="coverage">
+                  <option value="">Selecciona una opci&oacute;n</option>
+                  <option value="basica">Cobertura b&aacute;sica</option>
+                  <option value="media">Cobertura media</option>
+                  <option value="amplia">Cobertura amplia</option>
+                  <option value="no-se">A&uacute;n no estoy seguro</option>
+                </select>
+                <div class="field-error">Selecciona una opci&oacute;n.</div>
+              </div>
+              <div class="field field-full">
+                <label for="message">Comentario adicional</label>
+                <textarea id="message" name="message" placeholder="Ej. Busco cotizar un seguro de gastos m&eacute;dicos mayores para mi familia en M&eacute;rida"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Solicitar cotizaci&oacute;n</button>
+            </div>
+            <p class="form-note">Tus datos se usan &uacute;nicamente para contactarte y brindarte asesor&iacute;a.</p>
+            <div class="form-success" id="formSuccess">Gracias. Tu solicitud fue preparada correctamente. Ya puedes conectarla con tu backend, CRM o WhatsApp.</div>
+            <div class="form-general-error" id="formError">Revisa los campos marcados e int&eacute;ntalo de nuevo.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="container trust-strip">
+      <div class="trust-card">
+        <div class="trust-item"><strong>45+ a&ntilde;os</strong><span>de experiencia en seguros</span></div>
+        <div class="trust-item"><strong>M&eacute;rida</strong><span>atenci&oacute;n local y personalizada</span></div>
+        <div class="trust-item"><strong>Comparaci&oacute;n real</strong><span>entre opciones y coberturas</span></div>
+        <div class="trust-item"><strong>Respuesta r&aacute;pida</strong><span>para iniciar tu cotizaci&oacute;n</span></div>
+      </div>
+    </div>
+
+    <section class="section" id="como-cotizar">
+      <div class="container split">
+        <div class="media-frame">
+          <div class="media-video">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/4qUdomUFq7c?start=11"
+              title="Video sobre cómo cotizar un seguro médico en Mérida"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="media-tags">
+            <div class="media-tag">Asesor&iacute;a real</div>
+            <div class="media-tag">Cotizaci&oacute;n guiada</div>
+            <div class="media-tag">Atenci&oacute;n local</div>
+          </div>
+        </div>
+
+        <div class="content-block">
+          <span class="eyebrow">Cotizar seguro de gastos m&eacute;dicos mayores</span>
+          <h2 class="section-title">&iquest;C&oacute;mo cotizar un seguro m&eacute;dico en M&eacute;rida?</h2>
+          <p>
+            Muchas personas buscan <strong>cotizar un seguro m&eacute;dico en M&eacute;rida</strong> y terminan
+            comparando solo precios. Pero una buena cotizaci&oacute;n tambi&eacute;n debe ayudarte a entender
+            coberturas, deducibles, coaseguros, red hospitalaria y beneficios reales.
+          </p>
+          <p>
+            En CARSA te acompa&ntilde;amos para que la cotizaci&oacute;n no sea solo una cifra, sino una herramienta
+            para tomar una mejor decisi&oacute;n. As&iacute; puedes evaluar si te conviene un
+            <strong>seguro de gastos m&eacute;dicos mayores en Yucat&aacute;n</strong>, una opci&oacute;n familiar
+            o una cobertura m&aacute;s amplia seg&uacute;n tu perfil.
+          </p>
+          <ul class="check-list">
+            <li><span>&#10003;</span> Evaluaci&oacute;n seg&uacute;n edad y tipo de cobertura</li>
+            <li><span>&#10003;</span> Comparaci&oacute;n entre aseguradoras y condiciones</li>
+            <li><span>&#10003;</span> Enfoque en necesidades reales, no solo en precio</li>
+            <li><span>&#10003;</span> Atenci&oacute;n r&aacute;pida y personalizada desde M&eacute;rida</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#fff;">
+      <div class="container">
+        <span class="eyebrow">Lo que revisamos al cotizar</span>
+        <h2 class="section-title">Qu&eacute; influye en tu cotizaci&oacute;n</h2>
+        <p class="section-subtitle">
+          Una cotizaci&oacute;n de seguro m&eacute;dico cambia seg&uacute;n diversos factores. Por eso,
+          una propuesta bien hecha debe considerar m&aacute;s que solo el costo mensual o anual.
+        </p>
+        <div class="cards-3">
+          <article class="card">
+            <div class="card-icon">
+              <img src="/Content/img/Iconos/asesoria-personalizada.svg" alt="" width="28" height="28" loading="lazy" decoding="async" />
+            </div>
+            <h3>Edad y perfil</h3>
+            <p>La edad del asegurado influye directamente en el costo y en las opciones de cobertura disponibles.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">
+              <img src="/Content/img/Iconos/cobertura-nacional-e-internacional.svg" alt="" width="28" height="28" loading="lazy" decoding="async" />
+            </div>
+            <h3>Nivel de cobertura</h3>
+            <p>No es lo mismo una cobertura b&aacute;sica que una cobertura amplia con acceso a hospitales privados de mayor nivel.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">
+              <img src="/Content/img/Iconos/evita-gastos-innecesarios.svg" alt="" width="28" height="28" loading="lazy" decoding="async" />
+            </div>
+            <h3>Deducible y coaseguro</h3>
+            <p>Estos elementos cambian el precio y tambi&eacute;n el nivel de protecci&oacute;n financiera ante un evento m&eacute;dico.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <div class="highlight-band" id="por-que">
+          <div class="highlight-grid">
+            <div>
+              <h2 class="section-title" style="font-size:clamp(2rem,3.6vw,3.5rem);">Cotizar bien es elegir mejor</h2>
+              <p>
+                Una cotizaci&oacute;n &uacute;til no solo te dice cu&aacute;nto pagar, tambi&eacute;n te muestra qu&eacute; recibes a cambio.
+                La diferencia entre un plan y otro puede impactar en hospitales disponibles, costos compartidos
+                y protecci&oacute;n real ante una emergencia m&eacute;dica.
+              </p>
+              <ul class="highlight-points">
+                <li><strong>&#10003;</strong> M&aacute;s claridad antes de contratar</li>
+                <li><strong>&#10003;</strong> Mejor comparaci&oacute;n entre alternativas</li>
+                <li><strong>&#10003;</strong> Acompa&ntilde;amiento para tomar una decisi&oacute;n correcta</li>
+              </ul>
+            </div>
+            <div class="highlight-badges">
+              <div class="bubble">M&eacute;rida y Yucat&aacute;n</div>
+              <div class="bubble">Opciones para familia y empresa</div>
+              <div class="bubble">Asesor&iacute;a antes de contratar</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="content-block">
+          <span class="eyebrow">Espacio visual para reforzar confianza</span>
+          <h2 class="section-title">Qu&eacute; imagen o video conviene aqu&iacute;</h2>
+          <p>
+            Esta secci&oacute;n funciona muy bien con un recurso visual porque ya estamos en un punto de
+            alta intenci&oacute;n. Aqu&iacute; conviene reforzar confianza, cercan&iacute;a y profesionalismo.
+          </p>
+          <p>
+            Si a&uacute;n no tienen material propio, pueden usar una imagen de stock premium. Pero idealmente,
+            despu&eacute;s deber&iacute;an reemplazarla por fotograf&iacute;a real del equipo, una asesor&iacute;a real o una pieza
+            de video institucional corta.
+          </p>
+          <ul class="check-list">
+            <li><span>&#10003;</span> Mejor opci&oacute;n: asesor real de CARSA atendiendo</li>
+            <li><span>&#10003;</span> Segunda opci&oacute;n: cliente recibiendo orientaci&oacute;n</li>
+            <li><span>&#10003;</span> Tercera opci&oacute;n: video corto de atenci&oacute;n o branding</li>
+          </ul>
+        </div>
+        <div class="media-frame">
+          <div class="media-video">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/IyBvSpDvgo8?start=104"
+              title="Video sobre qué imagen o video conviene aquí"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="media-tags">
+            <div class="media-tag">Foto real</div>
+            <div class="media-tag">Equipo CARSA</div>
+            <div class="media-tag">Video corto</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2 class="section-title">Preguntas frecuentes sobre cotizar seguro m&eacute;dico en M&eacute;rida</h2>
+        <p class="section-subtitle">
+          Estas preguntas ayudan a resolver dudas comunes antes de solicitar una cotizaci&oacute;n de
+          seguro m&eacute;dico privado o seguro de gastos m&eacute;dicos mayores en Yucat&aacute;n.
+        </p>
+        <div class="faq-list">
+          <article class="faq-item active">
+            <button class="faq-question" type="button">
+              <span>&iquest;Qu&eacute; necesito para cotizar un seguro m&eacute;dico en M&eacute;rida?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" style="max-height: 220px;">
+              <div class="faq-answer-inner">
+                Normalmente se consideran datos como edad, tipo de cobertura deseada, si el seguro es individual,
+                familiar o empresarial, y algunos aspectos generales del perfil para orientar mejor la propuesta.
+              </div>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">
+              <span>&iquest;La cotizaci&oacute;n ya incluye el precio final?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                La cotizaci&oacute;n sirve como base para conocer rangos, opciones y coberturas. El precio definitivo
+                depende de la aseguradora, el plan elegido y la validaci&oacute;n final del perfil.
+              </div>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">
+              <span>&iquest;Puedo cotizar un seguro para mi familia?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                S&iacute;. Puedes solicitar una cotizaci&oacute;n para proteger a tu familia y comparar distintas configuraciones
+                de cobertura seg&uacute;n edades, necesidades y presupuesto.
+              </div>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">
+              <span>&iquest;Conviene comparar varias opciones antes de contratar?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                S&iacute;. Comparar opciones te ayuda a entender diferencias en deducibles, coaseguros, red hospitalaria
+                y beneficios. Eso permite tomar una mejor decisi&oacute;n y no elegir solo por precio.
+              </div>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">
+              <span>&iquest;Atienden solo en M&eacute;rida?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                La p&aacute;gina est&aacute; enfocada en SEO local para M&eacute;rida y Yucat&aacute;n, pero tambi&eacute;n pueden atender cotizaciones
+                para otras zonas, seg&uacute;n el caso y el tipo de seguro que est&eacute;s buscando.
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <span class="eyebrow">Explora m&aacute;s p&aacute;ginas del cluster</span>
+        <h2 class="section-title">Sigue comparando y resolviendo dudas</h2>
+        <div class="cluster-links">
+          <a class="cluster-link" href="/seguro-medico-merida">
+            <div>
+              <strong>Seguro m&eacute;dico en M&eacute;rida</strong>
+              <span>Landing principal con enfoque general de cobertura, beneficios y asesor&iacute;a local.</span>
+            </div>
+            <span class="cluster-link-arrow">&rarr;</span>
+          </a>
+          <a class="cluster-link" href="/seguro-medico-precios-mexico">
+            <div>
+              <strong>Precio de seguro m&eacute;dico en M&eacute;xico</strong>
+              <span>Contenido orientado a quienes est&aacute;n investigando costos y factores de precio.</span>
+            </div>
+            <span class="cluster-link-arrow">&rarr;</span>
+          </a>
+          <a class="cluster-link" href="/seguro-gastos-medicos-merida">
+            <div>
+              <strong>Seguro de gastos m&eacute;dicos mayores en M&eacute;rida</strong>
+              <span>Una versi&oacute;n m&aacute;s espec&iacute;fica sobre coberturas y valor de protecci&oacute;n m&eacute;dica.</span>
+            </div>
+            <span class="cluster-link-arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="final-cta">
+          <h2 class="section-title" style="margin-bottom:16px;">Empieza tu cotizaci&oacute;n hoy</h2>
+          <p>
+            Si ya est&aacute;s buscando <strong>cotizar un seguro m&eacute;dico en M&eacute;rida</strong>, este es el momento
+            para revisar opciones con claridad y encontrar una cobertura que realmente tenga sentido para ti.
+          </p>
+          <div class="final-cta-actions">
+            <a href="#formulario" class="btn btn-white">Solicitar cotizaci&oacute;n</a>
+            <a href="https://wa.me/529992563187" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:#fff;color:#fff;">Hablar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 footer-logo">
+          <div class="footer-logo-img-wrapper"><p><img id="footer-logo" class="footer-logo-img" src="/Content/img/carsaLogo-B.webp" alt="CARSA Seguros y Fianzas" width="53" height="53" decoding="async" loading="lazy" /></p></div>
+          <p id="footer-logo-texto" class="footer-logo-tranquilo">Tu tranquilidad, nuestro compromiso</p>
+        </div>
+        <div class="col-12 footer-informacion">
+          <div class="col-4">
+            <div class="col-12 p-0"><p id="footer-contacto-titulo" class="h5">Cont&aacute;ctanos</p></div>
+            <div class="col-12">
+              <p id="footer-correo" class="p-md"><span class="bold">Correo:</span> <a href="mailto:contacto@segurosfianzas.com">contacto@segurosfianzas.com</a></p>
+              <p id="footer-telefono" class="p-md"><span class="bold">Tel&eacute;fono:</span> <a href="tel:+529999444999">(999) 944 4999</a></p>
+              <p id="footer-whatsapp" class="p-md"><span class="bold">WhatsApp:</span> <a href="https://wa.me/529992653187" target="_blank" rel="noopener">(999) 265 3187</a></p>
+              <div class="col-12 redes-sociales mt-3">
+                <span class="bold">S&iacute;guenos:</span>
+                <a href="https://www.facebook.com/share/1KgjejV4SG/" target="_blank" class="social-icon" rel="noopener" aria-label="Facebook de CARSA Seguros y Fianzas">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.5 1.6-1.5H17V4.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3.2h2.8V22h2.7Z"></path></svg>
+                </a>
+                <a href="https://www.instagram.com/grupocarsa?igsh=MTcwOHV1cnN2ZXd5bA==" target="_blank" class="social-icon" rel="noopener" aria-label="Instagram de CARSA Seguros y Fianzas">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm0 1.8A2.2 2.2 0 0 0 4.8 7v10A2.2 2.2 0 0 0 7 19.2h10a2.2 2.2 0 0 0 2.2-2.2V7A2.2 2.2 0 0 0 17 4.8H7Zm10.5 1.4a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8Z"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="col-12 p-0"><a href="/mapa-del-sitio" target="_blank"><p class="h5">Servicios</p></a></div>
+            <div class="col-12 p-0">
+              <div class="col-3">
+                <p class="h6">&Iacute;ndice</p>
+                <a href="#" class="p-md">Seguros</a>
+                <a href="/plan-personal-de-retiro" class="p-md">Retiro</a>
+                <a href="/seguro-de-vida" class="p-md">Vida</a>
+                <a href="/gastos-medicos-mayores" class="p-md">GMM</a>
+                <a href="/seguro-de-auto" class="p-md">Auto</a>
+                <a href="/seguro-de-hogar" class="p-md">Hogar</a>
+                <a href="/seguro-empresarial" class="p-md">Empresarial</a>
+              </div>
+              <div class="col-3">
+                <p class="h6">Fianzas</p>
+                <a href="/fianzas" class="p-md">Panorama</a>
+                <a href="/fianza-de-cumplimiento" class="p-md">Cumplimiento</a>
+                <a href="/fianza-de-anticipo" class="p-md">Anticipo</a>
+                <a href="/fianza-de-vicios-ocultos" class="p-md">Vicios Ocultos</a>
+                <a href="/fianza-de-credito" class="p-md">Cr&eacute;dito</a>
+              </div>
+              <div class="col-3">
+                <p class="h6">M&aacute;s Informaci&oacute;n</p>
+                <a href="/recursos" class="p-md">Recursos</a>
+                <a href="https://www.teamcarsa.com/" target="_blank" rel="noopener" class="p-md">&Uacute;nete a CARSA</a>
+                <a href="/mapa-del-sitio" class="p-md">Mapa de sitio</a>
+                <a href="#carsa-aviso-privacidad" class="p-md">Aviso de privacidad</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 footer-redes"><div class="redes"></div></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="carsa-legal-bar">
+    <div class="carsa-legal-bar__inner">
+      <div class="carsa-legal-bar__left">CARSA 2026 | Derechos reservados &reg;</div>
+      <div class="carsa-legal-bar__right"><a href="#carsa-aviso-privacidad" class="carsa-legal-link">Aviso de Privacidad.</a></div>
+    </div>
+  </div>
+
+  <div id="carsa-aviso-privacidad" class="carsa-privacy-modal">
+    <div class="carsa-privacy-modal__box">
+      <a href="#" class="carsa-privacy-modal__close" aria-label="Cerrar ventana">&times;</a>
+      <h2 class="carsa-privacy-title">Aviso de privacidad integral</h2>
+      <p class="carsa-privacy-subtitle">Consultores Asociados en Riesgos, Agente de Seguros y de Fianzas, S.A. de C.V.<br />(CARSA Seguros y Fianzas)</p>
+      <div class="carsa-privacy-section">
+        <h3>1. Identidad y domicilio del responsable</h3>
+        <p>Consultores Asociados en Riesgos, Agente de Seguros y de Fianzas, S.A. de C.V., comercialmente conocida como CARSA Seguros y Fianzas, con domicilio en Calle 10 #326 por 3 y 3C, Colonia Gonzalo Guerrero, M&eacute;rida, Yucat&aacute;n, M&eacute;xico, C.P. 97115, es responsable del tratamiento de sus datos personales conforme a la Ley Federal de Protecci&oacute;n de Datos Personales en Posesi&oacute;n de los Particulares.</p>
+      </div>
+      <div class="carsa-privacy-section">
+        <h3>2. Datos personales que recabamos</h3>
+        <p>Podremos recabar de manera directa o indirecta los siguientes datos personales:</p>
+        <p class="carsa-privacy-highlight">Datos de identificaci&oacute;n y contacto</p>
+        <ul>
+          <li>Nombre completo</li>
+          <li>Tel&eacute;fono</li>
+          <li>Correo electr&oacute;nico</li>
+          <li>Domicilio</li>
+          <li>RFC</li>
+          <li>CURP</li>
+          <li>Fecha de nacimiento</li>
+          <li>Nacionalidad</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "InsuranceAgency",
+      "name": "CARSA Seguros y Fianzas",
+      "url": "https://carsaseguros.mx/cotizar-seguro-medico-merida",
+      "description": "Asesoría para cotizar seguro médico y seguro de gastos médicos mayores en Mérida, Yucatán.",
+      "telephone": "+52 999 256 3187",
+      "email": "contacto@carsaseguros.mx",
+      "areaServed": {
+        "@type": "City",
+        "name": "Mérida"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mérida",
+        "addressRegion": "Yucatán",
+        "addressCountry": "MX"
+      }
+    }
+  </script>
+
+  <script src="Scripts/general.js" defer></script>
+  <script src="Scripts/site-ui/home.js" defer></script>
+  <script src="Scripts/site-ui/index-interactions.js" defer></script>
+  <script>
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach((item) => {
+      const button = item.querySelector(".faq-question");
+      const answer = item.querySelector(".faq-answer");
+
+      button.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+
+        faqItems.forEach((otherItem) => {
+          otherItem.classList.remove("active");
+          otherItem.querySelector(".faq-answer").style.maxHeight = null;
+        });
+
+        if (!isActive) {
+          item.classList.add("active");
+          answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+      });
+    });
+
+    const form = document.getElementById("leadForm");
+    const successBox = document.getElementById("formSuccess");
+    const errorBox = document.getElementById("formError");
+
+    function setError(fieldEl, hasError) {
+      const wrapper = fieldEl.closest(".field");
+      if (!wrapper) return;
+      wrapper.classList.toggle("has-error", hasError);
+    }
+
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+    }
+
+    function validatePhone(phone) {
+      const cleaned = phone.replace(/\D/g, "");
+      return cleaned.length === 10;
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      successBox.style.display = "none";
+      errorBox.style.display = "none";
+
+      const name = document.getElementById("name");
+      const email = document.getElementById("email");
+      const phone = document.getElementById("phone");
+      const age = document.getElementById("age");
+      const insuranceFor = document.getElementById("insuranceFor");
+      const coverage = document.getElementById("coverage");
+      const message = document.getElementById("message");
+
+      let isValid = true;
+
+      if (name.value.trim().length < 3) {
+        setError(name, true);
+        isValid = false;
+      } else {
+        setError(name, false);
+      }
+
+      if (!validateEmail(email.value)) {
+        setError(email, true);
+        isValid = false;
+      } else {
+        setError(email, false);
+      }
+
+      if (!validatePhone(phone.value)) {
+        setError(phone, true);
+        isValid = false;
+      } else {
+        setError(phone, false);
+      }
+
+      const ageValue = Number(age.value);
+      if (!age.value || Number.isNaN(ageValue) || ageValue < 0 || ageValue > 120) {
+        setError(age, true);
+        isValid = false;
+      } else {
+        setError(age, false);
+      }
+
+      if (!insuranceFor.value) {
+        setError(insuranceFor, true);
+        isValid = false;
+      } else {
+        setError(insuranceFor, false);
+      }
+
+      if (!coverage.value) {
+        setError(coverage, true);
+        isValid = false;
+      } else {
+        setError(coverage, false);
+      }
+
+      if (!isValid) {
+        errorBox.style.display = "block";
+        return;
+      }
+
+      const payload = {
+        name: name.value.trim(),
+        email: email.value.trim(),
+        phone: phone.value.trim(),
+        age: age.value.trim(),
+        insuranceFor: insuranceFor.value,
+        coverage: coverage.value,
+        message: message.value.trim(),
+        page: "cotizar-seguro-medico-merida"
+      };
+
+      console.log("Lead listo para enviar:", payload);
+      successBox.style.display = "block";
+      form.reset();
+      document.querySelectorAll(".field").forEach((field) => field.classList.remove("has-error"));
+    });
+  </script>
+</body>
+</html>
