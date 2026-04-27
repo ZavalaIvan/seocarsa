@@ -3,940 +3,515 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>¿Cuánto cuesta un seguro de gastos médicos mayores?</title>
-  <meta name="description" content="Guía completa para saber cuánto cuesta un seguro de gastos médicos mayores en México, qué factores influyen en el precio y cómo elegir el mejor plan." />
+  <title>Precio de un seguro de gastos médicos mayores en México | Guía premium</title>
+  <meta name="description" content="Análisis premium sobre el precio de un seguro de gastos médicos mayores en México: rangos por perfil, edad, cobertura, deducible y cómo comparar antes de contratar." />
 
   <style>
     :root {
-      --bg: #f5f7fb;
-      --card: #ffffff;
-      --text: #102033;
-      --muted: #64748b;
-      --primary: #0b5cff;
-      --primary-dark: #063eb3;
-      --accent: #e8f0ff;
-      --border: #dbe3ef;
-      --success: #0f9f6e;
-      --radius: 24px;
-      --shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+      --navy: #082449;
+      --navy-2: #0e376d;
+      --blue: #2c8fda;
+      --sky: #eaf6ff;
+      --ice: #f4f8fc;
+      --white: #ffffff;
+      --ink: #10233f;
+      --muted: #61748c;
+      --line: #dce8f3;
+      --gold: #d6a54b;
+      --green: #19a974;
+      --shadow: 0 26px 70px rgba(7, 29, 59, 0.12);
+      --soft-shadow: 0 18px 45px rgba(7, 29, 59, 0.08);
+      --radius: 28px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(44, 143, 218, .13), transparent 28%),
+        linear-gradient(180deg, #f8fbff 0%, #eef4fa 55%, #f7fbff 100%);
       line-height: 1.7;
     }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    .container { width: min(1180px, calc(100% - 36px)); margin: 0 auto; }
 
-    .page {
-      overflow: hidden;
+    .topbar {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(8, 36, 73, .88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      color: white;
     }
-
-    .container {
-      width: min(1160px, calc(100% - 32px));
-      margin: 0 auto;
-    }
+    .nav { height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 950; letter-spacing: .02em; }
+    .brand-mark { width: 42px; height: 42px; border-radius: 50%; border: 2px solid rgba(255,255,255,.75); display: grid; place-items: center; font-weight: 950; }
+    .nav-links { display: flex; align-items: center; gap: 18px; font-size: 14px; font-weight: 800; color: rgba(255,255,255,.82); }
+    .nav-cta { padding: 10px 16px; border-radius: 999px; background: white; color: var(--navy); }
 
     .hero {
       position: relative;
-      padding: 90px 0 70px;
-      background:
-        radial-gradient(circle at top left, rgba(11, 92, 255, 0.25), transparent 32%),
-        linear-gradient(135deg, #061a40 0%, #0b2d66 45%, #0b5cff 100%);
+      overflow: hidden;
       color: white;
+      background:
+        radial-gradient(circle at 78% 22%, rgba(214,165,75,.35), transparent 18%),
+        radial-gradient(circle at 12% 8%, rgba(44,143,218,.42), transparent 30%),
+        linear-gradient(135deg, #071b39 0%, #0b3163 45%, #1068c8 100%);
+      padding: 92px 0 132px;
     }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 48px;
-      align-items: center;
+    .hero::after {
+      content: ""; position: absolute; inset: auto -10% -1px -10%; height: 82px;
+      background: #f8fbff; clip-path: polygon(0 42%, 100% 0, 100% 100%, 0% 100%);
     }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.14);
-      backdrop-filter: blur(10px);
-      font-size: 14px;
+    .hero-grid { display: grid; grid-template-columns: 1.04fr .96fr; gap: 54px; align-items: center; position: relative; z-index: 2; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 14px; border-radius: 999px;
+      background: rgba(255,255,255,.13); border: 1px solid rgba(255,255,255,.18);
+      color: rgba(255,255,255,.9); font-weight: 900; font-size: 13px; text-transform: uppercase; letter-spacing: .08em;
       margin-bottom: 22px;
     }
-
-    .hero h1 {
-      font-size: clamp(40px, 6vw, 72px);
-      line-height: 1.02;
-      letter-spacing: -0.05em;
-      margin-bottom: 24px;
-    }
-
-    .hero p {
-      font-size: 19px;
-      max-width: 680px;
-      color: rgba(255,255,255,0.82);
-      margin-bottom: 32px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
+    .hero h1 { font-size: clamp(42px, 6vw, 76px); line-height: .98; letter-spacing: -.06em; max-width: 760px; margin-bottom: 24px; }
+    .hero p { font-size: clamp(17px, 2vw, 20px); color: rgba(255,255,255,.82); max-width: 680px; margin-bottom: 30px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 14px 22px;
-      border-radius: 999px;
-      font-weight: 800;
-      transition: 0.25s ease;
-      border: 1px solid transparent;
-      cursor: pointer;
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 14px 21px; border-radius: 999px; font-weight: 950;
+      border: 1px solid transparent; cursor: pointer; transition: .24s ease;
+      font-size: 15px;
     }
+    .btn-primary { background: white; color: var(--navy); box-shadow: 0 16px 34px rgba(0,0,0,.15); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 22px 42px rgba(0,0,0,.22); }
+    .btn-ghost { border-color: rgba(255,255,255,.28); color: white; background: rgba(255,255,255,.08); }
+    .btn-ghost:hover { background: rgba(255,255,255,.15); }
 
-    .btn-primary {
-      background: white;
-      color: var(--primary);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.18);
-    }
-
-    .btn-outline {
-      border-color: rgba(255,255,255,0.35);
-      color: white;
-    }
-
-    .btn-outline:hover {
-      background: rgba(255,255,255,0.12);
-    }
-
-    .media-card {
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 32px;
+    .premium-panel {
+      border-radius: 34px;
+      background: rgba(255,255,255,.13);
+      border: 1px solid rgba(255,255,255,.2);
+      box-shadow: 0 34px 90px rgba(0,0,0,.25);
       padding: 18px;
-      box-shadow: 0 35px 80px rgba(0,0,0,0.22);
+      backdrop-filter: blur(18px);
     }
-
-    .media-placeholder {
-      min-height: 420px;
-      border-radius: 24px;
-      border: 2px dashed rgba(255,255,255,0.35);
-      display: grid;
-      place-items: center;
-      text-align: center;
-      color: rgba(255,255,255,0.75);
+    .panel-inner {
+      border-radius: 26px;
+      min-height: 445px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.06)),
+        linear-gradient(135deg, rgba(7,27,57,.72), rgba(44,143,218,.55));
+      border: 1px dashed rgba(255,255,255,.35);
       padding: 28px;
-      background: linear-gradient(145deg, rgba(255,255,255,0.16), rgba(255,255,255,0.04));
-    }
-
-    .stats {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: -36px;
-      position: relative;
-      z-index: 2;
+      align-content: space-between;
     }
+    .price-preview { display: grid; gap: 14px; }
+    .preview-row { background: rgba(255,255,255,.13); border: 1px solid rgba(255,255,255,.16); border-radius: 18px; padding: 16px; display: flex; justify-content: space-between; gap: 16px; }
+    .preview-row span { color: rgba(255,255,255,.72); font-size: 13px; }
+    .preview-row strong { font-size: 20px; }
+    .panel-note { color: rgba(255,255,255,.75); font-size: 14px; }
 
-    .stat {
-      background: var(--card);
-      border-radius: 22px;
-      padding: 24px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
+    .quick-stats { margin-top: -68px; position: relative; z-index: 5; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .quick-card { background: white; border: 1px solid var(--line); border-radius: 22px; padding: 22px; box-shadow: var(--soft-shadow); }
+    .quick-card small { color: var(--muted); display: block; font-weight: 800; margin-bottom: 8px; }
+    .quick-card strong { font-size: 25px; color: var(--navy); letter-spacing: -.03em; }
+
+    .main { display: grid; grid-template-columns: 280px 1fr; gap: 34px; padding: 76px 0; align-items: start; }
+    .toc { position: sticky; top: 92px; background: rgba(255,255,255,.86); backdrop-filter: blur(14px); border: 1px solid var(--line); border-radius: 26px; padding: 22px; box-shadow: var(--soft-shadow); }
+    .toc h3 { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+    .toc a { display: block; padding: 10px 12px; border-radius: 14px; font-weight: 850; font-size: 14px; color: #60738a; }
+    .toc a:hover, .toc a.active { background: var(--sky); color: var(--navy); }
+
+    article { display: grid; gap: 28px; }
+    .section { background: rgba(255,255,255,.92); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(28px, 4vw, 52px); box-shadow: var(--shadow); }
+    .section-label { display: inline-flex; padding: 7px 12px; border-radius: 999px; background: #eef7ff; color: var(--blue); font-weight: 950; text-transform: uppercase; letter-spacing: .08em; font-size: 12px; margin-bottom: 18px; }
+    .section h2 { font-size: clamp(29px, 4vw, 48px); line-height: 1.05; letter-spacing: -.045em; margin-bottom: 18px; color: var(--navy); }
+    .section p { color: var(--muted); font-size: 17px; margin-bottom: 16px; }
+    .section strong { color: var(--ink); }
+
+    .lead { font-size: 19px !important; color: #405875 !important; }
+    .note { margin: 24px 0 0; padding: 20px 22px; border-radius: 20px; background: #edf7ff; border: 1px solid #cfe8fa; color: var(--navy); font-weight: 850; }
+    .warning { background: #fff8eb; border-color: #f0d9aa; }
+
+    .price-ladder { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 26px 0; }
+    .ladder-card { position: relative; overflow: hidden; background: #f8fbff; border: 1px solid var(--line); border-radius: 24px; padding: 24px; }
+    .ladder-card::before { content: ""; position: absolute; inset: 0 0 auto; height: 5px; background: linear-gradient(90deg, var(--blue), #75c8f1); }
+    .ladder-card .icon { width: 48px; height: 48px; border-radius: 16px; display: grid; place-items: center; background: white; box-shadow: 0 10px 24px rgba(7,29,59,.08); margin-bottom: 14px; font-size: 22px; }
+    .ladder-card h3 { font-size: 18px; color: var(--navy); margin-bottom: 8px; }
+    .ladder-card .range { color: var(--blue); font-size: 26px; font-weight: 950; letter-spacing: -.04em; margin-bottom: 8px; }
+    .ladder-card p { font-size: 14px; margin: 0; }
+
+    .formula { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; align-items: stretch; margin: 28px 0; }
+    .formula .chip { background: #f8fbff; border: 1px solid var(--line); border-radius: 18px; padding: 16px 14px; text-align: center; font-weight: 950; color: var(--navy); }
+    .formula .plus { display: grid; place-items: center; color: var(--blue); font-weight: 950; font-size: 22px; }
+
+    .matrix { overflow-x: auto; margin: 26px 0; border-radius: 22px; border: 1px solid var(--line); }
+    table { width: 100%; min-width: 760px; border-collapse: collapse; background: white; }
+    th, td { padding: 17px 18px; text-align: left; border-bottom: 1px solid var(--line); }
+    th { background: #eef7ff; color: var(--navy); font-size: 13px; text-transform: uppercase; letter-spacing: .07em; }
+    td { color: #4d6078; }
+    tr:last-child td { border-bottom: 0; }
+
+    .split { display: grid; grid-template-columns: 1fr .9fr; gap: 22px; align-items: start; }
+    .checklist { display: grid; gap: 12px; margin-top: 20px; }
+    .check { display: flex; gap: 12px; align-items: flex-start; padding: 15px 16px; border: 1px solid var(--line); border-radius: 17px; background: #f8fbff; color: #556b84; }
+    .check span { color: var(--green); font-weight: 950; }
+    .visual-slot { min-height: 320px; border-radius: 24px; border: 1.5px dashed #b9cde1; display: grid; place-items: center; text-align: center; color: var(--muted); padding: 24px; background: linear-gradient(135deg, rgba(44,143,218,.07), rgba(214,165,75,.07)); }
+
+    .mistakes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 22px; }
+    .mistake { padding: 20px; border-radius: 20px; border: 1px solid var(--line); background: #f9fcff; }
+    .mistake b { display: block; color: var(--navy); margin-bottom: 6px; }
+    .mistake p { font-size: 14px; margin: 0; }
+
+    .faq { display: grid; gap: 12px; margin-top: 18px; }
+    .faq-item { border: 1px solid var(--line); border-radius: 18px; background: #fbfdff; overflow: hidden; }
+    .faq-question { width: 100%; border: 0; background: transparent; padding: 18px 20px; display: flex; justify-content: space-between; gap: 18px; color: var(--navy); font-size: 16px; font-weight: 950; text-align: left; cursor: pointer; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .25s ease; }
+    .faq-answer p { padding: 0 20px 18px; margin: 0; font-size: 15px; }
+    .faq-item.open .faq-answer { max-height: 280px; }
+
+    .related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 22px; }
+    .related a { padding: 18px; border: 1px solid var(--line); border-radius: 20px; background: #f8fbff; font-weight: 950; color: var(--navy); }
+    .related span { display: block; margin-top: 5px; color: var(--muted); font-size: 13px; font-weight: 650; }
+
+    .cta { background: linear-gradient(135deg, #071b39 0%, #0b4fab 58%, #2c8fda 100%); color: white; border-radius: 34px; padding: clamp(32px, 5vw, 58px); display: grid; grid-template-columns: 1fr .78fr; gap: 28px; align-items: center; box-shadow: 0 30px 80px rgba(8,36,73,.22); }
+    .cta h2 { font-size: clamp(32px, 5vw, 54px); line-height: 1.03; letter-spacing: -.05em; margin-bottom: 16px; }
+    .cta p { color: rgba(255,255,255,.82); font-size: 18px; margin-bottom: 22px; }
+    .form { background: white; border-radius: 26px; padding: 22px; color: var(--ink); }
+    .form input, .form select, .form textarea { width: 100%; padding: 14px 15px; border: 1px solid var(--line); border-radius: 14px; font: inherit; margin-bottom: 12px; outline: none; }
+    .form button { width: 100%; border: 0; background: var(--blue); color: white; border-radius: 999px; padding: 15px; font-weight: 950; cursor: pointer; }
+
+    .footer { padding: 46px 0; color: var(--muted); font-size: 14px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; }
+
+    @media (max-width: 1000px) {
+      .hero-grid, .main, .split, .cta { grid-template-columns: 1fr; }
+      .toc { position: relative; top: 0; }
+      .quick-stats, .price-ladder, .related { grid-template-columns: 1fr 1fr; }
+      .formula { grid-template-columns: 1fr; }
+      .formula .plus { display: none; }
+      .nav-links { display: none; }
     }
-
-    .stat strong {
-      display: block;
-      font-size: 28px;
-      color: var(--primary);
-      margin-bottom: 6px;
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 34px;
-      padding: 70px 0;
-      align-items: start;
-    }
-
-    .toc {
-      position: sticky;
-      top: 22px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 22px;
-      box-shadow: var(--shadow);
-    }
-
-    .toc h3 {
-      font-size: 15px;
-      margin-bottom: 16px;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .toc a {
-      display: block;
-      padding: 10px 12px;
-      border-radius: 12px;
-      color: var(--muted);
-      font-weight: 650;
-      font-size: 14px;
-    }
-
-    .toc a:hover,
-    .toc a.active {
-      background: var(--accent);
-      color: var(--primary);
-    }
-
-    article {
-      display: grid;
-      gap: 28px;
-    }
-
-    .section {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: clamp(26px, 4vw, 46px);
-      box-shadow: var(--shadow);
-    }
-
-    .section h2 {
-      font-size: clamp(28px, 4vw, 42px);
-      line-height: 1.12;
-      letter-spacing: -0.035em;
-      margin-bottom: 18px;
-    }
-
-    .section h3 {
-      font-size: 23px;
-      margin: 26px 0 12px;
-    }
-
-    .section p {
-      color: var(--muted);
-      margin-bottom: 16px;
-      font-size: 17px;
-    }
-
-    .highlight {
-      padding: 22px;
-      background: var(--accent);
-      border-left: 5px solid var(--primary);
-      border-radius: 18px;
-      margin: 24px 0;
-      color: var(--text);
-      font-weight: 700;
-    }
-
-    .cost-grid,
-    .factor-grid,
-    .benefit-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 22px;
-    }
-
-    .mini-card {
-      background: #f8fbff;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 22px;
-    }
-
-    .mini-card .icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      background: var(--accent);
-      color: var(--primary);
-      display: grid;
-      place-items: center;
-      font-size: 22px;
-      margin-bottom: 14px;
-    }
-
-    .mini-card h4 {
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-
-    .mini-card p {
-      font-size: 15px;
-      margin: 0;
-    }
-
-    .image-slot,
-    .video-slot {
-      min-height: 280px;
-      border: 2px dashed #b8c7dc;
-      border-radius: 24px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 28px;
-      background:
-        linear-gradient(135deg, rgba(11,92,255,0.06), rgba(15,159,110,0.06));
-      color: var(--muted);
-      margin: 28px 0;
-    }
-
-    .video-slot {
-      min-height: 360px;
-      background:
-        linear-gradient(135deg, rgba(6,26,64,0.08), rgba(11,92,255,0.08));
-    }
-
-    .comparison {
-      overflow-x: auto;
-      margin-top: 24px;
-    }
-
-    table {
-      width: 100%;
-      min-width: 700px;
-      border-collapse: collapse;
-      overflow: hidden;
-      border-radius: 18px;
-    }
-
-    th, td {
-      padding: 18px;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-      background: white;
-    }
-
-    th {
-      background: #eef5ff;
-      color: var(--primary-dark);
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    .checklist {
-      display: grid;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .check-item {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      padding: 16px;
-      background: #f8fbff;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      color: var(--muted);
-    }
-
-    .check-item span {
-      color: var(--success);
-      font-weight: 900;
-    }
-
-    .cta {
-      background:
-        radial-gradient(circle at top right, rgba(255,255,255,0.25), transparent 28%),
-        linear-gradient(135deg, #061a40, #0b5cff);
-      color: white;
-      border-radius: 32px;
-      padding: clamp(34px, 5vw, 58px);
-      display: grid;
-      grid-template-columns: 1fr 0.8fr;
-      gap: 30px;
-      align-items: center;
-    }
-
-    .cta h2 {
-      font-size: clamp(30px, 5vw, 52px);
-      line-height: 1.06;
-      letter-spacing: -0.04em;
-      margin-bottom: 18px;
-    }
-
-    .cta p {
-      color: rgba(255,255,255,0.82);
-      font-size: 18px;
-      margin-bottom: 24px;
-    }
-
-    .quote-form {
-      background: white;
-      color: var(--text);
-      border-radius: 24px;
-      padding: 24px;
-    }
-
-    .quote-form input,
-    .quote-form select,
-    .quote-form textarea {
-      width: 100%;
-      padding: 14px 16px;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      margin-bottom: 12px;
-      font: inherit;
-    }
-
-    .quote-form button {
-      width: 100%;
-      background: var(--primary);
-      color: white;
-      border: 0;
-      border-radius: 999px;
-      padding: 15px;
-      font-weight: 900;
-      cursor: pointer;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .faq-question {
-      width: 100%;
-      background: none;
-      border: 0;
-      padding: 20px 0;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      font-size: 18px;
-      font-weight: 800;
-      text-align: left;
-      cursor: pointer;
-      color: var(--text);
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: 0.3s ease;
-    }
-
-    .faq-answer p {
-      padding-bottom: 20px;
-    }
-
-    .faq-item.open .faq-answer {
-      max-height: 260px;
-    }
-
-    .footer {
-      padding: 38px 0;
-      text-align: center;
-      color: var(--muted);
-    }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .layout,
-      .cta {
-        grid-template-columns: 1fr;
-      }
-
-      .toc {
-        position: relative;
-        top: 0;
-      }
-
-      .cost-grid,
-      .factor-grid,
-      .benefit-grid,
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .media-placeholder {
-        min-height: 300px;
-      }
+    @media (max-width: 640px) {
+      .hero { padding-top: 64px; }
+      .quick-stats, .price-ladder, .mistakes, .related { grid-template-columns: 1fr; }
+      .panel-inner { min-height: 320px; }
+      .section { border-radius: 22px; }
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
+  <header class="topbar">
+    <div class="container nav">
+      <a href="/" class="brand" aria-label="CARSA Seguros y Fianzas">
+        <span class="brand-mark">C</span>
+        <span>CARSA<br><small>Seguros y Fianzas</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="/seguros">Seguros</a>
+        <a href="/fianzas">Fianzas</a>
+        <a href="/recursos">Recursos</a>
+        <a class="nav-cta" href="#cotizar">Cotizar</a>
+      </nav>
+    </div>
+  </header>
 
-    <header class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="badge">Guía actualizada · Seguros de salud</div>
-          <h1>¿Cuánto cuesta un seguro de gastos médicos mayores en México?</h1>
-          <p>
-          Conoce los <a href="/seguro-medico-precios-mexico">factores que influyen en el precio</a>, qué debe cubrir una buena póliza
-            y cómo elegir un seguro que realmente proteja tu salud, tu patrimonio y a tu familia.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#cotizar" class="btn btn-primary">Cotizar mi seguro</a>
-            <a href="#costos" class="btn btn-outline">Ver costos aproximados</a>
-          </div>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Análisis de precios · México</span>
+        <h1>Precio de un seguro médico: cómo se calcula y qué rango esperar</h1>
+        <p>
+          Una guía enfocada únicamente en costos: rangos aproximados, variables que mueven la prima, ejemplos por perfil y señales para saber si una cotización está equilibrada.
+        </p>
+        <div class="hero-actions">
+          <a href="#costos" class="btn btn-primary">Ver rangos de precio</a>
+          <a href="#cotizar" class="btn btn-ghost">Cotizar mi caso</a>
         </div>
+      </div>
 
-        <div class="media-card">
-          <div class="media-placeholder">
-            <div>
-              <strong>Espacio para imagen principal</strong>
-              <br />
-              Foto sugerida: familia, hospital premium o asesoría financiera médica.
-            </div>
+      <div class="premium-panel" aria-label="Resumen de precios aproximados">
+        <div class="panel-inner">
+          <div class="price-preview">
+            <div class="preview-row"><div><span>Perfil joven</span><strong>$10k–$23k</strong></div><span>aprox. anual</span></div>
+            <div class="preview-row"><div><span>Adulto 35 años</span><strong>$17k–$44k</strong></div><span>aprox. anual</span></div>
+            <div class="preview-row"><div><span>Familia</span><strong>$44k–$100k+</strong></div><span>según cobertura</span></div>
           </div>
+          <p class="panel-note">Los rangos son referencias generales. El precio real depende de edad, ciudad, red médica, deducible, coaseguro y aseguradora.</p>
         </div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <section class="container stats">
-      <div class="stat">
-        <strong>$10k - $23k</strong>
-        <span>Persona menor de 30 años</span>
-      </div>
-      <div class="stat">
-        <strong>$17k - $44k</strong>
-        <span>Persona de 35 años</span>
-      </div>
-      <div class="stat">
-        <strong>$44k - $100k+</strong>
-        <span>Familia de tres personas</span>
-      </div>
-    </section>
+  <section class="container quick-stats" aria-label="Resumen rápido">
+    <div class="quick-card"><small>Factor que más impacta</small><strong>Edad</strong></div>
+    <div class="quick-card"><small>Variable negociable</small><strong>Deducible</strong></div>
+    <div class="quick-card"><small>Mayor diferencia</small><strong>Red médica</strong></div>
+    <div class="quick-card"><small>Mejor decisión</small><strong>Comparar</strong></div>
+  </section>
 
-    <main class="container layout">
-      <aside class="toc">
-        <h3>Contenido</h3>
-        <a href="#que-es">Qué es un seguro GMM</a>
-        <a href="#costos">Cuánto cuesta</a>
-        <a href="#factores">Qué influye en el precio</a>
-        <a href="#coberturas">Qué cubre</a>
-        <a href="#elegir">Cómo elegir</a>
-        <a href="#beneficios">Beneficios</a>
-        <a href="#faq">Preguntas frecuentes</a>
-        <a href="#cotizar">Cotizar</a>
-      </aside>
+  <main class="container main">
+    <aside class="toc">
+      <h3>Contenido</h3>
+      <a href="#enfoque">Enfoque de esta guía</a>
+      <a href="#costos">Rangos de precio</a>
+      <a href="#formula">Cómo se calcula</a>
+      <a href="#comparativa">Comparativa de planes</a>
+      <a href="#ajustar">Cómo bajar el costo</a>
+      <a href="#errores">Errores de precio</a>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a href="#cotizar">Cotizar</a>
+    </aside>
 
-      <article>
-        <section class="section" id="que-es">
-          <h2>¿Qué es un seguro de gastos médicos mayores?</h2>
-          <p>
-            Un seguro de gastos médicos mayores es una herramienta financiera que te ayuda a cubrir
-            gastos derivados de accidentes, enfermedades, hospitalización, cirugías y tratamientos médicos; si apenas estás comparando, revisa también esta
-            <a href="/blog-guia-seguro-medico">guía completa de seguro médico</a>.
-          </p>
-          <p>
-            A cambio del pago de una prima anual, la aseguradora asume una parte importante del costo
-            médico cuando ocurre un evento cubierto por la póliza.
-          </p>
+    <article>
+      <section class="section" id="enfoque">
+        <span class="section-label">No es otra guía general</span>
+        <h2>Esta página responde una sola duda: cuánto puede costar</h2>
+        <p class="lead">
+          Muchas páginas explican qué es un seguro médico. Esta guía se concentra en el dinero: cómo interpretar una prima, por qué dos personas pagan montos distintos y qué revisar antes de decidir por precio.
+        </p>
+        <p>
+          Un seguro de gastos médicos mayores puede parecer caro si solo ves el pago anual. Pero la lectura correcta es compararlo contra el riesgo que traslada: hospitalización, cirugía, estudios, medicamentos y honorarios médicos privados.
+        </p>
+        <div class="note">
+          Regla práctica: no busques “el más barato”; busca el punto donde prima, deducible, coaseguro, hospitales y suma asegurada quedan balanceados para tu perfil.
+        </div>
+      </section>
 
-          <div class="highlight">
-            En palabras simples: pagas una cantidad controlada cada año para evitar un gasto médico
-            inesperado que podría afectar tu estabilidad económica.
-          </div>
+      <section class="section" id="costos">
+        <span class="section-label">Rangos aproximados</span>
+        <h2>¿Cuánto cuesta un seguro médico según el perfil?</h2>
+        <p>
+          Los rangos cambian por aseguradora, ciudad, sexo, edad, salud y condiciones contratadas. Aun así, estos escenarios ayudan a ubicar el orden de magnitud antes de solicitar una cotización formal.
+        </p>
+        <div class="price-ladder">
+          <article class="ladder-card">
+            <div class="icon">👤</div>
+            <h3>Persona joven</h3>
+            <div class="range">$10k–$23k</div>
+            <p>Referencia anual para personas menores de 30 años con cobertura básica o media.</p>
+          </article>
+          <article class="ladder-card">
+            <div class="icon">🧑</div>
+            <h3>Adulto 35 años</h3>
+            <div class="range">$17k–$44k</div>
+            <p>Rango aproximado con mayor variación por red hospitalaria y deducible.</p>
+          </article>
+          <article class="ladder-card">
+            <div class="icon">👨‍👩‍👧</div>
+            <h3>Familia</h3>
+            <div class="range">$44k–$100k+</div>
+            <p>Depende de número de integrantes, edades, maternidad, hospitales y suma asegurada.</p>
+          </article>
+        </div>
+        <p>
+          Si el objetivo es proteger a una familia completa, conviene revisar una página más específica sobre <a href="/seguro-medico-familiar-precio"><strong>seguro médico familiar en México</strong></a>, porque el cálculo cambia por integrante.
+        </p>
+      </section>
 
-          <div class="image-slot">
-            <div>
-              <strong>Espacio para imagen explicativa</strong>
-              <br />
-              Puedes agregar una ilustración del funcionamiento: Prima → Deducible → Aseguradora → Hospital.
-            </div>
-          </div>
-        </section>
+      <section class="section" id="formula">
+        <span class="section-label">La lógica detrás del precio</span>
+        <h2>La prima no sale de la nada: se arma con varias piezas</h2>
+        <p>
+          La aseguradora cruza el riesgo médico del asegurado con el nivel de protección solicitado. Por eso dos cotizaciones pueden tener una diferencia grande aunque parezcan similares a simple vista.
+        </p>
+        <div class="formula" aria-label="Fórmula visual del costo">
+          <div class="chip">Edad</div><div class="plus">+</div>
+          <div class="chip">Red hospitalaria</div><div class="plus">+</div>
+          <div class="chip">Deducible</div>
+        </div>
+        <div class="formula" aria-label="Fórmula visual del costo continuación">
+          <div class="chip">Coaseguro</div><div class="plus">+</div>
+          <div class="chip">Suma asegurada</div><div class="plus">+</div>
+          <div class="chip">Historial médico</div>
+        </div>
+        <div class="note warning">
+          Si dos planes tienen precios muy distintos, revisa primero hospitales incluidos, deducible, coaseguro, tabulador médico y exclusiones. Ahí suele estar la explicación.
+        </div>
+      </section>
 
-        <section class="section" id="costos">
-          <h2>¿Cuánto cuesta un seguro de gastos médicos mayores?</h2>
-          <p>
-            El precio puede variar mucho dependiendo de tu edad, género, ciudad, suma asegurada,
-            red hospitalaria, deducible y coberturas contratadas.
-          </p>
+      <section class="section" id="comparativa">
+        <span class="section-label">Comparación inteligente</span>
+        <h2>Barato, medio o premium: qué cambia realmente</h2>
+        <p>
+          El nombre del plan no basta. Un plan económico puede funcionar muy bien para ciertos perfiles, pero no necesariamente para alguien que busca hospitales específicos o atención de alto nivel.
+        </p>
+        <div class="matrix">
+          <table>
+            <thead>
+              <tr>
+                <th>Nivel de plan</th>
+                <th>Prima anual</th>
+                <th>Lo que normalmente cambia</th>
+                <th>Ideal para</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Básico</td>
+                <td>Menor</td>
+                <td>Red hospitalaria más limitada y deducible más alto</td>
+                <td>Quien busca protección esencial contra gastos grandes</td>
+              </tr>
+              <tr>
+                <td>Intermedio</td>
+                <td>Media</td>
+                <td>Mejor equilibrio entre hospitales, deducible y beneficios</td>
+                <td>Personas o familias que quieren balance entre costo y cobertura</td>
+              </tr>
+              <tr>
+                <td>Premium</td>
+                <td>Mayor</td>
+                <td>Red amplia, hospitales de mayor nivel y beneficios superiores</td>
+                <td>Quien prioriza acceso hospitalario, comodidad y flexibilidad</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Para comparar marcas y enfoques de cobertura, puedes revisar también la guía de <a href="/mejor-seguro-medico-mexico"><strong>mejores seguros médicos en México</strong></a>.
+        </p>
+      </section>
 
-          <div class="cost-grid">
-            <div class="mini-card">
-              <div class="icon">👤</div>
-              <h4>Menores de 30 años</h4>
-              <p>Entre $10,000 y $23,000 MXN anuales aproximadamente.</p>
-            </div>
-
-            <div class="mini-card">
-              <div class="icon">🧑</div>
-              <h4>Persona de 35 años</h4>
-              <p>Entre $17,000 y $44,000 MXN anuales aproximadamente.</p>
-            </div>
-
-            <div class="mini-card">
-              <div class="icon">👨‍👩‍👧</div>
-              <h4>Familia de 3 personas</h4>
-              <p>Entre $44,000 y más de $100,000 MXN anuales.</p>
-            </div>
-          </div>
-
-          <div class="video-slot">
-            <div>
-              <strong>Espacio para video</strong>
-              <br />
-              Video sugerido: “Cómo funciona un seguro de gastos médicos mayores en 2 minutos”.
-            </div>
-          </div>
-
-          <p>
-            Estos rangos son únicamente una referencia. Para conocer el precio real, es necesario
-            realizar una cotización personalizada.
-          </p>
-        </section>
-
-        <section class="section" id="factores">
-          <h2>¿Qué factores influyen en el precio?</h2>
-          <p>
-            Las aseguradoras calculan el costo de acuerdo con el perfil del asegurado y las condiciones
-            del plan elegido.
-          </p>
-
-          <div class="factor-grid">
-            <div class="mini-card">
-              <div class="icon">🎂</div>
-              <h4>Edad</h4>
-              <p>Mientras mayor sea la edad, mayor suele ser el costo del seguro.</p>
-            </div>
-
-            <div class="mini-card">
-              <div class="icon">🏥</div>
-              <h4>Red hospitalaria</h4>
-              <p>Los hospitales premium elevan el precio de la póliza.</p>
-            </div>
-
-            <div class="mini-card">
-              <div class="icon">📍</div>
-              <h4>Ciudad de residencia</h4>
-              <p>El costo médico cambia según la zona donde vives.</p>
-            </div>
-
-            <div class="mini-card">
-              <div class="icon">💰</div>
-              <h4>Suma asegurada</h4>
-              <p>Entre más alta sea la cobertura, mayor puede ser la prima.</p>
-            </div>
-
-            <div class="mini-card">
-              <div class="icon">🧾</div>
-              <h4>Deducible</h4>
-              <p>Un deducible alto puede bajar el costo anual del seguro.</p>
-            </div>
-
-            <div class="mini-card">
-              <div class="icon">🩺</div>
-              <h4>Historial médico</h4>
-              <p>Preexistencias o hábitos de riesgo pueden influir en la aceptación o precio.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" id="coberturas">
-          <h2>¿Qué cubre un seguro de gastos médicos mayores?</h2>
-          <p>
-            Aunque cada aseguradora maneja condiciones diferentes, una póliza suele incluir coberturas
-            básicas y coberturas adicionales.
-          </p>
-
-          <div class="comparison">
-            <table>
-              <thead>
-                <tr>
-                  <th>Tipo de cobertura</th>
-                  <th>Qué puede incluir</th>
-                  <th>Por qué importa</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Básica</td>
-                  <td>Hospitalización, cirugías, medicamentos y estudios</td>
-                  <td>Protege ante eventos médicos de alto costo</td>
-                </tr>
-                <tr>
-                  <td>Médica profesional</td>
-                  <td>Honorarios médicos, especialistas y enfermería</td>
-                  <td>Ayuda a cubrir atención especializada</td>
-                </tr>
-                <tr>
-                  <td>Maternidad</td>
-                  <td>Parto, cesárea o complicaciones</td>
-                  <td>Importante para familias en planeación</td>
-                </tr>
-                <tr>
-                  <td>Internacional</td>
-                  <td>Emergencias fuera del país</td>
-                  <td>Útil para personas que viajan</td>
-                </tr>
-                <tr>
-                  <td>Adicionales</td>
-                  <td>Dental, funerario o consultas preventivas</td>
-                  <td>Personaliza la póliza según tus necesidades</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="highlight">
-            No elijas solo el seguro más barato. Revisa qué hospitales incluye, cuánto deducible pagarás
-            y qué enfermedades o tratamientos cubre.
-          </div>
-        </section>
-
-        <section class="section" id="elegir">
-          <h2>¿Cómo elegir el mejor seguro para ti?</h2>
-          <p>
-            La mejor póliza no siempre es la más barata ni la más cara. Es la que se ajusta a tu presupuesto,
-            estilo de vida, ciudad y necesidades médicas reales.
-          </p>
-
-          <div class="checklist">
-            <div class="check-item">
-              <span>✓</span>
-              <div>
-                <strong>Define tu presupuesto anual.</strong>
-                Elige una prima que puedas mantener a largo plazo.
-              </div>
-            </div>
-
-            <div class="check-item">
-              <span>✓</span>
-              <div>
-                <strong>Revisa el deducible.</strong>
-                Un deducible bajo reduce tu desembolso en una emergencia, pero puede elevar la prima.
-              </div>
-            </div>
-
-            <div class="check-item">
-              <span>✓</span>
-              <div>
-                <strong>Compara hospitales.</strong>
-                Asegúrate de que la red médica incluya hospitales que realmente usarías.
-              </div>
-            </div>
-
-            <div class="check-item">
-              <span>✓</span>
-              <div>
-                <strong>Pregunta por exclusiones.</strong>
-                Revisa enfermedades preexistentes, periodos de espera y límites por padecimiento.
-              </div>
-            </div>
-
-            <div class="check-item">
-              <span>✓</span>
-              <div>
-                <strong>Cotiza con asesoría.</strong>
-                Comparar varias aseguradoras te ayuda a tomar una mejor decisión.
-              </div>
-            </div>
-          </div>
-
-          <div class="image-slot">
-            <div>
-              <strong>Espacio para imagen comparativa</strong>
-              <br />
-              Puedes agregar una imagen de asesor revisando opciones con una familia o empresario.
-            </div>
-          </div>
-        </section>
-
-        <section class="section" id="beneficios">
-          <h2>Beneficios de tener un seguro de gastos médicos mayores</h2>
-
-          <div class="benefit-grid">
-            <div class="mini-card">
-              <div class="icon">🏨</div>
-              <h4>Acceso hospitalario</h4>
-              <p>Permite recibir atención en hospitales privados de acuerdo con tu red.</p>
-            </div>
-
-            <div class="mini-card">
-              <div class="icon">🛡️</div>
-              <h4>Protección económica</h4>
-              <p>Evita que una emergencia médica afecte gravemente tus finanzas.</p>
-            </div>
-
-            <div class="mini-card">
-              <div class="icon">👨‍👩‍👧‍👦</div>
-              <h4>Tranquilidad familiar</h4>
-              <p>Puede proteger a tu pareja, hijos o familia completa bajo un mismo plan.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" id="faq">
-          <h2>Preguntas frecuentes</h2>
-
-          <div class="faq-item open">
-            <button class="faq-question">
-              ¿Cuál es el mejor seguro de gastos médicos mayores?
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                El mejor seguro depende de tu edad, presupuesto, ciudad, hospitales deseados y coberturas.
-                Lo ideal es comparar varias aseguradoras antes de contratar.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              ¿Qué es el deducible?
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Es la cantidad que pagas antes de que la aseguradora comience a cubrir los gastos médicos
-                de un evento cubierto.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              ¿Conviene contratarlo joven?
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Sí. Mientras más joven y sano estés, suele ser más fácil acceder a mejores condiciones y
-                precios más competitivos.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              ¿Cubre enfermedades preexistentes?
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Depende de la aseguradora y de las condiciones de la póliza. Algunas pueden excluirlas,
-                aplicar periodos de espera o rechazarlas.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class="cta" id="cotizar">
+      <section class="section" id="ajustar">
+        <span class="section-label">Optimización de costo</span>
+        <h2>Cómo bajar el precio sin quedarte mal protegido</h2>
+        <div class="split">
           <div>
-            <h2>Conoce cuánto costaría tu seguro ideal</h2>
             <p>
-              Recibe una cotización personalizada según tu edad, ciudad, presupuesto,
-              red hospitalaria deseada y necesidades familiares.
+              Reducir el costo no significa elegir lo más barato. Significa mover las variables correctas sin perder aquello que sí importa para tu caso: hospitales, padecimientos cubiertos y capacidad real de pago ante una emergencia.
             </p>
-            <a href="https://wa.me/5219990000000" class="btn btn-primary">Hablar con un asesor</a>
+            <div class="checklist">
+              <div class="check"><span>✓</span><div><strong>Ajusta el deducible.</strong> Puede bajar la prima, pero debe ser una cantidad que realmente puedas pagar.</div></div>
+              <div class="check"><span>✓</span><div><strong>Revisa hospitales.</strong> No pagues por una red premium si no la necesitas.</div></div>
+              <div class="check"><span>✓</span><div><strong>Compara tabuladores.</strong> Dos planes pueden cubrir lo mismo en papel, pero pagar distinto a médicos.</div></div>
+              <div class="check"><span>✓</span><div><strong>Cotiza antes de enfermar.</strong> La edad y el historial médico influyen en aceptación y costo.</div></div>
+            </div>
           </div>
+          <div class="visual-slot">
+            <div>
+              <strong>Espacio visual premium</strong><br>
+              Sugerencia: gráfico de sliders mostrando cómo deducible, hospitales y suma asegurada mueven el precio.
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <form class="quote-form" onsubmit="sendQuote(event)">
-            <input type="text" id="name" placeholder="Nombre completo" required />
-            <input type="tel" id="phone" placeholder="WhatsApp" required />
-            <select id="type" required>
-              <option value="">¿A quién quieres asegurar?</option>
-              <option>Solo a mí</option>
-              <option>A mi pareja</option>
-              <option>A mi familia</option>
-              <option>A mi empresa/equipo</option>
-            </select>
-            <textarea id="message" rows="4" placeholder="Cuéntanos tu edad, ciudad y presupuesto aproximado"></textarea>
-            <button type="submit">Solicitar cotización</button>
-          </form>
-        </section>
-      </article>
-    </main>
+      <section class="section" id="errores">
+        <span class="section-label">Evita pagar mal</span>
+        <h2>Errores comunes al comparar precios</h2>
+        <p>
+          La cotización más baja puede verse atractiva, pero no siempre es la más conveniente cuando revisas lo que pasaría al usar la póliza.
+        </p>
+        <div class="mistakes">
+          <div class="mistake"><b>Comparar solo la prima</b><p>El pago anual es importante, pero también debes revisar deducible, coaseguro y límite de cobertura.</p></div>
+          <div class="mistake"><b>Ignorar la red médica</b><p>Un plan económico puede excluir hospitales que realmente usarías en tu ciudad.</p></div>
+          <div class="mistake"><b>No preguntar exclusiones</b><p>Algunas enfermedades, tratamientos o preexistencias pueden no estar cubiertos.</p></div>
+          <div class="mistake"><b>No calcular el gasto total</b><p>La mejor comparación es prima + posible deducible + coaseguro + hospitales disponibles.</p></div>
+        </div>
+        <p style="margin-top:20px">
+          Para entender mejor estas dos variables, consulta la explicación sobre <a href="/deducible-coaseguro-seguro-medico"><strong>qué es deducible y coaseguro en un seguro médico</strong></a>.
+        </p>
+      </section>
 
-    <footer class="footer">
-      <div class="container">
-        © 2026 · Guía de seguros de gastos médicos mayores
-      </div>
-    </footer>
-  </div>
+      <section class="section" id="faq">
+        <span class="section-label">Preguntas frecuentes</span>
+        <h2>Dudas rápidas sobre el precio del seguro médico</h2>
+        <div class="faq">
+          <div class="faq-item open">
+            <button class="faq-question">¿Por qué sube el seguro médico cada año?<span>+</span></button>
+            <div class="faq-answer"><p>Principalmente por edad, inflación médica, uso de la póliza, ajustes de aseguradora y cambios en costos hospitalarios.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">¿Es mejor pagar mensual o anual?<span>+</span></button>
+            <div class="faq-answer"><p>El pago anual puede ofrecer mejores condiciones, pero el pago mensual ayuda a distribuir el gasto. Depende de tu flujo de efectivo.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">¿Un deducible alto siempre conviene?<span>+</span></button>
+            <div class="faq-answer"><p>No siempre. Puede bajar la prima, pero si ocurre una emergencia debes tener capacidad real para pagarlo.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">¿La ciudad cambia el precio?<span>+</span></button>
+            <div class="faq-answer"><p>Sí. El costo médico y la red hospitalaria disponible varían por zona, por eso una cotización puede cambiar entre ciudades.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <span class="section-label">Siguiente lectura</span>
+        <h2>Continúa comparando sin repetir información</h2>
+        <p>Estas páginas atacan dudas diferentes para que no compitan entre sí dentro del sitio.</p>
+        <div class="related">
+          <a href="/blog-guia-seguro-medico">Guía completa<span>Qué es, cómo funciona y qué cubre.</span></a>
+          <a href="/seguro-medico-precio-por-edad">Precio por edad<span>Cómo cambia el costo con los años.</span></a>
+          <a href="/cotizar-seguro-medico-merida">Cotizar en Mérida<span>Página directa para solicitar asesoría.</span></a>
+        </div>
+      </section>
+
+      <section class="cta" id="cotizar">
+        <div>
+          <h2>Recibe una cotización aterrizada a tu perfil</h2>
+          <p>
+            Compara precio, deducible, coaseguro, red hospitalaria y beneficios antes de contratar. La mejor póliza es la que puedes pagar y usar con confianza.
+          </p>
+          <a href="https://wa.me/5219999444999" class="btn btn-primary">Hablar por WhatsApp</a>
+        </div>
+        <form class="form" onsubmit="sendQuote(event)">
+          <input id="name" type="text" placeholder="Nombre completo" required>
+          <input id="phone" type="tel" placeholder="WhatsApp" required>
+          <select id="profile" required>
+            <option value="">Perfil a cotizar</option>
+            <option>Solo para mí</option>
+            <option>Pareja</option>
+            <option>Familia</option>
+            <option>Empresa/equipo</option>
+          </select>
+          <textarea id="message" rows="4" placeholder="Edad, ciudad, presupuesto aproximado y hospitales de interés"></textarea>
+          <button type="submit">Solicitar cotización</button>
+        </form>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2026 CARSA · Seguros y Fianzas</div>
+      <div>Contenido informativo. La cotización final depende de cada aseguradora.</div>
+    </div>
+  </footer>
 
   <script>
-    const tocLinks = document.querySelectorAll(".toc a");
-    const sections = document.querySelectorAll("section[id]");
+    const tocLinks = document.querySelectorAll('.toc a');
+    const sections = document.querySelectorAll('section[id]');
 
     function setActiveLink() {
-      let currentSection = "";
-
+      let current = '';
       sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        if (window.scrollY >= sectionTop) {
-          currentSection = section.getAttribute("id");
-        }
+        if (window.scrollY >= section.offsetTop - 130) current = section.id;
       });
-
       tocLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + currentSection) {
-          link.classList.add("active");
-        }
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
       });
     }
+    window.addEventListener('scroll', setActiveLink);
+    setActiveLink();
 
-    window.addEventListener("scroll", setActiveLink);
-
-    document.querySelectorAll(".faq-question").forEach(button => {
-      button.addEventListener("click", () => {
-        const item = button.parentElement;
-        item.classList.toggle("open");
-      });
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => button.closest('.faq-item').classList.toggle('open'));
     });
 
     function sendQuote(event) {
       event.preventDefault();
-
-      const name = document.getElementById("name").value;
-      const phone = document.getElementById("phone").value;
-      const type = document.getElementById("type").value;
-      const message = document.getElementById("message").value;
-
-      const whatsappNumber = "5219990000000";
-
-      const text = `Hola, quiero cotizar un seguro de gastos médicos mayores.%0A%0A` +
-        `Nombre: ${name}%0A` +
-        `WhatsApp: ${phone}%0A` +
-        `Tipo de seguro: ${type}%0A` +
-        `Comentarios: ${message}`;
-
-      window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank");
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const profile = document.getElementById('profile').value;
+      const message = document.getElementById('message').value.trim();
+      const whatsappNumber = '5219999444999';
+      const text = encodeURIComponent(`Hola CARSA, quiero cotizar un seguro de gastos médicos mayores.\n\nNombre: ${name}\nWhatsApp: ${phone}\nPerfil: ${profile}\nComentarios: ${message}`);
+      window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
     }
   </script>
 </body>

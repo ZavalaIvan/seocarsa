@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cotizar Seguro M&eacute;dico en M&eacute;rida | Seguro de Gastos M&eacute;dicos | CARSA</title>
+  <title>Cotiza tu Seguro M&eacute;dico en M&eacute;rida | Respuesta R&aacute;pida | CARSA</title>
   <meta
     name="description"
-    content="Cotiza tu seguro m&eacute;dico en M&eacute;rida con asesor&iacute;a personalizada. Compara opciones de seguro de gastos m&eacute;dicos mayores y recibe atenci&oacute;n r&aacute;pida en Yucat&aacute;n."
+    content="Cotiza tu seguro m&eacute;dico en M&eacute;rida hoy mismo. Recibe asesor&iacute;a personalizada, compara opciones de gastos m&eacute;dicos mayores y habla con un asesor CARSA por WhatsApp."
   />
   <meta
     name="keywords"
@@ -120,6 +120,41 @@
       color: var(--primary-dark);
     }
 
+    .hero-actions .btn {
+      min-height: 58px;
+      padding: 0 28px;
+      font-size: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-actions .btn-white {
+      background: linear-gradient(135deg, #ffffff, #eaf6ff);
+      color: #0b4f86;
+      border-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 18px 34px rgba(31, 111, 167, 0.22);
+    }
+
+    .hero-actions .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 42px rgba(31, 111, 167, 0.28);
+    }
+
+    .hero-actions .btn-outline {
+      background: #25d366;
+      color: #ffffff;
+      border-color: #25d366;
+      box-shadow: 0 18px 34px rgba(37, 211, 102, 0.24);
+    }
+
+    .hero-actions .btn-outline:hover {
+      background: #1ebe5d;
+      border-color: #1ebe5d;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 22px 42px rgba(37, 211, 102, 0.32);
+    }
+
     .skip-link {
       position: absolute;
       left: 16px;
@@ -168,7 +203,7 @@
     .hero {
       position: relative;
       overflow: hidden;
-      padding: 0 0 84px;
+      padding: clamp(92px, 9vw, 126px) 0 112px;
       background:
         linear-gradient(90deg, rgba(211, 231, 248, 0.94) 0%, rgba(211, 231, 248, 0.84) 34%, rgba(255, 255, 255, 0.14) 62%, rgba(255, 255, 255, 0.08) 100%),
         url("/Content/img/cotiza-tu-seguro-medico.webp") center center / cover no-repeat;
@@ -197,17 +232,20 @@
     }
 
     .hero-grid {
-      grid-template-columns: minmax(0, 1.08fr) minmax(420px, 470px);
-      min-height: 760px;
-      padding: 54px 0 44px;
+      grid-template-columns: minmax(0, 640px) minmax(390px, 470px);
+      justify-content: space-between;
+      min-height: auto;
+      padding: 0;
+      gap: clamp(40px, 6vw, 72px);
     }
 
     .split,
     .search-grid { grid-template-columns: minmax(0, 1fr) minmax(320px, 520px); }
     .highlight-grid { grid-template-columns: minmax(0, 1fr) minmax(260px, 320px); }
 
-    .hero-copy { max-width: 590px; }
-    .hero-copy p { max-width: 560px; font-size: 1.14rem; }
+    .hero-copy { max-width: 640px; }
+    .hero-copy .section-title { max-width: 620px; }
+    .hero-copy p { max-width: 590px; font-size: 1.14rem; }
     .hero-kicker {
       display: inline-flex;
       align-items: center;
@@ -282,7 +320,12 @@
       box-shadow: 0 24px 48px rgba(22, 46, 77, 0.12);
     }
 
-    .hero-form { padding: 30px 26px 22px; }
+    .hero-form {
+      width: 100%;
+      max-width: 470px;
+      justify-self: end;
+      padding: 32px 28px 24px;
+    }
     .form-title { margin: 0 0 8px; font-size: 1.36rem; font-weight: 900; color: #112c4b; }
     .form-subtitle { margin: 0 0 18px; }
 
@@ -290,6 +333,11 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px;
+    }
+
+    .form-grid .btn {
+      grid-column: 1 / -1;
+      width: 100%;
     }
 
     .field { min-width: 0; }
@@ -370,6 +418,12 @@
     }
 
     .trust-item:last-child { border-right: 0; }
+    .trust-icon {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+      margin-bottom: 12px;
+    }
     .trust-item strong { display: block; margin-bottom: 8px; font-size: 1rem; color: #102c4f; }
     .trust-item span { display: block; color: #5b6c7c; }
 
@@ -600,11 +654,26 @@
     .carsa-privacy-mail { text-decoration: none; }
 
     @media (max-width: 1100px) {
+      .hero {
+        padding: 96px 0 112px;
+      }
+
       .hero-grid,
       .split,
       .highlight-grid,
       .search-grid {
         grid-template-columns: 1fr;
+      }
+
+      .hero-copy,
+      .hero-copy .section-title,
+      .hero-copy p,
+      .hero-form {
+        max-width: 720px;
+      }
+
+      .hero-form {
+        justify-self: stretch;
       }
 
       .trust-card,
@@ -616,7 +685,8 @@
     @media (max-width: 768px) {
       .navbar-logo { width: 120px; height: auto; }
       .section { padding: 58px 0; }
-      .hero-grid { min-height: auto; padding: 34px 0 110px; gap: 28px; }
+      .hero { padding: 88px 0 104px; }
+      .hero-grid { min-height: auto; padding: 0; gap: 28px; }
       .hero-actions,
       .final-cta-actions { flex-direction: column; }
       .btn { width: 100%; }
@@ -636,6 +706,211 @@
       .carsa-privacy-modal { padding: 12px; }
       .carsa-privacy-modal__box { padding: 22px 18px; }
     }
+
+    /* Conversion-focused additions */
+    .conversion-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 22px 0 0;
+    }
+
+    .conversion-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(46,125,192,.22);
+      color: #0b2d59;
+      font-weight: 800;
+      font-size: .92rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .conversion-pill img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    .urgent-note {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(255,255,255,.55);
+      color: #274470;
+      font-weight: 700;
+      max-width: 720px;
+    }
+
+    .mini-proof {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .proof-card,
+    .step-card,
+    .option-card,
+    .objection-card {
+      background: #fff;
+      border: 1px solid rgba(219, 229, 238, 0.95);
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: 0 16px 34px rgba(22, 46, 77, 0.07);
+    }
+
+    .proof-card strong {
+      display: block;
+      color: #0b2d59;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      font-weight: 900;
+    }
+
+    .proof-icon {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 18px;
+    }
+
+    .proof-card p,
+    .step-card p,
+    .option-card p,
+    .objection-card p {
+      margin: 0;
+      color: #365273;
+      line-height: 1.65;
+    }
+
+    .steps-grid,
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 34px;
+    }
+
+    .step-number {
+      width: 46px;
+      height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      background: rgba(46,125,192,.12);
+      color: #2e7dc0;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .step-card h3,
+    .option-card h3,
+    .objection-card h3 {
+      margin: 0 0 10px;
+      color: #0b2d59;
+      font-size: 1.2rem;
+      line-height: 1.15;
+      font-weight: 900;
+    }
+
+    .option-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 260px;
+    }
+
+    .option-icon {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 18px;
+    }
+
+    .option-card .btn {
+      margin-top: auto;
+      width: 100%;
+    }
+
+    .objection-panel {
+      background: linear-gradient(135deg, #0b2d59, #174b84);
+      border-radius: 30px;
+      padding: 34px;
+      color: #fff;
+      box-shadow: 0 24px 54px rgba(11,45,89,.18);
+    }
+
+    .objection-panel .section-title,
+    .objection-panel p,
+    .objection-panel h3 {
+      color: #fff;
+    }
+
+    .objection-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .objection-list {
+      display: grid;
+      gap: 12px;
+      margin: 20px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .objection-list li {
+      display: flex;
+      gap: 10px;
+      color: rgba(255,255,255,.92);
+      font-weight: 700;
+    }
+
+    .objection-list span {
+      color: #9bd0ff;
+      font-weight: 900;
+    }
+
+    .quote-box {
+      background: rgba(255,255,255,.11);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 24px;
+      padding: 24px;
+    }
+
+    .quote-box strong {
+      display: block;
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .final-cta .btn-outline:hover,
+    .objection-panel .btn-outline:hover {
+      background: #fff;
+      color: #0b2d59 !important;
+    }
+
+    .form-title strong {
+      color: #2e7dc0;
+    }
+
+    @media (max-width: 1100px) {
+      .mini-proof,
+      .steps-grid,
+      .options-grid,
+      .objection-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -686,30 +961,46 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="hero-kicker">Atenci&oacute;n r&aacute;pida en M&eacute;rida y todo Yucat&aacute;n</div>
-          <h1 class="section-title">Cotizar seguro m&eacute;dico en M&eacute;rida con asesor&iacute;a clara y personalizada</h1>
+          <div class="hero-kicker">Cotizaci&oacute;n r&aacute;pida en M&eacute;rida y Yucat&aacute;n</div>
+          <h1 class="section-title">Cotiza tu seguro m&eacute;dico en M&eacute;rida con asesor&iacute;a clara y sin compromiso</h1>
           <p>
-            Si est&aacute;s buscando <strong><a href="/seguro-medico-en-merida-yucatan">cotizar un seguro m&eacute;dico en M&eacute;rida</a></strong>, aqu&iacute; puedes comenzar
-            de forma r&aacute;pida. Te ayudamos a comparar coberturas, <a href="/deducible-coaseguro-seguro-medico">deducibles, coaseguro</a>, costos y aseguradoras
-            para encontrar el plan ideal para ti, tu familia o tu empresa.
+            Recibe acompa&ntilde;amiento para comparar <strong>seguro de gastos m&eacute;dicos mayores</strong>,
+            coberturas, deducibles, coaseguro y red hospitalaria. Te ayudamos a elegir una opci&oacute;n
+            que tenga sentido para ti, tu familia o tu empresa.
           </p>
+
           <ul class="hero-benefits">
-            <li><span>&#10003;</span> Cotizaci&oacute;n personalizada seg&uacute;n tu perfil</li>
-            <li><span>&#10003;</span> Opciones de seguro de gastos m&eacute;dicos mayores</li>
-            <li><span>&#10003;</span> Atenci&oacute;n local en M&eacute;rida, Yucat&aacute;n</li>
-            <li><span>&#10003;</span> Comparaci&oacute;n entre distintas alternativas</li>
+            <li><span>&#10003;</span> Cotizaci&oacute;n personalizada seg&uacute;n edad, presupuesto y cobertura</li>
+            <li><span>&#10003;</span> Comparaci&oacute;n de opciones antes de contratar</li>
+            <li><span>&#10003;</span> Asesor&iacute;a local en M&eacute;rida, Yucat&aacute;n</li>
+            <li><span>&#10003;</span> Atenci&oacute;n por formulario o WhatsApp</li>
           </ul>
+
           <div class="hero-actions">
-            <a href="#formulario" class="btn btn-white">Cotizar ahora</a>
-            <a href="https://wa.me/529992563187" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Hablar por WhatsApp</a>
+            <a href="#formulario" class="btn btn-white">Solicitar cotizaci&oacute;n</a>
+            <a href="https://wa.me/529992563187?text=Hola%20CARSA%2C%20quiero%20cotizar%20un%20seguro%20m%C3%A9dico%20en%20M%C3%A9rida" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Hablar por WhatsApp</a>
           </div>
+
+          <div class="conversion-pills">
+            <span class="conversion-pill">
+              <img src="/Content/img/iconos/asesoria-personalizada.svg" alt="" width="24" height="24" loading="lazy" decoding="async" />
+              Atenci&oacute;n personalizada
+            </span>
+            <span class="conversion-pill">
+              <img src="/Content/img/iconos/tus-datos-estan-protegidos.svg" alt="" width="24" height="24" loading="lazy" decoding="async" />
+              Sin compromiso
+            </span>
+          </div>
+
+          <p class="urgent-note">
+            No necesitas saber qu&eacute; plan elegir. Nosotros te ayudamos a revisar opciones y resolver dudas antes de contratar.
+          </p>
         </div>
 
         <div class="hero-form" id="formulario">
-          <h2 class="form-title">Recibe tu cotizaci&oacute;n en minutos</h2>
+          <h2 class="form-title">Recibe tu cotizaci&oacute;n <strong>hoy</strong></h2>
           <p class="form-subtitle">
-            Completa tus datos y te ayudamos a cotizar un seguro m&eacute;dico en M&eacute;rida seg&uacute;n tu edad,
-            presupuesto y tipo de cobertura.
+            Deja tus datos y un asesor CARSA te contacta para comparar opciones reales seg&uacute;n tu edad, presupuesto y tipo de cobertura.
           </p>
           <form id="leadForm" novalidate>
             <div class="form-grid">
@@ -758,9 +1049,9 @@
                 <label for="message">Comentario adicional</label>
                 <textarea id="message" name="message" placeholder="Ej. Busco cotizar un seguro de gastos m&eacute;dicos mayores para mi familia en M&eacute;rida"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Solicitar cotizaci&oacute;n</button>
+              <button type="submit" class="btn btn-primary">Quiero mi cotizaci&oacute;n</button>
             </div>
-            <p class="form-note">Tus datos se usan &uacute;nicamente para contactarte y brindarte asesor&iacute;a.</p>
+            <p class="form-note">Sin compromiso. Tus datos se usan solo para contactarte y preparar tu cotizaci&oacute;n.</p>
             <div class="form-success" id="formSuccess">Gracias. Tu solicitud fue preparada correctamente. Ya puedes conectarla con tu backend, CRM o WhatsApp.</div>
             <div class="form-general-error" id="formError">Revisa los campos marcados e int&eacute;ntalo de nuevo.</div>
           </form>
@@ -770,12 +1061,152 @@
 
     <div class="container trust-strip">
       <div class="trust-card">
-        <div class="trust-item"><strong>45+ a&ntilde;os</strong><span>de experiencia en seguros</span></div>
-        <div class="trust-item"><strong>M&eacute;rida</strong><span>atenci&oacute;n local y personalizada</span></div>
-        <div class="trust-item"><strong>Comparaci&oacute;n real</strong><span>entre opciones y coberturas</span></div>
-        <div class="trust-item"><strong>Respuesta r&aacute;pida</strong><span>para iniciar tu cotizaci&oacute;n</span></div>
+        <div class="trust-item">
+          <img class="trust-icon" src="/Content/img/iconos/premio-excelencia-seguros-carsa.svg" alt="" width="46" height="46" loading="lazy" decoding="async" />
+          <strong>45+ a&ntilde;os</strong>
+          <span>de experiencia en seguros</span>
+        </div>
+        <div class="trust-item">
+          <img class="trust-icon" src="/Content/img/iconos/atencion-local-en-merida.svg" alt="" width="46" height="46" loading="lazy" decoding="async" />
+          <strong>M&eacute;rida</strong>
+          <span>atenci&oacute;n local y personalizada</span>
+        </div>
+        <div class="trust-item">
+          <img class="trust-icon" src="/Content/img/iconos/Mejores-aseguradoras-en-un-solo-lugar.svg" alt="" width="46" height="46" loading="lazy" decoding="async" />
+          <strong>Comparaci&oacute;n real</strong>
+          <span>entre opciones y coberturas</span>
+        </div>
+        <div class="trust-item">
+          <img class="trust-icon" src="/Content/img/iconos/Respuesta-rapida.svg" alt="" width="46" height="46" loading="lazy" decoding="async" />
+          <strong>Respuesta r&aacute;pida</strong>
+          <span>para iniciar tu cotizaci&oacute;n</span>
+        </div>
       </div>
     </div>
+
+    <section class="section" id="beneficios">
+      <div class="container">
+        <span class="eyebrow">Por qu&eacute; cotizar con CARSA</span>
+        <h2 class="section-title">Una cotizaci&oacute;n pensada para decidir, no solo para ver un precio</h2>
+        <p class="section-subtitle">
+          El precio es importante, pero una buena cotizaci&oacute;n tambi&eacute;n debe ayudarte a entender qu&eacute; est&aacute;s contratando,
+          cu&aacute;ndo aplica la cobertura y cu&aacute;nto podr&iacute;as pagar al usar el seguro.
+        </p>
+
+        <div class="mini-proof">
+          <article class="proof-card">
+            <img class="proof-icon" src="/Content/img/comparas-con mas-claridad.webp" alt="" width="76" height="76" loading="lazy" decoding="async" />
+            <strong>Comparas con m&aacute;s claridad</strong>
+            <p>Revisamos cobertura, deducible, coaseguro, red hospitalaria y condiciones importantes antes de elegir.</p>
+          </article>
+
+          <article class="proof-card">
+            <img class="proof-icon" src="/Content/img/recibes-asesoria-local.webp" alt="" width="76" height="76" loading="lazy" decoding="async" />
+            <strong>Evitas contratar a ciegas</strong>
+            <p>Te explicamos las diferencias entre opciones para que no elijas solo por el precio m&aacute;s bajo.</p>
+          </article>
+
+          <article class="proof-card">
+            <img class="proof-icon" src="/Content/img/evitas-contratar-a-ciegas.webp" alt="" width="76" height="76" loading="lazy" decoding="async" />
+            <strong>Recibes asesor&iacute;a local</strong>
+            <p>Atenci&oacute;n enfocada en M&eacute;rida y Yucat&aacute;n, con acompa&ntilde;amiento cercano durante el proceso.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#fff;">
+      <div class="container">
+        <span class="eyebrow">Proceso simple</span>
+        <h2 class="section-title">Cotiza tu seguro m&eacute;dico en 3 pasos</h2>
+        <p class="section-subtitle">
+          Dise&ntilde;amos esta p&aacute;gina para que el usuario que ya quiere cotizar pueda avanzar r&aacute;pido, sin leer una gu&iacute;a extensa.
+        </p>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-number">1</div>
+            <h3>Deja tus datos</h3>
+            <p>Indica tu edad, tipo de cobertura y si buscas seguro individual, familiar o empresarial.</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">2</div>
+            <h3>Te contactamos</h3>
+            <p>Un asesor revisa tu caso y te ayuda a entender qu&eacute; informaci&oacute;n falta para cotizar correctamente.</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">3</div>
+            <h3>Compara y decide</h3>
+            <p>Recibes orientaci&oacute;n para comparar opciones y elegir una cobertura adecuada a tus necesidades.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="opciones">
+      <div class="container">
+        <span class="eyebrow">Elige el tipo de cotizaci&oacute;n</span>
+        <h2 class="section-title">Podemos ayudarte seg&uacute;n lo que necesitas proteger</h2>
+        <p class="section-subtitle">
+          Cada perfil necesita una revisi&oacute;n distinta. Selecciona el camino que m&aacute;s se parece a tu caso y solicita asesor&iacute;a.
+        </p>
+
+        <div class="options-grid">
+          <article class="option-card">
+            <img class="option-icon" src="/Content/img/seguro-medico-individual.webp" alt="" width="78" height="78" loading="lazy" decoding="async" />
+            <h3>Seguro individual</h3>
+            <p>Para personas que quieren protegerse ante accidentes, enfermedades u hospitalizaciones.</p>
+            <a href="#formulario" class="btn btn-primary">Cotizar para m&iacute;</a>
+          </article>
+
+          <article class="option-card">
+            <img class="option-icon" src="/Content/img/seguro-medico-familiar.webp" alt="" width="78" height="78" loading="lazy" decoding="async" />
+            <h3>Seguro familiar</h3>
+            <p>Para familias que buscan comparar coberturas, edades, hospitales y presupuesto mensual o anual.</p>
+            <a href="#formulario" class="btn btn-primary">Cotizar para mi familia</a>
+          </article>
+
+          <article class="option-card">
+            <img class="option-icon" src="/Content/img/seguro-medico-empresarial.webp" alt="" width="78" height="78" loading="lazy" decoding="async" />
+            <h3>Seguro para empresa</h3>
+            <p>Para empresas que buscan opciones de protecci&oacute;n m&eacute;dica para socios, colaboradores o equipo clave.</p>
+            <a href="#formulario" class="btn btn-primary">Cotizar para empresa</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <div class="objection-panel">
+          <div class="objection-grid">
+            <div>
+              <span class="eyebrow" style="background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.2);">Antes de contratar</span>
+              <h2 class="section-title" style="font-size:clamp(2rem,3.4vw,3.3rem);">No elijas tu seguro m&eacute;dico solo por el precio</h2>
+              <p>
+                Dos p&oacute;lizas pueden parecer similares, pero cambiar mucho en hospitales disponibles,
+                deducible, coaseguro, exclusiones, periodos de espera y suma asegurada.
+              </p>
+              <ul class="objection-list">
+                <li><span>&#10003;</span> Entiende qu&eacute; pagar&iacute;as de tu bolsa al usarlo.</li>
+                <li><span>&#10003;</span> Revisa si incluye hospitales convenientes para ti.</li>
+                <li><span>&#10003;</span> Compara beneficios reales, no solo mensualidades.</li>
+              </ul>
+            </div>
+
+            <div class="quote-box">
+              <strong>La mejor cotizaci&oacute;n no siempre es la m&aacute;s barata.</strong>
+              <p>Es la que equilibra precio, cobertura y tranquilidad para tu caso real.</p>
+              <div class="hero-actions" style="margin-top:22px;">
+                <a href="#formulario" class="btn btn-white">Quiero comparar opciones</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section" id="como-cotizar">
       <div class="container split">
@@ -797,162 +1228,61 @@
         </div>
 
         <div class="content-block">
-          <span class="eyebrow">Cotizar seguro de gastos m&eacute;dicos mayores</span>
-          <h2 class="section-title">&iquest;C&oacute;mo cotizar un seguro m&eacute;dico en M&eacute;rida?</h2>
+          <span class="eyebrow">Acompa&ntilde;amiento personalizado</span>
+          <h2 class="section-title">&iquest;Qu&eacute; recibes al solicitar tu cotizaci&oacute;n?</h2>
           <p>
-            Muchas personas buscan <strong>cotizar un seguro m&eacute;dico en M&eacute;rida</strong> y terminan
-            comparando solo precios. Pero una buena cotizaci&oacute;n tambi&eacute;n debe ayudarte a entender
-            coberturas, deducibles, coaseguros, red hospitalaria y beneficios reales.
-          </p>
-          <p>
-            En CARSA te acompa&ntilde;amos para que la cotizaci&oacute;n no sea solo una cifra, sino una herramienta
-            para tomar una mejor decisi&oacute;n. As&iacute; puedes evaluar si te conviene un
-            <strong>seguro de gastos m&eacute;dicos mayores en Yucat&aacute;n</strong>, una opci&oacute;n familiar
-            o una cobertura m&aacute;s amplia seg&uacute;n tu perfil.
+            Esta p&aacute;gina est&aacute; enfocada en acci&oacute;n: dejar tus datos, recibir contacto y avanzar hacia una
+            cotizaci&oacute;n clara. Si todav&iacute;a est&aacute;s investigando precios generales, puedes visitar nuestra gu&iacute;a sobre
+            <a href="/seguro-medico-en-merida-yucatan">seguro m&eacute;dico en M&eacute;rida</a>.
           </p>
           <ul class="check-list">
-            <li><span>&#10003;</span> Evaluaci&oacute;n seg&uacute;n edad y tipo de cobertura</li>
-            <li><span>&#10003;</span> Comparaci&oacute;n entre aseguradoras y condiciones</li>
-            <li><span>&#10003;</span> Enfoque en necesidades reales, no solo en precio</li>
-            <li><span>&#10003;</span> Atenci&oacute;n r&aacute;pida y personalizada desde M&eacute;rida</li>
+            <li><span>&#10003;</span> Orientaci&oacute;n sobre cobertura individual, familiar o empresarial</li>
+            <li><span>&#10003;</span> Revisi&oacute;n de deducible, coaseguro y red hospitalaria</li>
+            <li><span>&#10003;</span> Resoluci&oacute;n de dudas antes de contratar</li>
+            <li><span>&#10003;</span> Siguiente paso claro para avanzar con tu seguro</li>
           </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" style="background:#fff;">
-      <div class="container">
-        <span class="eyebrow">Lo que revisamos al cotizar</span>
-        <h2 class="section-title">Qu&eacute; influye en tu cotizaci&oacute;n</h2>
-        <p class="section-subtitle">
-          Una cotizaci&oacute;n de seguro m&eacute;dico cambia seg&uacute;n diversos factores. Por eso,
-          una propuesta bien hecha debe considerar m&aacute;s que solo el costo mensual o anual.
-        </p>
-        <div class="cards-3">
-          <article class="card">
-            <div class="card-icon">
-              <img src="/Content/img/Iconos/asesoria-personalizada.svg" alt="" width="28" height="28" loading="lazy" decoding="async" />
-            </div>
-            <h3>Edad y perfil</h3>
-            <p>La edad del asegurado influye directamente en el costo y en las opciones de cobertura disponibles.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">
-              <img src="/Content/img/Iconos/cobertura-nacional-e-internacional.svg" alt="" width="28" height="28" loading="lazy" decoding="async" />
-            </div>
-            <h3>Nivel de cobertura</h3>
-            <p>No es lo mismo una cobertura b&aacute;sica que una cobertura amplia con acceso a hospitales privados de mayor nivel.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">
-              <img src="/Content/img/Iconos/evita-gastos-innecesarios.svg" alt="" width="28" height="28" loading="lazy" decoding="async" />
-            </div>
-            <h3>Deducible y coaseguro</h3>
-            <p>Estos elementos cambian el precio y tambi&eacute;n el nivel de protecci&oacute;n financiera ante un evento m&eacute;dico.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-sm">
-      <div class="container">
-        <div class="highlight-band" id="por-que">
-          <div class="highlight-grid">
-            <div>
-              <h2 class="section-title" style="font-size:clamp(2rem,3.6vw,3.5rem);">Cotizar bien es elegir mejor</h2>
-              <p>
-                Una cotizaci&oacute;n &uacute;til no solo te dice cu&aacute;nto pagar, tambi&eacute;n te muestra qu&eacute; recibes a cambio.
-                La diferencia entre un plan y otro puede impactar en hospitales disponibles, costos compartidos
-                y protecci&oacute;n real ante una emergencia m&eacute;dica.
-              </p>
-              <ul class="highlight-points">
-                <li><strong>&#10003;</strong> M&aacute;s claridad antes de contratar</li>
-                <li><strong>&#10003;</strong> Mejor comparaci&oacute;n entre alternativas</li>
-                <li><strong>&#10003;</strong> Acompa&ntilde;amiento para tomar una decisi&oacute;n correcta</li>
-              </ul>
-            </div>
-            <div class="highlight-badges">
-              <div class="bubble">M&eacute;rida y Yucat&aacute;n</div>
-              <div class="bubble">Opciones para familia y empresa</div>
-              <div class="bubble">Asesor&iacute;a antes de contratar</div>
-            </div>
+          <div class="hero-actions" style="margin-top:24px;">
+            <a href="#formulario" class="btn btn-primary">Solicitar cotizaci&oacute;n</a>
+            <a href="https://wa.me/529992563187?text=Hola%20CARSA%2C%20quiero%20asesor%C3%ADa%20para%20cotizar%20un%20seguro%20m%C3%A9dico" target="_blank" rel="noopener noreferrer" class="btn btn-outline">WhatsApp</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container split">
-        <div class="content-block">
-          <span class="eyebrow">Espacio visual para reforzar confianza</span>
-          <h2 class="section-title">Qu&eacute; imagen o video conviene aqu&iacute;</h2>
-          <p>
-            Esta secci&oacute;n funciona muy bien con un recurso visual porque ya estamos en un punto de
-            alta intenci&oacute;n. Aqu&iacute; conviene reforzar confianza, cercan&iacute;a y profesionalismo.
-          </p>
-          <p>
-            Si a&uacute;n no tienen material propio, pueden usar una imagen de stock premium. Pero idealmente,
-            despu&eacute;s deber&iacute;an reemplazarla por fotograf&iacute;a real del equipo, una asesor&iacute;a real o una pieza
-            de video institucional corta.
-          </p>
-          <ul class="check-list">
-            <li><span>&#10003;</span> Mejor opci&oacute;n: asesor real de CARSA atendiendo</li>
-            <li><span>&#10003;</span> Segunda opci&oacute;n: cliente recibiendo orientaci&oacute;n</li>
-            <li><span>&#10003;</span> Tercera opci&oacute;n: video corto de atenci&oacute;n o branding</li>
-          </ul>
-        </div>
-        <div class="media-frame">
-          <div class="media-video">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/IyBvSpDvgo8?start=104"
-              title="Video sobre qué imagen o video conviene aquí"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="media-tags">
-            <div class="media-tag">Foto real</div>
-            <div class="media-tag">Equipo CARSA</div>
-            <div class="media-tag">Video corto</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="faq">
+    <section class="section" id="faq" style="background:#fff;">
       <div class="container">
         <span class="eyebrow">Preguntas frecuentes</span>
-        <h2 class="section-title">Preguntas frecuentes sobre cotizar seguro m&eacute;dico en M&eacute;rida</h2>
+        <h2 class="section-title">Dudas antes de cotizar tu seguro m&eacute;dico</h2>
         <p class="section-subtitle">
-          Estas preguntas ayudan a resolver dudas comunes antes de solicitar una cotizaci&oacute;n de
-          seguro m&eacute;dico privado o seguro de gastos m&eacute;dicos mayores en Yucat&aacute;n.
+          Resolvemos las preguntas m&aacute;s comunes antes de solicitar una cotizaci&oacute;n de seguro m&eacute;dico privado en M&eacute;rida.
         </p>
+
         <div class="faq-list">
           <article class="faq-item active">
             <button class="faq-question" type="button">
-              <span>&iquest;Qu&eacute; necesito para cotizar un seguro m&eacute;dico en M&eacute;rida?</span>
+              <span>&iquest;Qu&eacute; necesito para cotizar un seguro m&eacute;dico?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer" style="max-height: 220px;">
               <div class="faq-answer-inner">
-                Normalmente se consideran datos como edad, tipo de cobertura deseada, si el seguro es individual,
-                familiar o empresarial, y algunos aspectos generales del perfil para orientar mejor la propuesta.
+                Normalmente se consideran datos como edad, tipo de cobertura, si el seguro es individual,
+                familiar o empresarial, y algunos aspectos generales para orientar la propuesta.
               </div>
             </div>
           </article>
+
           <article class="faq-item">
             <button class="faq-question" type="button">
-              <span>&iquest;La cotizaci&oacute;n ya incluye el precio final?</span>
+              <span>&iquest;La cotizaci&oacute;n tiene costo?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                La cotizaci&oacute;n sirve como base para conocer rangos, opciones y coberturas. El precio definitivo
-                depende de la aseguradora, el plan elegido y la validaci&oacute;n final del perfil.
+                La solicitud de informaci&oacute;n no tiene compromiso. Un asesor te contacta para ayudarte a revisar opciones y aclarar dudas.
               </div>
             </div>
           </article>
+
           <article class="faq-item">
             <button class="faq-question" type="button">
               <span>&iquest;Puedo cotizar un seguro para mi familia?</span>
@@ -960,23 +1290,23 @@
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                S&iacute;. Puedes solicitar una cotizaci&oacute;n para proteger a tu familia y comparar distintas configuraciones
-                de cobertura seg&uacute;n edades, necesidades y presupuesto.
+                S&iacute;. Puedes solicitar una cotizaci&oacute;n familiar y comparar opciones seg&uacute;n edades, cobertura, presupuesto y necesidades m&eacute;dicas.
               </div>
             </div>
           </article>
+
           <article class="faq-item">
             <button class="faq-question" type="button">
-              <span>&iquest;Conviene comparar varias opciones antes de contratar?</span>
+              <span>&iquest;Conviene cotizar por WhatsApp o formulario?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                S&iacute;. Comparar opciones te ayuda a entender diferencias en deducibles, coaseguros, red hospitalaria
-                y beneficios. Eso permite tomar una mejor decisi&oacute;n y no elegir solo por precio.
+                Ambas opciones funcionan. El formulario ayuda a ordenar tus datos desde el inicio; WhatsApp es ideal si quieres contacto m&aacute;s directo.
               </div>
             </div>
           </article>
+
           <article class="faq-item">
             <button class="faq-question" type="button">
               <span>&iquest;Atienden solo en M&eacute;rida?</span>
@@ -984,8 +1314,7 @@
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                La p&aacute;gina est&aacute; enfocada en SEO local para M&eacute;rida y Yucat&aacute;n, pero tambi&eacute;n pueden atender cotizaciones
-                para otras zonas, seg&uacute;n el caso y el tipo de seguro que est&eacute;s buscando.
+                La p&aacute;gina est&aacute; enfocada en M&eacute;rida y Yucat&aacute;n, pero tambi&eacute;n se pueden revisar casos de otras zonas seg&uacute;n el tipo de seguro.
               </div>
             </div>
           </article>
@@ -995,27 +1324,27 @@
 
     <section class="section-sm">
       <div class="container">
-        <span class="eyebrow">Explora m&aacute;s p&aacute;ginas del cluster</span>
-        <h2 class="section-title">Sigue comparando y resolviendo dudas</h2>
+        <span class="eyebrow">Si quieres investigar m&aacute;s</span>
+        <h2 class="section-title">Gu&iacute;as relacionadas antes de contratar</h2>
         <div class="cluster-links">
-          <a class="cluster-link" href="/seguro-medico-merida">
+          <a class="cluster-link" href="/seguro-medico-en-merida-yucatan">
             <div>
               <strong>Seguro m&eacute;dico en M&eacute;rida</strong>
-              <span>Landing principal con enfoque general de cobertura, beneficios y asesor&iacute;a local.</span>
+              <span>Conoce beneficios, coberturas y puntos clave antes de contratar.</span>
             </div>
             <span class="cluster-link-arrow">&rarr;</span>
           </a>
           <a class="cluster-link" href="/seguro-medico-precios-mexico">
             <div>
               <strong>Precio de seguro m&eacute;dico en M&eacute;xico</strong>
-              <span>Contenido orientado a quienes est&aacute;n investigando costos y factores de precio.</span>
+              <span>Gu&iacute;a para entender costos, edades, deducible y coaseguro.</span>
             </div>
             <span class="cluster-link-arrow">&rarr;</span>
           </a>
-          <a class="cluster-link" href="/seguro-gastos-medicos-merida">
+          <a class="cluster-link" href="/deducible-coaseguro-seguro-medico">
             <div>
-              <strong>Seguro de gastos m&eacute;dicos mayores en M&eacute;rida</strong>
-              <span>Una versi&oacute;n m&aacute;s espec&iacute;fica sobre coberturas y valor de protecci&oacute;n m&eacute;dica.</span>
+              <strong>Deducible y coaseguro</strong>
+              <span>Entiende cu&aacute;nto podr&iacute;as pagar al usar tu seguro.</span>
             </div>
             <span class="cluster-link-arrow">&rarr;</span>
           </a>
@@ -1026,14 +1355,14 @@
     <section class="section">
       <div class="container">
         <div class="final-cta">
-          <h2 class="section-title" style="margin-bottom:16px;">Empieza tu cotizaci&oacute;n hoy</h2>
+          <h2 class="section-title" style="margin-bottom:16px;">Cotiza tu seguro m&eacute;dico hoy mismo</h2>
           <p>
-            Si ya est&aacute;s buscando <strong>cotizar un seguro m&eacute;dico en M&eacute;rida</strong>, este es el momento
-            para revisar opciones con claridad y encontrar una cobertura que realmente tenga sentido para ti.
+            Da el primer paso para comparar opciones con claridad. Solicita asesor&iacute;a y recibe orientaci&oacute;n
+            para encontrar una cobertura adecuada para ti o tu familia.
           </p>
           <div class="final-cta-actions">
             <a href="#formulario" class="btn btn-white">Solicitar cotizaci&oacute;n</a>
-            <a href="https://wa.me/529992563187" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:#fff;color:#fff;">Hablar por WhatsApp</a>
+            <a href="https://wa.me/529992563187?text=Hola%20CARSA%2C%20quiero%20cotizar%20un%20seguro%20m%C3%A9dico" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:#fff;color:#fff;">Hablar por WhatsApp</a>
           </div>
         </div>
       </div>
