@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guia completa de seguro de ahorro en Mexico y plan de retiro</title>
-  <meta name="description" content="Descubre como funciona un seguro de ahorro en Mexico, cuanto cuesta, que beneficios fiscales puede ofrecer y como comparar opciones con proteccion financiera." />
+  <title>Guía completa de seguro de ahorro en México y plan de retiro</title>
+  <meta name="description" content="Descubre cómo funciona un seguro de ahorro en México, qué inversión requiere, qué beneficios fiscales puede ofrecer y cómo comparar opciones con protección financiera." />
 
   <style>
     :root {
@@ -132,6 +132,12 @@
       color: rgba(255,255,255,0.75);
       padding: 28px;
       background: linear-gradient(145deg, rgba(255,255,255,0.16), rgba(255,255,255,0.04));
+    }
+
+    .hero-real-image {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     .stats {
@@ -291,6 +297,92 @@
       background: linear-gradient(135deg, rgba(11,92,255,0.06), rgba(15,159,110,0.06));
       color: var(--muted);
       margin: 28px 0;
+    }
+
+    .content-real-image {
+      width: 60%;
+      height: auto;
+      display: block;
+      margin: 28px auto;
+    }
+
+    .content-real-image-wide {
+      width: 100%;
+    }
+
+    .cotizador-inline-hero {
+      width: 100%;
+      margin: 32px 0 0;
+      padding: clamp(30px, 5vw, 54px);
+      border-radius: 24px;
+      background: #faf7f2;
+      color: #0b1d3a;
+      text-align: center;
+    }
+
+    .cotizador-inline-tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 28px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: #f0eae0;
+      color: #c9a84c;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .cotizador-inline-hero h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.08;
+      letter-spacing: -.04em;
+      margin-bottom: 12px;
+    }
+
+    .cotizador-inline-hero h3 em {
+      color: #c9a84c;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .cotizador-inline-hero p {
+      max-width: 520px;
+      margin: 0 auto;
+      color: #3f4a5c;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .cotizador-inline-button {
+      width: min(100%, 514px);
+      min-height: 54px;
+      margin: 28px auto 0;
+      border-radius: 14px;
+      background: #0b1d3a;
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 900;
+      box-shadow: 0 14px 30px rgba(11, 29, 58, .22);
+      transition: transform .24s ease, box-shadow .24s ease;
+    }
+
+    .cotizador-inline-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 38px rgba(11, 29, 58, .28);
+    }
+
+    .cotizador-inline-privacy {
+      margin-top: 16px !important;
+      color: #7a8493 !important;
+      font-size: 12px !important;
     }
 
     .video-slot {
@@ -470,58 +562,50 @@
       <header class="hero">
     <div class="container hero-grid">
       <div>
-        <div class="badge">Guia completa · Seguro de ahorro en Mexico y plan retiro</div>
-        <h1>Seguro de ahorro en Mexico: guia completa para elegir mejor</h1>
+        <div class="badge">Guía completa · Seguro de ahorro en México y plan retiro</div>
+        <h1>Seguro de ahorro en México: guía completa para elegir mejor</h1>
         <p>
-          Descubre como un seguro de ahorro en Mexico combina proteccion financiera con acumulacion de capital
-          a mediano o largo plazo, cuanto cuesta, que beneficios fiscales podria ofrecer y como comparar opciones
+          Descubre como un seguro de ahorro en México combina protección financiera con acumulación de capital
+          a mediano o largo plazo, qué inversión requiere, qué beneficios fiscales podría ofrecer y cómo comparar opciones
           de seguro de ahorro con rendimiento sin perder de vista tu meta y presupuesto.
         </p>
 
         <div class="hero-actions">
           <a href="#cotizar" class="btn btn-primary">Cotizar mi plan</a>
-          <a href="#guia" class="btn btn-outline">Leer la guia</a>
+          <a href="#guia" class="btn btn-outline">Leer la guía</a>
         </div>
       </div>
 
-      <div class="media-card">
-        <div class="media-placeholder">
-          <div>
-            <strong>Espacio para imagen principal</strong>
-            <br />
-            Foto sugerida: familia planeando metas, retiro o patrimonio a largo plazo.
-          </div>
-        </div>
-      </div>
+      <img class="hero-real-image" src="/Content/img/Landing/Ahorro/seguro-de-vida-allianz-page-0001-ejemplo-real.webp" alt="Ejemplo real de seguro de vida Allianz" loading="eager" decoding="async" />
     </div>
   </header>
 
       <section class="container stats">
     <div class="stat">
-      <strong>Aportacion</strong>
-      <span>El monto que destinas periodicamente a tu plan de ahorro a largo plazo.</span>
+      <strong>Aportación</strong>
+      <span>El monto que destinas periódicamente a tu plan de ahorro a largo plazo.</span>
     </div>
     <div class="stat">
       <strong>Plazo</strong>
-      <span>El tiempo durante el cual construyes ahorro para el retiro, educacion o patrimonio.</span>
+      <span>El tiempo durante el cual construyes ahorro para el retiro, educación o patrimonio.</span>
     </div>
     <div class="stat">
       <strong>Capital garantizado</strong>
-      <span>La base protegida que puede dar mayor certidumbre segun condiciones de la poliza.</span>
+      <span>La base protegida que puede dar mayor certidumbre según condiciones de la póliza.</span>
     </div>
   </section>
 
   <main class="container layout" id="guia">
     <aside class="toc">
       <h3>Contenido</h3>
-      <a href="#que-es">Que es</a>
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#costos">Cuanto cuesta</a>
-      <a href="#coberturas">Que incluye</a>
-      <a href="#no-cubre">Que revisar</a>
+      <a href="#que-es">Qué es</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#inversion">Qué inversión requiere</a>
+      <a href="#coberturas">Qué incluye</a>
+      <a href="#no-cubre">Qué revisar</a>
       <a href="#deducible">Beneficios fiscales</a>
       <a href="#red">Comparativa</a>
-      <a href="#elegir">Como elegir</a>
+      <a href="#elegir">Cómo elegir</a>
       <a href="#errores">Errores comunes</a>
       <a href="#faq">FAQ</a>
       <a href="#cotizar">Cotizar</a>
@@ -529,106 +613,94 @@
 
     <article>
                   <section class="section" id="que-es">
-        <h2>&iquest;Que es un seguro de ahorro?</h2>
+        <h2>&iquest;Qué es un seguro de ahorro?</h2>
         <p>
-          Un seguro de ahorro es una solucion que combina disciplina financiera, acumulacion de patrimonio
-          y cobertura de proteccion. En terminos simples, te permite apartar capital de forma periodica mientras
-          construyes una meta concreta como ahorro para el retiro, educacion de hijos, patrimonio familiar
-          o un fondo de proteccion financiera.
+          Un seguro de ahorro es una solución que combina disciplina financiera, acumulación de patrimonio
+          y cobertura de protección. En términos simples, te permite apartar capital de forma periódica mientras
+          construyes una meta concreta como ahorro para el retiro, educación de hijos, patrimonio familiar
+          o un fondo de protección financiera.
         </p>
         <p>
           No se contrata solo para guardar dinero. Se contrata para convertir aportaciones constantes
           en una estrategia con reglas claras de plazo, beneficiarios, capital objetivo y respaldo de aseguradora.
-          A diferencia del ahorro tradicional, aqui existe estructura y seguimiento; a diferencia de una inversion pura,
-          suele haber componentes de seguro vida y condiciones de proteccion; y a diferencia de un seguro de vida simple,
+          A diferencia del ahorro tradicional, aquí existe estructura y seguimiento; a diferencia de una inversión pura,
+          suele haber componentes de seguro vida y condiciones de protección; y a diferencia de un seguro de vida simple,
           el objetivo principal es acumular capital.
         </p>
 
         <div class="highlight">
-          La idea central es simple: apartar capital hoy para construir proteccion financiera manana,
-          con una estrategia mas clara que ahorrar sin objetivo. Si quieres comparar seguros de ahorro con base
-          en tu meta, el primer paso es definir para que quieres usar el dinero y en que plazo.
+          La idea central es simple: apartar capital hoy para construir protección financiera mañana,
+          con una estrategia más clara que ahorrar sin objetivo. Si quieres comparar seguros de ahorro con base
+          en tu meta, el primer paso es definir para qué quieres usar el dinero y en qué plazo.
         </div>
 
-        <div class="image-slot">
-          <div>
-            <strong>Espacio para imagen</strong>
-            <br />
-            Sugerencia: ilustracion de metas de ahorro, retiro o patrimonio familiar.
-          </div>
-        </div>
+        <img class="content-real-image" src="/Content/img/Landing/Ahorro/ejemplo-real-saldo-proyectado-a-edad-con-allianz.webp" alt="Ejemplo real de seguro de vida Allianz" loading="lazy" decoding="async" />
       </section>
 
                   <section class="section" id="como-funciona">
-        <h2>&iquest;Como funciona?</h2>
+        <h2>&iquest;Cómo funciona?</h2>
         <p>
-          Para entender como funciona un plan retiro, un seguro dotal o un seguro de ahorro con rendimiento,
-          conviene revisar cinco piezas: aportacion, plazo, proteccion, capital objetivo y reglas del producto.
+          Para entender cómo funciona un plan retiro, un seguro dotal o un seguro de ahorro con rendimiento,
+          conviene revisar cinco piezas: aportación, plazo, protección, capital objetivo y reglas del producto.
         </p>
 
         <div class="grid-3">
           <div class="mini-card">
             <div class="icon">1</div>
-            <h4>Aportacion periodica</h4>
-            <p>Defines cuanto ahorraras cada mes, trimestre o ano segun tu meta, presupuesto y capacidad financiera.</p>
+            <h4>Aportación periódica</h4>
+            <p>Defines cuánto ahorrarás cada mes, trimestre o año según tu meta, presupuesto y capacidad financiera.</p>
           </div>
 
           <div class="mini-card">
             <div class="icon">2</div>
             <h4>Acumulacion de valor</h4>
-            <p>Tu fondo ahorro crece conforme aportas y segun las condiciones de poliza, costos y beneficios del producto contratado.</p>
+            <p>Tu fondo ahorro crece conforme aportas y según las condiciones de póliza, inversiones y beneficios del producto contratado.</p>
           </div>
 
           <div class="mini-card">
             <div class="icon">3</div>
-            <h4>Proteccion adicional</h4>
+            <h4>Protección adicional</h4>
             <p>Muchos planes incluyen seguro vida para respaldar a la familia mientras el capital se construye.</p>
           </div>
         </div>
 
         <p>
-          En la practica, el contratante define un objetivo de ahorro, elige un plazo que pueda sostener
-          y selecciona si quiere una estrategia mas conservadora, un esquema con capital garantizado
-          o una alternativa con mayor flexibilidad. Algunos productos tambien pueden ofrecer beneficios fiscales,
-          aunque siempre dependen del tipo de plan y del regimen aplicable en Mexico.
+          En la práctica, el contratante define un objetivo de ahorro, elige un plazo que pueda sostener
+          y selecciona si quiere una estrategia más conservadora, un esquema con capital garantizado
+          o una alternativa con mayor flexibilidad. Algunos productos también pueden ofrecer beneficios fiscales,
+          aunque siempre dependen del tipo de plan y del régimen aplicable en México.
         </p>
         <p>
-          Micro-CTA: si no tienes claro cuanto aportar o que plazo conviene, <a href="#cotizar" class="btn btn-outline">compara tu perfil aqui</a>.
+          Micro-CTA: si no tienes claro cuánto aportar o qué plazo conviene, <a href="#cotizar" class="btn btn-outline">compara tu perfil aquí</a>.
         </p>
 
-        <div class="video-slot">
-          <div>
-            <strong>Espacio para video</strong>
-            <br />
-            Video sugerido: "Como funciona un seguro de ahorro en 2 minutos".
-          </div>
-        </div>
+        <img class="content-real-image content-real-image-wide" src="/Content/img/Landing/Ahorro/resumen-de-rendimientos-ejemplo-real-de%20saldo-acreditado.webp" alt="Resumen de rendimientos con ejemplo real de saldo acreditado" loading="lazy" decoding="async" />
       </section>
 
-                  <section class="section" id="costos">
-        <h2>&iquest;Cuanto cuesta un seguro de ahorro?</h2>
+                  <section class="section" id="inversion">
+        <h2>&iquest;Qué inversión requiere un seguro de ahorro?</h2>
         <p>
-          El costo depende del plazo, la edad de contratacion, el objetivo, la suma asegurada,
-          el componente de proteccion y el nivel de aportacion. En Mexico existen planes con entradas accesibles
-          y otros disenados para metas patrimoniales mas ambiciosas.
+          La inversión depende del plazo, la edad de contratación, el objetivo, la suma asegurada,
+          el componente de protección y el nivel de aportación. En México existen planes con entradas accesibles
+          y otros diseñados para metas patrimoniales más ambiciosas.
         </p>
         <p>
           Como referencia orientativa, hay casos que inician desde aportaciones cercanas a $1,000 o $1,500 pesos al mes,
           mientras que un plan de ahorro a largo plazo con objetivo patrimonial, seguro vida integrado o enfoque de
-          ahorro para el retiro puede requerir aportaciones mayores. No existe un precio fijo: costos, rendimientos
-          y beneficios fiscales pueden variar segun aseguradora, edad, plazo, suma asegurada y perfil del contratante.
+          ahorro para el retiro puede requerir aportaciones mayores. No existe una aportación fija: inversiones, rendimientos
+          y beneficios fiscales pueden variar según aseguradora, edad, plazo, suma asegurada y perfil del contratante.
         </p>
 
         <div class="grid-3">
           <div class="mini-card">
             <div class="icon">A</div>
             <h4>Meta personal</h4>
-            <p>Util para quien busca construir capital garantizado o un fondo ahorro para una meta puntual en 5 a 10 anos.</p>
+            <p>Útil para quien busca construir capital garantizado o un fondo ahorro para una meta puntual en 5 a 10 años.</p>
           </div>
 
           <div class="mini-card">
             <div class="icon">B</div>
-            <h4>Proteccion familiar</h4>
+            <h4>Protección familiar</h4>
             <p>Combina ahorro con seguro vida para respaldar a la familia y al mismo tiempo acumular patrimonio con orden.</p>
           </div>
 
@@ -639,23 +711,23 @@
           </div>
         </div>
 
-        <h3>Factores que influyen en el precio</h3>
+        <h3>Factores que influyen en la aportación</h3>
         <div class="checklist">
-          <div class="check-item"><span>&#10003;</span><div>Edad de entrada y plazo contratado: comenzar antes suele dar mas margen para construir capital.</div></div>
-          <div class="check-item"><span>&#10003;</span><div>Monto de aportacion y frecuencia de pago: mensual, trimestral o anual.</div></div>
-          <div class="check-item"><span>&#10003;</span><div>Suma asegurada, objetivo del ahorro y coberturas adicionales de proteccion.</div></div>
-          <div class="check-item"><span>&#10003;</span><div>Condiciones de retiro, liquidez, costos internos y beneficios fiscales disponibles.</div></div>
+          <div class="check-item"><span>&#10003;</span><div>Edad de entrada y plazo contratado: comenzar antes suele dar más margen para construir capital.</div></div>
+          <div class="check-item"><span>&#10003;</span><div>Monto de aportación y frecuencia de pago: mensual, trimestral o anual.</div></div>
+          <div class="check-item"><span>&#10003;</span><div>Suma asegurada, objetivo del ahorro y coberturas adicionales de protección.</div></div>
+          <div class="check-item"><span>&#10003;</span><div>Condiciones de retiro, liquidez, inversiones internas y beneficios fiscales disponibles.</div></div>
         </div>
         <p>
-          Micro-CTA: si quieres un rango mas realista para tu edad y meta, <a href="#cotizar" class="btn btn-outline">solicita una comparativa</a>.
+          Micro-CTA: si quieres un rango más realista para tu edad y meta, <a href="#cotizar" class="btn btn-outline">solicita una comparativa</a>.
         </p>
       </section>
 
                   <section class="section" id="coberturas">
-        <h2>&iquest;Que incluye un seguro de ahorro?</h2>
+        <h2>&iquest;Qué incluye un seguro de ahorro?</h2>
         <p>
-          Cada producto cambia segun la aseguradora, pero en general los seguros ahorro pueden integrar
-          acumulacion de capital, proteccion por fallecimiento, ahorro fiscal y reglas claras para retiro.
+          Cada producto cambia según la aseguradora, pero en general los seguros ahorro pueden integrar
+          acumulación de capital, protección por fallecimiento, ahorro fiscal y reglas claras para retiro.
         </p>
 
         <div class="comparison">
@@ -663,8 +735,8 @@
             <thead>
               <tr>
                 <th>Elemento</th>
-                <th>Que puede incluir</th>
-                <th>Por que importa</th>
+                <th>Qué puede incluir</th>
+                <th>Por qué importa</th>
               </tr>
             </thead>
             <tbody>
@@ -676,45 +748,39 @@
               <tr>
                 <td>Seguro vida</td>
                 <td>Suma asegurada para beneficiarios o respaldo por fallecimiento</td>
-                <td>Anade proteccion financiera durante el plan y protege a la familia</td>
+                <td>Anade protección financiera durante el plan y protege a la familia</td>
               </tr>
               <tr>
                 <td>Capital garantizado</td>
-                <td>Base protegida conforme al contrato o a condiciones de poliza</td>
+                <td>Base protegida conforme al contrato o a condiciones de póliza</td>
                 <td>Da mayor certidumbre a la meta para perfiles conservadores</td>
               </tr>
               <tr>
                 <td>Beneficios fiscales</td>
-                <td>Deduccion o tratamiento fiscal segun el producto y tu regimen</td>
+                <td>Deducción o tratamiento fiscal según el producto y tu régimen</td>
                 <td>Puede mejorar el resultado real del esfuerzo de ahorro, si aplica</td>
               </tr>
               <tr>
                 <td>Opciones de retiro</td>
                 <td>Rescate, vencimiento, retiro parcial o entrega por metas</td>
-                <td>Define como, cuando y con que costo podras usar tu dinero</td>
+                <td>Define cómo, cuándo y con qué inversión podrás usar tu dinero</td>
               </tr>
             </tbody>
           </table>
         </div>
         <p>
           En una etapa de compra, este bloque es clave: comparar seguros de ahorro no es solo revisar si ahorran,
-          sino que incluyen, que protegen y cuanta flexibilidad te ofrecen.
+          sino que incluyen, que protegen y cuánta flexibilidad te ofrecen.
         </p>
 
-        <div class="image-slot">
-          <div>
-            <strong>Espacio para imagen</strong>
-            <br />
-            Sugerencia: grafico con estructura de ahorro, proteccion y retiro.
-          </div>
-        </div>
+        <img class="content-real-image content-real-image-wide" src="/Content/img/Landing/Ahorro/detalles-de-saldo-ejemplos-con-allianz.webp" alt="Detalles de saldo con ejemplos de Allianz" loading="lazy" decoding="async" />
       </section>
 
                   <section class="section" id="no-cubre">
-        <h2>&iquest;Que revisar antes de contratar?</h2>
+        <h2>&iquest;Qué revisar antes de contratar?</h2>
         <p>
           En este tipo de productos no basta con ver la promesa comercial. Conviene revisar condiciones,
-          permanencia, liquidez, penalizaciones por retiro anticipado, suma asegurada, costos y como funciona
+          permanencia, liquidez, penalizaciones por retiro anticipado, suma asegurada, inversiones y cómo funciona
           el tratamiento fiscal antes de firmar.
         </p>
 
@@ -728,92 +794,92 @@
           <div class="mini-card">
             <div class="icon">2</div>
             <h4>Liquidez</h4>
-            <p>Es clave saber cuando puedes disponer de tu dinero, si existen rescates parciales y bajo que condiciones.</p>
+            <p>Es clave saber cuándo puedes disponer de tu dinero, si existen rescates parciales y bajo qué condiciones.</p>
           </div>
 
           <div class="mini-card">
             <div class="icon">3</div>
-            <h4>Costos y cargos</h4>
-            <p>Revisa administracion, rescate, proteccion y cualquier cargo que afecte el resultado real de tu ahorro inversion.</p>
+            <h4>Inversiones y cargos</h4>
+            <p>Revisa administración, rescate, protección y cualquier cargo que afecte el resultado real de tu ahorro inversión.</p>
           </div>
         </div>
         <p>
-          Micro-CTA: antes de contratar, pide un desglose escrito con rango de aportaciones, condiciones de cancelacion
-          y escenarios de salida. Esa comparativa suele filtrar mejor a los planes mas convenientes.
+          Micro-CTA: antes de contratar, pide un desglose escrito con rango de aportaciones, condiciones de cancelación
+          y escenarios de salida. Esa comparativa suele filtrar mejor a los planes más convenientes.
         </p>
       </section>
 
                   <section class="section" id="deducible">
         <h2>Beneficios fiscales: dos conceptos clave</h2>
 
-        <h3>&iquest;Que es el ahorro fiscal?</h3>
+        <h3>&iquest;Qué es el ahorro fiscal?</h3>
         <p>
           Es la posibilidad de que ciertos productos de ahorro o plan retiro tengan ventajas tributarias,
-          siempre sujetas al tipo de producto, a la poliza contratada y al regimen fiscal aplicable en Mexico.
+          siempre sujetas al tipo de producto, a la póliza contratada y al régimen fiscal aplicable en México.
         </p>
         <p>
           En otras palabras: no todos los seguros de ahorro son deducibles, ni todos ofrecen el mismo tratamiento.
-          Algunos planes pueden ayudar a ordenar el ahorro para el retiro y otros no estan disenados para ese fin.
+          Algunos planes pueden ayudar a ordenar el ahorro para el retiro y otros no estan diseñados para ese fin.
         </p>
 
-        <h3>&iquest;Por que importa revisar el tratamiento fiscal?</h3>
+        <h3>&iquest;Por qué importa revisar el tratamiento fiscal?</h3>
         <p>
-          Porque dos planes similares pueden verse muy distintos cuando comparas deduccion, horizonte de retiro,
+          Porque dos planes similares pueden verse muy distintos cuando comparas deducción, horizonte de retiro,
           disponibilidad del dinero, reglas de permanencia y el impacto final en tu patrimonio.
         </p>
 
         <div class="highlight">
           Un producto atractivo en apariencia puede perder valor si no entiendes sus beneficios fiscales,
-          restricciones y horizonte real de uso. Nota de responsabilidad: los beneficios fiscales pueden variar segun
+          restricciones y horizonte real de uso. Nota de responsabilidad: los beneficios fiscales pueden variar según
           aseguradora, edad, plazo, suma asegurada y perfil del contratante.
         </div>
       </section>
 
                   <section class="section" id="red">
-        <h2>Comparativa: mejores opciones segun tu objetivo</h2>
+        <h2>Comparativa: mejores opciones según tu objetivo</h2>
         <p>
-          No existe una unica respuesta para todos. Las mejores opciones dependen de si buscas ahorro para el retiro,
-          educacion, patrimonio familiar, proteccion con seguro vida o simplemente una herramienta de disciplina financiera.
+          No existe una única respuesta para todos. Las mejores opciones dependen de si buscas ahorro para el retiro,
+          educación, patrimonio familiar, protección con seguro vida o simplemente una herramienta de disciplina financiera.
         </p>
         <p>
-          Una comparativa util revisa flexibilidad, capital garantizado, posibilidad de rescate,
-          beneficio fiscal, costos y solidez de la aseguradora. Para usuarios con intencion de compra,
+          Una comparativa útil revisa flexibilidad, capital garantizado, posibilidad de rescate,
+          beneficio fiscal, inversiones y solidez de la aseguradora. Para usuarios con intención de compra,
           comparar seguros de ahorro implica aterrizar el producto a una meta concreta, no solo ver una promesa general.
         </p>
 
         <div class="checklist">
           <div class="check-item"><span>&#10003;</span><div><strong>Ahorro para el retiro:</strong> prioriza plazo largo, disciplina y posible tratamiento fiscal.</div></div>
           <div class="check-item"><span>&#10003;</span><div><strong>Educacion:</strong> busca una fecha clara de uso y liquidez alineada a la meta.</div></div>
-          <div class="check-item"><span>&#10003;</span><div><strong>Patrimonio familiar:</strong> valora proteccion, suma asegurada y continuidad del plan.</div></div>
-          <div class="check-item"><span>&#10003;</span><div><strong>Proteccion + ahorro:</strong> compara cuanto pesa el seguro vida dentro del costo total.</div></div>
-          <div class="check-item"><span>&#10003;</span><div><strong>Disciplina financiera:</strong> revisa aportacion sostenible, automatizacion y reglas de permanencia.</div></div>
+          <div class="check-item"><span>&#10003;</span><div><strong>Patrimonio familiar:</strong> valora protección, suma asegurada y continuidad del plan.</div></div>
+          <div class="check-item"><span>&#10003;</span><div><strong>Protección + ahorro:</strong> compara cuánto pesa el seguro vida dentro de la inversión total.</div></div>
+          <div class="check-item"><span>&#10003;</span><div><strong>Disciplina financiera:</strong> revisa aportación sostenible, automatización y reglas de permanencia.</div></div>
         </div>
         <p>
-          Micro-CTA: si tienes dos o tres opciones en mente, <a href="#cotizar" class="btn btn-outline">comparalas con un asesor</a> antes de firmar.
+          Micro-CTA: si tienes dos o tres opciones en mente, <a href="#cotizar" class="btn btn-outline">compáralas con un asesor</a> antes de firmar.
         </p>
 
-        <div class="image-slot">
-          <div>
-            <strong>Espacio para imagen</strong>
-            <br />
-            Sugerencia: tabla comparativa de plan retiro, seguro dotal y ahorro inversion.
-          </div>
+        <div class="cotizador-inline-hero">
+          <span class="cotizador-inline-tag">Tu plan · Tu ritmo</span>
+          <h3>Construye tu <em>futuro</em><br />y protege a los <em>tuyos</em></h3>
+          <p>Dise&ntilde;a en menos de 2 minutos tu plan de ahorro y protecci&oacute;n. Sin presiones, sin llamadas, a tu ritmo.</p>
+          <a class="cotizador-inline-button" href="cotizador-publico-webapp.html">Comenzar mi plan →</a>
+          <p class="cotizador-inline-privacy">Tu informaci&oacute;n es privada y segura</p>
         </div>
       </section>
 
                   <section class="section" id="elegir">
-        <h2>&iquest;Como elegir el mejor seguro de ahorro?</h2>
+        <h2>&iquest;Cómo elegir el mejor seguro de ahorro?</h2>
         <p>
           El mejor plan no siempre es el de mayor rendimiento prometido, sino el que encaja con tu meta,
-          tu presupuesto, tu plazo y tu necesidad real de proteccion financiera. En un seguro de ahorro en Mexico,
-          la mejor decision suele ser la que puedes sostener, entender y aprovechar durante anos.
+          tu presupuesto, tu plazo y tu necesidad real de protección financiera. En un seguro de ahorro en México,
+          la mejor decisión suele ser la que puedes sostener, entender y aprovechar durante años.
         </p>
 
         <div class="checklist">
-          <div class="check-item"><span>&#10003;</span><div>Elige una aportacion que si puedas sostener a largo plazo.</div></div>
-          <div class="check-item"><span>&#10003;</span><div>Define si tu prioridad es retiro, educacion, patrimonio o proteccion con seguro vida.</div></div>
+          <div class="check-item"><span>&#10003;</span><div>Elige una aportación que sí puedas sostener a largo plazo.</div></div>
+          <div class="check-item"><span>&#10003;</span><div>Define si tu prioridad es retiro, educación, patrimonio o protección con seguro vida.</div></div>
           <div class="check-item"><span>&#10003;</span><div>Pregunta por liquidez, rescate, penalizaciones y capital garantizado si aplica.</div></div>
-          <div class="check-item"><span>&#10003;</span><div>Revisa beneficios fiscales, costos, suma asegurada y condiciones de permanencia.</div></div>
+          <div class="check-item"><span>&#10003;</span><div>Revisa beneficios fiscales, inversiones, suma asegurada y condiciones de permanencia.</div></div>
           <div class="check-item"><span>&#10003;</span><div>Haz una comparativa entre varias aseguradoras antes de decidir.</div></div>
         </div>
       </section>
@@ -825,19 +891,19 @@
           <div class="mini-card">
             <div class="icon">1</div>
             <h4>Contratar solo por rendimiento</h4>
-            <p>Una proyeccion atractiva no sirve si no entiendes condiciones, costos, proteccion y sostenibilidad del plan.</p>
+            <p>Una proyección atractiva no sirve si no entiendes condiciones, inversiones, protección y sostenibilidad del plan.</p>
           </div>
 
           <div class="mini-card">
             <div class="icon">2</div>
-            <h4>No revisar penalizaciones por cancelacion</h4>
-            <p>Salir antes del plazo puede afectar el valor acumulado; siempre valida costos, rescates y condiciones.</p>
+            <h4>No revisar penalizaciones por cancelación</h4>
+            <p>Salir antes del plazo puede afectar el valor acumulado; siempre valida inversiones, rescates y condiciones.</p>
           </div>
 
           <div class="mini-card">
             <div class="icon">3</div>
             <h4>Elegir un plazo que no se puede sostener</h4>
-            <p>Si la aportacion compromete tu flujo, el plan se vuelve fragil. Es mejor crecer gradualmente que abandonar.</p>
+            <p>Si la aportación compromete tu flujo, el plan se vuelve frágil. Es mejor crecer gradualmente que abandonar.</p>
           </div>
         </div>
         <p>
@@ -852,46 +918,46 @@
         <div class="faq-item open">
           <button class="faq-question">&iquest;Conviene contratar un seguro de ahorro?<span>+</span></button>
           <div class="faq-answer">
-            <p>Si puede convenir si buscas disciplina financiera, proteccion y una meta clara de mediano o largo plazo. No es ideal para todos; depende de tu perfil, horizonte y capacidad de aportacion.</p>
+            <p>Sí puede convenir si buscas disciplina financiera, protección y una meta clara de mediano o largo plazo. No es ideal para todos; depende de tu perfil, horizonte y capacidad de aportación.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-question">&iquest;Cual es el mejor seguro de ahorro en Mexico?<span>+</span></button>
+          <button class="faq-question">&iquest;Cuál es el mejor seguro de ahorro en México?<span>+</span></button>
           <div class="faq-answer">
-            <p>El mejor seguro de ahorro en Mexico es el que se adapta a tu edad, meta, plazo, presupuesto y necesidad de proteccion financiera. Por eso conviene comparar seguros de ahorro antes de firmar.</p>
+            <p>El mejor seguro de ahorro en México es el que se adapta a tu edad, meta, plazo, presupuesto y necesidad de protección financiera. Por eso conviene comparar seguros de ahorro antes de firmar.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-question">&iquest;Que diferencia hay entre seguro de ahorro y seguro de vida?<span>+</span></button>
+          <button class="faq-question">&iquest;Qué diferencia hay entre seguro de ahorro y seguro de vida?<span>+</span></button>
           <div class="faq-answer">
-            <p>El seguro de vida prioriza la proteccion por fallecimiento; el seguro de ahorro prioriza la acumulacion de capital e integra proteccion como parte del plan. Algunos productos mezclan ambos componentes.</p>
+            <p>El seguro de vida prioriza la protección por fallecimiento; el seguro de ahorro prioriza la acumulación de capital e integra protección como parte del plan. Algunos productos mezclan ambos componentes.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">&iquest;Puedo retirar mi dinero antes del plazo?<span>+</span></button>
           <div class="faq-answer">
-            <p>Depende del producto. Algunos permiten rescates parciales o totales, pero puede haber penalizaciones, cargos o ajustes en el valor acumulado. Siempre revisa esa clausula antes de contratar.</p>
+            <p>Depende del producto. Algunos permiten rescates parciales o totales, pero puede haber penalizaciones, cargos o ajustes en el valor acumulado. Siempre revisa esa cláusula antes de contratar.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">&iquest;Un seguro de ahorro es deducible de impuestos?<span>+</span></button>
           <div class="faq-answer">
-            <p>Algunos planes pueden tener beneficios fiscales, pero no aplica de forma absoluta a todos los productos. Debes revisar el tipo de poliza, el objetivo del plan y tu regimen fiscal antes de asumirlo.</p>
+            <p>Algunos planes pueden tener beneficios fiscales, pero no aplica de forma absoluta a todos los productos. Debes revisar el tipo de póliza, el objetivo del plan y tu régimen fiscal antes de asumirlo.</p>
           </div>
         </div>
       </section>
 
                   <section class="cta" id="cotizar">
         <div>
-          <h2>Compara opciones de seguro de ahorro segun tu edad, meta y presupuesto</h2>
+          <h2>Compara opciones de seguro de ahorro según tu edad, meta y presupuesto</h2>
           <p>
-            Recibe una cotizacion personalizada segun tu meta, plazo, presupuesto
-            y el tipo de proteccion financiera que buscas construir. Costos, rendimientos y beneficios fiscales
-            pueden variar segun aseguradora, edad, plazo, suma asegurada y perfil del contratante.
+            Recibe una proyección personalizada según tu meta, plazo, presupuesto
+            y el tipo de protección financiera que buscas construir. Inversiones, rendimientos y beneficios fiscales
+            pueden variar según aseguradora, edad, plazo, suma asegurada y perfil del contratante.
           </p>
           <a href="https://wa.me/5219990000000" class="btn btn-primary">Hablar con un asesor</a>
         </div>
@@ -900,13 +966,13 @@
           <input type="text" id="name" placeholder="Nombre completo" required />
           <input type="tel" id="phone" placeholder="WhatsApp" required />
           <select id="type" required>
-            <option value="">&iquest;Que objetivo quieres cotizar?</option>
+            <option value="">&iquest;Qué objetivo quieres cotizar?</option>
             <option>Plan retiro</option>
             <option>Seguro de ahorro familiar</option>
-            <option>Ahorro inversion con proteccion</option>
+            <option>Ahorro inversión con protección</option>
           </select>
           <textarea id="message" rows="4" placeholder="Meta, plazo y presupuesto aproximado"></textarea>
-          <button type="submit">Solicitar cotizacion</button>
+          <button type="submit">Solicitar proyección</button>
         </form>
       </section>
     </article>
@@ -914,7 +980,7 @@
 
   <footer class="footer">
     <div class="container">
-      &copy; 2026 · Guia completa de seguros de ahorro y plan de retiro
+      &copy; 2026 · Guía completa de seguros de ahorro y plan de retiro
     </div>
   </footer>
 
@@ -970,5 +1036,3 @@
   </script>
 </body>
 </html>
-
-
