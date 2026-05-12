@@ -68,6 +68,9 @@ RewriteRule ^Fianzas/fidelidad\.html$ /fianza-de-fidelidad [R=301,L]
 RewriteCond %{THE_REQUEST} \s/+fianzas\.html[\s?] [NC]
 RewriteRule ^fianzas\.html$ /fianzas [R=301,L]
 
+RewriteCond %{THE_REQUEST} \s/+carsa-fianzas\.html[\s?] [NC]
+RewriteRule ^carsa-fianzas\.html$ /carsa-fianzas [R=301,L]
+
 RewriteCond %{THE_REQUEST} \s/+recursos\.html[\s?] [NC]
 RewriteRule ^recursos\.html$ /recursos [R=301,L]
 
@@ -104,12 +107,13 @@ RewriteRule ^seguro-medico$ /gastos-medicos-mayores [R=301,L]
 # =========================
 # Quitar slash final de URLs públicas
 # =========================
-RewriteRule ^(contacto|mapa-del-sitio|plan-personal-de-retiro|seguro-de-ahorro|seguro-de-vida|gastos-medicos-mayores|seguro-medico|seguro-de-hogar|seguro-de-auto|seguro-empresarial|fianzas|recursos|agradecimiento|unete|seguro-ahorro-precios-mexico|seguro-ahorro-en-merida-yucatan|cotizar-seguro-ahorro-merida|cotizador-publico-webapp|blog-seguro-ahorro|blog-guia-seguro-ahorro|fianza-de-cumplimiento|fianza-de-anticipo|fianza-de-vicios-ocultos|fianza-de-credito|fianza-de-fidelidad)/$ /$1 [R=301,L,NC]
+RewriteRule ^(contacto|mapa-del-sitio|plan-personal-de-retiro|seguro-de-ahorro|seguro-de-vida|gastos-medicos-mayores|seguro-medico|seguro-de-hogar|seguro-de-auto|seguro-empresarial|fianzas|carsa-fianzas|recursos|agradecimiento|unete|seguro-ahorro-precios-mexico|seguro-ahorro-en-merida-yucatan|cotizar-seguro-ahorro-merida|cotizador-publico-webapp|blog-seguro-ahorro|blog-guia-seguro-ahorro|fianza-de-cumplimiento|fianza-de-anticipo|fianza-de-vicios-ocultos|fianza-de-credito|fianza-de-fidelidad)/$ /$1 [R=301,L,NC]
 
 # =========================
 # Hub pages con prioridad
 # =========================
 RewriteRule ^fianzas$ fianzas.html [L,NC]
+RewriteRule ^carsa-fianzas$ carsa-fianzas.html [L,NC]
 RewriteRule ^recursos$ recursos.html [L,NC]
 
 # =========================
