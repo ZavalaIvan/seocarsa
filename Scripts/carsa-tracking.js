@@ -34,6 +34,11 @@
   var trackedForms = {};
   var trackedScroll = {};
   var trackedTime = {};
+  var trackingState = window.__carsaTrackingState = window.__carsaTrackingState || {
+    initialized: false,
+    submittedForms: typeof WeakMap === 'function' ? new WeakMap() : null
+  };
+  var SUBMIT_DEDUP_WINDOW_MS = 1000;
 
   window.trackEvent = function (eventName, params) {
     if (!eventName) {
@@ -386,9 +391,33 @@ function getFormName(form) {
 
   function trackFormSubmit(event) {
     var form = event.target;
+    var now;
+    var lastSubmitAt;
 
     if (!form || !form.matches || !form.matches('form')) {
       return;
+    }
+
+    if (trackingState.submittedForms) {
+      now = Date.now();
+      lastSubmitAt = trackingState.submittedForms.get(form) || 0;
+
+      if (now - lastSubmitAt < SUBMIT_DEDUP_WINDOW_MS) {
+        return;
+      }
+
+      trackingState.submittedForms.set(form, now);
+    } else if (form.dataset.carsaSubmitTrackedAt) {
+      now = Date.now();
+      lastSubmitAt = Number(form.dataset.carsaSubmitTrackedAt) || 0;
+
+      if (now - lastSubmitAt < SUBMIT_DEDUP_WINDOW_MS) {
+        return;
+      }
+
+      form.dataset.carsaSubmitTrackedAt = String(now);
+    } else {
+      form.dataset.carsaSubmitTrackedAt = String(Date.now());
     }
 
     window.trackEvent('form_submit', {
@@ -473,6 +502,12 @@ function getFormName(form) {
   }
 
   function init() {
+    if (trackingState.initialized) {
+      return;
+    }
+
+    trackingState.initialized = true;
+
     patchWindowOpen();
     trackInsurancePageView();
 
