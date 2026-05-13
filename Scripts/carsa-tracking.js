@@ -36,17 +36,44 @@
   var trackedTime = {};
   var trackingState = window.__carsaTrackingState = window.__carsaTrackingState || {
     initialized: false,
-    submittedForms: typeof WeakMap === 'function' ? new WeakMap() : null
+    submittedForms: typeof WeakMap === 'function' ? new WeakMap() : null,
+    formSubmitKeys: {}
   };
-  var SUBMIT_DEDUP_WINDOW_MS = 1000;
+  var SUBMIT_DEDUP_WINDOW_MS = 5000;
 
   window.trackEvent = function (eventName, params) {
+    var eventParams = params || {};
+    var now;
+    var dedupKey;
+    var lastPushAt;
+
     if (!eventName) {
       return;
     }
 
+    if (eventName === 'form_submit') {
+      now = Date.now();
+      dedupKey = [
+        eventParams.form_name || '',
+        eventParams.page_path || '',
+        eventParams.location || '',
+        eventParams.insurance_type || ''
+      ].join('|');
+      lastPushAt = trackingState.formSubmitKeys[dedupKey] || 0;
+
+      if (now - lastPushAt < SUBMIT_DEDUP_WINDOW_MS) {
+        if (window.CARSA_TRACKING_DEBUG === true && window.console && window.console.debug) {
+          window.console.debug('[CARSA Tracking] Duplicate form_submit blocked', dedupKey);
+        }
+
+        return;
+      }
+
+      trackingState.formSubmitKeys[dedupKey] = now;
+    }
+
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push(Object.assign({ event: eventName }, params || {}));
+    window.dataLayer.push(Object.assign({ event: eventName }, eventParams));
   };
 
   function cleanText(value) {
