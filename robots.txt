@@ -1,3 +1,27 @@
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
 User-agent: *
 Allow: /
 Disallow: /jocms/
@@ -7,27 +31,5 @@ Disallow: /error_log
 Disallow: /test-mail.php
 Disallow: /test-phpmailer.php
 Disallow: /info.php
-
-# Bots de busqueda e IA permitidos explicitamente
-User-agent: Googlebot
-Allow: /
-
-User-agent: Googlebot-News
-Allow: /
-
-User-agent: Googlebot-Image
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: GPTBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
 
 Sitemap: https://carsaseguros.mx/sitemap.xml
