@@ -7,6 +7,19 @@
   var passiveOptions = { passive: true, once: true };
   var listeners = ['pointerdown', 'keydown', 'touchstart', 'scroll', 'mousemove'];
 
+  function hasExistingTagManager() {
+    var dataLayer = window.dataLayer || [];
+    var hasGtmEvent = Array.prototype.some.call(dataLayer, function (item) {
+      return item && item.event === 'gtm.js';
+    });
+
+    return hasGtmEvent || !!document.querySelector('script[src*="googletagmanager.com/gtm.js"]');
+  }
+
+  if (hasExistingTagManager()) {
+    return;
+  }
+
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () {
     window.dataLayer.push(arguments);

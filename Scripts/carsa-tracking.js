@@ -37,9 +37,11 @@
   var trackingState = window.__carsaTrackingState = window.__carsaTrackingState || {
     initialized: false,
     submittedForms: typeof WeakMap === 'function' ? new WeakMap() : null,
-    formSubmitKeys: {}
+    formSubmitKeys: {},
+    lastFormSubmitAt: 0
   };
   var SUBMIT_DEDUP_WINDOW_MS = 5000;
+  var WHATSAPP_AFTER_SUBMIT_SUPPRESS_MS = 3000;
 
   window.trackEvent = function (eventName, params) {
     var eventParams = params || {};
@@ -320,6 +322,10 @@ function getFormName(form) {
       return;
     }
 
+    if (element.closest('form') && element.matches('button[type="submit"], button:not([type])')) {
+      return;
+    }
+
     var href = element.getAttribute('href') || '';
     var text = cleanText(element.innerText || element.textContent || element.getAttribute('aria-label'));
     var location = getLocation(element);
@@ -425,8 +431,9 @@ function getFormName(form) {
       return;
     }
 
+    now = Date.now();
+
     if (trackingState.submittedForms) {
-      now = Date.now();
       lastSubmitAt = trackingState.submittedForms.get(form) || 0;
 
       if (now - lastSubmitAt < SUBMIT_DEDUP_WINDOW_MS) {
@@ -435,7 +442,6 @@ function getFormName(form) {
 
       trackingState.submittedForms.set(form, now);
     } else if (form.dataset.carsaSubmitTrackedAt) {
-      now = Date.now();
       lastSubmitAt = Number(form.dataset.carsaSubmitTrackedAt) || 0;
 
       if (now - lastSubmitAt < SUBMIT_DEDUP_WINDOW_MS) {
@@ -444,8 +450,10 @@ function getFormName(form) {
 
       form.dataset.carsaSubmitTrackedAt = String(now);
     } else {
-      form.dataset.carsaSubmitTrackedAt = String(Date.now());
+      form.dataset.carsaSubmitTrackedAt = String(now);
     }
+
+    trackingState.lastFormSubmitAt = now;
 
     window.trackEvent('form_submit', {
       form_name: getFormName(form),
@@ -513,6 +521,10 @@ function getFormName(form) {
 
     window.open = function (url) {
       if (isWhatsappUrl(url)) {
+        if (Date.now() - (trackingState.lastFormSubmitAt || 0) < WHATSAPP_AFTER_SUBMIT_SUPPRESS_MS) {
+          return originalOpen.apply(window, arguments);
+        }
+
         window.trackEvent('click_whatsapp', {
           location: 'script',
           page_path: getPagePath(),
