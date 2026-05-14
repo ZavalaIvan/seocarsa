@@ -439,6 +439,7 @@
     .form-card p { margin: 0 0 18px; }
 
     .form-card input,
+    .form-card select,
     .form-card textarea {
       width: 100%;
       min-height: 54px;
@@ -1176,6 +1177,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
+    <section class="section-sm">
+      <div class="container">
+        <span class="eyebrow">Lectura comercial</span>
+        <h2 class="section-title">C&oacute;mo interpretar un precio antes de contratar</h2>
+        <p class="section-subtitle">
+          El precio mensual solo es una parte de la decisi&oacute;n. Antes de elegir un seguro de ahorro, conviene revisar
+          qu&eacute; recibes a cambio de esa aportaci&oacute;n y qu&eacute; condiciones tendr&iacute;as si cambian tus planes.
+        </p>
+
+        <div class="policy-checklist">
+          <article class="policy-item">
+            <h3>Capital objetivo</h3>
+            <p>Compara cu&aacute;nto podr&iacute;as construir al final del plazo, no solo cu&aacute;nto pagas cada mes.</p>
+          </article>
+          <article class="policy-item">
+            <h3>Flexibilidad</h3>
+            <p>Pregunta qu&eacute; pasa si necesitas pausar, rescatar parcialmente o ajustar tu aportaci&oacute;n.</p>
+          </article>
+          <article class="policy-item">
+            <h3>Protecci&oacute;n incluida</h3>
+            <p>Algunos planes integran seguro de vida o beneficios adicionales que cambian el valor real de la propuesta.</p>
+          </article>
+          <article class="policy-item">
+            <h3>Fiscalidad</h3>
+            <p>Confirma si el producto puede tener beneficios fiscales y bajo qu&eacute; condiciones aplican para tu caso.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section factors-section">
       <div class="container">
         <span class="eyebrow">Factores</span>
@@ -1467,7 +1498,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p>Recibe asesoría personalizada por WhatsApp y conoce la aportación real según tu perfil.</p>
           <form id="whatsapp-quote-form">
             <input id="quote-name" name="nombre" type="text" placeholder="Nombre" required />
+            <input id="quote-phone" name="telefono" type="tel" placeholder="WhatsApp o celular" required />
             <input id="quote-email" name="correo" type="email" placeholder="Correo" required />
+            <input id="quote-state" name="estado" type="text" placeholder="Estado donde resides" required />
+            <select id="quote-goal" name="objetivo" required>
+              <option value="">Objetivo principal</option>
+              <option value="Retiro">Retiro</option>
+              <option value="Educacion de hijos">Educaci&oacute;n de hijos</option>
+              <option value="Patrimonio familiar">Patrimonio familiar</option>
+              <option value="Ahorro fiscal">Ahorro fiscal</option>
+              <option value="Comparar opciones">Comparar opciones</option>
+            </select>
+            <select id="quote-budget" name="aportacion" required>
+              <option value="">Rango de aportaci&oacute;n mensual</option>
+              <option value="Menos de $2,000 MXN">Menos de $2,000 MXN</option>
+              <option value="$2,000 a $4,500 MXN">$2,000 a $4,500 MXN</option>
+              <option value="$4,500 a $8,000 MXN">$4,500 a $8,000 MXN</option>
+              <option value="Mas de $8,000 MXN">M&aacute;s de $8,000 MXN</option>
+              <option value="Aun no lo se">A&uacute;n no lo s&eacute;</option>
+            </select>
             <textarea id="quote-message" name="mensaje" placeholder="Hola Carsa! me interesa cotizar mi seguro de ahorro." required></textarea>
             <button class="btn btn-primary" type="submit">Cotizar por WhatsApp</button>
           </form>
@@ -1610,12 +1659,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       event.preventDefault();
 
       var nombre = document.getElementById("quote-name").value.trim();
+      var telefono = document.getElementById("quote-phone").value.trim();
       var correo = document.getElementById("quote-email").value.trim();
+      var estado = document.getElementById("quote-state").value.trim();
+      var objetivo = document.getElementById("quote-goal").value;
+      var aportacion = document.getElementById("quote-budget").value;
       var mensaje = document.getElementById("quote-message").value.trim();
       var whatsappMessage = [
         "Hola CARSA, quiero cotizar mi seguro de ahorro.",
         "Nombre: " + nombre,
+        "WhatsApp: " + telefono,
         "Correo: " + correo,
+        "Estado: " + estado,
+        "Objetivo: " + objetivo,
+        "Aportacion mensual estimada: " + aportacion,
         "Mensaje: " + mensaje
       ].join("\n");
 
