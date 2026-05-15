@@ -641,7 +641,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           en una estrategia con reglas claras de plazo, beneficiarios, capital objetivo y respaldo de aseguradora.
           A diferencia del ahorro tradicional, aquí existe estructura y seguimiento; a diferencia de una inversión pura,
           suele haber componentes de seguro vida y condiciones de protección; y a diferencia de un seguro de vida simple,
-          el objetivo principal es acumular capital.
+          el objetivo principal es acumular capital. Si tu meta principal es jubilaci&oacute;n, tambi&eacute;n puedes revisar la p&aacute;gina de <a href="/plan-personal-de-retiro">plan personal de retiro</a>.
         </p>
 
         <div class="highlight">
@@ -975,12 +975,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             y el tipo de protección financiera que buscas construir. Inversiones, rendimientos y beneficios fiscales
             pueden variar según aseguradora, edad, plazo, suma asegurada y perfil del contratante.
           </p>
-          <a href="https://wa.me/5219990000000" class="btn btn-primary">Hablar con un asesor</a>
+          <a href="https://wa.me/5219992653187" class="btn btn-primary">Hablar con un asesor</a>
         </div>
 
         <form class="quote-form" onsubmit="sendQuote(event)">
           <input type="text" id="name" placeholder="Nombre completo" required />
           <input type="tel" id="phone" placeholder="WhatsApp" required />
+          <input type="email" id="email" placeholder="Correo electrónico" required />
           <select id="type" required>
             <option value="">&iquest;Qué objetivo quieres cotizar?</option>
             <option>Plan retiro</option>
@@ -1035,19 +1036,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       const name = document.getElementById("name").value;
       const phone = document.getElementById("phone").value;
+      const email = document.getElementById("email").value;
       const type = document.getElementById("type").value;
       const message = document.getElementById("message").value;
 
-      const whatsappNumber = "5219990000000";
+      const whatsappNumber = "5219992653187";
 
       const text =
         `Hola, quiero cotizar un seguro de ahorro.%0A%0A` +
         `Nombre: ${name}%0A` +
         `WhatsApp: ${phone}%0A` +
+        `Correo: ${email}%0A` +
         `Objetivo: ${type}%0A` +
         `Comentarios: ${message}`;
 
-      window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank");
+      const formData = new FormData();
+      formData.append("formulario", "Seguro de ahorro");
+      formData.append("name", name.trim());
+      formData.append("email", email.trim());
+      formData.append("telefono", phone.trim());
+      formData.append("objetivo", type);
+      formData.append("mensaje", message.trim());
+      formData.append("page", "blog-guia-seguro-ahorro");
+
+      fetch("/enviar.php", { method: "POST", body: formData })
+        .then(response => {
+          if (!response.ok) throw new Error("Error al enviar");
+          window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank");
+          event.target.reset();
+        })
+        .catch(() => {
+          alert("No se pudo enviar tu solicitud. Intenta nuevamente o escríbenos por WhatsApp.");
+        });
     }
   </script>
 </body>

@@ -9,6 +9,13 @@
   var ORG_ID = SITE_URL + '/#organization';
   var BUSINESS_ID = SITE_URL + '/#insurance-agency';
   var WEBSITE_ID = SITE_URL + '/#website';
+  var GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/pk8kE9BM5KyEEavD7';
+  var SOCIAL_PROFILES = [
+    'https://www.facebook.com/CarsaSegurosyFianzas',
+    'https://www.instagram.com/grupocarsa/',
+    'https://www.teamcarsa.com/',
+    GOOGLE_MAPS_URL
+  ];
 
   function toArray(value) {
     return Array.isArray(value) ? value : [value];
@@ -68,6 +75,87 @@
     return cleanText(h1 && h1.textContent) || cleanText(document.title) || 'CARSA Seguros y Fianzas';
   }
 
+  function buildBusinessNode() {
+    return {
+      '@type': ['LocalBusiness', 'InsuranceAgency'],
+      '@id': BUSINESS_ID,
+      name: 'CARSA Seguros y Fianzas',
+      alternateName: 'CARSA Seguros',
+      legalName: 'Consultores Asociados en Riesgos, Agente de Seguros y de Fianzas, S.A. de C.V.',
+      url: SITE_URL + '/',
+      logo: SITE_URL + '/Content/img/home/Logo.webp',
+      image: SITE_URL + '/Content/img/home/OG_Meta.webp',
+      description: 'Agencia de seguros y fianzas en Mexico con asesoria en linea para personas y empresas.',
+      telephone: '+52-999-944-4999',
+      email: 'contacto@segurosfianzas.com',
+      priceRange: '$$',
+      hasMap: GOOGLE_MAPS_URL,
+      openingHours: 'Mo-Fr 08:00-17:00',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'C. 60 326, Gonzalo Guerrero',
+        addressLocality: 'Merida',
+        addressRegion: 'Yucatan',
+        postalCode: '97118',
+        addressCountry: 'MX'
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 21.021830761301565,
+        longitude: -89.62525664766997
+      },
+      areaServed: {
+        '@type': 'Country',
+        name: 'Mexico'
+      },
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          contactType: 'customer service',
+          telephone: '+52-999-944-4999',
+          email: 'contacto@segurosfianzas.com',
+          areaServed: 'MX',
+          availableLanguage: ['es']
+        },
+        {
+          '@type': 'ContactPoint',
+          contactType: 'WhatsApp',
+          telephone: '+52-1-999-265-3187',
+          areaServed: 'MX',
+          availableLanguage: ['es']
+        }
+      ],
+      sameAs: SOCIAL_PROFILES,
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '08:00',
+          closes: '17:00'
+        }
+      ],
+      identifier: [
+        {
+          '@type': 'PropertyValue',
+          name: 'Google Maps Place ID',
+          value: 'ChIJyf4tBdJ2Vo8REw_u_bkm3YY'
+        }
+      ],
+      additionalProperty: [
+        {
+          '@type': 'PropertyValue',
+          name: 'Plus Code',
+          value: '29CF+MV Merida, Yucatan'
+        },
+        {
+          '@type': 'PropertyValue',
+          name: 'Place ID',
+          value: 'ChIJyf4tBdJ2Vo8REw_u_bkm3YY'
+        }
+      ]
+    };
+  }
+
   function buildBaseGraph(types) {
     var graph = [];
 
@@ -78,34 +166,12 @@
         name: 'CARSA Seguros y Fianzas',
         url: SITE_URL + '/',
         logo: SITE_URL + '/Content/img/home/Logo.webp',
-        sameAs: [
-          'https://www.facebook.com/share/1KgjejV4SG/',
-          'https://www.instagram.com/grupocarsa'
-        ]
+        sameAs: SOCIAL_PROFILES
       });
     }
 
     if (!types.InsuranceAgency && !types.LocalBusiness && !types.FinancialService) {
-      graph.push({
-        '@type': ['LocalBusiness', 'InsuranceAgency'],
-        '@id': BUSINESS_ID,
-        name: 'CARSA Seguros y Fianzas',
-        url: SITE_URL + '/',
-        image: SITE_URL + '/Content/img/home/OG_Meta.webp',
-        telephone: '+52-999-944-4999',
-        areaServed: {
-          '@type': 'Country',
-          name: 'Mexico'
-        },
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: 'Calle 60 326, Gonzalo Guerrero',
-          addressLocality: 'Merida',
-          addressRegion: 'Yucatan',
-          postalCode: '97118',
-          addressCountry: 'MX'
-        }
-      });
+      graph.push(buildBusinessNode());
     }
 
     if (!types.WebSite) {

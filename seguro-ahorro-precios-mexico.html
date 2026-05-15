@@ -1110,7 +1110,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </p>
           <p>
             Por eso, dos personas pueden aportar cantidades distintas aunque contraten un producto similar:
-            todo depende del objetivo patrimonial y del nivel de <strong>protecci&oacute;n financiera</strong> que buscan.
+            todo depende del objetivo patrimonial y del nivel de <strong>protecci&oacute;n financiera</strong> que buscan. Si est&aacute;s comparando con enfoque de retiro, complementa esta lectura con la p&aacute;gina de <a href="/plan-personal-de-retiro">plan personal de retiro</a>.
           </p>
         </div>
 
@@ -1432,14 +1432,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="section faq-section">
   <div class="container">
     <span class="eyebrow">Preguntas frecuentes</span>
-    <h2 class="section-title">Dudas comunes sobre seguros ahorro en México</h2>
+    <h2 class="section-title">Dudas comunes sobre seguros ahorro en Mexico</h2>
     <p class="section-subtitle">
       Antes de contratar un seguro de ahorro, estas son algunas de las preguntas más importantes que conviene resolver.
     </p>
 
     <div class="faq-list">
       <article class="faq-item">
-        <h3>Qué inversión requiere un seguro de ahorro en México?</h3>
+        <h3>Qué inversión requiere un seguro de ahorro en Mexico?</h3>
         <p>La inversión puede empezar desde aproximadamente $1,200 pesos mensuales y subir según edad, plazo, monto objetivo, aseguradora y beneficios incluidos.</p>
       </article>
 
@@ -1567,7 +1567,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="col-12">
               <p id="footer-correo" class="p-md"><span class="bold">Correo:</span> <a href="mailto:contacto@segurosfianzas.com">contacto@segurosfianzas.com</a></p>
               <p id="footer-telefono" class="p-md"><span class="bold">Tel&eacute;fono:</span> <a href="tel:+529999444999">(999) 944 4999</a></p>
-              <p id="footer-whatsapp" class="p-md"><span class="bold">WhatsApp:</span> <a href="https://wa.me/529992653187" target="_blank" rel="noopener">(999) 265 3187</a></p>
+              <p id="footer-whatsapp" class="p-md"><span class="bold">WhatsApp:</span> <a href="https://wa.me/5219992653187" target="_blank" rel="noopener">(999) 265 3187</a></p>
               <div class="col-12 redes-sociales mt-3">
                 <span class="bold">S&iacute;guenos:</span>
                 <a href="https://www.facebook.com/share/1KgjejV4SG/" target="_blank" class="social-icon" rel="noopener" aria-label="Facebook de CARSA Seguros y Fianzas">
@@ -1631,7 +1631,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="carsa-privacy-subtitle">Consultores Asociados en Riesgos, Agente de Seguros y de Fianzas, S.A. de C.V.<br />(CARSA Seguros y Fianzas)</p>
       <div class="carsa-privacy-section">
         <h3>1. Identidad y domicilio del responsable</h3>
-        <p>Consultores Asociados en Riesgos, Agente de Seguros y de Fianzas, S.A. de C.V., comercialmente conocida como CARSA Seguros y Fianzas, con domicilio en Calle 10 #326 por 3 y 3C, Colonia Gonzalo Guerrero, M&eacute;rida, Yucat&aacute;n, M&eacute;xico, C.P. 97115, es responsable del tratamiento de sus datos personales conforme a la Ley Federal de Protecci&oacute;n de Datos Personales en Posesi&oacute;n de los Particulares.</p>
+        <p>Consultores Asociados en Riesgos, Agente de Seguros y de Fianzas, S.A. de C.V., comercialmente conocida como CARSA Seguros y Fianzas, con domicilio en C. 60 326, Gonzalo Guerrero, 97118 M&eacute;rida, Yucat&aacute;n, M&eacute;xico, es responsable del tratamiento de sus datos personales conforme a la Ley Federal de Protecci&oacute;n de Datos Personales en Posesi&oacute;n de los Particulares.</p>
       </div>
       <div class="carsa-privacy-section">
         <h3>2. Datos personales que recabamos</h3>
@@ -1676,7 +1676,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         "Mensaje: " + mensaje
       ].join("\n");
 
-      window.open("https://wa.me/529992653187?text=" + encodeURIComponent(whatsappMessage), "_blank");
+      var formData = new FormData(this);
+      formData.append("formulario", "Seguro de ahorro");
+      formData.append("email", correo);
+      formData.append("page", "seguro-ahorro-precios-mexico");
+
+      fetch("/enviar.php", { method: "POST", body: formData })
+        .then(function (response) {
+          if (!response.ok) throw new Error("Error al enviar");
+          window.open("https://wa.me/5219992653187?text=" + encodeURIComponent(whatsappMessage), "_blank");
+          event.target.reset();
+        })
+        .catch(function () {
+          alert("No se pudo enviar tu solicitud. Intenta nuevamente o escríbenos por WhatsApp.");
+        });
     });
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -1744,7 +1757,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Qué inversión requiere un seguro de ahorro en México?",
+      "name": "Qué inversión requiere un seguro de ahorro en Mexico?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "La inversión puede empezar desde aproximadamente $1,200 pesos mensuales y subir según edad, plazo, monto objetivo, aseguradora y beneficios incluidos."

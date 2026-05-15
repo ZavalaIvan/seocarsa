@@ -24,7 +24,27 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' || empty($_POST)) {
     exit('Solicitud inválida');
 }
 
-$email = isset($_POST['email']) ? trim((string) $_POST['email']) : '';
+function post_value($keys) {
+    foreach ($keys as $key) {
+        if (isset($_POST[$key])) {
+            return trim((string) $_POST[$key]);
+        }
+    }
+
+    return '';
+}
+
+function h($value) {
+    return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
+}
+
+function append_field(&$message, $label, $value) {
+    if ($value !== '') {
+        $message .= '<p><strong>'.h($label).':</strong> '.h($value).'</p>';
+    }
+}
+
+$email = post_value(['email', 'correo', 'postCorreo_c']);
 if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     http_response_code(400);
     exit('Correo electrónico inválido');
@@ -33,7 +53,12 @@ if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 /*********************************************************
  * DETECTAR TIPO DE FORMULARIO
  *********************************************************/
-if (isset($_POST['modelo'], $_POST['anio'], $_POST['estado'])) {
+$formulario = strtolower(post_value(['formulario', 'producto', 'page', 'pagina']));
+
+if (strpos($formulario, 'ahorro') !== false || strpos($formulario, 'ppr') !== false || strpos($formulario, 'retiro') !== false) {
+    $tipo_form = 'ahorro';
+
+} elseif (isset($_POST['modelo'], $_POST['anio'], $_POST['estado'])) {
     $tipo_form = 'auto';
 
 } elseif (isset($_POST['sexo'], $_POST['fumador'])) {
@@ -41,6 +66,9 @@ if (isset($_POST['modelo'], $_POST['anio'], $_POST['estado'])) {
     $tipo_form = 'vida';
 
 } elseif (isset($_POST['edad'], $_POST['monto'])) {
+    $tipo_form = 'ahorro';
+
+} elseif (isset($_POST['postEdad'], $_POST['postMontoAportacion'])) {
     $tipo_form = 'ahorro';
 
 } elseif (isset($_POST['codigo_postal'], $_POST['tipo_cliente'])) {
@@ -103,14 +131,20 @@ switch ($tipo_form) {
     break;
 
     case 'ahorro':
-        $subject = 'Nueva solicitud de cotización (Ahorro) - Carsa Seguros';
-        $message = "
-            <h2>Plan de Ahorro</h2>
-            <p><strong>Correo:</strong> ".htmlspecialchars($email)."</p>
-            <p><strong>Teléfono:</strong> ".htmlspecialchars($_POST['telefono'])."</p>
-            <p><strong>Edad:</strong> ".htmlspecialchars($_POST['edad'])."</p>
-            <p><strong>Monto:</strong> $".htmlspecialchars($_POST['monto'])."</p>
-        ";
+        $subject = 'Nueva solicitud de cotizacion (Ahorro/PPR) - Carsa Seguros';
+        $message = '<h2>Plan de Ahorro / PPR</h2>';
+        append_field($message, 'Nombre', post_value(['name', 'nombre', 'postNombre_c']));
+        append_field($message, 'Apellido paterno', post_value(['postApellidoPa_c']));
+        append_field($message, 'Apellido materno', post_value(['postApellidoMa_c']));
+        append_field($message, 'Correo', $email);
+        append_field($message, 'Telefono / WhatsApp', post_value(['telefono', 'phone', 'whatsapp', 'postCelular_c']));
+        append_field($message, 'Edad', post_value(['edad', 'age', 'postEdad']));
+        append_field($message, 'Monto / aportacion', post_value(['monto', 'aportacion', 'budget', 'postMontoAportacion']));
+        append_field($message, 'Frecuencia de pago', post_value(['postFrecuenciaPago']));
+        append_field($message, 'Objetivo', post_value(['objetivo', 'profile', 'type', 'insuranceFor', 'interest', 'coverage']));
+        append_field($message, 'Estado', post_value(['estado']));
+        append_field($message, 'Mensaje', post_value(['mensaje', 'message']));
+        append_field($message, 'Pagina', post_value(['page', 'pagina']));
     break;
 
     case 'vida':
