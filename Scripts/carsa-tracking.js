@@ -49,6 +49,7 @@
     initialized: false,
     submittedForms: typeof WeakMap === 'function' ? new WeakMap() : null,
     formSubmitKeys: {},
+    formSubmitPageKeys: {},
     formErrorKeys: {},
     formSuccessKeys: {},
     lastFormSubmitAt: 0,
@@ -65,10 +66,16 @@
     var eventParams = params || {};
     var now;
     var dedupKey;
+    var pageDedupKey;
     var lastPushAt;
+    var lastPagePushAt;
 
     if (!eventName) {
       return;
+    }
+
+    if (!eventParams.tracking_source) {
+      eventParams.tracking_source = 'carsa_tracking';
     }
 
     if (eventName === 'form_submit') {
@@ -89,7 +96,22 @@
         return;
       }
 
+      pageDedupKey = [
+        eventParams.page_path || '',
+        eventParams.insurance_type || ''
+      ].join('|');
+      lastPagePushAt = trackingState.formSubmitPageKeys[pageDedupKey] || 0;
+
+      if (now - lastPagePushAt < 1000) {
+        if (window.CARSA_TRACKING_DEBUG === true && window.console && window.console.debug) {
+          window.console.debug('[CARSA Tracking] Near-duplicate form_submit blocked', pageDedupKey);
+        }
+
+        return;
+      }
+
       trackingState.formSubmitKeys[dedupKey] = now;
+      trackingState.formSubmitPageKeys[pageDedupKey] = now;
     }
 
     window.dataLayer = window.dataLayer || [];
@@ -273,6 +295,10 @@
     }
 
     return 'unknown_form';
+  }
+
+  function shouldIgnoreForm(form) {
+    return !!(form && form.matches && form.matches('[data-track-ignore="true"], [data-carsa-track-ignore="true"]'));
   }
 
   function isDownloadUrl(href) {
@@ -679,6 +705,10 @@
       return;
     }
 
+    if (shouldIgnoreForm(form)) {
+      return;
+    }
+
     formName = getFormName(form);
 
     if (trackedForms[formName]) {
@@ -695,6 +725,10 @@
     var lastSubmitAt;
 
     if (!form || !form.matches || !form.matches('form')) {
+      return;
+    }
+
+    if (shouldIgnoreForm(form)) {
       return;
     }
 
@@ -735,6 +769,10 @@
       return;
     }
 
+    if (shouldIgnoreForm(form)) {
+      return;
+    }
+
     payload = buildFormEventPayload(form, extra);
     dedupKey = [
       payload.form_name || '',
@@ -758,6 +796,10 @@
     var now = Date.now();
 
     if (!form) {
+      return;
+    }
+
+    if (shouldIgnoreForm(form)) {
       return;
     }
 
@@ -786,6 +828,11 @@
     }
 
     form = field.form;
+
+    if (shouldIgnoreForm(form)) {
+      return;
+    }
+
     trackFormError(form, {
       error_type: 'validation',
       field_name: field.name || field.id || 'unknown_field',
