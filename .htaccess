@@ -71,6 +71,12 @@ RewriteRule ^fianzas\.html$ /fianzas [R=301,L]
 RewriteCond %{THE_REQUEST} \s/+carsa-fianzas\.html[\s?] [NC]
 RewriteRule ^carsa-fianzas\.html$ /carsa-fianzas [R=301,L]
 
+RewriteCond %{THE_REQUEST} \s/+FIANZAS-CARSA/index\.html[\s?] [NC]
+RewriteRule ^FIANZAS-CARSA/index\.html$ /carsa-fianzas [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+FIANZAS-CARSA/?[\s?] [NC]
+RewriteRule ^FIANZAS-CARSA/?$ /carsa-fianzas [R=301,L]
+
 RewriteCond %{THE_REQUEST} \s/+recursos\.html[\s?] [NC]
 RewriteRule ^recursos\.html$ /recursos [R=301,L]
 
@@ -113,7 +119,7 @@ RewriteRule ^(contacto|mapa-del-sitio|plan-personal-de-retiro|seguro-de-ahorro|s
 # Hub pages con prioridad
 # =========================
 RewriteRule ^fianzas$ fianzas.html [L,NC]
-RewriteRule ^carsa-fianzas$ carsa-fianzas.html [L,NC]
+RewriteRule ^carsa-fianzas$ FIANZAS-CARSA/index.html [L,NC]
 RewriteRule ^recursos$ recursos.html [L,NC]
 
 # =========================
