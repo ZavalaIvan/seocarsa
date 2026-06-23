@@ -411,23 +411,24 @@
     .trust-card {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      padding: 38px 22px;
+      padding: 46px 26px;
     }
 
     .trust-item {
-      padding: 0 24px;
+      min-height: 122px;
+      padding: 0 28px;
       border-right: 1px solid rgba(219, 229, 238, 0.85);
     }
 
     .trust-item:last-child { border-right: 0; }
     .trust-icon {
-      width: 46px;
-      height: 46px;
+      width: 52px;
+      height: 52px;
       object-fit: contain;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
-    .trust-item strong { display: block; margin-bottom: 8px; font-size: 1rem; color: #102c4f; }
-    .trust-item span { display: block; color: #5b6c7c; }
+    .trust-item strong { display: block; margin-bottom: 10px; font-size: 1.08rem; color: #102c4f; }
+    .trust-item span { display: block; color: #5b6c7c; font-size: 1.02rem; line-height: 1.45; }
 
     .content-block p { margin: 0 0 16px; }
 
@@ -791,7 +792,110 @@
       line-height: 1.65;
     }
 
-    .steps-grid,
+    #beneficios {
+      background: #f3f6fb;
+    }
+
+    #beneficios .section-title {
+      max-width: 980px;
+      font-size: clamp(2.5rem, 3.8vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      margin-bottom: 14px;
+    }
+
+    #beneficios .section-subtitle {
+      max-width: 980px;
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    #beneficios .mini-proof {
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    #beneficios .proof-card {
+      border-radius: 22px;
+      padding: 22px 18px 20px;
+      box-shadow: 0 10px 24px rgba(22, 46, 77, 0.08);
+    }
+
+    #beneficios .proof-icon {
+      width: 76px;
+      height: 76px;
+      margin-bottom: 14px;
+    }
+
+    #beneficios .proof-card strong {
+      margin-bottom: 10px;
+      font-size: 1.08rem;
+      line-height: 1.25;
+    }
+
+    #beneficios .proof-card p {
+      font-size: 0.98rem;
+      line-height: 1.6;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 34px;
+    }
+
+    .steps-grid-tilt {
+      perspective: 1400px;
+    }
+
+    .steps-grid-tilt .step-card {
+      position: relative;
+      overflow: hidden;
+      transform-style: preserve-3d;
+      transform: perspective(1400px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) translateY(var(--tilt-shift, 0));
+      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+      will-change: transform;
+      background: linear-gradient(160deg, #ffffff 0%, #f5faff 100%);
+    }
+
+    .steps-grid-tilt .step-card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      background: radial-gradient(circle at var(--pointer-x, 50%) var(--pointer-y, 50%), rgba(115, 185, 245, 0.28), rgba(115, 185, 245, 0.08) 22%, transparent 54%);
+      opacity: var(--glare-opacity, 0);
+      transition: opacity 220ms ease;
+      pointer-events: none;
+    }
+
+    .steps-grid-tilt .step-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.52), transparent 42%, transparent 58%, rgba(126, 187, 240, 0.12));
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .steps-grid-tilt .step-card:hover {
+      border-color: rgba(125, 181, 228, 0.85);
+      box-shadow: 0 26px 46px rgba(22, 46, 77, 0.16);
+    }
+
+    .steps-grid-tilt .step-card > * {
+      position: relative;
+      z-index: 1;
+      transform: translateZ(22px);
+    }
+
+    .steps-grid-tilt .step-card .step-number {
+      transform: translateZ(46px);
+      box-shadow: 0 14px 30px rgba(46, 125, 192, 0.18);
+    }
+
     .options-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -882,16 +986,32 @@
     }
 
     .quote-box {
-      background: rgba(255,255,255,.11);
-      border: 1px solid rgba(255,255,255,.18);
+      background: transparent;
+      border: 0;
       border-radius: 24px;
       padding: 24px;
+    }
+
+    .quote-box-image {
+      display: block;
+      width: 100%;
+      max-width: 330px;
+      height: auto;
+      margin: 0 auto 18px;
+      object-fit: contain;
     }
 
     .quote-box strong {
       display: block;
       font-size: 1.15rem;
       margin-bottom: 10px;
+    }
+
+    .quote-box p {
+      font-size: 0.95rem;
+      line-height: 1.72;
+      text-align: justify;
+      text-wrap: pretty;
     }
 
     .final-cta .btn-outline:hover,
@@ -906,10 +1026,26 @@
 
     @media (max-width: 1100px) {
       .mini-proof,
-      .steps-grid,
       .options-grid,
       .objection-grid {
         grid-template-columns: 1fr;
+      }
+
+      .steps-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .steps-grid-tilt .step-card,
+      .steps-grid-tilt .step-card::before {
+        transition: none;
+      }
+
+      .steps-grid-tilt .step-card,
+      .steps-grid-tilt .step-card > *,
+      .steps-grid-tilt .step-card .step-number {
+        transform: none;
       }
     }
 
@@ -977,99 +1113,64 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="hero-kicker">Proyecci&oacute;n r&aacute;pida en M&eacute;rida y Yucat&aacute;n</div>
-          <h1 class="section-title">Proyecci&oacute;n de seguro de ahorro en M&eacute;rida con asesor&iacute;a clara y sin compromiso</h1>
+          <div class="hero-kicker">Seguro de ahorro en M&eacute;rida y Yucat&aacute;n</div>
+          <h1 class="section-title">Cotiza y compara tu seguro de ahorro con asesor&iacute;a clara antes de decidir</h1>
           <p>
-            Recibe acompa&ntilde;amiento para comparar <strong>seguros ahorro</strong>,
-            opciones de <strong>plan retiro</strong>, <strong>seguro de vida con ahorro</strong>, plan patrimonial,
-            ahorro a largo plazo y protecci&oacute;n financiera. Te ayudamos a elegir una estrategia que tenga sentido
-            para tu meta personal, familiar o patrimonial.
+            Conoce opciones de seguro de ahorro, retiro y protecci&oacute;n patrimonial seg&uacute;n tu edad,
+            presupuesto y metas. Un asesor local te ayuda a revisar alternativas reales para que tomes
+            una decisi&oacute;n informada y sin presi&oacute;n.
           </p>
-
+          <p>Antes de elegir un plan, revisa estos puntos clave:</p>
           <ul class="hero-benefits">
-            <li><span>&#10003;</span> Proyecci&oacute;n personalizada seg&uacute;n edad, plazo, presupuesto y objetivo</li>
-            <li><span>&#10003;</span> Comparaci&oacute;n entre opciones antes de tomar una decisi&oacute;n</li>
-            <li><span>&#10003;</span> Asesor&iacute;a local en M&eacute;rida y Yucat&aacute;n</li>
-            <li><span>&#10003;</span> Atenci&oacute;n personalizada por formulario o WhatsApp, sin compromiso</li>
+            <li><span>&#10003;</span> Cu&aacute;nto podr&iacute;as aportar mensualmente</li>
+            <li><span>&#10003;</span> Qu&eacute; plazo se adapta mejor a tu objetivo</li>
+            <li><span>&#10003;</span> Qu&eacute; capital podr&iacute;as construir o proteger</li>
+            <li><span>&#10003;</span> Qu&eacute; beneficios fiscales podr&iacute;an aplicar</li>
           </ul>
 
           <div class="hero-actions">
-            <a href="#formulario" class="btn btn-white">Solicitar proyecci&oacute;n</a>
-            <a href="https://wa.me/5219992653187?text=Hola%20CARSA%2C%20quiero%20cotizar%20un%20seguro%20de%20ahorro%20en%20M%C3%A9rida" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Hablar por WhatsApp</a>
+            <a href="https://wa.me/5219992653187?text=Hola%20CARSA%2C%20quiero%20recibir%20orientacion%20por%20WhatsApp%20sobre%20un%20seguro%20de%20ahorro%20en%20Merida" target="_blank" rel="noopener noreferrer" class="btn btn-outline" data-track-event="click_whatsapp" data-track-location="hero_whatsapp" data-track-cta-type="whatsapp">Recibir orientaci&oacute;n por WhatsApp</a>
+            <a href="tel:+529992653187" class="btn btn-white">Llamar ahora</a>
           </div>
 
-          <div class="conversion-pills">
-            <span class="conversion-pill">
-              <img src="/Content/img/iconos/asesoria-personalizada.svg" alt="" width="24" height="24" loading="lazy" decoding="async" />
-              Atenci&oacute;n personalizada
-            </span>
-            <span class="conversion-pill">
-              <img src="/Content/img/iconos/tus-datos-estan-protegidos.svg" alt="" width="24" height="24" loading="lazy" decoding="async" />
-              Sin compromiso
-            </span>
-          </div>
+          
 
           <p class="urgent-note">
-            No necesitas llegar con el plan definido. Nosotros te ayudamos a revisar metas, plazos, condiciones de p&oacute;liza y beneficios fiscales cuando puedan aplicar antes de decidir.
+            No necesitas llegar con el plan definido. Te ayudamos a comparar opciones, entender condiciones y resolver tus dudas antes de contratar.
           </p>
         </div>
 
         <div class="hero-form" id="formulario">
-          <h2 class="form-title">Recibe tu proyecci&oacute;n <strong>hoy</strong></h2>
+          <h2 class="form-title">Recibe m&aacute;s informaci&oacute;n</h2>
           <p class="form-subtitle">
-            Deja tus datos y un asesor de seguros en M&eacute;rida te contacta para comparar opciones reales seg&uacute;n tu edad, presupuesto, objetivo y plazo.
+            D&eacute;janos un mensaje y un asesor de seguros se pondr&aacute; en contacto contigo para ayudarte a comparar opciones reales seg&uacute;n tu edad, presupuesto, objetivos y plazo.
           </p>
           <form id="leadForm" novalidate>
             <div class="form-grid">
               <div class="field">
-                <label for="name">Nombre completo</label>
+                <label for="name">Nombre</label>
                 <input id="name" name="name" type="text" placeholder="Ej. Mar&iacute;a Gonz&aacute;lez" />
-                <div class="field-error">Escribe tu nombre completo.</div>
-              </div>
-              <div class="field">
-                <label for="email">Correo electr&oacute;nico</label>
-                <input id="email" name="email" type="email" placeholder="Ej. nombre@correo.com" />
-                <div class="field-error">Ingresa un correo v&aacute;lido.</div>
-              </div>
-              <div class="field">
-                <label for="phone">Celular con WhatsApp</label>
-                <input id="phone" name="phone" type="tel" placeholder="Ej. 9991234567" />
-                <div class="field-error">Ingresa un n&uacute;mero v&aacute;lido de 10 d&iacute;gitos.</div>
-              </div>
-              <div class="field">
-                <label for="age">Edad</label>
-                <input id="age" name="age" type="number" min="18" max="120" placeholder="Ej. 37" />
-                <div class="field-error">Ingresa una edad v&aacute;lida.</div>
+                <div class="field-error">Escribe tu nombre.</div>
               </div>
               <div class="field field-full">
-                <label for="insuranceFor">&iquest;Qu&eacute; quieres construir?</label>
-                <select id="insuranceFor" name="insuranceFor">
+                <label for="contactPreference">&iquest;C&oacute;mo te gustar&iacute;a que te contacten?</label>
+                <select id="contactPreference" name="contactPreference">
                   <option value="">Selecciona una opci&oacute;n</option>
-                  <option value="retiro">Plan retiro</option>
-                  <option value="familiar">Seguro de ahorro familiar</option>
-                  <option value="patrimonio">Ahorro inversi&oacute;n patrimonial</option>
-                  <option value="no-se">A&uacute;n no estoy seguro</option>
+                  <option value="whatsapp">WhatsApp</option>
+                  <option value="llamada">Llamada</option>
+                  <option value="correo">Correo</option>
+                  <option value="en persona">En persona</option>
                 </select>
                 <div class="field-error">Selecciona una opci&oacute;n.</div>
               </div>
               <div class="field field-full">
-                <label for="coverage">Nivel de aportaci&oacute;n que te interesa</label>
-                <select id="coverage" name="coverage">
-                  <option value="">Selecciona una opci&oacute;n</option>
-                  <option value="inicial">Aportaci&oacute;n inicial accesible</option>
-                  <option value="media">Meta intermedia</option>
-                  <option value="alta">Construcci&oacute;n patrimonial amplia</option>
-                  <option value="no-se">A&uacute;n no estoy seguro</option>
-                </select>
-                <div class="field-error">Selecciona una opci&oacute;n.</div>
+                <label for="message">&iquest;Qu&eacute; informaci&oacute;n te gustar&iacute;a obtener?</label>
+                <textarea id="message" name="message" placeholder="Ej. Quiero comparar opciones de seguro de ahorro seg&uacute;n mi presupuesto, plazo y meta patrimonial."></textarea>
+                <div class="field-error">Cu&eacute;ntanos qu&eacute; informaci&oacute;n te gustar&iacute;a obtener.</div>
               </div>
-              <div class="field field-full">
-                <label for="message">Comentario adicional</label>
-                <textarea id="message" name="message" placeholder="Ej. Busco un plan retiro con ahorro fiscal y una aportaci&oacute;n mensual sostenible en M&eacute;rida"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Quiero mi proyecci&oacute;n</button>
+              <button type="submit" class="btn btn-primary">Contactar un asesor</button>
             </div>
-            <p class="form-note">Sin compromiso. Tus datos se usan solo para contactarte y preparar tu proyecci&oacute;n.</p>
+            <p class="form-note">Al enviar, te llevaremos a WhatsApp con un mensaje listo para contactar a un asesor.</p>
             <div class="form-success" id="formSuccess">Gracias. Tu solicitud fue enviada correctamente. Un asesor de CARSA te contactará para preparar tu proyección.</div>
             <div class="form-general-error" id="formError">Revisa los campos marcados e int&eacute;ntalo de nuevo.</div>
           </form>
@@ -1104,32 +1205,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section class="section-sm">
       <div class="container">
-        <span class="eyebrow">Decisi&oacute;n de compra</span>
-        <h2 class="section-title">Antes de pedir tu proyecci&oacute;n, define estas 4 cosas</h2>
+        <span class="eyebrow">Antes de comparar opciones</span>
+        <h2 class="section-title">No todos necesitan el mismo seguro de ahorro</h2>
         <p class="section-subtitle">
-          El seguro de ahorro adecuado depende de tu objetivo y de tu capacidad real de aportaci&oacute;n. Estas respuestas ayudan a que la asesor&iacute;a sea m&aacute;s r&aacute;pida, clara y &uacute;til.
+          La mejor opci&oacute;n depende de tu edad, meta, capacidad de aportaci&oacute;n y plazo. Por eso, antes de recomendarte un plan, revisamos contigo estos puntos clave.
         </p>
 
         <div class="steps-grid">
           <article class="step-card">
             <div class="step-number">1</div>
-            <h3>Meta principal</h3>
-            <p>Retiro, educaci&oacute;n, patrimonio familiar, ahorro fiscal o una combinaci&oacute;n de metas.</p>
+            <h3>Qu&eacute; quieres construir</h3>
+            <p>Retiro, educaci&oacute;n, patrimonio, ahorro fiscal, protecci&oacute;n familiar o una mezcla de objetivos.</p>
           </article>
           <article class="step-card">
             <div class="step-number">2</div>
-            <h3>Aportaci&oacute;n sostenible</h3>
-            <p>Un rango mensual que puedas mantener sin presionar tu flujo personal o familiar.</p>
+            <h3>Cu&aacute;nto puedes aportar</h3>
+            <p>Un rango mensual realista que puedas mantener sin presionar tu flujo personal o familiar.</p>
           </article>
           <article class="step-card">
             <div class="step-number">3</div>
-            <h3>Horizonte de tiempo</h3>
-            <p>Cu&aacute;ndo esperas usar el capital: 5, 10, 15, 20 a&ntilde;os o hasta tu retiro.</p>
+            <h3>En cu&aacute;nto tiempo lo necesitas</h3>
+            <p>Tu plazo ayuda a definir si conviene una estrategia de corto, mediano o largo plazo.</p>
           </article>
           <article class="step-card">
             <div class="step-number">4</div>
-            <h3>Nivel de flexibilidad</h3>
-            <p>Qu&eacute; tan importante es para ti poder ajustar, pausar o disponer de parte del ahorro.</p>
+            <h3>Qu&eacute; tanta flexibilidad buscas</h3>
+            <p>Opciones para ajustar, pausar o complementar tu plan seg&uacute;n tus necesidades y condiciones de p&oacute;liza.</p>
           </article>
         </div>
       </div>
@@ -1137,64 +1238,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section class="section" id="beneficios">
       <div class="container">
-        <span class="eyebrow">Por qu&eacute; cotizar con CARSA</span>
-        <h2 class="section-title">Una proyecci&oacute;n pensada para decidir, no solo para ver una aportación</h2>
+        <span class="eyebrow">POR QU&Eacute; COTIZAR CON CARSA</span>
+        <h2 class="section-title">No se trata solo de saber cu&aacute;nto pagar&iacute;as, sino de entender qu&eacute; opci&oacute;n te conviene</h2>
         <p class="section-subtitle">
-          La aportación importa, pero una buena proyecci&oacute;n de seguro de ahorro tambi&eacute;n debe ayudarte a entender
-          condiciones, plazo, aportaci&oacute;n, flexibilidad, beneficios y restricciones para tomar una decisi&oacute;n con m&aacute;s claridad. Para profundizar en el enfoque de retiro, revisa <a href="/plan-personal-de-retiro">plan personal de retiro</a>.
+          Una proyecci&oacute;n de seguro de ahorro no deber&iacute;a limitarse a una mensualidad. Tambi&eacute;n debe ayudarte a entender plazo, condiciones, flexibilidad, protecci&oacute;n, beneficios fiscales y qu&eacute; tan realista es para tu objetivo.
         </p>
 
         <div class="mini-proof">
           <article class="proof-card">
             <img class="proof-icon" src="/Content/img/comparas-con mas-claridad.webp" alt="" width="76" height="76" loading="lazy" decoding="async" />
             <strong>Comparas con m&aacute;s claridad</strong>
-            <p>Revisamos objetivo, plazo, aportaci&oacute;n, liquidez, capital garantizado y protecci&oacute;n financiera para que compares opciones con contexto real.</p>
+            <p>Revisamos tu edad, objetivo, plazo y capacidad de aportaci&oacute;n para ayudarte a comparar opciones con contexto real, no solo por precio.</p>
           </article>
 
           <article class="proof-card">
             <img class="proof-icon" src="/Content/img/recomendaciones-gmm-suma-asegurada.webp" alt="" width="76" height="76" loading="lazy" decoding="async" />
-            <strong>Evitas contratar a ciegas</strong>
-            <p>Te explicamos diferencias de p&oacute;liza, flexibilidad, beneficios y restricciones para que no elijas solo por la aportaci&oacute;n m&aacute;s baja.</p>
+            <strong>Evitas decidir a ciegas</strong>
+            <p>Te explicamos diferencias de p&oacute;liza, beneficios, restricciones y escenarios para que entiendas qu&eacute; est&aacute;s contratando antes de avanzar.</p>
           </article>
 
           <article class="proof-card">
             <img class="proof-icon" src="/Content/img/evitas-contratar-a-ciegas.webp" alt="" width="76" height="76" loading="lazy" decoding="async" />
             <strong>Recibes asesor&iacute;a local</strong>
-            <p>Atenci&oacute;n enfocada en M&eacute;rida y Yucat&aacute;n, con acompa&ntilde;amiento cercano para leads que buscan decidir con informaci&oacute;n clara.</p>
+            <p>Atenci&oacute;n personalizada en M&eacute;rida y Yucat&aacute;n, con acompa&ntilde;amiento cercano para resolver dudas y tomar una decisi&oacute;n informada.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" style="background:#fff;">
-      <div class="container">
-        <span class="eyebrow">Proceso simple</span>
-        <h2 class="section-title">Cotiza tu seguro de ahorro en 3 pasos</h2>
-        <p class="section-subtitle">
-          Dise&ntilde;amos esta p&aacute;gina para que quien ya quiere cotizar pueda avanzar r&aacute;pido, sin perder claridad.
-        </p>
-
-        <div class="steps-grid">
-          <article class="step-card">
-            <div class="step-number">1</div>
-            <h3>Comparte tus datos</h3>
-            <p>Indica tu edad, objetivo, nivel de aportaci&oacute;n y cualquier comentario clave para preparar tu proyecci&oacute;n.</p>
-          </article>
-
-          <article class="step-card">
-            <div class="step-number">2</div>
-            <h3>Comparamos opciones</h3>
-            <p>Un asesor revisa tu caso, ordena la informaci&oacute;n y te orienta sobre las opciones que mejor se alinean a tu meta.</p>
-          </article>
-
-          <article class="step-card">
-            <div class="step-number">3</div>
-            <h3>Decide con claridad</h3>
-            <p>Recibes una recomendaci&oacute;n clara para comparar plazo, aportaci&oacute;n, flexibilidad y elegir una estrategia adecuada.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+   
 
     <section class="section" id="opciones">
       <div class="container">
@@ -1229,6 +1301,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
+     <section class="section" style="background:#fff;">
+      <div class="container">
+        <span class="eyebrow">Proceso simple</span>
+        <h2 class="section-title">Cotiza tu seguro de ahorro en 3 pasos</h2>
+        <p class="section-subtitle">
+          Dise&ntilde;amos esta p&aacute;gina para que quien ya quiere cotizar pueda avanzar r&aacute;pido, sin perder claridad.
+        </p>
+
+        <div class="steps-grid steps-grid-tilt">
+          <article class="step-card">
+            <div class="step-number">1</div>
+            <h3>Comparte tus datos</h3>
+            <p>Indica tu edad, objetivo, nivel de aportaci&oacute;n y cualquier comentario clave para preparar tu proyecci&oacute;n.</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">2</div>
+            <h3>Comparamos opciones</h3>
+            <p>Un asesor revisa tu caso, ordena la informaci&oacute;n y te orienta sobre las opciones que mejor se alinean a tu meta.</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">3</div>
+            <h3>Decide con claridad</h3>
+            <p>Recibes una recomendaci&oacute;n clara para comparar plazo, aportaci&oacute;n, flexibilidad y elegir una estrategia adecuada.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section-sm">
       <div class="container">
         <div class="objection-panel">
@@ -1248,10 +1350,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <div class="quote-box">
-              <strong>La mejor proyecci&oacute;n no siempre es la m&aacute;s barata.</strong>
-              <p>Es la que equilibra aportación, flexibilidad, condiciones de p&oacute;liza y capacidad real de pago para tu caso.</p>
-              <div class="hero-actions" style="margin-top:22px;">
-                <a href="#formulario" class="btn btn-white">Quiero comparar opciones</a>
+              <img class="quote-box-image" src="/Content/img/compara-entre-seguros.png" alt="Compara entre seguros" width="330" height="330" loading="lazy" decoding="async" />
+              
+              <div class="hero-actions" style="margin-top:22px;justify-content:center;">
+                <a href="https://wa.me/5219992653187?text=Hola%20CARSA%2C%20quiero%20comparar%20opciones%20de%20seguro%20de%20ahorro%20en%20Merida" target="_blank" rel="noopener noreferrer" class="btn btn-white" data-track-event="click_whatsapp" data-track-location="compare_options_whatsapp" data-track-cta-type="whatsapp">comparar opciones</a>
               </div>
             </div>
           </div>
@@ -1259,46 +1361,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-    <section class="section" id="como-cotizar">
-      <div class="container split">
-        <div class="media-frame">
-          <div class="media-video">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/YsDqfcmu5yI?si=355yk7Mv_liJ2Whu"
-              title="Video sobre cómo cotizar un seguro de ahorro en Merida"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="media-tags">
-            <div class="media-tag">Asesor&iacute;a real</div>
-            <div class="media-tag">Proyecci&oacute;n guiada</div>
-            <div class="media-tag">Atenci&oacute;n local</div>
-          </div>
-        </div>
-
-        <div class="content-block">
-          <span class="eyebrow">Acompa&ntilde;amiento personalizado</span>
-          <h2 class="section-title">&iquest;Qu&eacute; recibes al solicitar tu proyecci&oacute;n?</h2>
-          <p>
-            D&eacute;janos tus datos, te contactamos y avanzamos contigo para que tengas una proyecci&oacute;n clara y personalizada.
-            Si todav&iacute;a quieres revisar informaci&oacute;n general antes de decidir, tambi&eacute;n puedes visitar nuestra gu&iacute;a sobre
-            <a href="/blog-guia-seguro-ahorro">seguros ahorro y plan retiro</a>.
-          </p>
-          <ul class="check-list">
-            <li><span>&#10003;</span> An&aacute;lisis inicial de perfil, meta y capacidad de aportaci&oacute;n</li>
-            <li><span>&#10003;</span> Comparaci&oacute;n de opciones seg&uacute;n objetivo, plazo y nivel de protecci&oacute;n</li>
-            <li><span>&#10003;</span> Revisi&oacute;n de plazo, aportaci&oacute;n, liquidez y beneficios fiscales cuando apliquen</li>
-            <li><span>&#10003;</span> Explicaci&oacute;n clara de beneficios, restricciones y siguiente paso recomendado</li>
-          </ul>
-          <div class="hero-actions" style="margin-top:24px;">
-            <a href="#formulario" class="btn btn-primary">Solicitar proyecci&oacute;n</a>
-            <a href="https://wa.me/5219992653187?text=Hola%20CARSA%2C%20quiero%20asesor%C3%ADa%20para%20cotizar%20un%20seguro%20de%20ahorro" target="_blank" rel="noopener noreferrer" class="btn btn-outline">WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <section class="section" id="faq" style="background:#fff;">
       <div class="container">
@@ -1413,7 +1476,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </p>
           <div class="final-cta-actions">
             <a href="#formulario" class="btn btn-white">Solicitar proyecci&oacute;n</a>
-            <a href="https://wa.me/5219992653187?text=Hola%20CARSA%2C%20quiero%20cotizar%20un%20seguro%20de%20ahorro" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:#fff;color:#fff;">Hablar por WhatsApp</a>
+            <a href="https://wa.me/5219992653187?text=Hola%20CARSA%2C%20quiero%20cotizar%20un%20seguro%20de%20ahorro" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:#fff;color:#fff;" data-track-event="click_whatsapp" data-track-location="final_cta_whatsapp" data-track-cta-type="whatsapp">Hablar por WhatsApp</a>
           </div>
         </div>
       </div>
@@ -1433,7 +1496,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="col-12">
               <p id="footer-correo" class="p-md"><span class="bold">Correo:</span> <a href="mailto:contacto@segurosfianzas.com">contacto@segurosfianzas.com</a></p>
               <p id="footer-telefono" class="p-md"><span class="bold">Tel&eacute;fono:</span> <a href="tel:+529999444999">(999) 944 4999</a></p>
-              <p id="footer-whatsapp" class="p-md"><span class="bold">WhatsApp:</span> <a href="https://wa.me/5219992653187" target="_blank" rel="noopener">(999) 265 3187</a></p>
+              <p id="footer-whatsapp" class="p-md"><span class="bold">WhatsApp:</span> <a href="https://wa.me/5219992653187" target="_blank" rel="noopener" data-track-event="click_whatsapp" data-track-location="footer_whatsapp" data-track-cta-type="whatsapp">(999) 265 3187</a></p>
               <div class="col-12 redes-sociales mt-3">
                 <span class="bold">S&iacute;guenos:</span>
                 <a href="https://www.facebook.com/share/1KgjejV4SG/" target="_blank" class="social-icon" rel="noopener" aria-label="Facebook de CARSA Seguros y Fianzas">
@@ -1650,100 +1713,173 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       wrapper.classList.toggle("has-error", hasError);
     }
 
-    function validateEmail(email) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+    function getFormTrackingPayload() {
+      return {
+        form_name: form.getAttribute("id") || "leadForm",
+        page_path: window.location.pathname || "/",
+        insurance_type: "ahorro",
+        product_name: "Ahorro",
+        location: "hero_form"
+      };
     }
 
-    function validatePhone(phone) {
-      const cleaned = phone.replace(/\D/g, "");
-      return cleaned.length === 10;
+    function trackValidationError(fieldName, message) {
+      if (typeof window.trackEvent !== "function") return;
+
+      window.trackEvent("form_error", Object.assign(getFormTrackingPayload(), {
+        error_type: "validation",
+        field_name: fieldName,
+        error_message: message
+      }));
     }
+
+    function buildWhatsappMessage(nameValue, contactLabel, messageValue) {
+      return [
+        "Hola CARSA, quiero recibir informacion sobre un seguro de ahorro en Merida.",
+        "",
+        "Nombre: " + nameValue,
+        "Como me gustaria que me contacten: " + contactLabel,
+        "Informacion que me gustaria obtener: " + messageValue
+      ].join("\n");
+    }
+
+    function initTiltCards() {
+      const cards = document.querySelectorAll(".steps-grid-tilt .step-card");
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+      if (!cards.length || reduceMotion.matches) return;
+
+      cards.forEach((card) => {
+        let frameId = null;
+
+        function paint(pointerX, pointerY) {
+          const rect = card.getBoundingClientRect();
+          const px = Math.max(0, Math.min(1, (pointerX - rect.left) / rect.width));
+          const py = Math.max(0, Math.min(1, (pointerY - rect.top) / rect.height));
+          const rotateY = (px - 0.5) * 18;
+          const rotateX = (0.5 - py) * 18;
+
+          card.style.setProperty("--tilt-x", rotateX.toFixed(2) + "deg");
+          card.style.setProperty("--tilt-y", rotateY.toFixed(2) + "deg");
+          card.style.setProperty("--tilt-shift", "-8px");
+          card.style.setProperty("--pointer-x", (px * 100).toFixed(2) + "%");
+          card.style.setProperty("--pointer-y", (py * 100).toFixed(2) + "%");
+          card.style.setProperty("--glare-opacity", "1");
+        }
+
+        function queuePaint(event) {
+          const pointerX = event.clientX;
+          const pointerY = event.clientY;
+
+          if (frameId) {
+            window.cancelAnimationFrame(frameId);
+          }
+
+          frameId = window.requestAnimationFrame(() => {
+            paint(pointerX, pointerY);
+            frameId = null;
+          });
+        }
+
+        function resetTilt() {
+          if (frameId) {
+            window.cancelAnimationFrame(frameId);
+            frameId = null;
+          }
+
+          card.style.setProperty("--tilt-x", "0deg");
+          card.style.setProperty("--tilt-y", "0deg");
+          card.style.setProperty("--tilt-shift", "0px");
+          card.style.setProperty("--glare-opacity", "0");
+          card.style.setProperty("--pointer-x", "50%");
+          card.style.setProperty("--pointer-y", "50%");
+        }
+
+        card.addEventListener("pointermove", queuePaint);
+        card.addEventListener("pointerleave", resetTilt);
+        card.addEventListener("pointercancel", resetTilt);
+      });
+    }
+
+    initTiltCards();
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
       successBox.style.display = "none";
       errorBox.style.display = "none";
+      successBox.textContent = "Te estamos redirigiendo a WhatsApp para contactar a un asesor.";
 
       const name = document.getElementById("name");
-      const email = document.getElementById("email");
-      const phone = document.getElementById("phone");
-      const age = document.getElementById("age");
-      const insuranceFor = document.getElementById("insuranceFor");
-      const coverage = document.getElementById("coverage");
+      const contactPreference = document.getElementById("contactPreference");
       const message = document.getElementById("message");
 
       let isValid = true;
+      let firstErrorField = null;
 
       if (name.value.trim().length < 3) {
         setError(name, true);
         isValid = false;
+        firstErrorField = firstErrorField || name;
       } else {
         setError(name, false);
       }
 
-      if (!validateEmail(email.value)) {
-        setError(email, true);
+      if (!contactPreference.value) {
+        setError(contactPreference, true);
         isValid = false;
+        firstErrorField = firstErrorField || contactPreference;
       } else {
-        setError(email, false);
+        setError(contactPreference, false);
       }
 
-      if (!validatePhone(phone.value)) {
-        setError(phone, true);
+      if (message.value.trim().length < 5) {
+        setError(message, true);
         isValid = false;
+        firstErrorField = firstErrorField || message;
       } else {
-        setError(phone, false);
-      }
-
-      const ageValue = Number(age.value);
-      if (!age.value || Number.isNaN(ageValue) || ageValue < 0 || ageValue > 120) {
-        setError(age, true);
-        isValid = false;
-      } else {
-        setError(age, false);
-      }
-
-      if (!insuranceFor.value) {
-        setError(insuranceFor, true);
-        isValid = false;
-      } else {
-        setError(insuranceFor, false);
-      }
-
-      if (!coverage.value) {
-        setError(coverage, true);
-        isValid = false;
-      } else {
-        setError(coverage, false);
+        setError(message, false);
       }
 
       if (!isValid) {
+        if (firstErrorField) {
+          trackValidationError(firstErrorField.name || firstErrorField.id || "unknown_field", "validation_failed");
+          firstErrorField.focus();
+        }
+
         errorBox.style.display = "block";
         return;
       }
 
-      const formData = new FormData();
-      formData.append("formulario", "Seguro de ahorro");
-      formData.append("name", name.value.trim());
-      formData.append("email", email.value.trim());
-      formData.append("telefono", phone.value.trim());
-      formData.append("edad", age.value.trim());
-      formData.append("objetivo", insuranceFor.value);
-      formData.append("coverage", coverage.value);
-      formData.append("mensaje", message.value.trim());
-      formData.append("page", "cotizar-seguro-ahorro-merida");
+      const contactLabel = contactPreference.options[contactPreference.selectedIndex].text;
+      const whatsappMessage = buildWhatsappMessage(
+        name.value.trim(),
+        contactLabel,
+        message.value.trim()
+      );
+      const whatsappUrl = "https://wa.me/5219992653187?text=" + encodeURIComponent(whatsappMessage);
 
-      fetch("/enviar.php", { method: "POST", body: formData })
-        .then((response) => {
-          if (!response.ok) throw new Error("Error al enviar");
-          successBox.style.display = "block";
-          form.reset();
-          document.querySelectorAll(".field").forEach((field) => field.classList.remove("has-error"));
-        })
-        .catch(() => {
-          errorBox.style.display = "block";
+      if (typeof window.trackEvent === "function") {
+        window.trackEvent("form_success", Object.assign(getFormTrackingPayload(), {
+          contact_preference: contactPreference.value,
+          destination: "whatsapp"
+        }));
+        window.trackEvent("click_whatsapp", {
+          page_path: window.location.pathname || "/",
+          insurance_type: "ahorro",
+          product_name: "Ahorro",
+          location: "form",
+          phone_number: "5219992653187",
+          contact_preference: contactPreference.value
         });
+      }
+
+      successBox.style.display = "block";
+      document.querySelectorAll(".field").forEach((field) => field.classList.remove("has-error"));
+
+      window.setTimeout(function () {
+        window.location.href = whatsappUrl;
+      }, 150);
     });
   </script>
 </body>
