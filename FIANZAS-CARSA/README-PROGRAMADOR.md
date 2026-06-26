@@ -144,7 +144,7 @@ const CONFIG = {
 
 ### Contactos (en HTML y JS)
 - Tel fijo: 999 944 4999
-- WhatsApp: 999 265 3187
+- WhatsApp: 999 296 8025
 - Email cotizaciones: katycanul@segurosfianzas.com
 - Email Ricardo: rcastilla@segurosfianzas.com
 - Email general: contacto@segurosfianzas.com
@@ -193,5 +193,5 @@ const CONFIG = {
 
 - Sitio: https://carsaseguros.mx
 - Despacho: 999 944 4999
-- WhatsApp: 999 265 3187
+- WhatsApp: 999 296 8025
 - Email: contacto@segurosfianzas.com

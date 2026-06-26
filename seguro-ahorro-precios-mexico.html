@@ -1567,7 +1567,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="col-12">
               <p id="footer-correo" class="p-md"><span class="bold">Correo:</span> <a href="mailto:contacto@segurosfianzas.com">contacto@segurosfianzas.com</a></p>
               <p id="footer-telefono" class="p-md"><span class="bold">Tel&eacute;fono:</span> <a href="tel:+529999444999">(999) 944 4999</a></p>
-              <p id="footer-whatsapp" class="p-md"><span class="bold">WhatsApp:</span> <a href="https://wa.me/5219992653187" target="_blank" rel="noopener">(999) 265 3187</a></p>
+              <p id="footer-whatsapp" class="p-md"><span class="bold">WhatsApp:</span> <a href="https://wa.me/529992968025" target="_blank" rel="noopener">(999) 296 8025</a></p>
               <div class="col-12 redes-sociales mt-3">
                 <span class="bold">S&iacute;guenos:</span>
                 <a href="https://www.facebook.com/share/1KgjejV4SG/" target="_blank" class="social-icon" rel="noopener" aria-label="Facebook de CARSA Seguros y Fianzas">
@@ -1672,7 +1672,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         "Correo: " + correo,
         "Estado: " + estado,
         "Objetivo: " + objetivo,
-        "Aportacion mensual estimada: " + aportacion,
+        "Aportación mensual estimada: " + aportacion,
         "Mensaje: " + mensaje
       ].join("\n");
 
@@ -1684,7 +1684,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       fetch("/enviar.php", { method: "POST", body: formData })
         .then(function (response) {
           if (!response.ok) throw new Error("Error al enviar");
-          window.open("https://wa.me/5219992653187?text=" + encodeURIComponent(whatsappMessage), "_blank");
+          window.open("https://wa.me/529992968025?text=" + encodeURIComponent(whatsappMessage), "_blank");
           event.target.reset();
         })
         .catch(function () {

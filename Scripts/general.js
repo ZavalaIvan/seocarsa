@@ -19,7 +19,7 @@ function General_InsertarBurbujaWhatsApp() {
 
   var enlace = document.createElement("a");
   enlace.className = "carsa-whatsapp-float";
-  enlace.href = "https://wa.me/529992653187?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20CARSA";
+  enlace.href = "https://wa.me/529992968025?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20CARSA";
   enlace.target = "_blank";
   enlace.rel = "noopener";
   enlace.setAttribute("aria-label", "Abrir WhatsApp de CARSA");

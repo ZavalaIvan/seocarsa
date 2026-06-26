@@ -20,7 +20,7 @@ $(document).ready(function () {
     $('#select-producto').change(function () {
         producto = $(this).val();
 
-        let waLink = "https://api.whatsapp.com/send?phone=5219997402368";
+        let waLink = "https://api.whatsapp.com/send?phone=529992968025";
         urlCalendly = "tel:+529991299740";
 
         $('.card-calendly').hide();
@@ -28,25 +28,25 @@ $(document).ready(function () {
         switch (producto) {
             case 'Ahorro':
                 $('.card-calendly').show();
-                waLink += "&text=Hola,%20solicito%20informacion%20sobre%20los%20planes%20de%20ahorro%20Allianz.";
+                waLink += "&text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20los%20planes%20de%20ahorro%20Allianz.";
                 break;
             case 'Vida':
                 $('.card-calendly').show();
-                waLink += "&text=Hola,%20solicito%20informacion%20sobre%20los%20seguros%20de%20vida.";
+                waLink += "&text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20los%20seguros%20de%20vida.";
                 break;
             case 'Salud':
-                waLink += "&text=Hola,%20solicito%20informacion%20sobre%20los%20seguros%20de%20gastos%20medicos%20mayores.";
+                waLink += "&text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20los%20seguros%20de%20gastos%20m%C3%A9dicos%20mayores.";
                 break;
             case 'Hogar':
-                waLink += "&text=Hola,%20solicito%20informacion%20sobre%20los%20seguros%20de%20hogar.";
+                waLink += "&text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20los%20seguros%20de%20hogar.";
                 break;
             case 'Auto':
                 $('.card-calendly').show();
-                waLink += "&text=Hola,%20solicito%20informacion%20sobre%20los%20seguros%20de%20auto.";
+                waLink += "&text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20los%20seguros%20de%20auto.";
                 break;
             case 'Educacion':
                 $('.card-calendly').show();
-                waLink += "&text=Hola,%20solicito%20informacion%20sobre%20los%20planes%20de%20educacion%20y%20ahorro.";
+                waLink += "&text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20los%20planes%20de%20educaci%C3%B3n%20y%20ahorro.";
                 break;
         }
 
@@ -71,22 +71,22 @@ $(document).ready(function () {
 
         switch (producto) {
             case 'Ahorro':
-                waLink += "Hola, solicito informacion sobre los planes de ahorro.";
+                waLink += "Hola, solicito información sobre los planes de ahorro.";
                 break;
             case 'Vida':
-                waLink += "Hola, solicito informacion sobre los seguros de vida.";
+                waLink += "Hola, solicito información sobre los seguros de vida.";
                 break;
             case 'Salud':
-                waLink += "Hola, solicito informacion sobre los seguros de gastos medicos mayores.";
+                waLink += "Hola, solicito información sobre los seguros de gastos médicos mayores.";
                 break;
             case 'Hogar':
-                waLink += "Hola, solicito informacion sobre los seguros de hogar.";
+                waLink += "Hola, solicito información sobre los seguros de hogar.";
                 break;
             case 'Auto':
-                waLink += "Hola, solicito informacion sobre los seguros de auto.";
+                waLink += "Hola, solicito información sobre los seguros de auto.";
                 break;
             case 'Educacion':
-                waLink += "Hola, solicito informacion sobre los planes de educacion y ahorro.";
+                waLink += "Hola, solicito información sobre los planes de educación y ahorro.";
                 break;
         }
 

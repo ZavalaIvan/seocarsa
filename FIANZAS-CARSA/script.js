@@ -252,7 +252,7 @@ const LOGO_DATA_URI = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA
             '• Fianzas: ' + incluidas + '\n' +
             '• Total estimado: ' + fmt(granTotal) + '\n\n' +
             'Quiero avanzar con la emisión.';
-          waLink.href = 'https://wa.me/5219992653187?text=' + encodeURIComponent(msg);
+          waLink.href = 'https://wa.me/529992968025?text=' + encodeURIComponent(msg);
         }
       } else {
         calcNext.style.display = 'none';
@@ -544,7 +544,7 @@ const LOGO_DATA_URI = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA
     doc.text('CARSA Seguros y Fianzas', pageW - margin, y + 6, { align: 'right' });
     doc.text('Consultores Asociados en Riesgos, Agente de Seguros y de Fianzas, S.A. de C.V.', pageW - margin, y + 11, { align: 'right' });
     doc.text('Calle 10 #326 · Gonzalo Guerrero · Mérida, Yucatán · México', pageW - margin, y + 16, { align: 'right' });
-    doc.text('Tel: 999 944 4999 · WhatsApp: 999 265 3187', pageW - margin, y + 21, { align: 'right' });
+    doc.text('Tel: 999 944 4999 · WhatsApp: 999 296 8025', pageW - margin, y + 21, { align: 'right' });
     doc.text('katycanul@segurosfianzas.com', pageW - margin, y + 26, { align: 'right' });
 
     y += 35;
@@ -714,7 +714,7 @@ const LOGO_DATA_URI = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA
     doc.setTextColor(...MUTE);
     doc.setFont(undefined, 'normal');
     doc.text('CARSA Seguros y Fianzas · Despacho fundado en 1998 · Autorizado por la CNSF', margin, pageH - 12);
-    doc.text('Tel: 999 944 4999 · WhatsApp: 999 265 3187 · contacto@segurosfianzas.com · carsaseguros.mx', margin, pageH - 8);
+    doc.text('Tel: 999 944 4999 · WhatsApp: 999 296 8025 · contacto@segurosfianzas.com · carsaseguros.mx', margin, pageH - 8);
 
     // Guardar
     const safeName = cliente.nombre.replace(/[^a-z0-9]/gi, '_').slice(0, 40);
@@ -750,7 +750,7 @@ const LOGO_DATA_URI = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA
     doc.text('CARSA Seguros y Fianzas', pageW - margin, y + 6, { align: 'right' });
     doc.text('Consultores Asociados en Riesgos, Agente de Seguros y de Fianzas, S.A. de C.V.', pageW - margin, y + 11, { align: 'right' });
     doc.text('Calle 10 #326 · Gonzalo Guerrero · Mérida, Yucatán', pageW - margin, y + 16, { align: 'right' });
-    doc.text('Tel: 999 944 4999 · WhatsApp: 999 265 3187', pageW - margin, y + 21, { align: 'right' });
+    doc.text('Tel: 999 944 4999 · WhatsApp: 999 296 8025', pageW - margin, y + 21, { align: 'right' });
     doc.text('katycanul@segurosfianzas.com', pageW - margin, y + 26, { align: 'right' });
     y += 35;
 
@@ -900,7 +900,7 @@ const LOGO_DATA_URI = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA
     doc.setTextColor(...MUTE);
     doc.setFont(undefined, 'normal');
     doc.text('CARSA Seguros y Fianzas · Despacho fundado en 1998 · Autorizado por la CNSF', margin, pageH - 12);
-    doc.text('Tel: 999 944 4999 · WhatsApp: 999 265 3187 · contacto@segurosfianzas.com · carsaseguros.mx', margin, pageH - 8);
+    doc.text('Tel: 999 944 4999 · WhatsApp: 999 296 8025 · contacto@segurosfianzas.com · carsaseguros.mx', margin, pageH - 8);
 
     doc.save('Requisitos_Fianzas_CARSA.pdf');
   }
@@ -945,7 +945,7 @@ function submitForm(e) {
       '• WhatsApp: ' + telefono + '\n' +
       '• Tipo de fianza: ' + tipo + '\n' +
       '• Monto del contrato: ' + monto;
-    const wa = 'https://wa.me/5219992653187?text=' + encodeURIComponent(msgWA);
+    const wa = 'https://wa.me/529992968025?text=' + encodeURIComponent(msgWA);
     window.open(wa, '_blank');
     trackDownloadSuccess('cotizacion', {
       location: 'legacy_quote_form',

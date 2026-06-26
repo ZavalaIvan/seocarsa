@@ -22,13 +22,13 @@ $(document).ready(function () {
     let vidaAhorroSegment = segments[segments.length - 3];
 
     if (skandiaSegment == 'skandia') {
-        urlWhatsapp = 'https://api.whatsapp.com/send?phone=5214461437348&text=Hola,%20solicito%20informacion%20sobre%20los%20planes%20de%20ahorro%20Skandia.';
+        urlWhatsapp = 'https://api.whatsapp.com/send?phone=529992968025&text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20los%20planes%20de%20ahorro%20Skandia.';
     } else if (vidaAhorroSegment == 'seguros-de-vida') {
-        urlWhatsapp = 'https://api.whatsapp.com/send?phone=5214461437348&text=Hola,%20solicito%20informacion%20sobre%20los%20seguros%20de%20vida.';
+        urlWhatsapp = 'https://api.whatsapp.com/send?phone=529992968025&text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20los%20seguros%20de%20vida.';
     } else if (skandiaSegment == 'seguros-de-auto') {
-        urlWhatsapp = 'https://api.whatsapp.com/send?phone=5214461437348&text=Hola,%20solicito%20informacion%20sobre%20los%20seguros%20de%20auto.';
+        urlWhatsapp = 'https://api.whatsapp.com/send?phone=529992968025&text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20los%20seguros%20de%20auto.';
     } else {
-        urlWhatsapp = 'https://api.whatsapp.com/send?phone=5214461437348&text=Hola,%20solicito%20informacion%20sobre%20los%20planes%20de%20ahorro%20Allianz.';
+        urlWhatsapp = 'https://api.whatsapp.com/send?phone=529992968025&text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20los%20planes%20de%20ahorro%20Allianz.';
     }
 
     let btnChat = doc.getElementById('btn-chat');
@@ -36,8 +36,8 @@ $(document).ready(function () {
         btnChat.addEventListener('click', function (element) {
             element.preventDefault();
             let texto = vidaAhorroSegment == 'seguros-de-vida'
-                ? "Hola, solicito informacion sobre los planes de vida."
-                : "Hola, solicito informacion sobre los planes de ahorro.";
+                ? "Hola, solicito información sobre los planes de vida."
+                : "Hola, solicito información sobre los planes de ahorro.";
             abrirChatTidio(texto);
         });
     }

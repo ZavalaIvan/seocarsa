@@ -120,7 +120,7 @@
         {
           '@type': 'ContactPoint',
           contactType: 'WhatsApp',
-          telephone: '+52-1-999-265-3187',
+          telephone: '+52-999-296-8025',
           areaServed: 'MX',
           availableLanguage: ['es']
         }
