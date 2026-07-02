@@ -850,25 +850,28 @@ function App(){
   const hasProteccion=R.proteccionDisponible;
 
   const waMsg=encodeURIComponent(
-    `¡Hola CARSA Seguros y Fianzas! Me interesa recibir mi propuesta formal.\n\n`+
-    `👤 *Datos:*\n`+
-    `• Nombre: ${f.nm}\n`+
-    `• Edad: ${f.edad} años\n`+
-    `• Teléfono: ${f.tel}\n`+
-    `• Email: ${f.email}\n\n`+
-    `💰 *Ahorro:*\n`+
-    `• Aportación mensual: ${fm(f.ap)}\n`+
-    `• Plazo: ${R.plAh} años (hasta edad ${R.edadFinal})\n`+
-    `• Saldo estimado: ${fm(last?.s||0)}\n`+
+    `Hola, quiero información sobre Ahorro / Retiro.\n`+
+    `Vengo desde: Página web\n`+
+    `Página: Cotizador público de ahorro\n`+
+    `Botón: Pedir mi propuesta por WhatsApp\n\n`+
+    `Datos de la propuesta:\n`+
+    `Nombre: ${f.nm}\n`+
+    `Edad: ${f.edad} años\n`+
+    `Teléfono: ${f.tel}\n`+
+    `Email: ${f.email}\n\n`+
+    `Ahorro:\n`+
+    `Aportación mensual: ${fm(f.ap)}\n`+
+    `Plazo: ${R.plAh} años (hasta edad ${R.edadFinal})\n`+
+    `Saldo estimado: ${fm(last?.s||0)}\n`+
     `• Plan ${f.isr==='151'?'deducible (Art. 151)':'flexible (Art. 93)'}\n\n`+
     (hasProteccion?
-      `🛡️ *Protección:*\n`+
-      `• Suma asegurada: ${fm(c.p)}\n`+
-      `• Plazo: ${pL[f.pl]}\n\n`+
-      `💵 *Total mensual año 1: ${fm(Math.round(R.tot))}*\n\n`
+      `Protección:\n`+
+      `Suma asegurada: ${fm(c.p)}\n`+
+      `Plazo: ${pL[f.pl]}\n\n`+
+      `Total mensual año 1: ${fm(Math.round(R.tot))}\n\n`
       :
-      `🛡️ *Protección:* Requiere asesoría personalizada por mi rango de edad.\n\n`+
-      `💵 *Aportación mensual ahorro: ${fm(f.ap)}*\n\n`
+      `Protección: Requiere asesoría personalizada por mi rango de edad.\n\n`+
+      `Aportación mensual ahorro: ${fm(f.ap)}\n\n`
     )+
     `Agradezco me envíen la propuesta formal detallada.`
   );

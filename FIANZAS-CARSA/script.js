@@ -247,7 +247,10 @@ const LOGO_DATA_URI = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA
         const waLink = document.getElementById('calcNextWhatsapp');
         if (waLink) {
           const incluidas = fianzas.filter(f => f.include).map(f => f.nombre).join(', ');
-          const msg = 'Hola CARSA, ya tengo mi cotización estimada:\n\n' +
+          const msg = 'Hola, quiero información sobre Fianzas.\n' +
+            'Vengo desde: Página web\n' +
+            'Página: Fianzas CARSA\n' +
+            'Botón: CTA calculadora\n\n' +
             '• Monto del contrato: ' + fmt(contrato) + '\n' +
             '• Fianzas: ' + incluidas + '\n' +
             '• Total estimado: ' + fmt(granTotal) + '\n\n' +
@@ -940,7 +943,10 @@ function submitForm(e) {
       'Origen: formulario hero del sitio carsaseguros.mx';
 
     // 1. Abrir WhatsApp con los datos (ruta principal)
-    const msgWA = 'Hola CARSA, quiero cotizar una fianza:\n\n' +
+    const msgWA = 'Hola, quiero información sobre Fianzas.\n' +
+      'Vengo desde: Página web\n' +
+      'Página: Fianzas CARSA\n' +
+      'Botón: Formulario hero\n\n' +
       '• Nombre: ' + nombre + '\n' +
       '• WhatsApp: ' + telefono + '\n' +
       '• Tipo de fianza: ' + tipo + '\n' +

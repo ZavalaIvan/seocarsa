@@ -17,9 +17,32 @@ function General_InsertarBurbujaWhatsApp() {
   if (document.querySelector(".carsa-whatsapp-float")) return;
   if (window.location && /(^|\/)contacto\.html$/i.test(window.location.pathname)) return;
 
+  var path = window.location && window.location.pathname ? window.location.pathname : "/";
+  var cleanPath = path.replace(/^\/+|\/+$/g, "") || "inicio";
+  var pageLabel = cleanPath.replace(/\.html?$/i, "").replace(/-/g, " ");
+  pageLabel = pageLabel.charAt(0).toUpperCase() + pageLabel.slice(1);
+
+  var lowerPath = cleanPath.toLowerCase();
+  var service = "General";
+  if (/fianza/.test(lowerPath)) service = "Fianzas";
+  else if (/auto|automovil/.test(lowerPath)) service = "Seguro de auto";
+  else if (/gastos-medicos|salud|medico/.test(lowerPath)) service = "Seguro de salud";
+  else if (/hogar/.test(lowerPath)) service = "Seguro de hogar";
+  else if (/empresarial|negocio|pyme/.test(lowerPath)) service = "Seguro empresarial";
+  else if (/vida/.test(lowerPath)) service = "Seguro de vida";
+  else if (/cetes|afore|comparativa|seguro-ahorro-en-merida/.test(lowerPath)) service = "Comparativa de ahorro";
+  else if (/ahorro|retiro|ppr|allianz/.test(lowerPath)) service = "Ahorro / Retiro";
+
+  var whatsappMessage = [
+    "Hola, quiero información sobre " + service + ".",
+    "Vengo desde: Página web",
+    "Página: " + pageLabel,
+    "Botón: WhatsApp flotante"
+  ].join("\n");
+
   var enlace = document.createElement("a");
   enlace.className = "carsa-whatsapp-float";
-  enlace.href = "https://wa.me/529992968025?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20CARSA";
+  enlace.href = "https://wa.me/529992968025?text=" + encodeURIComponent(whatsappMessage);
   enlace.target = "_blank";
   enlace.rel = "noopener";
   enlace.setAttribute("aria-label", "Abrir WhatsApp de CARSA");

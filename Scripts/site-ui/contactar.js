@@ -17,6 +17,15 @@ $(document).ready(function () {
         }
     }
 
+    function crearMensajeWhatsapp(servicio) {
+        return [
+            "Hola, quiero información sobre " + servicio + ".",
+            "Vengo desde: Página web",
+            "Página: Contacto",
+            "Botón: Botón de contacto"
+        ].join("\n");
+    }
+
     $('#select-producto').change(function () {
         producto = $(this).val();
 
@@ -28,25 +37,28 @@ $(document).ready(function () {
         switch (producto) {
             case 'Ahorro':
                 $('.card-calendly').show();
-                waLink += "&text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20los%20planes%20de%20ahorro%20Allianz.";
+                waLink += "&text=" + encodeURIComponent(crearMensajeWhatsapp("Ahorro / Retiro"));
                 break;
             case 'Vida':
                 $('.card-calendly').show();
-                waLink += "&text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20los%20seguros%20de%20vida.";
+                waLink += "&text=" + encodeURIComponent(crearMensajeWhatsapp("Seguro de vida"));
                 break;
             case 'Salud':
-                waLink += "&text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20los%20seguros%20de%20gastos%20m%C3%A9dicos%20mayores.";
+                waLink += "&text=" + encodeURIComponent(crearMensajeWhatsapp("Seguro de salud"));
                 break;
             case 'Hogar':
-                waLink += "&text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20los%20seguros%20de%20hogar.";
+                waLink += "&text=" + encodeURIComponent(crearMensajeWhatsapp("Seguro de hogar"));
                 break;
             case 'Auto':
                 $('.card-calendly').show();
-                waLink += "&text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20los%20seguros%20de%20auto.";
+                waLink += "&text=" + encodeURIComponent(crearMensajeWhatsapp("Seguro de auto"));
                 break;
             case 'Educacion':
                 $('.card-calendly').show();
-                waLink += "&text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20los%20planes%20de%20educaci%C3%B3n%20y%20ahorro.";
+                waLink += "&text=" + encodeURIComponent(crearMensajeWhatsapp("Ahorro / Retiro"));
+                break;
+            default:
+                waLink += "&text=" + encodeURIComponent(crearMensajeWhatsapp("General"));
                 break;
         }
 
