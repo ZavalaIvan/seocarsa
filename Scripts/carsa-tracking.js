@@ -42,6 +42,9 @@
     'whatsapp'
   ];
 
+  var GOOGLE_ADS_CONTACT_EVENT_NAME = 'conversion_event_contact_3';
+  var GOOGLE_ADS_CONTACT_DEDUP_WINDOW_MS = 1000;
+
   var trackedForms = {};
   var trackedScroll = {};
   var trackedTime = {};
@@ -54,13 +57,55 @@
     formSuccessKeys: {},
     lastFormSubmitAt: 0,
     lastSubmittedForm: null,
-    lastSelectedProduct: null
+    lastSelectedProduct: null,
+    lastGoogleAdsContactConversionAt: 0
   };
   var SUBMIT_DEDUP_WINDOW_MS = 5000;
   var FORM_ERROR_DEDUP_WINDOW_MS = 4000;
   var FORM_SUCCESS_DEDUP_WINDOW_MS = 15000;
   var WHATSAPP_AFTER_SUBMIT_SUPPRESS_MS = 3000;
   var LEAD_REQUEST_WINDOW_MS = 20000;
+
+  // Google Ads helper supplied for the CONTACT (3) conversion action.
+  // The fallback timer preserves navigation even when GTM is blocked or slow.
+  window.gtagSendEvent = function (url) {
+    var hasNavigationUrl = typeof url === 'string' && url.length > 0;
+    var navigationStarted = false;
+    var fallbackTimer;
+    var callback = function () {
+      if (!hasNavigationUrl || navigationStarted) {
+        return;
+      }
+
+      navigationStarted = true;
+
+      if (fallbackTimer) {
+        window.clearTimeout(fallbackTimer);
+      }
+
+      window.location = url;
+    };
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () {
+      window.dataLayer.push(arguments);
+    };
+
+    if (hasNavigationUrl) {
+      fallbackTimer = window.setTimeout(callback, 2100);
+    }
+
+    window.gtag('event', GOOGLE_ADS_CONTACT_EVENT_NAME, {
+      event_callback: callback,
+      event_timeout: 2000
+    });
+
+    return false;
+  };
+
+  // Alias kept for compatibility with Google Ads instructions that use the
+  // legacy helper name.
+  window.gtag_report_conversion = window.gtagSendEvent;
 
   window.trackEvent = function (eventName, params) {
     var eventParams = params || {};
@@ -313,6 +358,97 @@
 
   function isWhatsappUrl(href) {
     return /wa\.me|api\.whatsapp\.com|whatsapp/i.test(href || '');
+  }
+
+  function isGoogleAdsContactElement(element, href) {
+    var explicitSetting = element && element.getAttribute('data-google-ads-contact');
+    var explicitEvent = element && element.dataset && element.dataset.trackEvent;
+    var explicitCtaType = element && element.dataset && element.dataset.trackCtaType;
+    var path = href ? getUrlPath(href) : '';
+
+    if (element && (
+      element.disabled ||
+      element.getAttribute('disabled') !== null ||
+      element.getAttribute('aria-disabled') === 'true'
+    )) {
+      return false;
+    }
+
+    if (explicitSetting === 'false') {
+      return false;
+    }
+
+    if (explicitSetting === 'true') {
+      return true;
+    }
+
+    if (/^click_(?:whatsapp|call|email)$/i.test(explicitEvent || '')) {
+      return true;
+    }
+
+    if (/^(?:whatsapp|call|email)$/i.test(explicitCtaType || '')) {
+      return true;
+    }
+
+    if (isWhatsappUrl(href) || /^(?:tel|mailto):/i.test(href || '')) {
+      return true;
+    }
+
+    if (/^\/contacto(?:\.html)?\/?$/i.test(path)) {
+      return true;
+    }
+
+    return !!(element && /^(?:btn-whatsapp|btn-calendly|btn-chat)$/i.test(element.id || ''));
+  }
+
+  function shouldDelayGoogleAdsContactNavigation(event, element, href) {
+    var target = normalize(element && element.getAttribute('target'));
+
+    return !!(
+      href &&
+      href.charAt(0) !== '#' &&
+      event.button === 0 &&
+      !event.metaKey &&
+      !event.ctrlKey &&
+      !event.shiftKey &&
+      !event.altKey &&
+      target !== '_blank' &&
+      !(element && element.hasAttribute('download'))
+    );
+  }
+
+  function sendGoogleAdsContactConversion(url) {
+    var now = Date.now();
+    var lastSentAt = trackingState.lastGoogleAdsContactConversionAt || 0;
+
+    if (now - lastSentAt < GOOGLE_ADS_CONTACT_DEDUP_WINDOW_MS) {
+      return false;
+    }
+
+    trackingState.lastGoogleAdsContactConversionAt = now;
+    window.gtag_report_conversion(url);
+    return true;
+  }
+
+  function reportGoogleAdsContactConversion(event, element, href) {
+    var navigationUrl;
+    var sent;
+
+    if (!isGoogleAdsContactElement(element, href)) {
+      return false;
+    }
+
+    if (shouldDelayGoogleAdsContactNavigation(event, element, href)) {
+      navigationUrl = href;
+    }
+
+    sent = sendGoogleAdsContactConversion(navigationUrl);
+
+    if (sent && navigationUrl) {
+      event.preventDefault();
+    }
+
+    return sent;
   }
 
   function getPhoneNumberFromHref(href) {
@@ -602,6 +738,16 @@
     text = cleanText(element.innerText || element.textContent || element.getAttribute('aria-label'));
     location = getLocation(element);
     insuranceContext = getInsuranceContext(element, href, getPagePath());
+
+    if (isWhatsappUrl(href)) {
+      href = appendWhatsappAttribution(href, {
+        insuranceType: insuranceContext.insuranceType,
+        location: location
+      });
+      element.setAttribute('href', href);
+    }
+
+    reportGoogleAdsContactConversion(event, element, href);
 
     if (trackExplicitEvent(element, href, text)) {
       return;
@@ -1031,6 +1177,10 @@
             phone_number: getPhoneNumberFromHref(trackedUrl)
           }));
         }
+      }
+
+      if (isGoogleAdsContactElement(null, trackedUrl)) {
+        sendGoogleAdsContactConversion();
       }
 
       arguments[0] = trackedUrl;
