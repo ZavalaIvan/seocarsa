@@ -8,8 +8,8 @@
     { pattern: /seguro-de-hogar|hogar/, type: 'hogar' },
     { pattern: /seguro-empresarial|empresarial/, type: 'empresarial' },
     { pattern: /fianza|fianzas/, type: 'fianzas' },
-    { pattern: /seguro-ahorro|cotizar-seguro-ahorro|blog-seguro-ahorro|blog-guia-seguro-ahorro|cotizador-publico-webapp/, type: 'ahorro' },
-    { pattern: /plan-personal-de-retiro|retiro|planes-de-ahorro/, type: 'retiro' },
+    { pattern: /seguro-de-ahorro|seguro-ahorro|cotizar-seguro-ahorro|blog-seguro-ahorro|blog-guia-seguro-ahorro|cotizador-publico-webapp/, type: 'ahorro' },
+    { pattern: /plan-personal-de-retiro|plan-para-el-retiro|\bppr\b|retiro|planes-de-ahorro/, type: 'retiro' },
     { pattern: /responsabilidad-civil/, type: 'responsabilidad_civil' },
     { pattern: /flotillas/, type: 'flotillas' },
     { pattern: /transporte/, type: 'transporte' }

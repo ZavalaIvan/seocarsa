@@ -3,7 +3,7 @@
  * CONFIGURACIÓN GENERAL
  *********************************************************/
 error_reporting(E_ALL);
-ini_set('display_errors', 1); // en producción siempre en 0
+ini_set('display_errors', 0); // En producción no exponer detalles internos.
 
 // Cargar configuración SMTP (NO expone contraseña)
 $config = require __DIR__ . '/config-mail.php';
@@ -44,8 +44,17 @@ function append_field(&$message, $label, $value) {
     }
 }
 
+$formulario = strtolower(post_value(['formulario', 'producto', 'page', 'pagina']));
+$is_short_savings_lead = in_array($formulario, ['landing_ahorro', 'landing_retiro', 'landing_ppr'], true);
+
+// Honeypot para formularios públicos. Los bots reciben una respuesta neutra.
+if (post_value(['website']) !== '') {
+    echo 'OK';
+    exit;
+}
+
 $email = post_value(['email', 'correo', 'postCorreo_c']);
-if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if ((!$is_short_savings_lead && $email === '') || ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL))) {
     http_response_code(400);
     exit('Correo electrónico inválido');
 }
@@ -53,8 +62,6 @@ if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 /*********************************************************
  * DETECTAR TIPO DE FORMULARIO
  *********************************************************/
-$formulario = strtolower(post_value(['formulario', 'producto', 'page', 'pagina']));
-
 if (strpos($formulario, 'ahorro') !== false || strpos($formulario, 'ppr') !== false || strpos($formulario, 'retiro') !== false) {
     $tipo_form = 'ahorro';
 
@@ -82,6 +89,20 @@ if (strpos($formulario, 'ahorro') !== false || strpos($formulario, 'ppr') !== fa
 
 } else {
     $tipo_form = 'desconocido';
+}
+
+if ($is_short_savings_lead) {
+    $lead_name = post_value(['name', 'nombre']);
+    $lead_phone = preg_replace('/\D+/', '', post_value(['whatsapp', 'telefono', 'phone']));
+
+    if (strlen($lead_phone) === 12 && strpos($lead_phone, '52') === 0) {
+        $lead_phone = substr($lead_phone, 2);
+    }
+
+    if (strlen($lead_name) < 2 || strlen($lead_phone) !== 10) {
+        http_response_code(400);
+        exit('Nombre o WhatsApp inválido');
+    }
 }
 
 /*********************************************************
@@ -145,6 +166,15 @@ switch ($tipo_form) {
         append_field($message, 'Estado', post_value(['estado']));
         append_field($message, 'Mensaje', post_value(['mensaje', 'message']));
         append_field($message, 'Pagina', post_value(['page', 'pagina']));
+        append_field($message, 'Variante de landing', post_value(['variant']));
+        append_field($message, 'URL de landing', post_value(['landing_url']));
+        append_field($message, 'UTM source', post_value(['utm_source']));
+        append_field($message, 'UTM medium', post_value(['utm_medium']));
+        append_field($message, 'UTM campaign', post_value(['utm_campaign']));
+        append_field($message, 'UTM content', post_value(['utm_content']));
+        append_field($message, 'UTM term', post_value(['utm_term']));
+        append_field($message, 'Google click ID', post_value(['gclid']));
+        append_field($message, 'Google braid', post_value(['gbraid', 'wbraid']));
     break;
 
     case 'vida':
@@ -217,7 +247,9 @@ try {
     $mail->CharSet = 'UTF-8';
 
     $mail->setFrom('no-reply@carsaseguros.mx', 'Formulario Web Carsa');
-    $mail->addReplyTo($email, 'Contacto del formulario');
+    if ($email !== '') {
+        $mail->addReplyTo($email, 'Contacto del formulario');
+    }
 
     $mail->addAddress($to);
     foreach ($cc as $ccEmail) {

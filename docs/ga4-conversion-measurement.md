@@ -10,6 +10,30 @@
 - `form_success`
 - `select_product`
 
+### Embudo de la landing de ahorro y retiro
+
+Las rutas `/seguro-de-ahorro`, `/plan-para-el-retiro` y `/ppr` agregan estos eventos para medir el diagnóstico paso a paso:
+
+- `landing_view`
+- `quote_start`
+- `quote_step_1`
+- `quote_step_2`
+- `quote_step_3`
+- `lead_form_submit`
+- `whatsapp_click`
+- `phone_click`
+
+`whatsapp_click` y `phone_click` son alias específicos de la landing. Los eventos globales `click_whatsapp` y `click_call` se conservan para no romper reportes ni conversiones existentes.
+
+Parámetros adicionales de la landing:
+
+- `landing_variant`
+- `step_number`
+- `step_value`
+- `objective`
+- `contribution_range`
+- `age_range`
+
 ## Parametros relevantes
 
 - `page_path`

@@ -107,8 +107,8 @@ RewriteRule ^blog-seguro-ahorro\.html$ /blog-seguro-ahorro [R=301,L]
 RewriteCond %{THE_REQUEST} \s/+blog-guia-seguro-ahorro\.html[\s?] [NC]
 RewriteRule ^blog-guia-seguro-ahorro\.html$ /blog-guia-seguro-ahorro [R=301,L]
 
-RewriteCond %{THE_REQUEST} \s/+seguro-de-ahorro[\s?] [NC]
-RewriteRule ^seguro-de-ahorro$ /plan-personal-de-retiro [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+landing-ahorro\.php[\s?] [NC]
+RewriteRule ^landing-ahorro\.php$ /seguro-de-ahorro [R=301,L]
 
 RewriteCond %{THE_REQUEST} \s/+seguro-medico[\s?] [NC]
 RewriteRule ^seguro-medico$ /gastos-medicos-mayores [R=301,L]
@@ -116,7 +116,7 @@ RewriteRule ^seguro-medico$ /gastos-medicos-mayores [R=301,L]
 # =========================
 # Quitar slash final de URLs públicas
 # =========================
-RewriteRule ^(contacto|mapa-del-sitio|aviso-de-privacidad|plan-personal-de-retiro|seguro-de-ahorro|seguro-de-vida|gastos-medicos-mayores|seguro-medico|seguro-de-hogar|seguro-de-auto|seguro-empresarial|fianzas|carsa-fianzas|recursos|agradecimiento|unete|seguro-ahorro-precios-mexico|seguro-ahorro-en-merida-yucatan|cotizar-seguro-ahorro-merida|cotizador-publico-webapp|blog-seguro-ahorro|blog-guia-seguro-ahorro|fianza-de-cumplimiento|fianza-de-anticipo|fianza-de-vicios-ocultos|fianza-de-credito|fianza-de-fidelidad)/$ /$1 [R=301,L,NC]
+RewriteRule ^(contacto|mapa-del-sitio|aviso-de-privacidad|plan-personal-de-retiro|seguro-de-ahorro|plan-para-el-retiro|ppr|seguro-de-vida|gastos-medicos-mayores|seguro-medico|seguro-de-hogar|seguro-de-auto|seguro-empresarial|fianzas|carsa-fianzas|recursos|agradecimiento|unete|seguro-ahorro-precios-mexico|seguro-ahorro-en-merida-yucatan|cotizar-seguro-ahorro-merida|cotizador-publico-webapp|blog-seguro-ahorro|blog-guia-seguro-ahorro|fianza-de-cumplimiento|fianza-de-anticipo|fianza-de-vicios-ocultos|fianza-de-credito|fianza-de-fidelidad)/$ /$1 [R=301,L,NC]
 
 # =========================
 # Hub pages con prioridad
@@ -141,7 +141,7 @@ RewriteRule ^mapa-del-sitio$ mapa-del-sitio.html [L,NC]
 RewriteRule ^aviso-de-privacidad$ aviso-de-privacidad.html [L,NC]
 RewriteRule ^agradecimiento$ agradecimiento.html [L,NC]
 RewriteRule ^plan-personal-de-retiro$ planes-de-ahorro/allianz.html [L,NC]
-RewriteRule ^seguro-de-ahorro$ planes-de-ahorro/allianz.html [L,NC]
+RewriteRule ^(seguro-de-ahorro|plan-para-el-retiro|ppr)$ landing-ahorro.php [L,QSA,NC]
 RewriteRule ^seguro-de-vida$ seguros-de-vida/allianz.html [L,NC]
 RewriteRule ^gastos-medicos-mayores$ salud.html [L,NC]
 RewriteRule ^seguro-medico$ salud.html [L,NC]
