@@ -8,6 +8,7 @@
   var currentStep = 0;
   var started = false;
   var completedSteps = {};
+  var autoAdvanceTimer;
   var stepEvents = ['quote_step_1', 'quote_step_2', 'quote_step_3'];
 
   function emit(eventName, params) {
@@ -66,8 +67,6 @@
       }
     });
 
-    updateNextButton();
-
     if (opts.focus !== false) {
       var firstFocusable = panels[currentStep].querySelector('input:not([type="hidden"]), button');
       if (firstFocusable) {
@@ -81,17 +80,6 @@
   function getStepSelection(stepIndex) {
     var checked = panels[stepIndex].querySelector('input[type="radio"]:checked');
     return checked ? checked.value : '';
-  }
-
-  function updateNextButton() {
-    var panel = panels[currentStep];
-    var nextButton = panel && panel.querySelector('[data-quote-next]');
-
-    if (!nextButton) {
-      return;
-    }
-
-    nextButton.disabled = !getStepSelection(currentStep);
   }
 
   function reportStepError(stepNumber, fieldName) {
@@ -121,6 +109,15 @@
     }
 
     setStep(currentStep + 1);
+  }
+
+  function scheduleAutoAdvance(input) {
+    window.clearTimeout(autoAdvanceTimer);
+    autoAdvanceTimer = window.setTimeout(function () {
+      if (panels[currentStep].contains(input) && input.checked) {
+        completeCurrentStep();
+      }
+    }, 160);
   }
 
   function scrollToQuote() {
@@ -306,7 +303,7 @@
 
   function initQuote() {
     quoteForm = document.getElementById('savingsQuoteForm');
-    quoteCard = document.getElementById('cotizador');
+    quoteCard = document.getElementById('diagnostico');
 
     if (!quoteForm || !quoteCard) {
       return;
@@ -323,19 +320,20 @@
 
     quoteForm.addEventListener('change', function (event) {
       if (event.target.matches('input[type="radio"]')) {
-        updateNextButton();
+        scheduleAutoAdvance(event.target);
       }
     });
 
     quoteForm.addEventListener('click', function (event) {
-      var next = event.target.closest('[data-quote-next]');
       var back = event.target.closest('[data-quote-back]');
+      var radio = event.target.closest('input[type="radio"]');
 
-      if (next) {
-        completeCurrentStep();
+      if (radio && radio.checked) {
+        scheduleAutoAdvance(radio);
       }
 
       if (back) {
+        window.clearTimeout(autoAdvanceTimer);
         setStep(currentStep - 1);
       }
     });

@@ -38,7 +38,7 @@ $baseFaqs = [
         'answer' => 'Sí. CARSA brinda atención personalizada en Mérida y Yucatán, además de seguimiento por teléfono y WhatsApp.'
     ],
     [
-        'question' => '¿Cómo funciona la cotización?',
+        'question' => '¿Cómo funciona la solicitud de opciones?',
         'answer' => 'Respondes tres preguntas sobre tu objetivo, presupuesto y edad, compartes tu nombre y WhatsApp, y un asesor revisa alternativas compatibles contigo para explicarte aportaciones, protección, plazo, beneficios y condiciones.'
     ],
     [
@@ -80,10 +80,10 @@ $variants = [
     'seguro-de-ahorro' => [
         'slug' => 'seguro-de-ahorro',
         'form' => 'landing_ahorro',
-        'title' => 'Cotiza tu Seguro de Ahorro | Compara Opciones | CARSA',
-        'description' => 'Cotiza tu seguro de ahorro con CARSA. Compara opciones de ahorro, protección y retiro según tu edad, objetivo y presupuesto. Asesoría en Mérida y Yucatán.',
+        'title' => 'Seguro de Ahorro | Compara Opciones | CARSA',
+        'description' => 'Compara opciones de seguro de ahorro, protección y retiro según tu edad, objetivo y presupuesto. Asesoría personalizada en Mérida y Yucatán.',
         'eyebrow' => 'Seguro de ahorro en Mérida y Yucatán',
-        'h1' => 'Cotiza tu seguro de ahorro y descubre la mejor opción para ti',
+        'h1' => 'Compara seguros de ahorro y descubre la mejor opción para ti',
         'subheadline' => 'Compara planes de ahorro, protección y retiro con asesoría personalizada. Recibe opciones claras antes de decidir.',
         'goalTitle' => '¿Qué puedes lograr con un seguro de ahorro?',
         'goalIntro' => 'El punto de partida es tu objetivo. Después revisamos aportación, protección, plazo y condiciones para encontrar opciones que hagan sentido para ti.',
@@ -110,10 +110,10 @@ $variants = [
     'ppr' => [
         'slug' => 'ppr',
         'form' => 'landing_ppr',
-        'title' => 'Plan Personal de Retiro (PPR) | Cotiza con CARSA',
-        'description' => 'Cotiza y compara un Plan Personal de Retiro o PPR. Revisa aportaciones, plazo, protección, flexibilidad y posibles beneficios fiscales con asesoría CARSA.',
+        'title' => 'Plan Personal de Retiro (PPR) | Compara con CARSA',
+        'description' => 'Compara opciones de Plan Personal de Retiro o PPR. Revisa aportaciones, plazo, protección, flexibilidad y posibles beneficios fiscales con asesoría CARSA.',
         'eyebrow' => 'Plan Personal de Retiro · PPR',
-        'h1' => 'Cotiza tu Plan Personal de Retiro y compara opciones antes de decidir',
+        'h1' => 'Compara opciones de Plan Personal de Retiro antes de decidir',
         'subheadline' => 'Revisa alternativas de PPR según tu edad, meta de retiro y presupuesto, con una explicación clara de beneficios, condiciones y flexibilidad.',
         'goalTitle' => '¿Qué puedes lograr con un Plan Personal de Retiro?',
         'goalIntro' => 'Un PPR puede ayudarte a construir un fondo para el retiro. Te ayudamos a comparar su estructura, permanencia y posibles beneficios fiscales sin asumir que todos los planes son iguales.',
@@ -233,8 +233,8 @@ $schema = [
   <meta name="twitter:image" content="https://carsaseguros.mx/Content/img/home/OG_Meta.webp">
   <meta name="theme-color" content="#062a54">
   <link rel="icon" type="image/webp" href="/Content/img/carsaLogo-B.webp">
-  <link rel="preload" as="image" href="/Content/img/home/png/img-hero-480.webp" fetchpriority="high">
-  <link rel="stylesheet" href="/Content/landing-ahorro.css?v=20260812-1">
+  <link rel="preload" as="image" href="/Content/img/cotiza-tu-seguro-medico.webp" fetchpriority="high">
+  <link rel="stylesheet" href="/Content/landing-ahorro.css?v=20260812-2">
   <script type="application/ld+json"><?= json_encode($schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?></script>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -246,7 +246,7 @@ $schema = [
   <script src="/Scripts/carsa-tracking.js?v=20260812-1" defer></script>
   <script src="/Scripts/ai-traffic-detection.js?v=20260514" defer></script>
   <script>window.CARSA_GOOGLE_REVIEWS = <?= json_encode($googleReviews, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;</script>
-  <script src="/Scripts/landing-ahorro.js?v=20260812-2" defer></script>
+  <script src="/Scripts/landing-ahorro.js?v=20260812-3" defer></script>
 </head>
 <body data-landing-variant="<?= e($page['slug']) ?>">
   <!-- Google Tag Manager (noscript) -->
@@ -281,33 +281,26 @@ $schema = [
     <section class="landing-hero" aria-labelledby="hero-title">
       <div class="landing-container hero-grid">
         <div class="hero-message">
-          <div class="hero-copy-layout">
-            <div class="hero-copy">
-              <p class="hero-eyebrow"><?= e($page['eyebrow']) ?></p>
-              <h1 id="hero-title"><?= e($page['h1']) ?></h1>
-              <p class="hero-subheadline"><?= e($page['subheadline']) ?></p>
+          <div class="hero-copy">
+            <p class="hero-eyebrow"><?= e($page['eyebrow']) ?></p>
+            <h1 id="hero-title"><?= e($page['h1']) ?></h1>
+            <p class="hero-subheadline"><?= e($page['subheadline']) ?></p>
 
-              <ul class="hero-benefits" aria-label="Beneficios de la asesoría">
-                <li><img src="/Content/img/iconos/asesoria-personalizada.svg" alt="" width="32" height="32">Asesoría sin costo</li>
-                <li><img src="/Content/img/iconos/Respuesta-rapida.svg" alt="" width="32" height="32">Respuesta rápida por WhatsApp</li>
-                <li><img src="/Content/img/iconos/atencion-local-yucatan.svg" alt="" width="32" height="32">Atención en Mérida y Yucatán</li>
-                <li><img src="/Content/img/iconos/tus-datos-estan-protegidos.svg" alt="" width="32" height="32">Sin compromiso</li>
-              </ul>
+            <ul class="hero-benefits" aria-label="Beneficios de la asesoría">
+              <li><img src="/Content/img/iconos/asesoria-personalizada.svg" alt="" width="32" height="32">Asesoría sin costo</li>
+              <li><img src="/Content/img/iconos/Respuesta-rapida.svg" alt="" width="32" height="32">Respuesta rápida por WhatsApp</li>
+              <li><img src="/Content/img/iconos/atencion-local-yucatan.svg" alt="" width="32" height="32">Atención en Mérida y Yucatán</li>
+              <li><img src="/Content/img/iconos/tus-datos-estan-protegidos.svg" alt="" width="32" height="32">Sin compromiso</li>
+            </ul>
 
-              <div class="hero-proof">
-                <span class="hero-proof__mark" aria-hidden="true">45+</span>
-                <span>Más de 45 años asesorando a personas y empresas en seguros y protección patrimonial.</span>
-              </div>
+            <div class="hero-proof">
+              <span class="hero-proof__mark" aria-hidden="true">45+</span>
+              <span>Más de 45 años asesorando a personas y empresas en seguros y protección patrimonial.</span>
             </div>
-
-            <picture class="hero-person" aria-hidden="true">
-              <source srcset="/Content/img/home/png/img-hero-480.webp" media="(min-width: 900px)">
-              <img src="/Content/img/home/png/img-hero-480.webp" alt="" width="863" height="938" decoding="async" fetchpriority="high">
-            </picture>
           </div>
         </div>
 
-        <aside class="quote-card" id="cotizador" aria-labelledby="quote-title">
+        <aside class="quote-card" id="diagnostico" aria-labelledby="quote-title">
           <div id="quoteFormInner">
             <div class="quote-card__header">
               <h2 id="quote-title">Descubre tus opciones en 2 minutos</h2>
@@ -347,7 +340,6 @@ $schema = [
                       <label class="choice-card"><input type="radio" name="objetivo" value="<?= e($objective) ?>" <?= $index === 0 ? 'required' : '' ?>><span><?= e($objective) ?></span></label>
                     <?php endforeach; ?>
                   </div>
-                  <div class="quote-actions"><button class="landing-btn landing-btn--primary" type="button" data-quote-next disabled>Continuar</button></div>
                 </fieldset>
               </section>
 
@@ -359,7 +351,7 @@ $schema = [
                       <label class="choice-card"><input type="radio" name="aportacion" value="<?= e($amount) ?>" <?= $index === 0 ? 'required' : '' ?>><span><?= e($amount) ?></span></label>
                     <?php endforeach; ?>
                   </div>
-                  <div class="quote-actions"><button class="quote-back" type="button" data-quote-back>Volver</button><button class="landing-btn landing-btn--primary" type="button" data-quote-next disabled>Continuar</button></div>
+                  <div class="quote-actions quote-actions--back-only"><button class="quote-back" type="button" data-quote-back>← Atrás</button></div>
                 </fieldset>
               </section>
 
@@ -371,7 +363,7 @@ $schema = [
                       <label class="choice-card"><input type="radio" name="edad" value="<?= e($age) ?>" <?= $index === 0 ? 'required' : '' ?>><span><?= e($age) ?></span></label>
                     <?php endforeach; ?>
                   </div>
-                  <div class="quote-actions"><button class="quote-back" type="button" data-quote-back>Volver</button><button class="landing-btn landing-btn--primary" type="button" data-quote-next disabled>Continuar</button></div>
+                  <div class="quote-actions quote-actions--back-only"><button class="quote-back" type="button" data-quote-back>← Atrás</button></div>
                 </fieldset>
               </section>
 
@@ -391,7 +383,7 @@ $schema = [
                       <p class="form-error" id="quoteWhatsappError" aria-live="polite"></p>
                     </div>
                   </div>
-                  <div class="quote-actions"><button class="quote-back" type="button" data-quote-back>Volver</button><button class="landing-btn landing-btn--whatsapp" type="submit">Ver mis opciones</button></div>
+                  <div class="quote-actions"><button class="quote-back" type="button" data-quote-back>← Atrás</button><button class="landing-btn landing-btn--whatsapp" type="submit">Ver mis opciones</button></div>
                   <p class="quote-privacy"><img src="/Content/img/iconos/tus-datos-estan-protegidos.svg" alt="" width="17" height="17"><span>Tus datos están protegidos. No hay compromiso de contratación. Consulta nuestro <a href="/aviso-de-privacidad">aviso de privacidad</a>.</span></p>
                   <p class="form-status" id="quoteFormStatus" role="status" aria-live="polite"></p>
                 </fieldset>
@@ -466,7 +458,7 @@ $schema = [
             <li>Ahorro proyectado y flexibilidad</li>
             <li>Diferencias explicadas en lenguaje claro</li>
           </ul>
-          <a class="landing-btn landing-btn--primary" href="#cotizador" data-scroll-to-quote data-track-location="comparator_cta">Quiero comparar mis opciones</a>
+          <a class="landing-btn landing-btn--primary" href="#diagnostico" data-scroll-to-quote data-track-location="comparator_cta">Quiero comparar mis opciones</a>
         </div>
       </div>
     </section>
@@ -519,7 +511,7 @@ $schema = [
 
     <section class="landing-section" id="preguntas" aria-labelledby="faq-title">
       <div class="landing-container">
-        <div class="section-heading"><p class="section-eyebrow">Preguntas frecuentes</p><h2 id="faq-title">Dudas antes de cotizar tu ahorro o retiro</h2></div>
+        <div class="section-heading"><p class="section-eyebrow">Preguntas frecuentes</p><h2 id="faq-title">Dudas antes de elegir tu ahorro o retiro</h2></div>
         <div class="faq-list">
           <?php foreach ($page['faqs'] as $faq): ?>
             <details class="faq-item">
@@ -535,10 +527,10 @@ $schema = [
       <div class="landing-container">
         <div class="final-cta">
           <h2 id="final-title"><?= e($page['finalTitle']) ?></h2>
-          <p>Cotiza sin compromiso y recibe asesoría personalizada.</p>
+          <p>Conoce tus opciones sin compromiso y recibe asesoría personalizada.</p>
           <ul class="final-proof"><li>Sin compromiso</li><li>Atención personalizada</li><li>Datos confidenciales</li></ul>
           <div class="final-actions">
-            <a class="landing-btn landing-btn--white" href="#cotizador" data-scroll-to-quote data-track-location="final_quote_cta">Quiero conocer mis opciones</a>
+            <a class="landing-btn landing-btn--white" href="#diagnostico" data-scroll-to-quote data-track-location="final_quote_cta">Quiero conocer mis opciones</a>
             <a class="landing-btn landing-btn--whatsapp" href="<?= e($whatsappUrl) ?>" target="_blank" rel="noopener noreferrer" data-landing-whatsapp data-track-event="click_whatsapp" data-track-location="final_whatsapp" data-track-cta-type="whatsapp">Hablar por WhatsApp <img src="/Content/img/icn-whatsapp.webp" alt="" width="24" height="24" loading="lazy"></a>
           </div>
         </div>
@@ -562,7 +554,7 @@ $schema = [
 
   <div class="mobile-sticky" aria-label="Acciones rápidas">
     <a class="sticky-action sticky-action--whatsapp" href="<?= e($whatsappUrl) ?>" target="_blank" rel="noopener noreferrer" data-landing-whatsapp data-track-event="click_whatsapp" data-track-location="mobile_sticky_whatsapp" data-track-cta-type="whatsapp">WhatsApp <img src="/Content/img/icn-whatsapp.webp" alt="" width="24" height="24"></a>
-    <a class="sticky-action" href="#cotizador" data-scroll-to-quote data-track-location="mobile_sticky_quote">Cotizar</a>
+    <a class="sticky-action" href="#diagnostico" data-scroll-to-quote data-track-location="mobile_sticky_quote">Ver opciones</a>
   </div>
 
   <a class="floating-whatsapp" href="<?= e($whatsappUrl) ?>" target="_blank" rel="noopener noreferrer" aria-label="Hablar por WhatsApp" data-landing-whatsapp data-track-event="click_whatsapp" data-track-location="desktop_floating_whatsapp" data-track-cta-type="whatsapp"><img src="/Content/img/icn-whatsapp.webp" alt="" width="24" height="24"></a>
