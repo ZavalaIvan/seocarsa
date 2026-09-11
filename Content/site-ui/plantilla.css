@@ -715,8 +715,13 @@ footer .container-fluid {
     }
 
     .language-switcher {
+        position: absolute;
+        top: 2.12rem;
+        right: 4.5rem;
+        z-index: 1;
         justify-content: center;
-        margin-top: 0.75rem;
+        margin: 0;
+        transform: translateY(-50%);
     }
 
     footer .container {
