@@ -1190,6 +1190,30 @@
     window.open.__carsaTrackingPatched = true;
   }
 
+  function addLanguageSwitcher() {
+    var contactButton = document.querySelector('.navbar .btn-element-contact');
+    var contactItem;
+    var switcher;
+
+    if (!contactButton || document.querySelector('[data-carsa-language-switcher]')) {
+      return;
+    }
+
+    contactItem = contactButton.closest('.nav-item');
+    if (!contactItem || !contactItem.parentNode) {
+      return;
+    }
+
+    switcher = document.createElement('li');
+    switcher.className = 'nav-item language-switcher';
+    switcher.setAttribute('role', 'group');
+    switcher.setAttribute('aria-label', 'Selecciona tu país');
+    switcher.setAttribute('data-carsa-language-switcher', 'true');
+    switcher.innerHTML = '<span class="language-flag language-flag-current" role="img" aria-label="México" title="México"><img src="/Content/img/flag-mx.svg" width="32" height="32" alt=""></span><span class="language-divider" aria-hidden="true">|</span><a class="language-flag" href="https://insuranceforexpatsmexico.com" aria-label="United States — insuranceforexpatsmexico.com" title="United States"><img src="/Content/img/flag-us.svg" width="32" height="32" alt=""></a>';
+
+    contactItem.parentNode.insertBefore(switcher, contactItem.nextSibling);
+  }
+
   function init() {
     if (trackingState.initialized) {
       return;
@@ -1199,6 +1223,7 @@
 
     patchWindowOpen();
     patchFetch();
+    addLanguageSwitcher();
     trackInsurancePageView();
     trackThankYouPage();
 
