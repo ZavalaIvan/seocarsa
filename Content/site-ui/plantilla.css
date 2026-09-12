@@ -653,6 +653,12 @@ footer .container-fluid {
 }
 
 @media only screen and (max-width: 991px) {
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
     .ms-auto {
         margin-left: 0 !important;
     }
@@ -661,6 +667,15 @@ footer .container-fluid {
         height: auto;
         padding-top: 1.12rem;
         padding-bottom: 1.12rem;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .navbar .container,
+    .navbar-collapse,
+    .navbar-nav {
+        min-width: 0;
+        max-width: 100%;
     }
 
     .navbar-logo {
