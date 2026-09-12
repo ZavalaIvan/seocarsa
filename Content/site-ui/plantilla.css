@@ -547,7 +547,7 @@ a.language-flag:focus-visible {
 
 
 footer .row {
-    width: 100%;
+    width: auto;
 }
 
 footer .container {
